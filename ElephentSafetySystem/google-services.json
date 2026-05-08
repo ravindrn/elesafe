@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1052398280822",
+    "project_id": "elephant-safety-system",
+    "storage_bucket": "elephant-safety-system.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052398280822:android:e1c3d1d78f148e47c37f57",
+        "android_client_info": {
+          "package_name": "com.elephant.safety"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnC5xEItj-bwBaPMn9s-uEtqVZ54X6SOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
