@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Reports Management</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; }
+        .navbar {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a27 100%);
+            color: white;
+            padding: 0 30px;
+            height: 65px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        .nav-links a { color: white; text-decoration: none; padding: 8px 18px; }
+        .container { margin-top: 85px; padding: 25px 35px; }
+        .stats-summary { display: flex; gap: 20px; margin-bottom: 30px; }
+        .stat-badge { background: white; padding: 15px 25px; border-radius: 15px; flex: 1; text-align: center; }
+        .stat-badge .number { font-size: 32px; font-weight: bold; color: #1a472a; }
+        table { width: 100%; background: white; border-radius: 20px; overflow: hidden; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: #1a472a; color: white; }
+        .status-PENDING { color: #ff9800; font-weight: bold; }
+        .status-RESOLVED { color: #4caf50; font-weight: bold; }
+        .view-btn, .resolve-btn { padding: 5px 12px; border: none; border-radius: 6px; cursor: pointer; }
+        .view-btn { background: #2196f3; color: white; }
+        .resolve-btn { background: #4caf50; color: white; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; }
+        .modal-content { background: white; padding: 30px; border-radius: 20px; width: 500px; }
+        .close { float: right; cursor: pointer; font-size: 24px; }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">🐘 Elephant Safety</div>
+    <div class="nav-links">
+        <a href="/web/admin/dashboard">Dashboard</a>
+        <a href="/web/admin/danger-zones">Danger Zones</a>
+        <a href="/web/admin/reports" class="active">Reports</a>
+    </div>
+    <div><a href="/web/logout" style="color:white">Logout</a></div>
+</nav>
+<div class="container">
+    <h1>📋 Elephant Sighting Reports</h1>
+    <div class="stats-summary">
+        <div class="stat-badge"><h4>PENDING</h4><div class="number" th:text="${pendingCount}">0</div></div>
+        <div class="stat-badge"><h4>RESOLVED</h4><div class="number" th:text="${resolvedCount}">0</div></div>
+        <div class="stat-badge"><h4>TOTAL</h4><div class="number" th:text="${reports.size()}">0</div></div>
+    </div>
+    <table>
+        <thead><tr><th>ID</th><th>Coordinates</th><th>Elephants</th><th>User</th><th>Date</th><th>Status</th><th>Actions</th></tr></thead>
+        <tbody>
+        <tr th:each="report : ${reports}">
+            <td th:text="${report.id}">-</td>
+            <td th:text="${report.latitude} + ', ' + ${report.longitude}">-</td>
+            <td th:text="${report.elephantCount}">-</td>
+            <td th:text="${report.user != null ? report.user.name : 'Anonymous'}">-</td>
+            <td th:text="${#temporals.format(report.createdAt, 'yyyy-MM-dd HH:mm')}">-</td>
+            <td><span th:class="'status-' + ${report.status}" th:text="${report.status}">-</span></td>
+            <td>
+                <button class="view-btn" th:attr="data-id=${report.id}">View</button>
+                <button th:if="${report.status == 'PENDING'}" class="resolve-btn" th:attr="data-id=${report.id}">Resolve</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div id="reportModal" class="modal"><div class="modal-content"><span class="close" onclick="closeModal()">&times;</span><div id="modalBody"></div></div></div>
+<script>
+    document.querySelectorAll('.view-btn').forEach(btn => btn.addEventListener('click', function() { viewReport(this.dataset.id); }));
+    document.querySelectorAll('.resolve-btn').forEach(btn => btn.addEventListener('click', function() { resolveReport(this.dataset.id); }));
+    function viewReport(id) {
+        fetch('/api/admin/reports/' + id).then(r => r.json()).then(report => {
+            document.getElementById('modalBody').innerHTML = '<p><strong>Coordinates:</strong> ' + report.latitude + ', ' + report.longitude + '</p><p><strong>Elephants:</strong> ' + report.elephantCount + '</p><p><strong>Reported By:</strong> ' + report.userName + '</p><p><strong>Date:</strong> ' + new Date(report.createdAt).toLocaleString() + '</p><p><strong>Status:</strong> ' + report.status + '</p>';
+            document.getElementById('reportModal').style.display = 'flex';
+        });
+    }
+    function resolveReport(id) {
+        if (confirm('Mark as resolved?')) {
+            fetch('/api/admin/reports/' + id + '/status', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ status: 'RESOLVED' }) })
+                .then(r => { if(r.ok) window.location.reload(); else alert('Failed'); });
+        }
+    }
+    function closeModal() { document.getElementById('reportModal').style.display = 'none'; }
+</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Elephant Safety Sri Lanka</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; }
+        .navbar {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a27 100%);
+            color: white;
+            padding: 0 30px;
+            height: 65px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .logo { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: bold; }
+        .nav-links { display: flex; gap: 8px; }
+        .nav-links a { color: white; text-decoration: none; padding: 8px 18px; border-radius: 8px; font-size: 14px; }
+        .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.2); }
+        .user-info { display: flex; align-items: center; gap: 20px; }
+        .logout-btn { background: rgba(255,255,255,0.15); padding: 6px 14px; border-radius: 6px; text-decoration: none; color: white; }
+        .container { margin-top: 85px; padding: 25px 35px; }
+        .welcome-banner {
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+            color: white;
+            padding: 25px 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .stat-card {
+            background: white;
+            padding: 22px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .stat-card h3 { color: #666; font-size: 13px; margin-bottom: 8px; }
+        .stat-number { font-size: 38px; font-weight: bold; color: #1a472a; }
+        .quick-actions {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+        .action-buttons { display: flex; gap: 15px; flex-wrap: wrap; }
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-primary { background: #2e7d32; color: white; }
+        .btn-warning { background: #ff9800; color: white; }
+        @media (max-width: 768px) { .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">🐘 Elephant Safety Sri Lanka</div>
+    <div class="nav-links">
+        <a href="/web/admin/dashboard" class="active">Dashboard</a>
+        <a href="/web/admin/users">User Management</a>
+        <a href="/web/admin/danger-zones">Danger Zones</a>
+        <a href="/web/admin/reports">Reports</a>
+        <a href="/web/admin/contact">Contact Us</a>
+    </div>
+    <div class="user-info">
+        <span>👋 <strong th:text="${adminName}"></strong></span>
+        <a href="/web/logout" class="logout-btn">Logout</a>
+    </div>
+</nav>
+<div class="container">
+    <div class="welcome-banner">
+        <h2>Welcome back, <span th:text="${adminName}"></span>! 🇱🇰</h2>
+        <p>Here's what's happening with elephant conservation in Sri Lanka today.</p>
+    </div>
+    <div class="stats">
+        <div class="stat-card"><h3>Total Users</h3><div class="stat-number" th:text="${totalUsers}">0</div></div>
+        <div class="stat-card"><h3>Active Users (7 days)</h3><div class="stat-number" th:text="${activeUsers}">0</div></div>
+        <div class="stat-card"><h3>Danger Zones</h3><div class="stat-number" th:text="${totalDangerZones}">0</div></div>
+        <div class="stat-card"><h3>Pending Reports</h3><div class="stat-number" th:text="${pendingReports}">0</div></div>
+    </div>
+    <div class="quick-actions">
+        <h3>Quick Actions</h3>
+        <div class="action-buttons">
+            <a href="/web/admin/danger-zones" class="btn btn-primary">Add Danger Zone</a>
+            <a href="/web/admin/reports" class="btn btn-warning">Review Reports</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
