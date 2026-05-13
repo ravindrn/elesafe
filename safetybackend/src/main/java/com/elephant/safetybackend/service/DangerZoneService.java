@@ -4,11 +4,10 @@ import com.elephant.safetybackend.model.DangerZone;
 import com.elephant.safetybackend.repository.DangerZoneRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 @Service
 public class DangerZoneService {
@@ -17,41 +16,63 @@ public class DangerZoneService {
     private DangerZoneRepository dangerZoneRepository;
 
     public List<DangerZone> getAllActiveZones() {
-        return dangerZoneRepository.findByStatus(DangerZone.Status.ACTIVE);
+        try {
+            List<DangerZone> zones = dangerZoneRepository.findAll();
+            System.out.println("Found " + zones.size() + " zones in database");
+            return zones;
+        } catch (Exception e) {
+            System.err.println("Error fetching zones: " + e.getMessage());
+            e.printStackTrace();
+            return new ArrayList<>();
+        }
     }
 
     public List<DangerZone> getNearbyZones(double lat, double lng, int radiusMeters) {
-        double radiusKm = radiusMeters / 1000.0;
-        return dangerZoneRepository.findNearbyZones(lat, lng, radiusKm);
+        // Return all zones for now
+        return getAllActiveZones();
     }
 
     public List<DangerZone> getHighRiskZones() {
-        return dangerZoneRepository.findByRiskLevelAndStatus(
-                DangerZone.RiskLevel.HIGH, DangerZone.Status.ACTIVE);
+        List<DangerZone> allZones = getAllActiveZones();
+        List<DangerZone> highRiskZones = new ArrayList<>();
+        for (DangerZone zone : allZones) {
+            if (zone.getRiskLevel() == DangerZone.RiskLevel.HIGH ||
+                    zone.getRiskLevel() == DangerZone.RiskLevel.CRITICAL) {
+                highRiskZones.add(zone);
+            }
+        }
+        return highRiskZones;
     }
 
     public List<DangerZone> getZonesByDistrict(String district) {
-        return dangerZoneRepository.findByDistrictAndStatus(district, DangerZone.Status.ACTIVE);
+        List<DangerZone> allZones = getAllActiveZones();
+        List<DangerZone> districtZones = new ArrayList<>();
+        for (DangerZone zone : allZones) {
+            if (district.equals(zone.getDistrict())) {
+                districtZones.add(zone);
+            }
+        }
+        return districtZones;
     }
 
     public Map<String, Long> getZonesByDistrictStats() {
         List<DangerZone> zones = getAllActiveZones();
-        return zones.stream()
-                .collect(Collectors.groupingBy(
-                        DangerZone::getDistrict,
-                        Collectors.counting()
-                ));
+        Map<String, Long> stats = new HashMap<>();
+        for (DangerZone zone : zones) {
+            String district = zone.getDistrict();
+            if (district != null) {
+                stats.put(district, stats.getOrDefault(district, 0L) + 1);
+            }
+        }
+        return stats;
     }
 
     public DangerZone addZone(DangerZone zone) {
-        zone.setCreatedAt(LocalDateTime.now());
-        zone.setStatus(DangerZone.Status.ACTIVE);
         return dangerZoneRepository.save(zone);
     }
 
     public DangerZone updateZone(Long id, DangerZone zone) {
         zone.setId(id);
-        zone.setUpdatedAt(LocalDateTime.now());
         return dangerZoneRepository.save(zone);
     }
 

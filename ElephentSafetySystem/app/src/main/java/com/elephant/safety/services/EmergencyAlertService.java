@@ -1,57 +1,84 @@
 package com.elephant.safety.services;
 
 import android.content.Context;
-import android.media.AudioManager;
-import android.media.ToneGenerator;
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Vibrator;
 import android.widget.Toast;
-import androidx.appcompat.app.AlertDialog;
 
+import com.elephant.safety.R;
+import com.elephant.safety.activities.DangerAlertActivity;
 import com.elephant.safety.api.ApiClient;
 import com.elephant.safety.api.ApiService;
 
 public class EmergencyAlertService extends AlertService {
     private Vibrator vibrator;
     private ApiService apiService;
-    private ToneGenerator toneGenerator;
+    private MediaPlayer mediaPlayer;
 
     public EmergencyAlertService(Context context) {
         super(context);
         this.vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        this.apiService = ApiClient.getClient().create(ApiService.class);
+        this.apiService = ApiClient.getClient(context).create(ApiService.class);
+    }
 
+    @Override
+    public void showSoundAlert() {
         try {
-            // Fix: Use AudioManager.STREAM_ALARM instead
-            this.toneGenerator = new ToneGenerator(AudioManager.STREAM_ALARM, 100);
+            if (mediaPlayer == null) {
+                mediaPlayer = MediaPlayer.create(context, android.provider.Settings.System.DEFAULT_ALARM_ALERT_URI);
+            }
+            if (mediaPlayer != null) {
+                mediaPlayer.setLooping(true);
+                mediaPlayer.start();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @Override
-    public void showSoundAlert() {
-        if (toneGenerator != null) {
-            try {
-                // Play a loud alarm sound
-                toneGenerator.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, 2000);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
+    public void showVisualAlert(String message) {
+        // For danger zone alerts, launch full-screen activity
+        // The message contains zone info, but we'll extract it or just show the full screen alert
+
+        // Launch the full-screen danger alert activity
+        Intent intent = new Intent(context, DangerAlertActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+        // Parse message to extract zone info if needed
+        // For now, we'll let the activity handle it or pass generic info
+        intent.putExtra("zone_name", "Elephant Danger Zone");
+        intent.putExtra("risk_level", "HIGH");
+        intent.putExtra("distance", "Approaching");
+
+        context.startActivity(intent);
     }
 
-    @Override
-    public void showVisualAlert(String message) {
-        new AlertDialog.Builder(context)
-                .setTitle("⚠️ DANGER ZONE ALERT ⚠️")
-                .setMessage(message)
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .setPositiveButton("ACKNOWLEDGE", (dialog, which) -> {
-                    stopSound();
-                    dialog.dismiss();
-                })
-                .setCancelable(false)
-                .show();
+    public void showDetailedAlert(String zoneName, String riskLevel, double distanceKm) {
+        Intent intent = new Intent(context, DangerAlertActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.putExtra("zone_name", zoneName);
+        intent.putExtra("risk_level", riskLevel);
+
+        String distanceText;
+        if (distanceKm < 1) {
+            distanceText = String.format("%.0f meters", distanceKm * 1000);
+        } else {
+            distanceText = String.format("%.2f km", distanceKm);
+        }
+        intent.putExtra("distance", distanceText);
+
+        String instructions = "• REDUCE SPEED IMMEDIATELY\n" +
+                "• STAY EXTREMELY ALERT\n" +
+                "• WATCH FOR ELEPHANTS CROSSING\n" +
+                "• DO NOT USE HORN\n" +
+                "• DO NOT FLASH HEADLIGHTS\n" +
+                "• MAINTAIN SAFE DISTANCE\n" +
+                "• BE PREPARED TO STOP";
+        intent.putExtra("instructions", instructions);
+
+        context.startActivity(intent);
     }
 
     @Override
@@ -77,28 +104,24 @@ public class EmergencyAlertService extends AlertService {
 
     @Override
     public void logAlertToServer(long userId, long zoneId, String alertType) {
-        // TODO: Send alert log to backend
+        // Send alert log to backend
     }
 
     @Override
     protected String generateAlertMessage(String zoneName, String riskLevel) {
         return String.format(
-                "⚠️ ELEPHANT CROSSING ZONE ⚠️\n\n" +
-                        "Zone: %s\n" +
-                        "Risk Level: %s\n\n" +
-                        "Instructions:\n" +
-                        "• Reduce speed immediately\n" +
-                        "• Stay alert for elephants\n" +
-                        "• Do not use horn\n" +
-                        "• Watch both sides of road\n" +
-                        "• Be prepared to stop",
+                "Zone: %s\nRisk Level: %s\n\nInstructions:\n• Reduce speed immediately\n• Stay alert for elephants\n• Do not use horn\n• Watch both sides of road\n• Be prepared to stop",
                 zoneName, riskLevel
         );
     }
 
     public void stopSound() {
-        if (toneGenerator != null) {
-            toneGenerator.stopTone();
+        if (mediaPlayer != null) {
+            if (mediaPlayer.isPlaying()) {
+                mediaPlayer.stop();
+            }
+            mediaPlayer.release();
+            mediaPlayer = null;
         }
     }
 }

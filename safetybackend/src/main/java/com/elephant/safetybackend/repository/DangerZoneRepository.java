@@ -3,24 +3,23 @@ package com.elephant.safetybackend.repository;
 import com.elephant.safetybackend.model.DangerZone;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
 public interface DangerZoneRepository extends JpaRepository<DangerZone, Long> {
 
-    List<DangerZone> findByStatus(DangerZone.Status status);
+    List<DangerZone> findByStatus(String status);
 
-    List<DangerZone> findByRiskLevelAndStatus(DangerZone.RiskLevel riskLevel, DangerZone.Status status);
+    List<DangerZone> findByRiskLevel(String riskLevel);
 
-    List<DangerZone> findByDistrictAndStatus(String district, DangerZone.Status status);
+    List<DangerZone> findByDistrict(String district);
 
-    @Query(value = "SELECT * FROM danger_zones WHERE status = 'ACTIVE' AND " +
-            "(6371 * acos(cos(radians(:lat)) * cos(radians(latitude)) * " +
-            "cos(radians(longitude) - radians(:lng)) + sin(radians(:lat)) * " +
-            "sin(radians(latitude)))) <= :radiusKm", nativeQuery = true)
-    List<DangerZone> findNearbyZones(@Param("lat") double lat,
-                                     @Param("lng") double lng,
-                                     @Param("radiusKm") double radiusKm);
+    // Get top district with most danger zones
+    @Query("SELECT d.district FROM DangerZone d WHERE d.district IS NOT NULL GROUP BY d.district ORDER BY COUNT(d) DESC LIMIT 1")
+    String findTopDistrict();
+
+    // Count danger zones by district
+    @Query("SELECT d.district, COUNT(d) FROM DangerZone d WHERE d.district IS NOT NULL GROUP BY d.district ORDER BY COUNT(d) DESC")
+    List<Object[]> countByDistrict();
 }

@@ -24,21 +24,26 @@ public class ElephantReport {
     @Column(columnDefinition = "TEXT")
     private String note;
 
+    @Column(name = "elephant_count")
     private Integer elephantCount = 1;
 
     @Enumerated(EnumType.STRING)
-    private Status status = Status.PENDING;
+    private ReportStatus status = ReportStatus.PENDING;
 
-    private LocalDateTime createdAt = LocalDateTime.now();
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
 
+    @Column(name = "resolved_at")
     private LocalDateTime resolvedAt;
 
-    public enum Status {
+    public enum ReportStatus {
         PENDING, APPROVED, REJECTED, RESOLVED
     }
 
-    // Constructors
-    public ElephantReport() {}
+    @PrePersist
+    protected void onCreate() {
+        createdAt = LocalDateTime.now();
+    }
 
     // Getters and Setters
     public Long getId() { return id; }
@@ -59,8 +64,8 @@ public class ElephantReport {
     public Integer getElephantCount() { return elephantCount; }
     public void setElephantCount(Integer elephantCount) { this.elephantCount = elephantCount; }
 
-    public Status getStatus() { return status; }
-    public void setStatus(Status status) { this.status = status; }
+    public ReportStatus getStatus() { return status; }
+    public void setStatus(ReportStatus status) { this.status = status; }
 
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
