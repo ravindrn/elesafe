@@ -6,33 +6,43 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class AdminLoginController {
 
+    @GetMapping("/")
+    public String root() {
+        return "redirect:/login";
+    }
+
     @GetMapping("/login")
     public String showLoginPage() {
-        return "login";  // This will load login.html from templates/admin/
+        return "admin/login";
     }
-    
+
+    @GetMapping("/logout")
+    public String logout() {
+        return "redirect:/login";
+    }
+
     @GetMapping("/admin/dashboard")
     public String showDashboard() {
-        return "dashboard";  // This will load dashboard.html
+        return "admin/dashboard";
     }
-    
+
     @GetMapping("/admin/users")
     public String showUserManagement() {
-        return "users";
+        return "admin/users";
     }
-    
+
     @GetMapping("/admin/danger-zones")
     public String showDangerZones() {
-        return "danger-zones";
+        return "admin/danger-zones";
     }
-    
+
     @GetMapping("/admin/reports")
     public String showReports() {
-        return "reports";
+        return "admin/reports";
     }
-    
+
     @GetMapping("/admin/contact-us")
     public String showContactUs() {
-        return "contact-us";
+        return "admin/contact-us";
     }
 }

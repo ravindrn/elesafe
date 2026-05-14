@@ -24,143 +24,159 @@ public class WebController {
     private DangerZoneRepository dangerZoneRepository;
 
     @Autowired
-    private AlertRepository alertRepository;
-
-    @Autowired
     private ReportRepository reportRepository;
 
-    // ============================================
-    // LOGIN & AUTHENTICATION
-    // ============================================
-
-    @GetMapping("/web/login")
-    public String showLoginPage() {
-        return "admin/login";
-    }
-
-    @PostMapping("/web/login")
-    public String processLogin(@RequestParam String email,
+    // ========== PROCESS LOGIN (POST only) ==========
+    @PostMapping("/login")
+    public String processLogin(@RequestParam String username,
                                @RequestParam String password,
                                HttpSession session,
                                Model model) {
-        User user = userRepository.findByEmail(email).orElse(null);
+        System.out.println("=== LOGIN ATTEMPT: " + username);
 
-        if (user != null && user.getPassword().equals(password)) {
+        User user = userRepository.findByEmail(username).orElse(null);
+
+        if (user == null) {
+            System.out.println("USER NOT FOUND");
+            model.addAttribute("error", "Invalid email or password");
+            return "admin/login";
+        }
+
+        System.out.println("USER FOUND: " + user.getEmail());
+        System.out.println("ROLE: " + user.getRole());
+
+        if (user.getPassword().equals(password)) {
             session.setAttribute("userId", user.getId());
             session.setAttribute("userName", user.getName());
-            session.setAttribute("userEmail", user.getEmail());
             session.setAttribute("userRole", user.getRole().toString());
 
-            if (user.getRole() == User.Role.ADMIN) {
-                return "redirect:/web/admin/dashboard";
+            System.out.println("LOGIN SUCCESSFUL! Redirecting to /admin/dashboard");
+
+            if (user.getRole().toString().equals("ADMIN")) {
+                return "redirect:/admin/dashboard";
             } else {
-                return "redirect:/web/user/home";
+                return "redirect:/user/home";
             }
         }
 
+        System.out.println("PASSWORD MISMATCH");
         model.addAttribute("error", "Invalid email or password");
         return "admin/login";
     }
 
-    @GetMapping("/web/logout")
-    public String logout(HttpSession session) {
-        session.invalidate();
-        return "redirect:/web/login";
-    }
-
-    // ============================================
-    // ADMIN DASHBOARD
-    // ============================================
-
-    @GetMapping("/web/admin/dashboard")
-    public String adminDashboard(HttpSession session, Model model) {
-        if (!isAdmin(session)) return "redirect:/web/login";
+    // ========== ADMIN DASHBOARD API ==========
+    @GetMapping("/api/admin/stats")
+    @ResponseBody
+    public ResponseEntity<?> getDashboardStats(HttpSession session) {
+        if (session.getAttribute("userId") == null) {
+            return ResponseEntity.status(403).body("Unauthorized");
+        }
 
         long totalUsers = userRepository.count();
-        long activeUsers = totalUsers;
         long totalDangerZones = dangerZoneRepository.count();
 
         long pendingReports = 0;
         List<ElephantReport> allReports = reportRepository.findAll();
         for (ElephantReport report : allReports) {
-            if (report.getStatus() == ElephantReport.Status.PENDING) {
+            if (report.getStatus().toString().equals("PENDING")) {
                 pendingReports++;
             }
         }
 
-        long usersInDangerZones = 0;
+        Map<String, Object> stats = new HashMap<>();
+        stats.put("totalUsers", totalUsers);
+        stats.put("activeUsers", totalUsers);
+        stats.put("totalDangerZones", totalDangerZones);
+        stats.put("pendingReports", pendingReports);
 
-        model.addAttribute("adminName", session.getAttribute("userName"));
-        model.addAttribute("totalUsers", totalUsers);
-        model.addAttribute("activeUsers", activeUsers);
-        model.addAttribute("totalDangerZones", totalDangerZones);
-        model.addAttribute("pendingReports", pendingReports);
-        model.addAttribute("usersInDangerZones", usersInDangerZones);
+        Object adminName = session.getAttribute("userName");
+        stats.put("adminName", adminName != null ? adminName.toString() : "Admin");
 
-        return "admin/dashboard";
+        return ResponseEntity.ok(stats);
     }
 
-    // ============================================
-    // DANGER ZONES MANAGEMENT
-    // ============================================
-
-    @GetMapping("/web/admin/danger-zones")
-    public String manageDangerZones(HttpSession session, Model model) {
-        if (!isAdmin(session)) return "redirect:/web/login";
-
+    // ========== API: GET ALL DANGER ZONES ==========
+    @GetMapping("/api/admin/danger-zones")
+    @ResponseBody
+    public ResponseEntity<?> getAllDangerZones(HttpSession session) {
+        if (session.getAttribute("userId") == null) {
+            return ResponseEntity.status(403).body("Unauthorized");
+        }
         List<DangerZone> zones = dangerZoneRepository.findAll();
-        model.addAttribute("dangerZones", zones);
-        model.addAttribute("adminName", session.getAttribute("userName"));
-        return "admin/danger-zones";
+        return ResponseEntity.ok(zones);
     }
 
+    // ========== API: ADD DANGER ZONE ==========
     @PostMapping("/api/admin/danger-zones")
     @ResponseBody
     public ResponseEntity<?> addDangerZone(@RequestBody DangerZone zone, HttpSession session) {
-        if (!isAdmin(session)) return ResponseEntity.status(403).body("Unauthorized");
-
+        if (session.getAttribute("userId") == null) {
+            return ResponseEntity.status(403).body("Unauthorized");
+        }
         zone.setCreatedAt(LocalDateTime.now());
         DangerZone saved = dangerZoneRepository.save(zone);
         return ResponseEntity.ok(saved);
     }
 
+    // ========== API: DELETE DANGER ZONE ==========
     @DeleteMapping("/api/admin/danger-zones/{id}")
     @ResponseBody
     public ResponseEntity<?> deleteDangerZone(@PathVariable Long id, HttpSession session) {
-        if (!isAdmin(session)) return ResponseEntity.status(403).body("Unauthorized");
-
+        if (session.getAttribute("userId") == null) {
+            return ResponseEntity.status(403).body("Unauthorized");
+        }
         dangerZoneRepository.deleteById(id);
         return ResponseEntity.ok("Deleted");
     }
 
-    // ============================================
-    // REPORTS MANAGEMENT
-    // ============================================
-
-    @GetMapping("/web/admin/reports")
-    public String manageReports(HttpSession session, Model model) {
-        if (!isAdmin(session)) return "redirect:/web/login";
+    // ========== API: GET ALL REPORTS ==========
+    @GetMapping("/api/admin/reports")
+    @ResponseBody
+    public ResponseEntity<?> getAllReports(HttpSession session) {
+        if (session.getAttribute("userId") == null) {
+            return ResponseEntity.status(403).body("Unauthorized");
+        }
 
         List<ElephantReport> reports = reportRepository.findAll();
 
         long pendingCount = 0;
         long resolvedCount = 0;
         for (ElephantReport report : reports) {
-            if (report.getStatus() == ElephantReport.Status.PENDING) pendingCount++;
-            if (report.getStatus() == ElephantReport.Status.RESOLVED) resolvedCount++;
+            if (report.getStatus().toString().equals("PENDING")) pendingCount++;
+            if (report.getStatus().toString().equals("RESOLVED")) resolvedCount++;
         }
 
-        model.addAttribute("reports", reports);
-        model.addAttribute("pendingCount", pendingCount);
-        model.addAttribute("resolvedCount", resolvedCount);
-        model.addAttribute("adminName", session.getAttribute("userName"));
-        return "admin/reports";
+        List<Map<String, Object>> reportList = new java.util.ArrayList<>();
+        for (ElephantReport report : reports) {
+            Map<String, Object> reportMap = new HashMap<>();
+            reportMap.put("id", report.getId());
+            reportMap.put("latitude", report.getLatitude());
+            reportMap.put("longitude", report.getLongitude());
+            reportMap.put("elephantCount", report.getElephantCount());
+            reportMap.put("status", report.getStatus().toString());
+            reportMap.put("createdAt", report.getCreatedAt());
+
+            String userName = "Anonymous";
+            if (report.getUser() != null) {
+                userName = report.getUser().getName();
+            }
+            reportMap.put("userName", userName);
+            reportList.add(reportMap);
+        }
+
+        Map<String, Object> response = new HashMap<>();
+        response.put("reports", reportList);
+        response.put("pendingCount", pendingCount);
+        response.put("resolvedCount", resolvedCount);
+
+        return ResponseEntity.ok(response);
     }
 
+    // ========== API: GET SINGLE REPORT ==========
     @GetMapping("/api/admin/reports/{id}")
     @ResponseBody
     public ResponseEntity<?> getReportById(@PathVariable Long id, HttpSession session) {
-        if (!isAdmin(session)) {
+        if (session.getAttribute("userId") == null) {
             return ResponseEntity.status(403).body("Unauthorized");
         }
 
@@ -171,8 +187,6 @@ public class WebController {
 
         Map<String, Object> reportData = new HashMap<>();
         reportData.put("id", report.getId());
-        // getLocation removed - use area or coordinates instead
-        reportData.put("area", "Report #" + report.getId());
         reportData.put("latitude", report.getLatitude());
         reportData.put("longitude", report.getLongitude());
         reportData.put("elephantCount", report.getElephantCount());
@@ -188,10 +202,11 @@ public class WebController {
         return ResponseEntity.ok(reportData);
     }
 
+    // ========== API: UPDATE REPORT STATUS ==========
     @PutMapping("/api/admin/reports/{id}/status")
     @ResponseBody
     public ResponseEntity<?> updateReportStatus(@PathVariable Long id, @RequestBody Map<String, String> payload, HttpSession session) {
-        if (!isAdmin(session)) {
+        if (session.getAttribute("userId") == null) {
             return ResponseEntity.status(403).body("Unauthorized");
         }
 
@@ -205,33 +220,8 @@ public class WebController {
             report.setStatus(ElephantReport.Status.RESOLVED);
         } else if ("PENDING".equals(status)) {
             report.setStatus(ElephantReport.Status.PENDING);
-        } else {
-            return ResponseEntity.badRequest().body("Invalid status");
         }
-
         reportRepository.save(report);
         return ResponseEntity.ok(Map.of("message", "Status updated successfully"));
-    }
-
-    // ============================================
-    // USER WEB VIEW
-    // ============================================
-
-    @GetMapping("/web/user/home")
-    public String userHome(HttpSession session, Model model) {
-        if (session.getAttribute("userId") == null) {
-            return "redirect:/web/login";
-        }
-        model.addAttribute("userName", session.getAttribute("userName"));
-        return "user/home";
-    }
-
-    // ============================================
-    // HELPER METHOD
-    // ============================================
-
-    private boolean isAdmin(HttpSession session) {
-        return session.getAttribute("userRole") != null &&
-                "ADMIN".equals(session.getAttribute("userRole"));
     }
 }

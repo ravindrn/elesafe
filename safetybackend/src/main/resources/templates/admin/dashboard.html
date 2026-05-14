@@ -76,35 +76,56 @@
 <nav class="navbar">
     <div class="logo">🐘 Elephant Safety Sri Lanka</div>
     <div class="nav-links">
-        <a href="/web/admin/dashboard" class="active">Dashboard</a>
-        <a href="/web/admin/users">User Management</a>
-        <a href="/web/admin/danger-zones">Danger Zones</a>
-        <a href="/web/admin/reports">Reports</a>
-        <a href="/web/admin/contact">Contact Us</a>
+        <a href="/admin/dashboard" class="active">📊 Dashboard</a>
+        <a href="/admin/users">👥 User Management</a>
+        <a href="/admin/danger-zones">⚠️ Danger Zones</a>
+        <a href="/admin/reports">📋 Reports</a>
+        <a href="/admin/contact-us">📞 Contact Us</a>
     </div>
     <div class="user-info">
-        <span>👋 <strong th:text="${adminName}"></strong></span>
-        <a href="/web/logout" class="logout-btn">Logout</a>
+        <span>👋 <strong id="adminName">Admin</strong></span>
+        <a href="/logout" class="logout-btn">🚪 Logout</a>
     </div>
 </nav>
 <div class="container">
     <div class="welcome-banner">
-        <h2>Welcome back, <span th:text="${adminName}"></span>! 🇱🇰</h2>
+        <h2>Welcome back, <span id="welcomeName">Admin</span>! 🇱🇰</h2>
         <p>Here's what's happening with elephant conservation in Sri Lanka today.</p>
     </div>
     <div class="stats">
-        <div class="stat-card"><h3>Total Users</h3><div class="stat-number" th:text="${totalUsers}">0</div></div>
-        <div class="stat-card"><h3>Active Users (7 days)</h3><div class="stat-number" th:text="${activeUsers}">0</div></div>
-        <div class="stat-card"><h3>Danger Zones</h3><div class="stat-number" th:text="${totalDangerZones}">0</div></div>
-        <div class="stat-card"><h3>Pending Reports</h3><div class="stat-number" th:text="${pendingReports}">0</div></div>
+        <div class="stat-card"><h3>Total Users</h3><div class="stat-number" id="totalUsers">0</div></div>
+        <div class="stat-card"><h3>Active Users (7 days)</h3><div class="stat-number" id="activeUsers">0</div></div>
+        <div class="stat-card"><h3>Danger Zones</h3><div class="stat-number" id="totalDangerZones">0</div></div>
+        <div class="stat-card"><h3>Pending Reports</h3><div class="stat-number" id="pendingReports">0</div></div>
     </div>
     <div class="quick-actions">
-        <h3>Quick Actions</h3>
+        <h3>⚡ Quick Actions</h3>
         <div class="action-buttons">
-            <a href="/web/admin/danger-zones" class="btn btn-primary">Add Danger Zone</a>
-            <a href="/web/admin/reports" class="btn btn-warning">Review Reports</a>
+            <a href="/admin/danger-zones" class="btn btn-primary">➕ Add Danger Zone</a>
+            <a href="/admin/reports" class="btn btn-warning">📝 Review Reports</a>
         </div>
     </div>
 </div>
+
+<script>
+    // Load dashboard stats from API
+    fetch('/api/admin/stats')
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to load stats');
+            return response.json();
+        })
+        .then(data => {
+            document.getElementById('totalUsers').innerText = data.totalUsers || 0;
+            document.getElementById('activeUsers').innerText = data.activeUsers || 0;
+            document.getElementById('totalDangerZones').innerText = data.totalDangerZones || 0;
+            document.getElementById('pendingReports').innerText = data.pendingReports || 0;
+            document.getElementById('adminName').innerText = data.adminName || 'Admin';
+            document.getElementById('welcomeName').innerText = data.adminName || 'Admin';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('totalUsers').innerText = 'Error';
+        });
+</script>
 </body>
 </html>

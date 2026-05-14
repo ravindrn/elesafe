@@ -18,9 +18,16 @@
             top: 0;
             left: 0;
             right: 0;
+            z-index: 1000;
         }
-        .nav-links a { color: white; text-decoration: none; padding: 8px 18px; }
+        .logo { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: bold; }
+        .nav-links { display: flex; gap: 8px; }
+        .nav-links a { color: white; text-decoration: none; padding: 8px 18px; border-radius: 8px; font-size: 14px; }
+        .nav-links a:hover { background: rgba(255,255,255,0.2); }
+        .user-info { display: flex; align-items: center; gap: 20px; }
+        .logout-btn { background: rgba(255,255,255,0.15); padding: 6px 14px; border-radius: 6px; text-decoration: none; color: white; }
         .container { margin-top: 85px; padding: 25px 35px; }
+        h1 { color: #1a472a; margin-bottom: 20px; }
         .add-form {
             background: white;
             padding: 25px;
@@ -41,57 +48,94 @@
         .risk-MEDIUM { color: #ff9800; font-weight: bold; }
         .risk-LOW { color: #4caf50; font-weight: bold; }
         .delete-btn { background: #f44336; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer; }
+        .loading { text-align: center; padding: 20px; color: #666; }
     </style>
 </head>
 <body>
 <nav class="navbar">
-    <div class="logo">🐘 Elephant Safety</div>
+    <div class="logo">🐘 Elephant Safety Sri Lanka</div>
     <div class="nav-links">
-        <a href="/web/admin/dashboard">Dashboard</a>
-        <a href="/web/admin/danger-zones" class="active">Danger Zones</a>
-        <a href="/web/admin/reports">Reports</a>
+        <a href="/admin/dashboard">📊 Dashboard</a>
+        <a href="/admin/users">👥 User Management</a>
+        <a href="/admin/danger-zones" class="active">⚠️ Danger Zones</a>
+        <a href="/admin/reports">📋 Reports</a>
+        <a href="/admin/contact-us">📞 Contact Us</a>
     </div>
-    <div><a href="/web/logout" style="color:white">Logout</a></div>
+    <div class="user-info">
+        <span>👋 <strong id="adminName">Admin</strong></span>
+        <a href="/logout" class="logout-btn">🚪 Logout</a>
+    </div>
 </nav>
 <div class="container">
     <h1>⚠️ Danger Zones Management</h1>
 
     <div class="add-form">
-        <h3>Add New Danger Zone</h3>
+        <h3>➕ Add New Danger Zone</h3>
         <form id="addZoneForm">
             <div class="form-grid">
                 <input type="text" name="locationName" placeholder="Location Name" required>
                 <input type="number" step="any" name="latitude" placeholder="Latitude" required>
                 <input type="number" step="any" name="longitude" placeholder="Longitude" required>
                 <select name="riskLevel">
-                    <option value="HIGH">High Risk</option>
-                    <option value="MEDIUM">Medium Risk</option>
-                    <option value="LOW">Low Risk</option>
+                    <option value="HIGH">🔴 High Risk</option>
+                    <option value="MEDIUM">🟡 Medium Risk</option>
+                    <option value="LOW">🟢 Low Risk</option>
                 </select>
                 <select name="status">
                     <option value="ACTIVE">Active</option>
                     <option value="INACTIVE">Inactive</option>
                 </select>
             </div>
-            <button type="submit">Add Zone</button>
+            <button type="submit">➕ Add Zone</button>
         </form>
     </div>
 
-    <table>
-        <thead><tr><th>ID</th><th>Location</th><th>Coordinates</th><th>Risk</th><th>Status</th><th>Action</th></tr></thead>
-        <tbody>
-        <tr th:each="zone : ${dangerZones}">
-            <td th:text="${zone.id}">-</td>
-            <td th:text="${zone.locationName}">-</td>
-            <td th:text="${zone.latitude} + ', ' + ${zone.longitude}">-</td>
-            <td><span th:class="'risk-' + ${zone.riskLevel}" th:text="${zone.riskLevel}">-</span></td>
-            <td th:text="${zone.status}">-</td>
-            <td><button class="delete-btn" th:onclick="'deleteZone(' + ${zone.id} + ')'">Delete</button></td>
-        </tr>
-        </tbody>
-    </table>
+    <div id="zonesTable" class="loading">Loading danger zones...</div>
 </div>
+
 <script>
+    // Load danger zones on page load
+    async function loadDangerZones() {
+        try {
+            const response = await fetch('/api/admin/danger-zones');
+            if (!response.ok) throw new Error('Failed to load');
+            const zones = await response.json();
+
+            if (zones.length === 0) {
+                document.getElementById('zonesTable').innerHTML = '<div class="loading">No danger zones found. Add one above!</div>';
+                return;
+            }
+
+            let tableHtml = `
+                <table>
+                    <thead>
+                        <tr><th>ID</th><th>Location</th><th>Coordinates</th><th>Risk</th><th>Status</th><th>Action</th></tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            zones.forEach(zone => {
+                tableHtml += `
+                    <tr>
+                        <td>${zone.id}</td>
+                        <td>${zone.locationName || '-'}</td>
+                        <td>${zone.latitude}, ${zone.longitude}</td>
+                        <td><span class="risk-${zone.riskLevel}">${zone.riskLevel}</span></td>
+                        <td>${zone.status || 'ACTIVE'}</td>
+                        <td><button class="delete-btn" onclick="deleteZone(${zone.id})">🗑️ Delete</button></td>
+                    </tr>
+                `;
+            });
+
+            tableHtml += `</tbody></table>`;
+            document.getElementById('zonesTable').innerHTML = tableHtml;
+
+        } catch (error) {
+            document.getElementById('zonesTable').innerHTML = '<div class="loading">Error loading danger zones</div>';
+        }
+    }
+
+    // Add Danger Zone
     document.getElementById('addZoneForm').onsubmit = async function(e) {
         e.preventDefault();
         var form = e.target;
@@ -107,16 +151,36 @@
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         });
-        if (response.ok) { window.location.reload(); }
-        else { alert('Failed to add'); }
+        if (response.ok) {
+            loadDangerZones(); // Refresh the table
+            form.reset();
+        } else {
+            alert('Failed to add');
+        }
     };
+
+    // Delete Danger Zone
     async function deleteZone(id) {
         if (confirm('Delete this zone?')) {
             var response = await fetch('/api/admin/danger-zones/' + id, { method: 'DELETE' });
-            if (response.ok) { window.location.reload(); }
-            else { alert('Failed to delete'); }
+            if (response.ok) {
+                loadDangerZones(); // Refresh the table
+            } else {
+                alert('Failed to delete');
+            }
         }
     }
+
+    // Load zones and admin name when page loads
+    loadDangerZones();
+
+    // Load admin name
+    fetch('/api/admin/stats')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('adminName').innerText = data.adminName || 'Admin';
+        })
+        .catch(() => {});
 </script>
 </body>
 </html>
