@@ -1,45 +1,267 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Contact Us - Elephant Safety Admin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Elephant Safety Sri Lanka</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background: #f5f5f5; }
-        .navbar { background: #2c3e50; color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 20px; font-weight: bold; }
-        .logo span { color: #3498db; }
-        .nav-links a { color: white; text-decoration: none; padding: 8px 15px; margin: 0 5px; border-radius: 5px; }
-        .nav-links a:hover { background: #34495e; }
-        .logout-btn { background: #e74c3c; padding: 8px 15px; border-radius: 5px; color: white; text-decoration: none; }
-        .container { padding: 20px; max-width: 800px; margin: 0 auto; }
-        h1 { color: #2c3e50; margin-bottom: 20px; }
-        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .info-item { margin: 15px 0; padding: 10px; border-bottom: 1px solid #eee; }
-        .label { font-weight: bold; color: #2c3e50; display: inline-block; width: 120px; }
-        .value { color: #666; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f2f5; }
+        
+        /* Navbar */
+        .navbar {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a27 100%);
+            color: white;
+            padding: 0 30px;
+            height: 65px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .logo { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: bold; }
+        .nav-links { display: flex; gap: 8px; }
+        .nav-links a { color: white; text-decoration: none; padding: 8px 18px; border-radius: 8px; font-size: 14px; transition: background 0.3s; }
+        .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.2); }
+        .user-info { display: flex; align-items: center; gap: 20px; }
+        .logout-btn { background: rgba(255,255,255,0.15); padding: 6px 14px; border-radius: 6px; text-decoration: none; color: white; }
+        
+        /* Container */
+        .container { margin-top: 85px; padding: 25px 35px; }
+        
+        /* Welcome Banner */
+        .welcome-banner {
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+            color: white;
+            padding: 25px 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+        
+        /* Stats Grid */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .stat-card {
+            background: white;
+            padding: 22px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .stat-card h3 { color: #666; font-size: 13px; margin-bottom: 8px; }
+        .stat-number { font-size: 32px; font-weight: bold; color: #1a472a; }
+        
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .contact-card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .contact-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e8f5e9;
+        }
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a27 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .contact-header h3 { font-size: 20px; color: #1a472a; }
+        .contact-item {
+            display: flex;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .contact-label {
+            width: 100px;
+            font-weight: 600;
+            color: #555;
+        }
+        .contact-value {
+            flex: 1;
+            color: #333;
+        }
+        .contact-value a {
+            color: #2d5a27;
+            text-decoration: none;
+        }
+        .contact-value a:hover { text-decoration: underline; }
+        .emergency-note {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        .emergency-note p { color: #e65100; font-size: 14px; }
+        
+        /* Quick Actions */
+        .quick-actions {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+        .action-buttons { display: flex; gap: 15px; flex-wrap: wrap; }
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-primary { background: #2e7d32; color: white; }
+        .btn-warning { background: #ff9800; color: white; }
+        
+        @media (max-width: 768px) { .nav-links { display: none; } }
     </style>
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo">🐘 Elephant Safety <span>Admin</span></div>
+        <div class="logo">🐘 Elephant Safety Sri Lanka</div>
         <div class="nav-links">
-            <a href="/admin/dashboard">Dashboard</a>
-            <a href="/admin/users">User Management</a>
-            <a href="/admin/danger-zones">Danger Zones</a>
-            <a href="/admin/reports">Reports</a>
-            <a href="/admin/contact-us">Contact Us</a>
+            <a href="/admin/dashboard">📊 Dashboard</a>
+            <a href="/admin/users">👥 User Management</a>
+            <a href="/admin/danger-zones">⚠️ Danger Zones</a>
+            <a href="/admin/reports">📋 Reports</a>
+            <a href="/admin/contact-us" class="active">📞 Contact Us</a>
         </div>
-        <a href="/logout" class="logout-btn">Logout</a>
+        <div class="user-info">
+            <span>👋 <strong id="adminName">Admin</strong></span>
+            <a href="/logout" class="logout-btn">🚪 Logout</a>
+        </div>
     </nav>
+
     <div class="container">
-        <h1>Contact Us</h1>
-        <div class="card">
-            <div class="info-item"><span class="label">📧 Email:</span><span class="value">support@elephantsafety.lk</span></div>
-            <div class="info-item"><span class="label">📞 Phone:</span><span class="value">+94 11 234 5678</span></div>
-            <div class="info-item"><span class="label">📍 Address:</span><span class="value">Department of Wildlife Conservation, Colombo, Sri Lanka</span></div>
-            <div class="info-item"><span class="label">🕒 Hours:</span><span class="value">Monday - Friday: 9:00 AM - 5:00 PM</span></div>
-            <div class="info-item"><span class="label">🚨 Emergency:</span><span class="value">+94 77 123 4567 (24/7)</span></div>
+        <!-- Welcome Banner -->
+        <div class="welcome-banner">
+            <h2>📞 Contact Us</h2>
+            <p>Get in touch with our team for support and inquiries.</p>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Response Time</h3>
+                <div class="stat-number">24/7</div>
+            </div>
+            <div class="stat-card">
+                <h3>Support Hours</h3>
+                <div class="stat-number">9AM-5PM</div>
+            </div>
+            <div class="stat-card">
+                <h3>Emergency</h3>
+                <div class="stat-number">24/7</div>
+            </div>
+            <div class="stat-card">
+                <h3>Quick Response</h3>
+                <div class="stat-number">15min</div>
+            </div>
+        </div>
+
+        <!-- Contact Grid -->
+        <div class="contact-grid">
+            <!-- Email Support -->
+            <div class="contact-card">
+                <div class="contact-header">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email Support</h3>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Email:</span>
+                    <span class="contact-value"><a href="mailto:support@elephantsafety.lk">support@elephantsafety.lk</a></span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Response:</span>
+                    <span class="contact-value">Within 24 hours</span>
+                </div>
+            </div>
+
+            <!-- Phone Support -->
+            <div class="contact-card">
+                <div class="contact-header">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone Support</h3>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Office:</span>
+                    <span class="contact-value"><a href="tel:+94112345678">+94 11 234 5678</a></span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Hours:</span>
+                    <span class="contact-value">Mon-Fri: 9:00 AM - 5:00 PM</span>
+                </div>
+            </div>
+
+            <!-- Emergency -->
+            <div class="contact-card">
+                <div class="contact-header">
+                    <div class="contact-icon">🚨</div>
+                    <h3>Emergency Hotline</h3>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Emergency:</span>
+                    <span class="contact-value"><a href="tel:+94771234567">+94 77 123 4567</a></span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Toll Free:</span>
+                    <span class="contact-value"><a href="tel:1929">1929</a></span>
+                </div>
+                <div class="emergency-note">
+                    <p>⚠️ For emergency elephant sightings or human-elephant conflict situations, call immediately! Available 24/7.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <h3>⚡ Quick Actions</h3>
+            <div class="action-buttons">
+                <a href="/admin/reports" class="btn btn-warning">📋 Review Reports</a>
+                <a href="/admin/danger-zones" class="btn btn-primary">⚠️ Manage Danger Zones</a>
+            </div>
         </div>
     </div>
+
+    <script>
+        // Load admin name
+        fetch('/api/admin/stats')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('adminName').innerText = data.adminName || 'Admin';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('adminName').innerText = 'Admin';
+            });
+    </script>
 </body>
 </html>
