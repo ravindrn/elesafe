@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - Elephant Safety Admin</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f5f5f5; }
+        .navbar { background: #2c3e50; color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 20px; font-weight: bold; }
+        .logo span { color: #3498db; }
+        .nav-links a { color: white; text-decoration: none; padding: 8px 15px; margin: 0 5px; border-radius: 5px; }
+        .nav-links a:hover { background: #34495e; }
+        .logout-btn { background: #e74c3c; padding: 8px 15px; border-radius: 5px; color: white; text-decoration: none; }
+        .container { padding: 20px; max-width: 800px; margin: 0 auto; }
+        h1 { color: #2c3e50; margin-bottom: 20px; }
+        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .info-item { margin: 15px 0; padding: 10px; border-bottom: 1px solid #eee; }
+        .label { font-weight: bold; color: #2c3e50; display: inline-block; width: 120px; }
+        .value { color: #666; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🐘 Elephant Safety <span>Admin</span></div>
+        <div class="nav-links">
+            <a href="/admin/dashboard">Dashboard</a>
+            <a href="/admin/users">User Management</a>
+            <a href="/admin/danger-zones">Danger Zones</a>
+            <a href="/admin/reports">Reports</a>
+            <a href="/admin/contact-us">Contact Us</a>
+        </div>
+        <a href="/logout" class="logout-btn">Logout</a>
+    </nav>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div class="card">
+            <div class="info-item"><span class="label">📧 Email:</span><span class="value">support@elephantsafety.lk</span></div>
+            <div class="info-item"><span class="label">📞 Phone:</span><span class="value">+94 11 234 5678</span></div>
+            <div class="info-item"><span class="label">📍 Address:</span><span class="value">Department of Wildlife Conservation, Colombo, Sri Lanka</span></div>
+            <div class="info-item"><span class="label">🕒 Hours:</span><span class="value">Monday - Friday: 9:00 AM - 5:00 PM</span></div>
+            <div class="info-item"><span class="label">🚨 Emergency:</span><span class="value">+94 77 123 4567 (24/7)</span></div>
+        </div>
+    </div>
+</body>
+</html>

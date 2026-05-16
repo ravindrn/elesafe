@@ -1,6 +1,7 @@
 package com.elephant.safetybackend.config;
 
 import com.elephant.safetybackend.filter.JwtRequestFilter;
+import com.elephant.safetybackend.repository.UserRepository;  // ADD THIS
 import com.elephant.safetybackend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -29,6 +30,9 @@ public class SecurityConfig {
 
     @Autowired
     private JwtRequestFilter jwtRequestFilter;
+    
+    @Autowired
+    private UserRepository userRepository;  // ADD THIS
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -48,47 +52,66 @@ public class SecurityConfig {
         return config.getAuthenticationManager();
     }
 
-    // ============ ADMIN WEB PANEL CONFIGURATION ============
+    // ============ ADMIN WEB PANEL CONFIGURATION ==========
     @Bean
     @Order(1)
     public SecurityFilterChain adminFilterChain(HttpSecurity http) throws Exception {
-        http.securityMatcher("/login", "/admin/**", "/logout", "/")
-                .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/login", "/logout", "/").permitAll()
-                        .anyRequest().authenticated()
-                )
-                .formLogin(form -> form
-                        .loginPage("/login")
-                        .loginProcessingUrl("/login")
-                        .defaultSuccessUrl("/admin/dashboard", true)
-                        .failureUrl("/login?error=true")
-                        .permitAll()
-                )
-                .logout(logout -> logout
-                        .logoutUrl("/logout")
-                        .logoutSuccessUrl("/login?logout=true")
-                        .permitAll()
-                )
-                .csrf(csrf -> csrf.disable());
-
+        http
+            .securityMatcher("/login", "/admin/**", "/logout")
+            .authorizeHttpRequests(auth -> auth
+                .requestMatchers("/login", "/css/**", "/js/**").permitAll()
+                .requestMatchers("/admin/**").hasRole("ADMIN")
+                .anyRequest().authenticated()
+            )
+            .formLogin(form -> form
+                .loginPage("/login")
+                .loginProcessingUrl("/login")
+                .successHandler((request, response, authentication) -> {
+                    // Set session attributes after successful login
+                    String email = authentication.getName();
+                    com.elephant.safetybackend.model.User user = userRepository.findByEmail(email).orElse(null);
+                    if (user != null) {
+                        request.getSession().setAttribute("userId", user.getId());
+                        request.getSession().setAttribute("userName", user.getName());
+                        request.getSession().setAttribute("userEmail", user.getEmail());
+                        request.getSession().setAttribute("userRole", user.getRole().toString());
+                        System.out.println("✅ Login successful! User: " + user.getName());
+                        System.out.println("   Session userId: " + user.getId());
+                        System.out.println("   Session userRole: " + user.getRole());
+                    }
+                    response.sendRedirect("/admin/dashboard");
+                })
+                .failureUrl("/login?error=true")
+                .permitAll()
+            )
+            .logout(logout -> logout
+                .logoutUrl("/logout")
+                .logoutSuccessUrl("/login?logout=true")
+                .invalidateHttpSession(true)
+                .deleteCookies("JSESSIONID")
+                .permitAll()
+            )
+            .csrf(csrf -> csrf.disable());
+        
         return http.build();
     }
 
-    // ============ MOBILE APP API CONFIGURATION (YOUR EXISTING CONFIG) ============
+    // ============ MOBILE APP API CONFIGURATION ==========
     @Bean
     @Order(2)
     public SecurityFilterChain apiFilterChain(HttpSecurity http) throws Exception {
-        http.securityMatcher("/api/**")
-                .csrf(csrf -> csrf.disable())
-                .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**", "/api/public/**").permitAll()
-                        .anyRequest().authenticated()
-                )
-                .sessionManagement(session -> session
-                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                )
-                .authenticationProvider(authenticationProvider())
-                .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
+        http
+            .securityMatcher("/api/**")
+            .csrf(csrf -> csrf.disable())
+            .authorizeHttpRequests(auth -> auth
+                .requestMatchers("/api/auth/**", "/api/public/**").permitAll()
+                .anyRequest().authenticated()
+            )
+            .sessionManagement(session -> session
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+            )
+            .authenticationProvider(authenticationProvider())
+            .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
