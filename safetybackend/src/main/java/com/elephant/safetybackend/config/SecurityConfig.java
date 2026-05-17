@@ -1,7 +1,7 @@
 package com.elephant.safetybackend.config;
 
 import com.elephant.safetybackend.filter.JwtRequestFilter;
-import com.elephant.safetybackend.repository.UserRepository;  // ADD THIS
+import com.elephant.safetybackend.repository.UserRepository;
 import com.elephant.safetybackend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -32,7 +32,7 @@ public class SecurityConfig {
     private JwtRequestFilter jwtRequestFilter;
     
     @Autowired
-    private UserRepository userRepository;  // ADD THIS
+    private UserRepository userRepository;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -57,10 +57,9 @@ public class SecurityConfig {
     @Order(1)
     public SecurityFilterChain adminFilterChain(HttpSecurity http) throws Exception {
         http
-            .securityMatcher("/login", "/admin/**", "/logout")
+            .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/login", "/css/**", "/js/**").permitAll()
-                .requestMatchers("/admin/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
             )
             .formLogin(form -> form
@@ -90,8 +89,7 @@ public class SecurityConfig {
                 .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID")
                 .permitAll()
-            )
-            .csrf(csrf -> csrf.disable());
+            );
         
         return http.build();
     }

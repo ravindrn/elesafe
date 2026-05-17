@@ -89,34 +89,86 @@ public class WebController {
 
     // ========== ADMIN DASHBOARD API ==========
     @GetMapping("/api/admin/stats")
-    @ResponseBody
-    public ResponseEntity<?> getDashboardStats(HttpSession session) {
-        if (session.getAttribute("userId") == null) {
-            return ResponseEntity.status(403).body("Unauthorized");
-        }
+@ResponseBody
+public ResponseEntity<?> getDashboardStats(HttpSession session) {
+    if (session.getAttribute("userId") == null) {
+        return ResponseEntity.status(403).body("Unauthorized");
+    }
 
-        long totalUsers = userRepository.count();
-        long totalDangerZones = dangerZoneRepository.count();
+    long totalUsers = userRepository.count();
+    
+    // Active users (users with location updated in last 5 minutes)
+    long activeUsers = userRepository.findAll().stream()
+            .filter(u -> u.getIsActive() != null && u.getIsActive())
+            .count();
+    
+    // Users in danger zones (based on their current location)
+    long usersInDanger = calculateUsersInDangerZones();
+    
+    // Pending reports
+    long pendingReports = reportRepository.findAll().stream()
+            .filter(r -> r.getStatus().toString().equals("PENDING"))
+            .count();
 
-        long pendingReports = 0;
-        List<ElephantReport> allReports = reportRepository.findAll();
-        for (ElephantReport report : allReports) {
-            if (report.getStatus().toString().equals("PENDING")) {
-                pendingReports++;
+    Map<String, Object> stats = new HashMap<>();
+    stats.put("totalUsers", totalUsers);
+    stats.put("activeUsers", activeUsers);
+    stats.put("totalDangerZones", usersInDanger);
+    stats.put("pendingReports", pendingReports);
+    stats.put("adminName", session.getAttribute("userName") != null ? 
+               session.getAttribute("userName").toString() : "Admin");
+
+    return ResponseEntity.ok(stats);
+}
+
+// Helper method to calculate users in danger zones
+private long calculateUsersInDangerZones() {
+    List<User> users = userRepository.findAll();
+    List<DangerZone> dangerZones = dangerZoneRepository.findAll();
+    
+    if (dangerZones.isEmpty()) {
+        return 0;
+    }
+    
+    long count = 0;
+    for (User user : users) {
+        if (user.getLatitude() != null && user.getLongitude() != null && 
+            user.getIsActive() != null && user.getIsActive()) {
+            if (isUserInDangerZone(user, dangerZones)) {
+                count++;
             }
         }
-
-        Map<String, Object> stats = new HashMap<>();
-        stats.put("totalUsers", totalUsers);
-        stats.put("activeUsers", totalUsers);
-        stats.put("totalDangerZones", totalDangerZones);
-        stats.put("pendingReports", pendingReports);
-
-        Object adminName = session.getAttribute("userName");
-        stats.put("adminName", adminName != null ? adminName.toString() : "Admin");
-
-        return ResponseEntity.ok(stats);
     }
+    return count;
+}
+
+private boolean isUserInDangerZone(User user, List<DangerZone> dangerZones) {
+    for (DangerZone zone : dangerZones) {
+        if (zone.getLatitude() != null && zone.getLongitude() != null) {
+            double distance = calculateDistance(
+                user.getLatitude(), user.getLongitude(),
+                zone.getLatitude(), zone.getLongitude()
+            );
+            // Convert radius from meters to km and compare
+            double zoneRadiusKm = zone.getRadius() != null ? zone.getRadius() / 1000.0 : 1.0;
+            if (distance <= zoneRadiusKm) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+private double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
+    final int R = 6371; // Earth's radius in km
+    double latDistance = Math.toRadians(lat2 - lat1);
+    double lonDistance = Math.toRadians(lon2 - lon1);
+    double a = Math.sin(latDistance / 2) * Math.sin(latDistance / 2)
+            + Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2))
+            * Math.sin(lonDistance / 2) * Math.sin(lonDistance / 2);
+    double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c;
+}
 
     // ========== API: GET ALL DANGER ZONES ==========
     @GetMapping("/api/admin/danger-zones")
@@ -247,4 +299,44 @@ public class WebController {
         reportRepository.save(report);
         return ResponseEntity.ok(Map.of("message", "Status updated successfully"));
     }
+
+    @GetMapping("/api/admin/users-in-danger")
+@ResponseBody
+public ResponseEntity<?> getUsersInDangerZones(HttpSession session) {
+    if (session.getAttribute("userId") == null) {
+        return ResponseEntity.status(403).body("Unauthorized");
+    }
+    
+    List<DangerZone> dangerZones = dangerZoneRepository.findAll();
+    List<Map<String, Object>> usersInDanger = new java.util.ArrayList<>();
+    
+    List<User> users = userRepository.findAll();
+    for (User user : users) {
+        if (user.getLatitude() != null && user.getLongitude() != null && 
+            user.getIsActive() != null && user.getIsActive()) {
+            for (DangerZone zone : dangerZones) {
+                double distance = calculateDistance(
+                    user.getLatitude(), user.getLongitude(),
+                    zone.getLatitude(), zone.getLongitude()
+                );
+                double zoneRadiusKm = zone.getRadius() != null ? zone.getRadius() / 1000.0 : 1.0;
+                if (distance <= zoneRadiusKm) {
+                    Map<String, Object> userData = new HashMap<>();
+                    userData.put("id", user.getId());
+                    userData.put("name", user.getName());
+                    userData.put("email", user.getEmail());
+                    userData.put("phone", user.getPhone());
+                    userData.put("latitude", user.getLatitude());
+                    userData.put("longitude", user.getLongitude());
+                    userData.put("dangerZone", zone.getZoneName());
+                    userData.put("distance", Math.round(distance * 100) / 100.0);
+                    usersInDanger.add(userData);
+                    break;
+                }
+            }
+        }
+    }
+    
+    return ResponseEntity.ok(usersInDanger);
+}
 }
