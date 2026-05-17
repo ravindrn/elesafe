@@ -1,0 +1,5001 @@
+Distance_to_Zone_km,Recent_Elephant_Count,Time_of_Day,Weather,Risk_Level
+1.48,11,Night,Heavy Rain,CRITICAL
+9.41,9,Afternoon,Light Rain,LOW
+14.31,2,Night,Light Rain,LOW
+12.42,4,Morning,Heavy Rain,LOW
+9.98,11,Morning,Light Rain,LOW
+10.33,0,Dusk,Heavy Rain,LOW
+7.79,21,Afternoon,Light Rain,MEDIUM
+8.32,8,Dusk,Clear,LOW
+11.66,11,Night,Clear,LOW
+11.31,25,Afternoon,Clear,LOW
+13.32,19,Dusk,Heavy Rain,LOW
+13.09,22,Night,Heavy Rain,LOW
+0.7,22,Morning,Light Rain,CRITICAL
+4.52,23,Night,Clear,HIGH
+12.69,24,Morning,Light Rain,LOW
+2.25,9,Afternoon,Light Rain,HIGH
+2.77,23,Morning,Heavy Rain,CRITICAL
+3.65,20,Dusk,Clear,CRITICAL
+14.59,25,Morning,Clear,LOW
+2.71,15,Dusk,Clear,CRITICAL
+10.49,8,Morning,Clear,LOW
+9.42,12,Dusk,Light Rain,LOW
+6.09,4,Morning,Heavy Rain,MEDIUM
+4.39,22,Morning,Light Rain,MEDIUM
+2.78,3,Afternoon,Heavy Rain,HIGH
+7.43,14,Dusk,Light Rain,MEDIUM
+4.54,17,Dusk,Light Rain,HIGH
+7.7,5,Morning,Heavy Rain,MEDIUM
+3.17,4,Morning,Clear,MEDIUM
+5.23,0,Night,Heavy Rain,LOW
+5.05,25,Morning,Light Rain,MEDIUM
+3.13,13,Morning,Heavy Rain,CRITICAL
+7.95,25,Afternoon,Clear,MEDIUM
+2.0,12,Morning,Clear,CRITICAL
+14.82,13,Afternoon,Light Rain,LOW
+13.76,21,Night,Clear,LOW
+1.12,12,Dusk,Heavy Rain,CRITICAL
+7.86,8,Morning,Heavy Rain,MEDIUM
+11.57,8,Dusk,Heavy Rain,LOW
+4.37,25,Night,Light Rain,HIGH
+8.83,0,Afternoon,Clear,LOW
+8.72,23,Afternoon,Heavy Rain,LOW
+8.87,14,Night,Clear,LOW
+5.84,4,Morning,Heavy Rain,MEDIUM
+6.0,24,Dusk,Clear,MEDIUM
+3.69,3,Dusk,Heavy Rain,HIGH
+12.87,25,Afternoon,Heavy Rain,LOW
+5.57,15,Night,Light Rain,MEDIUM
+12.68,9,Afternoon,Heavy Rain,LOW
+13.75,23,Afternoon,Light Rain,LOW
+13.65,18,Morning,Clear,LOW
+13.16,22,Night,Heavy Rain,LOW
+1.98,23,Morning,Light Rain,CRITICAL
+6.73,11,Afternoon,Light Rain,MEDIUM
+4.88,17,Morning,Light Rain,HIGH
+4.05,24,Night,Clear,HIGH
+1.99,8,Afternoon,Clear,HIGH
+9.97,13,Afternoon,Clear,LOW
+5.97,6,Night,Light Rain,MEDIUM
+6.92,8,Afternoon,Light Rain,MEDIUM
+5.95,13,Morning,Light Rain,MEDIUM
+8.86,7,Morning,Heavy Rain,LOW
+2.08,14,Night,Heavy Rain,CRITICAL
+4.61,9,Dusk,Light Rain,HIGH
+10.85,1,Morning,Clear,LOW
+2.5,0,Afternoon,Clear,LOW
+8.61,9,Night,Light Rain,LOW
+6.95,2,Morning,Clear,MEDIUM
+2.64,22,Afternoon,Clear,CRITICAL
+3.98,0,Afternoon,Light Rain,LOW
+3.92,12,Dusk,Light Rain,CRITICAL
+4.81,8,Afternoon,Clear,MEDIUM
+6.9,4,Afternoon,Light Rain,MEDIUM
+11.93,22,Afternoon,Heavy Rain,LOW
+11.33,21,Dusk,Heavy Rain,LOW
+7.26,17,Afternoon,Heavy Rain,MEDIUM
+11.93,21,Morning,Light Rain,LOW
+2.24,2,Afternoon,Light Rain,MEDIUM
+1.94,25,Dusk,Light Rain,CRITICAL
+1.44,3,Night,Heavy Rain,HIGH
+12.89,22,Afternoon,Heavy Rain,LOW
+3.85,15,Morning,Heavy Rain,CRITICAL
+4.23,8,Dusk,Heavy Rain,HIGH
+5.09,17,Night,Light Rain,MEDIUM
+7.65,16,Night,Heavy Rain,MEDIUM
+0.48,22,Morning,Heavy Rain,CRITICAL
+10.05,12,Night,Clear,LOW
+2.78,23,Night,Clear,CRITICAL
+2.54,3,Afternoon,Heavy Rain,HIGH
+5.78,3,Afternoon,Clear,MEDIUM
+8.02,15,Dusk,Heavy Rain,LOW
+2.57,0,Dusk,Light Rain,HIGH
+2.82,8,Afternoon,Light Rain,MEDIUM
+6.26,15,Night,Heavy Rain,MEDIUM
+8.06,4,Afternoon,Clear,LOW
+14.13,11,Afternoon,Light Rain,LOW
+3.87,13,Night,Light Rain,CRITICAL
+1.27,24,Afternoon,Heavy Rain,CRITICAL
+3.63,8,Morning,Clear,MEDIUM
+10.48,13,Morning,Clear,LOW
+2.36,8,Afternoon,Heavy Rain,HIGH
+3.19,25,Dusk,Clear,CRITICAL
+3.99,18,Afternoon,Clear,CRITICAL
+9.45,17,Morning,Clear,LOW
+6.43,14,Afternoon,Clear,MEDIUM
+11.98,21,Dusk,Heavy Rain,LOW
+8.19,21,Dusk,Light Rain,LOW
+10.75,9,Afternoon,Heavy Rain,LOW
+4.19,24,Night,Heavy Rain,HIGH
+1.93,2,Afternoon,Clear,MEDIUM
+5.17,25,Afternoon,Heavy Rain,MEDIUM
+4.53,15,Dusk,Heavy Rain,HIGH
+10.3,24,Afternoon,Clear,LOW
+13.43,15,Dusk,Heavy Rain,LOW
+11.78,22,Afternoon,Light Rain,LOW
+13.78,20,Night,Heavy Rain,LOW
+3.72,19,Night,Clear,CRITICAL
+4.12,2,Night,Clear,HIGH
+2.06,25,Morning,Clear,CRITICAL
+14.6,16,Dusk,Clear,LOW
+9.85,7,Dusk,Light Rain,LOW
+13.77,3,Morning,Clear,LOW
+5.3,7,Night,Light Rain,MEDIUM
+1.89,5,Dusk,Heavy Rain,HIGH
+3.91,16,Afternoon,Heavy Rain,CRITICAL
+9.85,21,Afternoon,Clear,LOW
+0.73,0,Morning,Clear,LOW
+11.99,22,Night,Light Rain,LOW
+3.34,11,Night,Heavy Rain,CRITICAL
+12.13,3,Morning,Clear,LOW
+14.19,6,Dusk,Light Rain,LOW
+11.13,3,Afternoon,Clear,LOW
+0.36,13,Morning,Clear,CRITICAL
+2.02,3,Morning,Heavy Rain,HIGH
+3.89,0,Morning,Light Rain,LOW
+9.6,22,Dusk,Clear,LOW
+7.14,19,Morning,Heavy Rain,MEDIUM
+2.52,11,Morning,Clear,CRITICAL
+12.05,2,Morning,Light Rain,LOW
+11.74,3,Night,Heavy Rain,LOW
+11.32,14,Morning,Clear,LOW
+3.8,25,Night,Clear,CRITICAL
+10.6,11,Dusk,Heavy Rain,LOW
+8.18,19,Morning,Light Rain,LOW
+1.3,19,Night,Light Rain,CRITICAL
+14.1,21,Dusk,Clear,LOW
+4.01,21,Afternoon,Clear,MEDIUM
+10.48,17,Night,Heavy Rain,LOW
+12.04,12,Night,Light Rain,LOW
+7.83,17,Afternoon,Clear,MEDIUM
+2.29,1,Night,Clear,HIGH
+8.22,0,Dusk,Light Rain,MEDIUM
+7.6,25,Afternoon,Heavy Rain,MEDIUM
+5.96,25,Afternoon,Light Rain,MEDIUM
+14.82,7,Dusk,Clear,LOW
+5.1,24,Dusk,Heavy Rain,MEDIUM
+4.83,6,Dusk,Clear,HIGH
+3.5,6,Morning,Clear,MEDIUM
+11.02,24,Dusk,Heavy Rain,LOW
+2.85,0,Morning,Heavy Rain,LOW
+12.49,21,Night,Heavy Rain,LOW
+14.16,13,Night,Clear,LOW
+3.33,19,Morning,Light Rain,CRITICAL
+2.68,11,Night,Light Rain,CRITICAL
+8.64,19,Dusk,Light Rain,LOW
+8.27,6,Night,Light Rain,LOW
+4.19,11,Dusk,Light Rain,HIGH
+12.98,12,Dusk,Light Rain,LOW
+10.7,24,Afternoon,Heavy Rain,LOW
+1.85,22,Night,Heavy Rain,CRITICAL
+10.62,19,Morning,Clear,LOW
+1.73,25,Night,Clear,CRITICAL
+11.98,24,Morning,Clear,LOW
+8.34,4,Afternoon,Clear,LOW
+11.74,13,Dusk,Heavy Rain,LOW
+0.61,16,Morning,Light Rain,CRITICAL
+0.42,15,Afternoon,Clear,CRITICAL
+4.31,15,Afternoon,Light Rain,MEDIUM
+5.82,19,Afternoon,Clear,MEDIUM
+8.61,9,Dusk,Heavy Rain,LOW
+3.23,8,Dusk,Clear,HIGH
+3.96,0,Morning,Light Rain,LOW
+11.86,19,Morning,Heavy Rain,LOW
+13.41,8,Afternoon,Heavy Rain,LOW
+12.47,19,Afternoon,Clear,LOW
+8.05,9,Dusk,Light Rain,LOW
+13.07,22,Morning,Clear,LOW
+12.3,1,Dusk,Light Rain,CRITICAL
+6.67,12,Morning,Clear,MEDIUM
+12.47,14,Morning,Clear,LOW
+6.59,14,Dusk,Light Rain,MEDIUM
+11.88,20,Morning,Clear,LOW
+11.18,21,Night,Heavy Rain,LOW
+5.13,5,Night,Light Rain,MEDIUM
+10.12,11,Night,Heavy Rain,LOW
+8.35,15,Afternoon,Heavy Rain,LOW
+10.02,0,Afternoon,Clear,LOW
+7.69,0,Afternoon,Clear,LOW
+12.96,20,Afternoon,Clear,LOW
+10.79,24,Afternoon,Light Rain,LOW
+7.46,6,Night,Heavy Rain,MEDIUM
+10.5,17,Afternoon,Clear,MEDIUM
+0.29,5,Dusk,Heavy Rain,HIGH
+1.83,14,Morning,Light Rain,CRITICAL
+13.66,20,Morning,Heavy Rain,LOW
+11.84,23,Night,Light Rain,LOW
+3.24,19,Morning,Clear,CRITICAL
+3.5,10,Morning,Light Rain,MEDIUM
+14.68,25,Night,Clear,LOW
+7.41,22,Night,Light Rain,MEDIUM
+4.24,7,Dusk,Heavy Rain,HIGH
+14.3,21,Dusk,Light Rain,LOW
+8.65,13,Afternoon,Heavy Rain,LOW
+4.38,20,Night,Heavy Rain,HIGH
+13.32,1,Afternoon,Light Rain,LOW
+11.77,16,Morning,Heavy Rain,LOW
+7.06,10,Afternoon,Clear,MEDIUM
+0.49,13,Morning,Clear,CRITICAL
+11.81,20,Morning,Heavy Rain,LOW
+3.55,19,Night,Light Rain,CRITICAL
+0.49,1,Morning,Clear,MEDIUM
+3.49,15,Night,Light Rain,CRITICAL
+7.74,6,Night,Clear,MEDIUM
+8.69,2,Morning,Light Rain,LOW
+0.23,22,Morning,Light Rain,CRITICAL
+10.25,21,Afternoon,Heavy Rain,LOW
+3.58,2,Dusk,Light Rain,HIGH
+6.52,8,Night,Light Rain,MEDIUM
+9.81,18,Morning,Heavy Rain,LOW
+10.07,18,Night,Heavy Rain,LOW
+7.4,25,Morning,Heavy Rain,MEDIUM
+2.1,17,Dusk,Heavy Rain,CRITICAL
+0.41,18,Dusk,Heavy Rain,CRITICAL
+11.34,9,Night,Light Rain,LOW
+9.73,1,Night,Heavy Rain,LOW
+10.17,12,Dusk,Light Rain,LOW
+1.1,18,Afternoon,Light Rain,CRITICAL
+13.68,16,Morning,Light Rain,LOW
+1.87,11,Afternoon,Heavy Rain,CRITICAL
+5.81,15,Afternoon,Heavy Rain,MEDIUM
+6.87,18,Night,Clear,MEDIUM
+0.56,22,Dusk,Clear,CRITICAL
+8.56,25,Afternoon,Light Rain,LOW
+14.12,19,Afternoon,Clear,LOW
+12.21,17,Night,Light Rain,CRITICAL
+4.19,12,Afternoon,Heavy Rain,MEDIUM
+5.81,11,Morning,Light Rain,MEDIUM
+6.53,10,Dusk,Heavy Rain,MEDIUM
+11.21,15,Night,Heavy Rain,LOW
+6.01,14,Afternoon,Heavy Rain,MEDIUM
+12.11,21,Dusk,Light Rain,LOW
+4.67,18,Afternoon,Clear,MEDIUM
+0.88,12,Night,Clear,CRITICAL
+4.79,7,Night,Light Rain,HIGH
+0.73,11,Morning,Heavy Rain,CRITICAL
+3.3,4,Night,Clear,CRITICAL
+1.2,22,Morning,Light Rain,CRITICAL
+12.68,9,Dusk,Light Rain,LOW
+2.65,14,Morning,Light Rain,CRITICAL
+11.78,8,Afternoon,Light Rain,LOW
+14.89,20,Afternoon,Clear,LOW
+1.64,21,Morning,Clear,CRITICAL
+0.99,15,Afternoon,Light Rain,CRITICAL
+11.56,6,Afternoon,Clear,LOW
+2.36,19,Afternoon,Clear,CRITICAL
+5.61,10,Morning,Clear,MEDIUM
+14.49,14,Dusk,Light Rain,LOW
+12.35,1,Afternoon,Clear,LOW
+14.03,18,Afternoon,Light Rain,LOW
+14.44,17,Afternoon,Light Rain,LOW
+11.31,7,Dusk,Light Rain,LOW
+9.68,23,Afternoon,Heavy Rain,LOW
+6.62,15,Morning,Light Rain,MEDIUM
+8.92,23,Night,Heavy Rain,LOW
+3.6,18,Night,Clear,CRITICAL
+12.13,19,Morning,Heavy Rain,LOW
+8.12,9,Morning,Heavy Rain,LOW
+5.39,16,Afternoon,Light Rain,MEDIUM
+13.35,19,Dusk,Heavy Rain,LOW
+1.42,16,Dusk,Heavy Rain,CRITICAL
+9.89,11,Afternoon,Clear,LOW
+8.49,16,Night,Heavy Rain,LOW
+3.37,5,Night,Clear,MEDIUM
+9.08,8,Dusk,Light Rain,LOW
+6.46,0,Night,Clear,LOW
+3.26,21,Morning,Clear,CRITICAL
+9.03,19,Afternoon,Clear,LOW
+5.04,1,Dusk,Light Rain,MEDIUM
+4.14,0,Afternoon,Light Rain,LOW
+13.42,18,Morning,Light Rain,LOW
+4.31,1,Afternoon,Light Rain,MEDIUM
+9.13,18,Night,Clear,LOW
+3.44,12,Night,Light Rain,CRITICAL
+9.45,9,Dusk,Light Rain,LOW
+9.91,17,Dusk,Heavy Rain,LOW
+9.74,10,Afternoon,Light Rain,LOW
+6.21,8,Morning,Heavy Rain,MEDIUM
+10.13,20,Morning,Clear,LOW
+6.06,4,Dusk,Heavy Rain,MEDIUM
+1.73,1,Dusk,Clear,HIGH
+3.72,8,Afternoon,Light Rain,MEDIUM
+10.56,7,Night,Clear,LOW
+13.27,17,Dusk,Heavy Rain,LOW
+8.03,19,Afternoon,Light Rain,LOW
+12.79,24,Morning,Clear,LOW
+11.28,21,Night,Heavy Rain,LOW
+12.93,23,Morning,Heavy Rain,LOW
+4.19,10,Night,Light Rain,HIGH
+0.47,19,Afternoon,Light Rain,CRITICAL
+11.01,3,Afternoon,Heavy Rain,LOW
+4.1,11,Dusk,Clear,HIGH
+3.13,25,Dusk,Clear,CRITICAL
+13.21,20,Afternoon,Light Rain,LOW
+2.27,14,Dusk,Clear,CRITICAL
+9.94,4,Dusk,Light Rain,LOW
+0.49,1,Afternoon,Heavy Rain,MEDIUM
+11.28,22,Morning,Light Rain,LOW
+9.55,23,Morning,Light Rain,LOW
+8.69,8,Morning,Heavy Rain,LOW
+6.56,19,Afternoon,Heavy Rain,MEDIUM
+8.65,8,Night,Heavy Rain,LOW
+3.55,4,Night,Heavy Rain,HIGH
+11.65,12,Morning,Light Rain,LOW
+5.56,7,Dusk,Heavy Rain,MEDIUM
+10.89,4,Dusk,Clear,LOW
+12.12,18,Dusk,Light Rain,LOW
+1.56,18,Morning,Heavy Rain,CRITICAL
+11.25,7,Morning,Light Rain,LOW
+7.41,12,Morning,Clear,MEDIUM
+13.02,11,Night,Clear,LOW
+13.03,22,Morning,Heavy Rain,LOW
+14.15,12,Afternoon,Clear,LOW
+2.76,25,Afternoon,Clear,CRITICAL
+14.8,20,Afternoon,Clear,LOW
+1.4,14,Dusk,Heavy Rain,CRITICAL
+8.17,22,Dusk,Heavy Rain,LOW
+9.25,16,Dusk,Heavy Rain,LOW
+14.76,2,Night,Clear,LOW
+7.65,21,Morning,Light Rain,MEDIUM
+5.47,2,Afternoon,Light Rain,MEDIUM
+4.74,2,Morning,Clear,MEDIUM
+2.92,23,Dusk,Clear,CRITICAL
+11.23,17,Afternoon,Light Rain,LOW
+3.92,15,Dusk,Heavy Rain,CRITICAL
+8.8,25,Dusk,Heavy Rain,LOW
+3.44,23,Dusk,Heavy Rain,CRITICAL
+4.66,11,Night,Light Rain,HIGH
+6.74,15,Night,Light Rain,LOW
+10.99,4,Afternoon,Heavy Rain,LOW
+3.37,12,Night,Heavy Rain,CRITICAL
+12.07,12,Night,Clear,LOW
+1.93,4,Dusk,Heavy Rain,HIGH
+11.25,1,Night,Clear,LOW
+0.6,20,Morning,Light Rain,CRITICAL
+13.74,20,Night,Clear,LOW
+14.32,19,Dusk,Light Rain,LOW
+12.15,10,Night,Clear,LOW
+14.86,25,Dusk,Clear,LOW
+12.72,21,Afternoon,Heavy Rain,LOW
+14.0,21,Morning,Light Rain,LOW
+1.72,9,Night,Heavy Rain,LOW
+6.24,13,Morning,Heavy Rain,MEDIUM
+14.7,12,Morning,Light Rain,LOW
+3.16,11,Night,Clear,CRITICAL
+7.98,14,Morning,Light Rain,MEDIUM
+11.37,22,Dusk,Heavy Rain,LOW
+13.02,5,Afternoon,Light Rain,LOW
+13.64,9,Dusk,Light Rain,LOW
+10.23,15,Night,Heavy Rain,LOW
+8.33,1,Night,Heavy Rain,LOW
+0.51,7,Morning,Heavy Rain,HIGH
+0.93,5,Night,Heavy Rain,HIGH
+6.42,12,Dusk,Heavy Rain,MEDIUM
+2.55,3,Night,Clear,HIGH
+5.28,12,Night,Clear,MEDIUM
+0.54,18,Dusk,Heavy Rain,CRITICAL
+11.17,21,Night,Clear,LOW
+9.68,9,Dusk,Light Rain,LOW
+10.53,9,Night,Heavy Rain,LOW
+10.25,15,Dusk,Heavy Rain,MEDIUM
+14.48,1,Dusk,Light Rain,LOW
+3.19,7,Dusk,Heavy Rain,HIGH
+4.48,2,Dusk,Light Rain,HIGH
+4.62,13,Morning,Light Rain,MEDIUM
+2.23,7,Afternoon,Light Rain,MEDIUM
+10.55,0,Morning,Clear,LOW
+3.87,25,Night,Light Rain,CRITICAL
+9.68,24,Morning,Heavy Rain,LOW
+9.97,9,Afternoon,Light Rain,HIGH
+1.34,13,Dusk,Clear,CRITICAL
+12.86,12,Morning,Heavy Rain,LOW
+11.73,5,Afternoon,Heavy Rain,LOW
+13.34,0,Afternoon,Clear,LOW
+2.71,3,Dusk,Heavy Rain,HIGH
+4.85,13,Morning,Clear,MEDIUM
+5.34,10,Night,Clear,MEDIUM
+3.24,5,Night,Clear,HIGH
+11.07,10,Morning,Clear,LOW
+0.47,11,Dusk,Heavy Rain,CRITICAL
+8.77,20,Morning,Heavy Rain,LOW
+8.1,14,Dusk,Clear,LOW
+8.19,6,Dusk,Light Rain,MEDIUM
+5.21,18,Night,Heavy Rain,MEDIUM
+4.93,4,Morning,Clear,MEDIUM
+6.0,19,Night,Heavy Rain,MEDIUM
+5.25,1,Night,Light Rain,MEDIUM
+14.07,6,Morning,Light Rain,LOW
+9.09,8,Dusk,Clear,LOW
+12.86,1,Afternoon,Light Rain,LOW
+7.0,21,Night,Heavy Rain,MEDIUM
+11.42,18,Dusk,Heavy Rain,LOW
+4.34,25,Afternoon,Clear,MEDIUM
+12.52,25,Afternoon,Light Rain,LOW
+8.31,5,Dusk,Clear,LOW
+0.72,14,Night,Clear,CRITICAL
+0.24,5,Dusk,Light Rain,HIGH
+7.17,22,Night,Clear,MEDIUM
+6.49,7,Afternoon,Heavy Rain,MEDIUM
+2.53,16,Dusk,Clear,CRITICAL
+0.98,19,Dusk,Heavy Rain,CRITICAL
+9.89,0,Morning,Heavy Rain,LOW
+12.78,15,Afternoon,Heavy Rain,LOW
+10.78,25,Afternoon,Heavy Rain,LOW
+13.79,22,Night,Heavy Rain,LOW
+12.32,23,Afternoon,Clear,LOW
+2.71,25,Dusk,Light Rain,CRITICAL
+3.46,22,Dusk,Light Rain,CRITICAL
+13.88,19,Dusk,Clear,LOW
+4.39,15,Afternoon,Clear,MEDIUM
+13.59,3,Dusk,Heavy Rain,LOW
+2.58,16,Morning,Clear,CRITICAL
+12.8,1,Night,Light Rain,LOW
+7.24,24,Morning,Clear,MEDIUM
+6.56,21,Afternoon,Heavy Rain,MEDIUM
+3.0,25,Morning,Light Rain,CRITICAL
+9.56,21,Morning,Light Rain,LOW
+9.93,7,Dusk,Heavy Rain,LOW
+10.0,8,Night,Heavy Rain,LOW
+1.65,10,Dusk,Heavy Rain,CRITICAL
+9.77,19,Night,Light Rain,LOW
+11.34,25,Night,Clear,LOW
+2.22,17,Afternoon,Light Rain,CRITICAL
+0.55,22,Dusk,Heavy Rain,CRITICAL
+11.18,17,Night,Clear,LOW
+13.44,16,Dusk,Heavy Rain,LOW
+1.36,10,Afternoon,Light Rain,HIGH
+12.24,2,Dusk,Clear,LOW
+14.33,19,Afternoon,Light Rain,LOW
+2.36,9,Morning,Light Rain,LOW
+2.55,18,Morning,Clear,CRITICAL
+2.46,4,Afternoon,Clear,HIGH
+2.62,13,Night,Clear,CRITICAL
+0.95,10,Morning,Clear,HIGH
+8.27,17,Dusk,Clear,LOW
+0.43,4,Morning,Clear,HIGH
+10.34,10,Afternoon,Light Rain,LOW
+11.87,14,Night,Light Rain,LOW
+6.88,21,Dusk,Light Rain,MEDIUM
+13.31,2,Night,Heavy Rain,LOW
+10.75,18,Night,Clear,CRITICAL
+0.67,15,Afternoon,Light Rain,CRITICAL
+0.69,1,Afternoon,Light Rain,CRITICAL
+0.51,7,Morning,Clear,HIGH
+11.73,15,Afternoon,Heavy Rain,LOW
+7.95,0,Dusk,Heavy Rain,LOW
+4.86,11,Afternoon,Clear,MEDIUM
+3.96,9,Dusk,Clear,HIGH
+6.5,7,Dusk,Heavy Rain,MEDIUM
+6.19,13,Afternoon,Clear,MEDIUM
+14.24,25,Afternoon,Clear,LOW
+0.13,22,Morning,Clear,CRITICAL
+9.72,19,Afternoon,Heavy Rain,LOW
+1.85,4,Afternoon,Clear,HIGH
+11.3,5,Dusk,Light Rain,LOW
+14.79,1,Night,Light Rain,CRITICAL
+8.26,13,Night,Light Rain,LOW
+14.61,14,Dusk,Clear,LOW
+0.63,7,Morning,Clear,HIGH
+10.59,22,Night,Clear,LOW
+6.41,23,Morning,Clear,MEDIUM
+9.7,12,Dusk,Heavy Rain,LOW
+2.9,0,Dusk,Light Rain,HIGH
+11.13,8,Afternoon,Clear,LOW
+14.72,22,Night,Heavy Rain,LOW
+7.07,25,Night,Heavy Rain,MEDIUM
+8.54,4,Morning,Light Rain,LOW
+4.47,19,Dusk,Clear,HIGH
+13.86,17,Morning,Heavy Rain,LOW
+5.99,3,Dusk,Light Rain,MEDIUM
+14.91,18,Afternoon,Light Rain,LOW
+0.15,9,Afternoon,Light Rain,HIGH
+11.02,8,Night,Heavy Rain,LOW
+2.28,4,Night,Clear,HIGH
+4.52,22,Night,Heavy Rain,CRITICAL
+0.27,24,Afternoon,Clear,CRITICAL
+9.65,14,Morning,Heavy Rain,LOW
+6.2,25,Afternoon,Light Rain,MEDIUM
+0.67,11,Afternoon,Light Rain,CRITICAL
+14.81,9,Dusk,Clear,LOW
+10.56,10,Night,Clear,LOW
+11.9,9,Afternoon,Clear,LOW
+6.31,15,Morning,Light Rain,MEDIUM
+2.51,9,Afternoon,Clear,HIGH
+9.58,23,Morning,Clear,LOW
+7.84,11,Morning,Clear,MEDIUM
+13.62,9,Afternoon,Light Rain,LOW
+13.09,22,Morning,Heavy Rain,LOW
+1.87,7,Dusk,Light Rain,CRITICAL
+8.33,1,Afternoon,Clear,LOW
+6.92,15,Night,Clear,MEDIUM
+10.69,10,Morning,Clear,LOW
+14.08,21,Morning,Heavy Rain,LOW
+1.57,22,Dusk,Clear,CRITICAL
+8.78,18,Dusk,Clear,LOW
+5.52,16,Dusk,Clear,MEDIUM
+5.42,17,Afternoon,Light Rain,MEDIUM
+8.56,11,Dusk,Clear,LOW
+12.63,22,Night,Clear,LOW
+0.33,12,Morning,Light Rain,CRITICAL
+12.89,24,Night,Light Rain,LOW
+5.66,13,Night,Heavy Rain,MEDIUM
+3.81,22,Morning,Heavy Rain,CRITICAL
+14.71,17,Night,Heavy Rain,LOW
+5.77,17,Afternoon,Light Rain,MEDIUM
+11.95,20,Dusk,Light Rain,LOW
+0.51,6,Night,Clear,CRITICAL
+4.78,5,Night,Heavy Rain,HIGH
+6.73,1,Morning,Light Rain,MEDIUM
+8.35,1,Afternoon,Light Rain,LOW
+14.29,21,Dusk,Light Rain,LOW
+10.19,6,Dusk,Light Rain,LOW
+9.18,12,Night,Light Rain,LOW
+6.99,2,Afternoon,Heavy Rain,MEDIUM
+4.26,22,Afternoon,Heavy Rain,MEDIUM
+5.45,25,Afternoon,Light Rain,MEDIUM
+8.86,16,Dusk,Heavy Rain,LOW
+2.14,16,Afternoon,Clear,CRITICAL
+4.92,23,Night,Heavy Rain,HIGH
+5.37,15,Dusk,Light Rain,MEDIUM
+5.18,8,Dusk,Light Rain,MEDIUM
+3.33,10,Afternoon,Light Rain,MEDIUM
+10.49,25,Dusk,Clear,MEDIUM
+8.5,14,Morning,Heavy Rain,LOW
+14.04,19,Afternoon,Light Rain,LOW
+9.78,2,Night,Light Rain,LOW
+11.95,5,Night,Clear,LOW
+12.47,17,Dusk,Clear,LOW
+13.34,25,Afternoon,Clear,LOW
+6.13,17,Night,Heavy Rain,MEDIUM
+8.34,16,Night,Light Rain,LOW
+2.72,0,Night,Heavy Rain,HIGH
+9.79,19,Night,Clear,LOW
+11.02,23,Night,Heavy Rain,LOW
+11.11,9,Night,Heavy Rain,LOW
+11.84,23,Morning,Light Rain,LOW
+2.64,22,Night,Clear,CRITICAL
+3.56,9,Afternoon,Heavy Rain,MEDIUM
+4.7,24,Dusk,Clear,HIGH
+4.57,13,Night,Heavy Rain,HIGH
+5.13,8,Night,Light Rain,MEDIUM
+8.03,0,Night,Clear,LOW
+10.29,2,Morning,Clear,LOW
+10.2,6,Night,Light Rain,LOW
+10.7,23,Dusk,Light Rain,LOW
+3.61,3,Dusk,Clear,HIGH
+10.91,25,Dusk,Light Rain,LOW
+11.99,25,Afternoon,Clear,LOW
+13.79,2,Dusk,Heavy Rain,LOW
+1.78,2,Night,Light Rain,HIGH
+8.23,8,Dusk,Light Rain,HIGH
+12.56,10,Dusk,Clear,LOW
+1.78,18,Night,Light Rain,CRITICAL
+13.69,22,Dusk,Heavy Rain,LOW
+7.89,8,Afternoon,Clear,MEDIUM
+8.1,8,Morning,Clear,LOW
+6.58,17,Morning,Clear,MEDIUM
+13.37,5,Night,Clear,LOW
+7.43,18,Night,Clear,MEDIUM
+4.3,16,Morning,Clear,MEDIUM
+9.53,18,Night,Light Rain,LOW
+0.7,20,Morning,Clear,CRITICAL
+2.98,14,Night,Heavy Rain,CRITICAL
+6.13,15,Morning,Heavy Rain,CRITICAL
+3.4,23,Morning,Heavy Rain,CRITICAL
+8.7,7,Afternoon,Light Rain,LOW
+11.66,15,Dusk,Light Rain,LOW
+7.2,6,Night,Light Rain,MEDIUM
+2.42,12,Afternoon,Light Rain,CRITICAL
+6.42,6,Dusk,Light Rain,MEDIUM
+14.61,17,Morning,Heavy Rain,LOW
+1.92,14,Dusk,Clear,CRITICAL
+10.69,13,Afternoon,Clear,LOW
+14.27,22,Night,Clear,LOW
+4.27,13,Morning,Heavy Rain,MEDIUM
+11.73,12,Night,Clear,LOW
+1.41,25,Morning,Clear,CRITICAL
+13.29,1,Night,Light Rain,LOW
+14.6,23,Afternoon,Heavy Rain,LOW
+10.15,17,Dusk,Heavy Rain,LOW
+3.27,10,Afternoon,Heavy Rain,MEDIUM
+10.46,24,Afternoon,Light Rain,LOW
+11.45,11,Afternoon,Heavy Rain,LOW
+14.91,3,Night,Light Rain,LOW
+3.82,9,Morning,Heavy Rain,MEDIUM
+8.2,3,Morning,Heavy Rain,LOW
+14.67,0,Dusk,Light Rain,LOW
+14.29,0,Afternoon,Clear,LOW
+1.74,12,Morning,Heavy Rain,CRITICAL
+8.3,23,Morning,Heavy Rain,LOW
+6.26,0,Morning,Heavy Rain,LOW
+6.47,1,Afternoon,Heavy Rain,MEDIUM
+7.66,8,Night,Light Rain,MEDIUM
+11.94,7,Morning,Heavy Rain,LOW
+7.16,22,Dusk,Clear,MEDIUM
+2.87,11,Night,Light Rain,CRITICAL
+4.67,5,Dusk,Light Rain,CRITICAL
+10.9,22,Afternoon,Heavy Rain,LOW
+12.47,4,Night,Light Rain,LOW
+7.17,17,Dusk,Light Rain,MEDIUM
+0.71,13,Morning,Clear,CRITICAL
+8.0,17,Dusk,Clear,LOW
+0.31,23,Dusk,Heavy Rain,CRITICAL
+12.32,20,Dusk,Clear,LOW
+13.02,5,Night,Clear,LOW
+4.78,10,Morning,Clear,MEDIUM
+2.5,16,Morning,Heavy Rain,CRITICAL
+1.83,24,Afternoon,Light Rain,CRITICAL
+10.72,6,Afternoon,Heavy Rain,LOW
+14.55,8,Night,Light Rain,LOW
+14.75,7,Dusk,Heavy Rain,LOW
+13.49,3,Morning,Heavy Rain,LOW
+13.67,16,Night,Light Rain,LOW
+13.34,23,Morning,Heavy Rain,LOW
+1.54,12,Morning,Light Rain,CRITICAL
+3.33,24,Morning,Clear,CRITICAL
+8.4,20,Night,Heavy Rain,LOW
+11.78,22,Dusk,Heavy Rain,LOW
+0.66,6,Afternoon,Heavy Rain,CRITICAL
+8.47,0,Morning,Clear,LOW
+3.94,2,Morning,Clear,MEDIUM
+6.74,2,Afternoon,Heavy Rain,MEDIUM
+7.06,19,Afternoon,Light Rain,MEDIUM
+8.31,24,Afternoon,Light Rain,LOW
+6.05,0,Night,Light Rain,LOW
+8.28,20,Night,Heavy Rain,LOW
+14.41,0,Dusk,Light Rain,LOW
+10.54,7,Night,Heavy Rain,LOW
+4.74,10,Night,Heavy Rain,HIGH
+0.87,10,Night,Light Rain,CRITICAL
+7.28,22,Morning,Heavy Rain,MEDIUM
+13.65,22,Dusk,Heavy Rain,LOW
+3.17,24,Afternoon,Heavy Rain,CRITICAL
+1.93,8,Morning,Heavy Rain,HIGH
+9.06,19,Night,Clear,LOW
+12.96,4,Afternoon,Light Rain,LOW
+14.66,22,Night,Clear,LOW
+6.79,16,Dusk,Clear,MEDIUM
+0.88,7,Afternoon,Light Rain,HIGH
+7.08,25,Morning,Light Rain,MEDIUM
+1.47,2,Night,Light Rain,HIGH
+2.01,22,Dusk,Light Rain,CRITICAL
+4.38,13,Morning,Heavy Rain,MEDIUM
+10.35,5,Afternoon,Heavy Rain,LOW
+12.07,15,Night,Light Rain,LOW
+9.09,0,Morning,Light Rain,LOW
+5.9,9,Dusk,Light Rain,MEDIUM
+12.93,5,Night,Light Rain,LOW
+4.99,23,Night,Clear,HIGH
+4.48,17,Night,Light Rain,HIGH
+8.39,13,Night,Clear,LOW
+2.18,1,Afternoon,Light Rain,MEDIUM
+4.7,18,Night,Light Rain,HIGH
+4.32,2,Afternoon,Clear,LOW
+6.49,19,Dusk,Heavy Rain,MEDIUM
+11.47,8,Dusk,Clear,LOW
+8.7,12,Morning,Light Rain,LOW
+4.33,7,Dusk,Light Rain,HIGH
+13.82,25,Afternoon,Clear,LOW
+9.45,21,Night,Heavy Rain,LOW
+10.55,25,Morning,Light Rain,LOW
+0.21,13,Morning,Heavy Rain,CRITICAL
+2.83,10,Night,Clear,HIGH
+7.3,10,Afternoon,Light Rain,MEDIUM
+2.79,14,Afternoon,Clear,CRITICAL
+10.92,13,Night,Clear,LOW
+10.2,10,Night,Heavy Rain,LOW
+0.3,19,Night,Clear,CRITICAL
+11.14,11,Morning,Light Rain,LOW
+6.3,1,Night,Heavy Rain,MEDIUM
+13.89,13,Morning,Heavy Rain,LOW
+13.1,19,Morning,Heavy Rain,LOW
+13.43,21,Dusk,Heavy Rain,LOW
+13.24,10,Morning,Heavy Rain,LOW
+5.24,4,Night,Light Rain,MEDIUM
+2.52,20,Night,Heavy Rain,CRITICAL
+14.3,10,Dusk,Heavy Rain,LOW
+3.43,18,Morning,Light Rain,CRITICAL
+12.45,5,Afternoon,Clear,LOW
+6.96,14,Night,Heavy Rain,MEDIUM
+5.13,3,Night,Light Rain,MEDIUM
+3.35,23,Afternoon,Light Rain,CRITICAL
+3.88,18,Night,Light Rain,MEDIUM
+13.08,4,Morning,Heavy Rain,LOW
+14.85,7,Dusk,Heavy Rain,LOW
+7.3,14,Afternoon,Clear,MEDIUM
+13.55,12,Night,Heavy Rain,LOW
+4.38,13,Afternoon,Light Rain,MEDIUM
+6.66,18,Morning,Clear,MEDIUM
+13.0,23,Dusk,Heavy Rain,LOW
+11.71,22,Afternoon,Light Rain,HIGH
+6.21,14,Dusk,Light Rain,MEDIUM
+13.81,18,Night,Light Rain,HIGH
+5.04,7,Dusk,Light Rain,MEDIUM
+7.5,15,Afternoon,Light Rain,MEDIUM
+2.48,5,Dusk,Clear,HIGH
+5.91,18,Afternoon,Light Rain,MEDIUM
+4.78,21,Morning,Light Rain,MEDIUM
+4.93,7,Night,Heavy Rain,HIGH
+4.03,21,Dusk,Heavy Rain,HIGH
+10.22,2,Afternoon,Heavy Rain,CRITICAL
+6.99,17,Dusk,Light Rain,MEDIUM
+9.17,12,Afternoon,Heavy Rain,LOW
+9.87,7,Afternoon,Clear,LOW
+8.76,16,Morning,Heavy Rain,LOW
+5.25,1,Morning,Clear,MEDIUM
+6.32,12,Morning,Heavy Rain,MEDIUM
+6.51,10,Afternoon,Clear,MEDIUM
+7.75,9,Afternoon,Heavy Rain,MEDIUM
+6.4,22,Dusk,Light Rain,MEDIUM
+5.89,25,Dusk,Light Rain,MEDIUM
+14.08,25,Afternoon,Light Rain,LOW
+2.87,1,Afternoon,Heavy Rain,HIGH
+0.12,9,Morning,Light Rain,MEDIUM
+12.75,20,Morning,Heavy Rain,LOW
+1.87,19,Afternoon,Light Rain,MEDIUM
+12.17,10,Night,Heavy Rain,LOW
+12.42,6,Night,Heavy Rain,LOW
+13.41,2,Morning,Clear,LOW
+11.34,20,Dusk,Light Rain,LOW
+8.64,1,Night,Light Rain,LOW
+0.59,17,Night,Clear,CRITICAL
+2.81,20,Dusk,Light Rain,HIGH
+3.93,2,Dusk,Clear,HIGH
+13.35,10,Night,Light Rain,LOW
+4.69,6,Night,Heavy Rain,HIGH
+7.49,3,Night,Clear,MEDIUM
+5.32,4,Dusk,Clear,MEDIUM
+11.03,11,Night,Light Rain,LOW
+10.76,15,Night,Light Rain,LOW
+3.75,11,Night,Clear,LOW
+7.54,8,Morning,Heavy Rain,MEDIUM
+3.87,24,Afternoon,Light Rain,CRITICAL
+11.83,5,Morning,Clear,LOW
+6.77,12,Night,Heavy Rain,MEDIUM
+4.51,25,Dusk,Light Rain,HIGH
+7.67,12,Morning,Heavy Rain,MEDIUM
+13.47,5,Dusk,Clear,LOW
+2.99,3,Night,Light Rain,HIGH
+12.68,16,Afternoon,Clear,LOW
+12.31,6,Afternoon,Light Rain,LOW
+11.73,14,Dusk,Light Rain,LOW
+6.8,25,Morning,Light Rain,MEDIUM
+1.07,21,Afternoon,Heavy Rain,CRITICAL
+7.95,13,Afternoon,Light Rain,MEDIUM
+0.8,10,Dusk,Light Rain,CRITICAL
+13.35,13,Dusk,Light Rain,LOW
+2.42,8,Morning,Clear,HIGH
+1.46,23,Night,Clear,CRITICAL
+2.63,15,Morning,Heavy Rain,CRITICAL
+3.77,12,Night,Heavy Rain,CRITICAL
+10.75,8,Afternoon,Light Rain,LOW
+9.07,18,Dusk,Light Rain,LOW
+7.71,5,Dusk,Clear,MEDIUM
+5.57,10,Afternoon,Heavy Rain,MEDIUM
+9.77,19,Dusk,Heavy Rain,LOW
+5.27,16,Dusk,Clear,MEDIUM
+14.84,3,Morning,Heavy Rain,LOW
+8.71,0,Afternoon,Light Rain,LOW
+8.91,25,Dusk,Clear,LOW
+11.7,20,Afternoon,Light Rain,LOW
+10.46,6,Morning,Heavy Rain,LOW
+10.99,18,Afternoon,Clear,LOW
+9.5,0,Afternoon,Heavy Rain,LOW
+2.67,7,Afternoon,Light Rain,HIGH
+14.08,18,Afternoon,Light Rain,LOW
+11.97,12,Night,Heavy Rain,LOW
+13.01,25,Morning,Clear,LOW
+9.69,15,Night,Light Rain,LOW
+6.11,11,Morning,Clear,MEDIUM
+6.5,25,Night,Clear,MEDIUM
+2.26,9,Morning,Clear,HIGH
+4.63,10,Night,Light Rain,LOW
+14.78,24,Morning,Heavy Rain,LOW
+13.12,22,Morning,Light Rain,LOW
+10.02,16,Night,Light Rain,LOW
+2.17,21,Dusk,Light Rain,CRITICAL
+1.12,12,Dusk,Clear,CRITICAL
+3.85,18,Night,Heavy Rain,CRITICAL
+10.64,2,Dusk,Clear,LOW
+5.18,13,Night,Light Rain,MEDIUM
+7.2,24,Morning,Light Rain,MEDIUM
+2.95,20,Night,Heavy Rain,CRITICAL
+13.45,7,Afternoon,Clear,LOW
+1.16,0,Morning,Heavy Rain,LOW
+10.86,18,Night,Clear,LOW
+1.58,1,Night,Heavy Rain,HIGH
+6.01,19,Morning,Clear,MEDIUM
+2.6,5,Morning,Heavy Rain,HIGH
+11.88,9,Dusk,Clear,LOW
+11.03,13,Dusk,Light Rain,LOW
+10.46,18,Dusk,Clear,LOW
+14.46,12,Dusk,Clear,LOW
+13.34,20,Morning,Heavy Rain,LOW
+6.38,4,Afternoon,Heavy Rain,MEDIUM
+4.5,23,Morning,Heavy Rain,MEDIUM
+3.74,5,Morning,Clear,MEDIUM
+14.79,4,Afternoon,Heavy Rain,LOW
+2.94,4,Night,Heavy Rain,HIGH
+11.57,13,Afternoon,Clear,LOW
+2.92,2,Afternoon,Light Rain,MEDIUM
+9.91,18,Dusk,Heavy Rain,LOW
+8.19,2,Dusk,Heavy Rain,LOW
+5.83,6,Morning,Light Rain,MEDIUM
+14.85,0,Afternoon,Clear,LOW
+6.14,1,Morning,Light Rain,HIGH
+13.93,3,Afternoon,Clear,LOW
+12.82,22,Night,Heavy Rain,LOW
+8.55,6,Morning,Clear,LOW
+1.75,14,Afternoon,Light Rain,CRITICAL
+0.77,8,Afternoon,Clear,HIGH
+7.93,8,Afternoon,Light Rain,MEDIUM
+11.02,7,Night,Heavy Rain,LOW
+11.97,1,Morning,Clear,LOW
+5.88,4,Morning,Heavy Rain,MEDIUM
+12.12,23,Dusk,Light Rain,LOW
+6.57,8,Morning,Clear,MEDIUM
+14.54,5,Night,Heavy Rain,LOW
+4.05,5,Night,Heavy Rain,HIGH
+14.22,23,Afternoon,Light Rain,LOW
+0.48,4,Morning,Clear,HIGH
+11.0,3,Night,Heavy Rain,LOW
+13.78,2,Dusk,Clear,LOW
+3.1,24,Dusk,Clear,CRITICAL
+5.66,13,Morning,Clear,MEDIUM
+8.98,3,Morning,Heavy Rain,LOW
+7.47,19,Afternoon,Heavy Rain,MEDIUM
+12.06,23,Afternoon,Clear,LOW
+7.09,0,Morning,Light Rain,LOW
+1.61,16,Dusk,Light Rain,CRITICAL
+9.53,20,Afternoon,Light Rain,LOW
+0.55,13,Afternoon,Heavy Rain,CRITICAL
+0.29,14,Morning,Light Rain,CRITICAL
+4.83,21,Afternoon,Clear,MEDIUM
+14.0,8,Night,Clear,LOW
+12.94,16,Afternoon,Clear,LOW
+10.37,12,Night,Heavy Rain,LOW
+5.11,23,Morning,Clear,MEDIUM
+11.13,25,Night,Heavy Rain,LOW
+9.69,9,Afternoon,Heavy Rain,LOW
+4.02,7,Dusk,Heavy Rain,HIGH
+7.97,15,Dusk,Clear,MEDIUM
+13.21,2,Night,Clear,LOW
+9.12,11,Morning,Clear,LOW
+5.33,0,Afternoon,Clear,LOW
+14.44,8,Afternoon,Light Rain,LOW
+8.4,21,Afternoon,Clear,LOW
+3.93,13,Night,Light Rain,CRITICAL
+7.44,7,Morning,Heavy Rain,MEDIUM
+4.99,2,Afternoon,Light Rain,MEDIUM
+3.75,9,Morning,Light Rain,MEDIUM
+2.59,0,Dusk,Clear,HIGH
+11.19,15,Dusk,Light Rain,LOW
+6.89,16,Morning,Heavy Rain,MEDIUM
+6.54,15,Night,Heavy Rain,MEDIUM
+1.37,2,Night,Heavy Rain,HIGH
+13.6,22,Dusk,Light Rain,LOW
+1.83,15,Morning,Light Rain,CRITICAL
+9.06,8,Morning,Clear,LOW
+1.32,7,Afternoon,Heavy Rain,HIGH
+1.53,10,Afternoon,Light Rain,HIGH
+14.83,1,Afternoon,Heavy Rain,HIGH
+7.98,6,Night,Clear,MEDIUM
+6.5,24,Afternoon,Heavy Rain,MEDIUM
+10.45,14,Morning,Heavy Rain,LOW
+6.5,21,Night,Clear,MEDIUM
+12.68,5,Dusk,Heavy Rain,LOW
+2.63,6,Morning,Heavy Rain,HIGH
+10.59,7,Afternoon,Clear,LOW
+5.0,7,Night,Heavy Rain,MEDIUM
+10.14,19,Afternoon,Heavy Rain,LOW
+7.38,22,Dusk,Light Rain,MEDIUM
+13.12,4,Afternoon,Light Rain,LOW
+4.53,1,Morning,Clear,MEDIUM
+0.27,21,Night,Clear,CRITICAL
+1.41,15,Dusk,Clear,CRITICAL
+14.51,4,Dusk,Clear,LOW
+8.06,17,Dusk,Light Rain,LOW
+1.89,23,Morning,Heavy Rain,CRITICAL
+7.96,4,Afternoon,Clear,MEDIUM
+1.45,9,Morning,Clear,HIGH
+12.25,15,Morning,Light Rain,LOW
+6.49,18,Afternoon,Clear,MEDIUM
+5.54,14,Night,Heavy Rain,MEDIUM
+14.86,24,Morning,Heavy Rain,LOW
+14.67,18,Night,Heavy Rain,LOW
+11.95,6,Afternoon,Heavy Rain,LOW
+6.12,17,Morning,Light Rain,MEDIUM
+0.63,17,Afternoon,Light Rain,CRITICAL
+12.21,5,Night,Heavy Rain,LOW
+2.37,0,Afternoon,Heavy Rain,LOW
+12.91,17,Morning,Light Rain,LOW
+13.83,23,Dusk,Heavy Rain,LOW
+3.75,0,Night,Light Rain,HIGH
+13.05,12,Afternoon,Light Rain,LOW
+3.9,16,Dusk,Light Rain,CRITICAL
+1.88,6,Morning,Heavy Rain,HIGH
+5.59,11,Afternoon,Light Rain,MEDIUM
+6.3,13,Afternoon,Light Rain,MEDIUM
+5.53,22,Dusk,Heavy Rain,MEDIUM
+6.15,2,Night,Light Rain,MEDIUM
+13.6,6,Night,Clear,LOW
+6.57,19,Morning,Clear,MEDIUM
+1.09,4,Afternoon,Heavy Rain,HIGH
+0.86,21,Morning,Light Rain,CRITICAL
+6.44,13,Dusk,Light Rain,MEDIUM
+3.7,17,Dusk,Heavy Rain,CRITICAL
+11.02,19,Dusk,Clear,LOW
+11.74,6,Night,Light Rain,LOW
+4.83,17,Morning,Light Rain,MEDIUM
+1.3,1,Dusk,Clear,HIGH
+4.82,3,Afternoon,Light Rain,MEDIUM
+2.48,22,Dusk,Clear,CRITICAL
+8.84,24,Dusk,Light Rain,LOW
+0.33,6,Night,Light Rain,CRITICAL
+10.87,25,Dusk,Light Rain,LOW
+11.68,13,Dusk,Heavy Rain,LOW
+7.5,12,Afternoon,Clear,MEDIUM
+7.04,3,Night,Heavy Rain,MEDIUM
+6.63,11,Night,Light Rain,MEDIUM
+10.12,10,Dusk,Light Rain,LOW
+5.23,2,Morning,Light Rain,MEDIUM
+7.37,1,Afternoon,Light Rain,MEDIUM
+13.56,3,Morning,Clear,LOW
+11.73,13,Night,Clear,LOW
+5.29,21,Night,Light Rain,MEDIUM
+6.02,9,Afternoon,Clear,MEDIUM
+4.86,19,Night,Clear,HIGH
+4.78,16,Morning,Clear,MEDIUM
+1.46,11,Morning,Clear,CRITICAL
+12.96,20,Morning,Light Rain,LOW
+8.31,4,Night,Light Rain,LOW
+13.38,23,Morning,Light Rain,LOW
+10.05,15,Morning,Heavy Rain,LOW
+5.94,21,Afternoon,Light Rain,MEDIUM
+12.07,21,Night,Clear,LOW
+5.4,16,Dusk,Heavy Rain,MEDIUM
+13.43,23,Night,Clear,LOW
+0.78,4,Morning,Clear,HIGH
+5.34,18,Morning,Heavy Rain,MEDIUM
+2.3,3,Afternoon,Heavy Rain,HIGH
+8.83,12,Night,Clear,LOW
+10.22,3,Afternoon,Heavy Rain,LOW
+5.33,15,Night,Clear,MEDIUM
+13.82,18,Night,Clear,LOW
+1.77,20,Dusk,Heavy Rain,CRITICAL
+2.36,11,Afternoon,Heavy Rain,CRITICAL
+10.11,9,Afternoon,Heavy Rain,LOW
+1.39,14,Dusk,Heavy Rain,CRITICAL
+6.34,2,Morning,Light Rain,MEDIUM
+4.11,9,Dusk,Heavy Rain,HIGH
+0.89,18,Night,Clear,MEDIUM
+3.08,17,Night,Clear,CRITICAL
+1.29,11,Morning,Light Rain,CRITICAL
+10.34,20,Afternoon,Light Rain,LOW
+9.96,12,Night,Clear,LOW
+6.31,4,Night,Heavy Rain,MEDIUM
+11.1,10,Afternoon,Light Rain,LOW
+0.37,10,Night,Light Rain,CRITICAL
+3.48,10,Afternoon,Heavy Rain,MEDIUM
+14.43,16,Morning,Clear,LOW
+6.26,5,Night,Heavy Rain,MEDIUM
+1.18,6,Morning,Clear,HIGH
+3.51,7,Afternoon,Clear,MEDIUM
+3.6,2,Dusk,Clear,HIGH
+12.6,10,Afternoon,Clear,LOW
+10.86,23,Dusk,Heavy Rain,LOW
+14.95,23,Night,Heavy Rain,LOW
+6.93,18,Morning,Heavy Rain,MEDIUM
+2.81,9,Morning,Light Rain,HIGH
+3.7,15,Morning,Clear,CRITICAL
+12.79,3,Night,Clear,LOW
+12.32,1,Morning,Heavy Rain,LOW
+5.13,10,Afternoon,Clear,MEDIUM
+5.84,23,Morning,Light Rain,MEDIUM
+8.31,21,Night,Heavy Rain,LOW
+9.82,13,Dusk,Heavy Rain,LOW
+3.14,21,Dusk,Heavy Rain,CRITICAL
+11.77,11,Night,Clear,LOW
+9.72,25,Morning,Light Rain,LOW
+7.56,21,Morning,Heavy Rain,MEDIUM
+14.93,12,Night,Light Rain,LOW
+8.87,0,Dusk,Clear,LOW
+6.64,10,Afternoon,Light Rain,MEDIUM
+10.1,9,Night,Clear,LOW
+7.28,5,Night,Heavy Rain,MEDIUM
+8.91,2,Morning,Heavy Rain,LOW
+11.5,0,Afternoon,Clear,LOW
+8.23,7,Night,Light Rain,LOW
+13.81,9,Morning,Light Rain,LOW
+12.83,21,Night,Clear,LOW
+0.74,23,Afternoon,Clear,CRITICAL
+14.08,25,Afternoon,Light Rain,LOW
+13.97,25,Night,Clear,LOW
+2.77,17,Dusk,Light Rain,CRITICAL
+7.58,16,Dusk,Clear,MEDIUM
+12.27,5,Night,Light Rain,LOW
+10.58,6,Night,Clear,LOW
+10.33,16,Dusk,Light Rain,LOW
+10.73,1,Dusk,Light Rain,LOW
+10.85,17,Morning,Clear,LOW
+8.8,20,Morning,Light Rain,LOW
+12.49,2,Afternoon,Clear,LOW
+8.06,4,Night,Heavy Rain,LOW
+2.1,1,Afternoon,Clear,MEDIUM
+1.31,1,Dusk,Clear,HIGH
+14.63,15,Night,Heavy Rain,LOW
+9.74,25,Morning,Heavy Rain,LOW
+6.14,18,Night,Light Rain,MEDIUM
+12.7,9,Afternoon,Clear,LOW
+3.2,13,Night,Heavy Rain,CRITICAL
+14.33,25,Morning,Light Rain,LOW
+3.78,16,Dusk,Light Rain,CRITICAL
+11.93,8,Night,Heavy Rain,LOW
+7.68,24,Morning,Heavy Rain,MEDIUM
+11.75,17,Dusk,Heavy Rain,LOW
+7.66,3,Morning,Light Rain,MEDIUM
+9.63,25,Morning,Heavy Rain,LOW
+9.13,16,Night,Light Rain,LOW
+1.97,13,Afternoon,Clear,CRITICAL
+4.52,20,Afternoon,Heavy Rain,MEDIUM
+8.9,21,Morning,Heavy Rain,LOW
+14.74,20,Morning,Clear,LOW
+7.2,3,Morning,Light Rain,MEDIUM
+5.3,2,Afternoon,Clear,MEDIUM
+11.55,10,Night,Heavy Rain,MEDIUM
+10.73,6,Night,Light Rain,LOW
+2.2,3,Night,Clear,HIGH
+0.79,23,Night,Heavy Rain,CRITICAL
+13.79,23,Morning,Clear,LOW
+11.48,2,Night,Light Rain,LOW
+4.21,25,Morning,Clear,MEDIUM
+12.43,20,Dusk,Clear,LOW
+11.36,9,Morning,Clear,LOW
+0.5,17,Afternoon,Clear,CRITICAL
+14.05,20,Morning,Light Rain,LOW
+3.18,12,Afternoon,Light Rain,CRITICAL
+5.98,22,Morning,Light Rain,MEDIUM
+14.91,20,Morning,Clear,LOW
+8.48,22,Afternoon,Clear,MEDIUM
+3.41,4,Dusk,Light Rain,HIGH
+6.35,6,Dusk,Light Rain,MEDIUM
+11.31,20,Dusk,Heavy Rain,LOW
+5.38,2,Morning,Heavy Rain,MEDIUM
+4.29,14,Morning,Heavy Rain,MEDIUM
+10.92,1,Morning,Clear,LOW
+0.18,19,Dusk,Clear,CRITICAL
+9.37,3,Afternoon,Clear,LOW
+3.28,6,Night,Heavy Rain,HIGH
+7.65,25,Morning,Heavy Rain,MEDIUM
+1.63,19,Night,Clear,CRITICAL
+2.86,5,Morning,Light Rain,HIGH
+7.22,19,Morning,Clear,MEDIUM
+2.46,21,Dusk,Light Rain,CRITICAL
+13.63,13,Night,Clear,LOW
+9.44,12,Afternoon,Clear,LOW
+8.05,21,Night,Heavy Rain,LOW
+2.36,21,Night,Heavy Rain,CRITICAL
+5.28,3,Morning,Light Rain,MEDIUM
+3.38,5,Night,Heavy Rain,HIGH
+8.95,20,Dusk,Heavy Rain,LOW
+12.18,6,Night,Heavy Rain,LOW
+5.08,18,Morning,Heavy Rain,MEDIUM
+3.52,12,Night,Heavy Rain,CRITICAL
+12.19,6,Night,Heavy Rain,LOW
+2.86,22,Dusk,Heavy Rain,CRITICAL
+0.55,19,Dusk,Light Rain,CRITICAL
+12.67,9,Morning,Light Rain,LOW
+7.3,17,Dusk,Clear,MEDIUM
+11.37,0,Night,Clear,LOW
+7.33,21,Dusk,Light Rain,MEDIUM
+10.76,24,Afternoon,Clear,LOW
+0.12,18,Afternoon,Heavy Rain,LOW
+7.32,5,Night,Clear,MEDIUM
+14.81,18,Dusk,Light Rain,HIGH
+2.73,11,Morning,Light Rain,CRITICAL
+2.47,2,Afternoon,Light Rain,MEDIUM
+13.85,9,Morning,Light Rain,LOW
+6.63,3,Morning,Heavy Rain,MEDIUM
+14.83,6,Morning,Heavy Rain,LOW
+4.1,23,Dusk,Clear,HIGH
+4.53,9,Morning,Clear,MEDIUM
+12.42,16,Night,Light Rain,LOW
+8.22,14,Night,Light Rain,LOW
+6.85,25,Dusk,Heavy Rain,MEDIUM
+4.88,1,Morning,Light Rain,MEDIUM
+4.39,0,Night,Clear,HIGH
+2.13,3,Morning,Clear,HIGH
+11.81,15,Night,Clear,LOW
+7.14,13,Night,Light Rain,MEDIUM
+2.08,3,Dusk,Heavy Rain,HIGH
+4.55,3,Dusk,Light Rain,CRITICAL
+9.69,18,Afternoon,Clear,LOW
+14.87,12,Afternoon,Heavy Rain,LOW
+8.33,19,Afternoon,Heavy Rain,LOW
+14.62,2,Night,Clear,LOW
+8.15,20,Dusk,Light Rain,LOW
+8.65,18,Dusk,Light Rain,LOW
+2.92,3,Dusk,Heavy Rain,HIGH
+11.3,23,Dusk,Heavy Rain,LOW
+6.01,1,Afternoon,Light Rain,MEDIUM
+12.01,22,Afternoon,Clear,LOW
+3.9,24,Afternoon,Clear,CRITICAL
+5.82,14,Morning,Heavy Rain,MEDIUM
+3.06,15,Afternoon,Clear,CRITICAL
+7.02,18,Night,Light Rain,LOW
+12.75,12,Dusk,Clear,LOW
+5.33,13,Afternoon,Heavy Rain,MEDIUM
+8.77,17,Afternoon,Light Rain,LOW
+10.97,19,Night,Light Rain,LOW
+6.65,14,Afternoon,Clear,MEDIUM
+2.96,21,Morning,Heavy Rain,CRITICAL
+6.14,2,Night,Clear,MEDIUM
+3.2,6,Dusk,Clear,HIGH
+4.54,8,Night,Clear,HIGH
+3.65,24,Morning,Light Rain,CRITICAL
+12.81,2,Afternoon,Light Rain,LOW
+13.52,10,Morning,Clear,LOW
+14.01,21,Dusk,Clear,LOW
+12.21,23,Dusk,Clear,LOW
+7.29,0,Dusk,Clear,LOW
+7.22,15,Night,Heavy Rain,MEDIUM
+10.36,14,Afternoon,Clear,LOW
+10.85,23,Morning,Clear,LOW
+4.69,9,Afternoon,Clear,MEDIUM
+5.08,7,Dusk,Light Rain,MEDIUM
+4.21,19,Night,Light Rain,HIGH
+12.22,12,Night,Light Rain,LOW
+4.27,6,Morning,Heavy Rain,MEDIUM
+5.29,17,Morning,Heavy Rain,MEDIUM
+9.91,0,Night,Clear,LOW
+10.98,20,Morning,Clear,LOW
+3.32,12,Dusk,Clear,CRITICAL
+10.53,17,Night,Heavy Rain,LOW
+13.4,23,Morning,Heavy Rain,LOW
+8.86,6,Afternoon,Heavy Rain,LOW
+2.98,9,Night,Heavy Rain,HIGH
+14.95,11,Morning,Light Rain,LOW
+3.54,8,Afternoon,Clear,MEDIUM
+2.23,7,Morning,Light Rain,HIGH
+5.28,15,Night,Clear,MEDIUM
+11.1,0,Morning,Clear,LOW
+5.38,8,Morning,Heavy Rain,MEDIUM
+9.58,18,Dusk,Heavy Rain,LOW
+1.49,5,Dusk,Heavy Rain,HIGH
+7.48,21,Night,Heavy Rain,MEDIUM
+7.55,23,Dusk,Heavy Rain,CRITICAL
+11.67,5,Dusk,Heavy Rain,LOW
+13.94,17,Dusk,Heavy Rain,LOW
+5.68,1,Dusk,Light Rain,MEDIUM
+14.65,19,Dusk,Light Rain,LOW
+9.06,16,Afternoon,Clear,LOW
+14.35,19,Afternoon,Heavy Rain,LOW
+9.27,21,Dusk,Light Rain,LOW
+2.77,2,Dusk,Heavy Rain,HIGH
+8.12,17,Morning,Light Rain,LOW
+1.77,24,Dusk,Light Rain,CRITICAL
+11.33,17,Morning,Clear,LOW
+10.88,9,Dusk,Clear,LOW
+10.42,15,Night,Light Rain,LOW
+2.87,25,Night,Light Rain,CRITICAL
+8.67,19,Morning,Clear,LOW
+11.64,24,Morning,Light Rain,LOW
+0.44,13,Morning,Heavy Rain,CRITICAL
+4.72,6,Night,Heavy Rain,HIGH
+11.71,15,Morning,Light Rain,LOW
+2.11,25,Night,Clear,CRITICAL
+9.07,11,Dusk,Heavy Rain,MEDIUM
+0.74,23,Dusk,Heavy Rain,CRITICAL
+7.62,19,Night,Clear,MEDIUM
+3.46,21,Morning,Heavy Rain,CRITICAL
+11.82,12,Night,Clear,LOW
+2.75,23,Dusk,Heavy Rain,CRITICAL
+3.29,25,Morning,Clear,CRITICAL
+8.76,23,Morning,Heavy Rain,LOW
+2.1,18,Dusk,Light Rain,CRITICAL
+1.45,18,Afternoon,Clear,CRITICAL
+11.82,19,Dusk,Light Rain,LOW
+14.59,10,Night,Heavy Rain,LOW
+14.58,21,Morning,Light Rain,LOW
+1.78,11,Morning,Clear,CRITICAL
+1.71,14,Morning,Heavy Rain,CRITICAL
+1.2,9,Morning,Light Rain,HIGH
+13.84,2,Night,Light Rain,LOW
+14.29,7,Dusk,Light Rain,LOW
+6.49,12,Afternoon,Light Rain,MEDIUM
+11.55,10,Dusk,Clear,LOW
+2.67,14,Night,Clear,LOW
+7.83,20,Dusk,Heavy Rain,MEDIUM
+8.63,8,Afternoon,Clear,LOW
+4.65,5,Morning,Clear,MEDIUM
+9.16,1,Night,Light Rain,LOW
+13.36,2,Dusk,Light Rain,LOW
+13.41,15,Morning,Light Rain,LOW
+10.93,23,Morning,Heavy Rain,LOW
+7.56,21,Afternoon,Heavy Rain,MEDIUM
+4.41,12,Dusk,Clear,HIGH
+3.03,16,Morning,Clear,CRITICAL
+9.79,14,Afternoon,Clear,LOW
+1.58,5,Morning,Heavy Rain,HIGH
+10.22,6,Morning,Light Rain,LOW
+11.14,1,Night,Heavy Rain,LOW
+5.66,18,Dusk,Light Rain,MEDIUM
+4.79,13,Dusk,Heavy Rain,HIGH
+1.65,8,Night,Clear,CRITICAL
+13.5,8,Morning,Heavy Rain,LOW
+12.57,17,Night,Clear,LOW
+0.68,5,Night,Heavy Rain,HIGH
+1.73,8,Afternoon,Light Rain,HIGH
+14.57,21,Afternoon,Heavy Rain,LOW
+10.42,4,Afternoon,Light Rain,LOW
+13.69,16,Night,Light Rain,LOW
+11.66,14,Dusk,Heavy Rain,LOW
+7.73,11,Afternoon,Clear,MEDIUM
+14.94,5,Dusk,Light Rain,LOW
+13.14,13,Afternoon,Clear,LOW
+5.56,21,Dusk,Light Rain,MEDIUM
+2.38,21,Morning,Heavy Rain,CRITICAL
+7.34,11,Afternoon,Light Rain,MEDIUM
+9.81,1,Night,Clear,LOW
+12.71,6,Night,Clear,LOW
+0.72,1,Dusk,Heavy Rain,MEDIUM
+2.0,10,Night,Heavy Rain,HIGH
+11.34,18,Night,Heavy Rain,LOW
+2.33,20,Dusk,Clear,CRITICAL
+6.74,4,Morning,Light Rain,MEDIUM
+11.29,1,Morning,Heavy Rain,LOW
+11.45,4,Dusk,Light Rain,LOW
+14.62,2,Morning,Heavy Rain,LOW
+9.85,14,Afternoon,Heavy Rain,LOW
+2.04,2,Night,Clear,HIGH
+14.12,15,Morning,Clear,LOW
+0.96,0,Afternoon,Light Rain,LOW
+4.11,13,Morning,Heavy Rain,MEDIUM
+4.86,3,Night,Clear,HIGH
+10.91,7,Morning,Light Rain,LOW
+12.26,10,Morning,Clear,LOW
+3.95,2,Morning,Heavy Rain,MEDIUM
+2.91,22,Dusk,Heavy Rain,CRITICAL
+10.66,9,Afternoon,Light Rain,LOW
+7.46,1,Dusk,Clear,MEDIUM
+11.92,2,Dusk,Heavy Rain,LOW
+1.09,5,Morning,Clear,HIGH
+0.67,15,Afternoon,Light Rain,CRITICAL
+10.52,11,Dusk,Clear,LOW
+9.78,2,Night,Heavy Rain,LOW
+4.56,23,Morning,Light Rain,MEDIUM
+6.05,1,Afternoon,Heavy Rain,MEDIUM
+12.84,2,Dusk,Heavy Rain,LOW
+10.47,20,Afternoon,Light Rain,LOW
+5.72,1,Morning,Heavy Rain,MEDIUM
+7.12,6,Dusk,Light Rain,MEDIUM
+5.67,13,Night,Light Rain,MEDIUM
+11.11,25,Dusk,Heavy Rain,LOW
+3.22,16,Dusk,Light Rain,CRITICAL
+13.48,10,Afternoon,Heavy Rain,LOW
+0.57,18,Night,Clear,CRITICAL
+14.63,0,Night,Clear,LOW
+7.89,0,Afternoon,Clear,LOW
+0.62,0,Night,Light Rain,HIGH
+13.3,1,Dusk,Light Rain,LOW
+6.52,24,Afternoon,Heavy Rain,MEDIUM
+7.1,1,Night,Light Rain,MEDIUM
+6.5,11,Night,Heavy Rain,MEDIUM
+4.25,9,Dusk,Clear,HIGH
+4.77,8,Morning,Light Rain,MEDIUM
+11.29,23,Dusk,Heavy Rain,LOW
+12.17,6,Dusk,Light Rain,LOW
+0.72,5,Night,Heavy Rain,HIGH
+1.24,7,Afternoon,Clear,HIGH
+9.57,24,Morning,Clear,LOW
+6.31,18,Afternoon,Clear,MEDIUM
+4.02,6,Morning,Light Rain,MEDIUM
+13.67,19,Night,Clear,LOW
+10.12,25,Dusk,Clear,LOW
+6.6,19,Afternoon,Light Rain,MEDIUM
+9.02,2,Dusk,Heavy Rain,MEDIUM
+5.46,8,Dusk,Heavy Rain,LOW
+10.33,0,Morning,Heavy Rain,LOW
+7.63,22,Morning,Heavy Rain,MEDIUM
+12.73,9,Dusk,Light Rain,LOW
+6.47,11,Night,Light Rain,MEDIUM
+14.02,2,Dusk,Light Rain,LOW
+4.83,13,Morning,Light Rain,MEDIUM
+13.06,14,Afternoon,Clear,LOW
+8.84,16,Morning,Clear,LOW
+1.73,6,Morning,Light Rain,HIGH
+10.07,5,Afternoon,Heavy Rain,LOW
+10.02,12,Afternoon,Light Rain,LOW
+12.61,5,Morning,Clear,LOW
+2.7,9,Dusk,Clear,HIGH
+4.3,16,Dusk,Clear,HIGH
+14.45,11,Dusk,Light Rain,LOW
+8.33,22,Morning,Heavy Rain,LOW
+2.09,17,Morning,Light Rain,CRITICAL
+6.31,14,Afternoon,Heavy Rain,MEDIUM
+10.01,0,Dusk,Light Rain,LOW
+10.52,10,Afternoon,Light Rain,LOW
+3.21,13,Night,Light Rain,CRITICAL
+13.3,15,Afternoon,Clear,LOW
+8.29,6,Afternoon,Light Rain,LOW
+1.97,24,Dusk,Clear,CRITICAL
+12.18,16,Night,Clear,LOW
+7.29,11,Dusk,Light Rain,MEDIUM
+0.63,4,Morning,Heavy Rain,HIGH
+11.38,17,Afternoon,Light Rain,LOW
+5.2,16,Night,Light Rain,MEDIUM
+0.89,6,Night,Heavy Rain,CRITICAL
+11.68,11,Dusk,Light Rain,LOW
+8.45,2,Night,Clear,LOW
+8.6,14,Night,Light Rain,LOW
+6.6,21,Afternoon,Clear,MEDIUM
+3.51,3,Night,Heavy Rain,HIGH
+2.26,24,Night,Heavy Rain,CRITICAL
+14.17,9,Morning,Light Rain,LOW
+3.94,25,Afternoon,Heavy Rain,CRITICAL
+12.95,10,Morning,Light Rain,LOW
+4.21,21,Morning,Heavy Rain,MEDIUM
+3.17,21,Dusk,Light Rain,MEDIUM
+2.89,5,Night,Light Rain,HIGH
+10.48,3,Morning,Light Rain,LOW
+6.58,13,Afternoon,Clear,MEDIUM
+9.55,16,Morning,Heavy Rain,LOW
+6.88,10,Morning,Clear,MEDIUM
+9.54,18,Night,Clear,LOW
+10.23,11,Dusk,Heavy Rain,LOW
+13.85,13,Night,Heavy Rain,CRITICAL
+5.21,7,Afternoon,Heavy Rain,MEDIUM
+4.5,15,Morning,Heavy Rain,MEDIUM
+0.41,21,Night,Light Rain,CRITICAL
+9.18,21,Night,Light Rain,LOW
+12.58,6,Afternoon,Clear,LOW
+11.8,5,Dusk,Heavy Rain,LOW
+8.91,3,Afternoon,Heavy Rain,LOW
+0.77,13,Dusk,Heavy Rain,CRITICAL
+6.47,19,Dusk,Light Rain,MEDIUM
+5.08,18,Night,Heavy Rain,MEDIUM
+11.19,19,Afternoon,Light Rain,LOW
+2.02,22,Dusk,Light Rain,HIGH
+0.5,7,Morning,Light Rain,HIGH
+3.33,12,Dusk,Light Rain,LOW
+7.75,7,Afternoon,Heavy Rain,MEDIUM
+13.15,19,Afternoon,Heavy Rain,LOW
+4.31,24,Dusk,Light Rain,HIGH
+10.57,3,Morning,Heavy Rain,LOW
+14.25,7,Morning,Light Rain,LOW
+4.36,15,Afternoon,Light Rain,MEDIUM
+14.52,2,Afternoon,Light Rain,LOW
+5.98,10,Afternoon,Clear,MEDIUM
+9.78,22,Afternoon,Heavy Rain,LOW
+11.84,2,Night,Clear,LOW
+2.87,4,Dusk,Heavy Rain,HIGH
+3.29,22,Dusk,Light Rain,CRITICAL
+5.69,13,Night,Light Rain,MEDIUM
+11.96,19,Afternoon,Clear,LOW
+1.45,3,Dusk,Heavy Rain,HIGH
+5.53,21,Dusk,Light Rain,MEDIUM
+13.91,6,Dusk,Heavy Rain,LOW
+10.96,25,Dusk,Heavy Rain,LOW
+0.82,2,Morning,Light Rain,MEDIUM
+6.99,2,Dusk,Heavy Rain,MEDIUM
+5.99,19,Afternoon,Heavy Rain,MEDIUM
+1.72,11,Morning,Heavy Rain,CRITICAL
+3.78,20,Morning,Light Rain,CRITICAL
+8.63,18,Dusk,Heavy Rain,LOW
+12.29,23,Night,Light Rain,LOW
+7.37,3,Afternoon,Heavy Rain,MEDIUM
+6.42,22,Afternoon,Light Rain,MEDIUM
+13.38,16,Night,Clear,LOW
+12.29,10,Morning,Heavy Rain,LOW
+3.77,21,Night,Clear,CRITICAL
+9.63,21,Afternoon,Heavy Rain,LOW
+13.06,4,Afternoon,Clear,LOW
+8.06,23,Dusk,Clear,LOW
+2.64,12,Morning,Heavy Rain,CRITICAL
+9.77,21,Dusk,Clear,LOW
+1.46,25,Dusk,Heavy Rain,CRITICAL
+1.05,6,Morning,Light Rain,HIGH
+2.67,15,Dusk,Heavy Rain,CRITICAL
+13.74,1,Afternoon,Clear,LOW
+13.35,20,Dusk,Light Rain,LOW
+4.73,15,Morning,Heavy Rain,MEDIUM
+2.61,1,Dusk,Heavy Rain,HIGH
+12.43,1,Morning,Light Rain,LOW
+12.54,10,Afternoon,Clear,LOW
+1.42,5,Morning,Light Rain,HIGH
+6.21,5,Night,Light Rain,MEDIUM
+6.72,8,Dusk,Light Rain,MEDIUM
+3.02,0,Night,Light Rain,LOW
+4.05,7,Night,Heavy Rain,HIGH
+9.06,19,Morning,Clear,LOW
+1.35,21,Morning,Heavy Rain,CRITICAL
+10.82,23,Morning,Light Rain,LOW
+2.21,19,Night,Light Rain,CRITICAL
+1.75,18,Night,Clear,CRITICAL
+5.95,1,Night,Clear,MEDIUM
+10.84,4,Night,Heavy Rain,LOW
+7.36,14,Afternoon,Clear,MEDIUM
+5.86,19,Night,Clear,MEDIUM
+11.11,2,Night,Heavy Rain,LOW
+3.78,1,Afternoon,Heavy Rain,MEDIUM
+13.34,22,Dusk,Clear,LOW
+0.45,0,Dusk,Clear,HIGH
+11.39,4,Dusk,Clear,LOW
+14.91,1,Dusk,Clear,LOW
+8.98,25,Morning,Light Rain,LOW
+14.59,6,Afternoon,Clear,LOW
+1.51,24,Night,Clear,CRITICAL
+10.75,6,Morning,Heavy Rain,LOW
+3.45,14,Morning,Light Rain,CRITICAL
+9.97,9,Morning,Light Rain,LOW
+5.13,0,Night,Clear,HIGH
+13.46,13,Dusk,Light Rain,LOW
+11.86,6,Afternoon,Clear,LOW
+4.53,10,Afternoon,Heavy Rain,MEDIUM
+5.7,9,Morning,Clear,MEDIUM
+12.19,9,Dusk,Heavy Rain,LOW
+3.34,13,Morning,Light Rain,CRITICAL
+2.13,18,Night,Heavy Rain,CRITICAL
+14.23,3,Afternoon,Heavy Rain,LOW
+6.39,13,Morning,Heavy Rain,MEDIUM
+1.36,12,Afternoon,Heavy Rain,CRITICAL
+2.8,11,Morning,Light Rain,CRITICAL
+12.57,15,Afternoon,Heavy Rain,LOW
+5.1,18,Morning,Heavy Rain,MEDIUM
+5.1,7,Afternoon,Clear,MEDIUM
+9.45,13,Afternoon,Heavy Rain,LOW
+1.56,0,Night,Heavy Rain,HIGH
+1.89,21,Dusk,Heavy Rain,CRITICAL
+1.74,0,Night,Heavy Rain,CRITICAL
+6.12,15,Dusk,Clear,MEDIUM
+3.01,6,Night,Clear,HIGH
+9.62,19,Afternoon,Heavy Rain,LOW
+3.25,3,Dusk,Heavy Rain,HIGH
+11.35,11,Afternoon,Heavy Rain,LOW
+9.85,6,Afternoon,Clear,LOW
+4.41,23,Night,Light Rain,HIGH
+0.35,1,Night,Clear,HIGH
+4.61,10,Dusk,Clear,HIGH
+5.38,12,Morning,Heavy Rain,MEDIUM
+11.96,24,Dusk,Clear,LOW
+6.21,3,Dusk,Clear,MEDIUM
+8.29,4,Dusk,Light Rain,LOW
+6.59,16,Dusk,Light Rain,MEDIUM
+13.21,5,Afternoon,Light Rain,LOW
+2.08,13,Night,Light Rain,CRITICAL
+8.09,11,Dusk,Clear,LOW
+1.6,15,Morning,Light Rain,CRITICAL
+4.83,0,Morning,Heavy Rain,LOW
+3.06,22,Afternoon,Clear,CRITICAL
+10.62,13,Morning,Light Rain,LOW
+9.36,10,Night,Light Rain,LOW
+5.52,11,Morning,Clear,MEDIUM
+3.59,5,Night,Heavy Rain,HIGH
+11.54,9,Dusk,Heavy Rain,LOW
+6.16,1,Night,Heavy Rain,MEDIUM
+10.8,23,Morning,Clear,LOW
+11.65,6,Dusk,Light Rain,LOW
+9.98,5,Night,Clear,LOW
+8.71,2,Morning,Clear,LOW
+4.49,9,Morning,Clear,MEDIUM
+14.8,15,Night,Clear,LOW
+5.87,15,Dusk,Light Rain,MEDIUM
+3.8,10,Morning,Light Rain,MEDIUM
+0.29,17,Afternoon,Heavy Rain,CRITICAL
+13.69,5,Dusk,Light Rain,LOW
+7.19,25,Morning,Clear,MEDIUM
+8.46,13,Afternoon,Clear,LOW
+7.5,21,Dusk,Light Rain,MEDIUM
+12.81,19,Dusk,Light Rain,LOW
+4.14,10,Dusk,Clear,HIGH
+6.36,23,Dusk,Heavy Rain,MEDIUM
+0.91,25,Afternoon,Clear,CRITICAL
+14.18,7,Morning,Heavy Rain,LOW
+9.24,9,Dusk,Light Rain,LOW
+0.71,4,Afternoon,Light Rain,HIGH
+7.58,23,Afternoon,Light Rain,MEDIUM
+1.78,8,Dusk,Clear,CRITICAL
+12.97,9,Night,Light Rain,CRITICAL
+7.36,6,Morning,Clear,MEDIUM
+0.63,10,Afternoon,Clear,HIGH
+10.08,0,Afternoon,Light Rain,LOW
+9.39,16,Dusk,Light Rain,LOW
+11.56,24,Night,Heavy Rain,LOW
+9.78,4,Night,Clear,LOW
+3.57,23,Night,Clear,HIGH
+1.36,5,Morning,Heavy Rain,HIGH
+6.62,13,Night,Heavy Rain,MEDIUM
+11.57,12,Night,Clear,LOW
+7.5,0,Night,Light Rain,LOW
+1.05,13,Night,Clear,CRITICAL
+9.56,11,Dusk,Heavy Rain,LOW
+2.2,21,Dusk,Light Rain,CRITICAL
+1.7,0,Morning,Heavy Rain,LOW
+12.64,2,Morning,Heavy Rain,LOW
+2.24,22,Dusk,Heavy Rain,CRITICAL
+13.6,19,Dusk,Heavy Rain,LOW
+11.27,19,Morning,Light Rain,LOW
+14.18,1,Dusk,Heavy Rain,LOW
+14.01,21,Morning,Heavy Rain,LOW
+11.47,15,Dusk,Clear,LOW
+10.78,23,Morning,Clear,LOW
+1.55,22,Afternoon,Heavy Rain,CRITICAL
+13.45,1,Dusk,Light Rain,LOW
+4.23,24,Night,Heavy Rain,HIGH
+4.05,2,Morning,Clear,MEDIUM
+13.62,8,Night,Light Rain,LOW
+5.93,15,Afternoon,Light Rain,MEDIUM
+7.17,7,Morning,Heavy Rain,MEDIUM
+13.0,23,Night,Heavy Rain,LOW
+4.15,21,Afternoon,Light Rain,MEDIUM
+3.52,21,Morning,Clear,CRITICAL
+2.74,16,Dusk,Heavy Rain,CRITICAL
+9.49,19,Dusk,Light Rain,LOW
+0.83,16,Afternoon,Light Rain,CRITICAL
+13.51,25,Morning,Clear,MEDIUM
+13.78,13,Afternoon,Light Rain,LOW
+10.39,5,Night,Heavy Rain,LOW
+5.57,7,Afternoon,Heavy Rain,MEDIUM
+13.36,6,Morning,Heavy Rain,LOW
+8.95,20,Dusk,Clear,LOW
+9.02,0,Dusk,Heavy Rain,LOW
+9.59,15,Afternoon,Clear,LOW
+5.34,6,Night,Heavy Rain,MEDIUM
+1.34,2,Morning,Heavy Rain,MEDIUM
+1.19,9,Dusk,Clear,CRITICAL
+9.5,5,Afternoon,Heavy Rain,LOW
+4.18,0,Morning,Clear,LOW
+5.71,4,Dusk,Light Rain,MEDIUM
+11.75,25,Morning,Light Rain,LOW
+12.6,18,Dusk,Heavy Rain,LOW
+11.02,18,Afternoon,Clear,LOW
+4.29,14,Morning,Heavy Rain,MEDIUM
+12.57,9,Morning,Clear,LOW
+8.79,22,Afternoon,Light Rain,LOW
+11.23,17,Afternoon,Light Rain,LOW
+4.22,9,Morning,Heavy Rain,MEDIUM
+6.65,22,Night,Clear,MEDIUM
+1.12,24,Morning,Clear,MEDIUM
+12.51,19,Night,Heavy Rain,LOW
+2.39,10,Afternoon,Light Rain,HIGH
+2.0,19,Afternoon,Light Rain,CRITICAL
+11.12,16,Afternoon,Heavy Rain,LOW
+3.92,12,Morning,Heavy Rain,CRITICAL
+13.96,8,Night,Light Rain,LOW
+10.04,18,Dusk,Heavy Rain,LOW
+9.67,6,Dusk,Light Rain,LOW
+10.53,12,Morning,Heavy Rain,LOW
+3.47,23,Dusk,Light Rain,CRITICAL
+5.37,3,Morning,Clear,HIGH
+12.88,18,Night,Light Rain,LOW
+10.2,5,Dusk,Heavy Rain,LOW
+7.2,22,Night,Light Rain,MEDIUM
+6.22,16,Night,Light Rain,MEDIUM
+10.34,13,Night,Heavy Rain,LOW
+10.83,10,Afternoon,Clear,LOW
+0.79,21,Night,Clear,CRITICAL
+0.8,18,Afternoon,Clear,CRITICAL
+14.11,1,Night,Heavy Rain,LOW
+5.89,6,Afternoon,Light Rain,MEDIUM
+4.95,5,Night,Light Rain,HIGH
+5.32,19,Morning,Light Rain,MEDIUM
+11.19,23,Afternoon,Clear,LOW
+4.76,10,Night,Heavy Rain,HIGH
+11.99,18,Afternoon,Heavy Rain,LOW
+3.14,7,Morning,Clear,MEDIUM
+12.47,5,Night,Heavy Rain,LOW
+3.43,9,Dusk,Light Rain,HIGH
+11.28,2,Night,Light Rain,LOW
+2.36,10,Morning,Clear,HIGH
+4.33,2,Morning,Clear,MEDIUM
+10.79,16,Morning,Clear,LOW
+1.13,10,Night,Light Rain,CRITICAL
+2.24,2,Morning,Heavy Rain,MEDIUM
+1.91,6,Night,Heavy Rain,HIGH
+14.03,2,Morning,Light Rain,LOW
+14.93,10,Morning,Clear,LOW
+4.91,12,Dusk,Light Rain,HIGH
+12.88,19,Dusk,Heavy Rain,LOW
+8.15,21,Morning,Clear,LOW
+11.56,13,Night,Heavy Rain,LOW
+10.5,20,Afternoon,Heavy Rain,LOW
+13.69,6,Dusk,Heavy Rain,LOW
+12.75,24,Afternoon,Light Rain,LOW
+12.18,0,Night,Clear,LOW
+0.43,19,Morning,Clear,CRITICAL
+7.17,18,Morning,Clear,MEDIUM
+3.23,1,Dusk,Heavy Rain,HIGH
+8.22,18,Afternoon,Clear,LOW
+14.54,3,Morning,Heavy Rain,LOW
+2.86,19,Morning,Clear,MEDIUM
+7.52,14,Dusk,Light Rain,MEDIUM
+7.62,15,Morning,Heavy Rain,MEDIUM
+0.37,1,Night,Clear,HIGH
+0.7,15,Night,Light Rain,CRITICAL
+14.45,8,Dusk,Heavy Rain,LOW
+1.08,9,Morning,Heavy Rain,HIGH
+0.97,3,Night,Heavy Rain,HIGH
+1.41,3,Morning,Clear,HIGH
+0.79,21,Afternoon,Light Rain,CRITICAL
+9.49,8,Night,Heavy Rain,LOW
+1.48,11,Afternoon,Heavy Rain,CRITICAL
+1.68,16,Morning,Heavy Rain,CRITICAL
+2.43,6,Afternoon,Heavy Rain,HIGH
+5.01,8,Night,Heavy Rain,MEDIUM
+2.19,21,Morning,Light Rain,CRITICAL
+10.8,5,Dusk,Clear,LOW
+1.95,25,Morning,Heavy Rain,CRITICAL
+0.91,24,Afternoon,Clear,CRITICAL
+10.78,21,Morning,Clear,LOW
+1.65,17,Morning,Clear,CRITICAL
+1.51,25,Afternoon,Light Rain,CRITICAL
+9.03,14,Morning,Light Rain,LOW
+3.12,6,Dusk,Clear,HIGH
+5.54,0,Night,Heavy Rain,LOW
+2.38,10,Night,Light Rain,HIGH
+13.22,15,Afternoon,Heavy Rain,LOW
+5.33,2,Morning,Clear,MEDIUM
+11.49,10,Dusk,Light Rain,LOW
+10.49,5,Morning,Clear,LOW
+10.6,0,Morning,Heavy Rain,LOW
+1.69,18,Afternoon,Heavy Rain,CRITICAL
+1.46,16,Afternoon,Clear,CRITICAL
+2.47,10,Morning,Light Rain,HIGH
+13.67,20,Afternoon,Heavy Rain,LOW
+10.09,11,Morning,Clear,LOW
+14.84,22,Night,Clear,LOW
+13.84,7,Morning,Clear,LOW
+14.95,18,Afternoon,Heavy Rain,LOW
+3.79,25,Dusk,Heavy Rain,CRITICAL
+12.58,21,Dusk,Heavy Rain,LOW
+9.35,13,Dusk,Heavy Rain,LOW
+5.01,7,Dusk,Light Rain,MEDIUM
+5.45,9,Dusk,Light Rain,MEDIUM
+3.07,19,Night,Light Rain,CRITICAL
+12.59,1,Night,Clear,LOW
+2.76,19,Afternoon,Light Rain,CRITICAL
+7.4,15,Morning,Clear,MEDIUM
+14.42,8,Night,Heavy Rain,LOW
+2.27,15,Morning,Heavy Rain,CRITICAL
+4.5,19,Morning,Heavy Rain,MEDIUM
+12.74,2,Dusk,Clear,LOW
+10.58,2,Afternoon,Heavy Rain,LOW
+6.31,5,Dusk,Clear,MEDIUM
+8.86,1,Morning,Heavy Rain,LOW
+6.44,23,Afternoon,Clear,MEDIUM
+11.56,23,Dusk,Light Rain,LOW
+7.53,8,Night,Heavy Rain,MEDIUM
+5.92,14,Night,Light Rain,MEDIUM
+0.87,7,Dusk,Heavy Rain,CRITICAL
+2.1,7,Night,Light Rain,CRITICAL
+9.5,2,Dusk,Heavy Rain,LOW
+3.66,11,Night,Heavy Rain,CRITICAL
+11.21,19,Morning,Heavy Rain,LOW
+2.53,24,Night,Light Rain,CRITICAL
+4.88,14,Afternoon,Heavy Rain,MEDIUM
+12.77,19,Afternoon,Heavy Rain,LOW
+4.1,9,Dusk,Clear,HIGH
+10.55,10,Morning,Clear,LOW
+8.7,5,Morning,Light Rain,LOW
+10.56,4,Night,Light Rain,LOW
+13.16,12,Dusk,Light Rain,LOW
+7.68,23,Dusk,Heavy Rain,MEDIUM
+6.78,15,Morning,Clear,MEDIUM
+1.38,7,Night,Clear,CRITICAL
+5.42,19,Dusk,Light Rain,MEDIUM
+12.17,21,Night,Light Rain,LOW
+5.47,15,Night,Light Rain,MEDIUM
+2.77,8,Morning,Light Rain,HIGH
+3.24,18,Dusk,Heavy Rain,CRITICAL
+1.0,9,Afternoon,Light Rain,HIGH
+10.92,1,Afternoon,Heavy Rain,LOW
+3.77,3,Morning,Heavy Rain,MEDIUM
+1.7,5,Afternoon,Heavy Rain,HIGH
+9.31,14,Afternoon,Clear,LOW
+2.79,11,Night,Clear,CRITICAL
+12.6,2,Night,Clear,LOW
+14.2,17,Afternoon,Light Rain,CRITICAL
+5.29,1,Dusk,Heavy Rain,MEDIUM
+10.55,21,Afternoon,Heavy Rain,LOW
+10.58,5,Afternoon,Light Rain,LOW
+5.12,9,Morning,Heavy Rain,MEDIUM
+3.63,7,Night,Light Rain,HIGH
+3.1,15,Night,Light Rain,CRITICAL
+0.19,12,Dusk,Clear,CRITICAL
+0.58,11,Morning,Clear,CRITICAL
+6.93,24,Morning,Heavy Rain,LOW
+11.07,15,Dusk,Light Rain,LOW
+14.76,25,Morning,Light Rain,LOW
+6.8,3,Afternoon,Heavy Rain,LOW
+14.25,23,Morning,Clear,LOW
+2.85,15,Morning,Light Rain,CRITICAL
+7.52,15,Afternoon,Clear,MEDIUM
+3.76,7,Night,Light Rain,HIGH
+1.81,5,Dusk,Heavy Rain,HIGH
+6.29,14,Dusk,Clear,MEDIUM
+13.82,12,Morning,Clear,LOW
+4.66,10,Dusk,Light Rain,HIGH
+1.46,4,Afternoon,Light Rain,HIGH
+6.68,5,Afternoon,Heavy Rain,MEDIUM
+1.27,13,Morning,Clear,CRITICAL
+13.15,7,Dusk,Clear,LOW
+6.65,7,Morning,Light Rain,MEDIUM
+12.93,14,Night,Light Rain,LOW
+8.73,6,Morning,Heavy Rain,LOW
+3.8,9,Night,Heavy Rain,HIGH
+5.58,17,Morning,Light Rain,MEDIUM
+4.05,20,Dusk,Heavy Rain,HIGH
+12.99,16,Afternoon,Clear,CRITICAL
+5.48,17,Dusk,Heavy Rain,MEDIUM
+10.22,24,Night,Light Rain,LOW
+9.43,21,Afternoon,Clear,LOW
+12.37,25,Dusk,Light Rain,LOW
+0.33,18,Morning,Heavy Rain,CRITICAL
+10.34,0,Morning,Heavy Rain,LOW
+11.32,6,Dusk,Light Rain,LOW
+13.35,22,Dusk,Heavy Rain,LOW
+4.15,25,Dusk,Clear,HIGH
+7.77,15,Morning,Heavy Rain,MEDIUM
+8.21,23,Night,Light Rain,LOW
+8.64,21,Afternoon,Clear,LOW
+0.69,20,Night,Heavy Rain,CRITICAL
+13.86,6,Dusk,Light Rain,LOW
+7.94,23,Dusk,Heavy Rain,MEDIUM
+6.28,5,Morning,Heavy Rain,LOW
+10.06,7,Night,Clear,LOW
+1.2,4,Night,Heavy Rain,HIGH
+12.55,2,Night,Clear,LOW
+10.52,2,Dusk,Clear,LOW
+12.2,1,Morning,Heavy Rain,LOW
+11.82,10,Afternoon,Heavy Rain,LOW
+11.7,20,Night,Heavy Rain,LOW
+14.2,20,Afternoon,Heavy Rain,LOW
+10.97,11,Night,Light Rain,LOW
+3.53,22,Morning,Heavy Rain,CRITICAL
+6.57,24,Morning,Clear,MEDIUM
+9.33,20,Dusk,Light Rain,LOW
+3.04,5,Dusk,Heavy Rain,HIGH
+12.7,6,Afternoon,Light Rain,LOW
+3.43,14,Night,Light Rain,CRITICAL
+3.03,6,Afternoon,Heavy Rain,MEDIUM
+0.6,20,Morning,Clear,CRITICAL
+3.2,21,Afternoon,Light Rain,CRITICAL
+6.94,9,Afternoon,Heavy Rain,CRITICAL
+4.87,6,Night,Light Rain,HIGH
+14.38,14,Morning,Clear,LOW
+6.45,8,Night,Light Rain,MEDIUM
+13.73,15,Night,Clear,LOW
+10.1,6,Morning,Heavy Rain,LOW
+13.11,12,Afternoon,Light Rain,LOW
+10.88,24,Night,Clear,LOW
+7.97,11,Dusk,Clear,MEDIUM
+6.12,7,Dusk,Light Rain,MEDIUM
+12.9,1,Afternoon,Light Rain,LOW
+3.88,3,Morning,Light Rain,MEDIUM
+7.35,12,Night,Light Rain,MEDIUM
+0.22,12,Night,Clear,CRITICAL
+8.64,1,Afternoon,Light Rain,LOW
+12.95,1,Dusk,Light Rain,LOW
+4.14,14,Night,Clear,HIGH
+10.12,1,Night,Light Rain,LOW
+13.92,21,Afternoon,Heavy Rain,LOW
+11.83,0,Afternoon,Light Rain,LOW
+3.96,15,Night,Clear,CRITICAL
+4.9,10,Night,Light Rain,HIGH
+12.3,0,Dusk,Clear,LOW
+1.67,14,Afternoon,Clear,CRITICAL
+6.25,16,Night,Heavy Rain,MEDIUM
+11.4,24,Night,Heavy Rain,LOW
+3.36,0,Afternoon,Light Rain,LOW
+5.94,11,Night,Light Rain,MEDIUM
+3.53,8,Afternoon,Light Rain,MEDIUM
+11.71,5,Night,Heavy Rain,LOW
+9.77,11,Morning,Light Rain,LOW
+1.67,2,Night,Clear,HIGH
+5.88,17,Morning,Light Rain,MEDIUM
+3.61,4,Afternoon,Heavy Rain,MEDIUM
+12.53,25,Morning,Heavy Rain,LOW
+4.96,7,Afternoon,Clear,MEDIUM
+8.48,6,Afternoon,Clear,LOW
+0.71,12,Morning,Light Rain,CRITICAL
+4.44,18,Morning,Heavy Rain,LOW
+3.93,11,Afternoon,Clear,CRITICAL
+2.77,14,Morning,Heavy Rain,CRITICAL
+8.18,1,Afternoon,Light Rain,LOW
+14.81,21,Morning,Heavy Rain,LOW
+6.47,4,Afternoon,Heavy Rain,MEDIUM
+9.51,16,Morning,Light Rain,LOW
+11.69,10,Dusk,Light Rain,LOW
+12.95,5,Afternoon,Clear,LOW
+12.92,8,Night,Light Rain,LOW
+9.02,4,Dusk,Clear,LOW
+1.37,17,Morning,Light Rain,CRITICAL
+10.33,7,Afternoon,Heavy Rain,LOW
+2.12,1,Morning,Heavy Rain,MEDIUM
+2.88,13,Dusk,Light Rain,CRITICAL
+10.33,23,Afternoon,Light Rain,LOW
+9.96,24,Morning,Clear,LOW
+6.0,19,Morning,Clear,MEDIUM
+2.33,4,Morning,Clear,CRITICAL
+2.02,22,Dusk,Light Rain,CRITICAL
+13.57,5,Morning,Clear,LOW
+10.55,25,Afternoon,Light Rain,LOW
+11.86,22,Afternoon,Heavy Rain,LOW
+1.54,4,Morning,Light Rain,HIGH
+8.85,7,Dusk,Light Rain,LOW
+1.94,10,Morning,Heavy Rain,HIGH
+7.1,22,Morning,Clear,MEDIUM
+8.28,2,Morning,Light Rain,LOW
+3.23,21,Night,Light Rain,CRITICAL
+5.01,17,Afternoon,Heavy Rain,MEDIUM
+12.62,7,Morning,Light Rain,LOW
+7.34,13,Dusk,Heavy Rain,MEDIUM
+4.35,11,Dusk,Light Rain,HIGH
+10.99,2,Dusk,Heavy Rain,LOW
+5.75,22,Afternoon,Heavy Rain,MEDIUM
+1.69,14,Dusk,Light Rain,CRITICAL
+7.48,13,Morning,Light Rain,MEDIUM
+0.24,15,Morning,Heavy Rain,CRITICAL
+10.2,21,Afternoon,Clear,LOW
+12.33,5,Morning,Light Rain,LOW
+7.54,8,Night,Light Rain,MEDIUM
+3.76,22,Night,Clear,CRITICAL
+7.45,6,Night,Light Rain,MEDIUM
+6.62,25,Night,Light Rain,MEDIUM
+5.25,24,Night,Heavy Rain,MEDIUM
+11.4,12,Morning,Light Rain,LOW
+7.72,10,Morning,Clear,MEDIUM
+11.09,12,Night,Light Rain,LOW
+10.71,13,Afternoon,Clear,LOW
+1.55,21,Night,Light Rain,CRITICAL
+11.97,14,Dusk,Clear,LOW
+5.22,25,Afternoon,Light Rain,MEDIUM
+5.36,20,Afternoon,Heavy Rain,MEDIUM
+13.16,11,Night,Heavy Rain,LOW
+13.98,12,Morning,Clear,LOW
+12.06,22,Morning,Heavy Rain,LOW
+9.23,25,Morning,Clear,LOW
+6.14,2,Afternoon,Clear,MEDIUM
+13.62,11,Night,Heavy Rain,LOW
+10.27,5,Night,Light Rain,LOW
+7.77,0,Morning,Light Rain,LOW
+13.25,18,Morning,Heavy Rain,LOW
+9.36,19,Afternoon,Light Rain,MEDIUM
+6.48,4,Night,Heavy Rain,MEDIUM
+14.18,19,Morning,Light Rain,LOW
+1.24,21,Night,Light Rain,CRITICAL
+4.88,14,Dusk,Heavy Rain,HIGH
+0.41,6,Dusk,Heavy Rain,CRITICAL
+1.56,3,Night,Clear,HIGH
+7.75,15,Dusk,Heavy Rain,MEDIUM
+14.4,4,Morning,Heavy Rain,LOW
+1.96,19,Morning,Clear,CRITICAL
+12.98,22,Morning,Heavy Rain,LOW
+4.82,7,Morning,Light Rain,MEDIUM
+13.62,9,Morning,Light Rain,LOW
+8.72,15,Night,Heavy Rain,LOW
+14.9,25,Dusk,Light Rain,LOW
+8.74,17,Morning,Light Rain,LOW
+6.56,22,Night,Clear,MEDIUM
+9.44,23,Night,Heavy Rain,LOW
+0.44,18,Afternoon,Light Rain,CRITICAL
+11.91,23,Dusk,Heavy Rain,LOW
+10.38,25,Afternoon,Light Rain,LOW
+3.5,23,Morning,Clear,CRITICAL
+14.5,6,Dusk,Light Rain,LOW
+3.55,12,Morning,Clear,CRITICAL
+4.23,1,Dusk,Light Rain,MEDIUM
+8.07,13,Morning,Heavy Rain,LOW
+14.51,16,Dusk,Light Rain,LOW
+7.96,0,Morning,Heavy Rain,LOW
+7.33,9,Dusk,Heavy Rain,MEDIUM
+9.15,13,Night,Heavy Rain,MEDIUM
+6.83,21,Dusk,Light Rain,MEDIUM
+2.79,15,Morning,Heavy Rain,CRITICAL
+9.17,5,Morning,Clear,LOW
+1.16,14,Dusk,Light Rain,CRITICAL
+9.39,6,Night,Light Rain,LOW
+14.54,10,Morning,Light Rain,LOW
+14.52,21,Afternoon,Light Rain,LOW
+10.04,3,Afternoon,Light Rain,HIGH
+8.38,20,Morning,Heavy Rain,LOW
+10.34,14,Dusk,Heavy Rain,HIGH
+13.7,9,Dusk,Light Rain,LOW
+4.03,7,Afternoon,Clear,MEDIUM
+6.32,22,Dusk,Heavy Rain,MEDIUM
+13.92,3,Dusk,Heavy Rain,LOW
+10.76,22,Afternoon,Clear,CRITICAL
+12.16,6,Night,Heavy Rain,LOW
+4.61,17,Night,Heavy Rain,HIGH
+14.44,7,Dusk,Heavy Rain,LOW
+0.22,8,Afternoon,Light Rain,HIGH
+12.71,25,Afternoon,Clear,LOW
+2.45,10,Night,Light Rain,HIGH
+14.1,9,Afternoon,Heavy Rain,LOW
+1.16,20,Morning,Light Rain,CRITICAL
+12.51,22,Morning,Heavy Rain,LOW
+14.53,18,Afternoon,Heavy Rain,LOW
+7.32,14,Afternoon,Heavy Rain,MEDIUM
+12.83,3,Morning,Heavy Rain,LOW
+14.06,16,Dusk,Clear,LOW
+4.44,6,Afternoon,Light Rain,MEDIUM
+7.07,15,Morning,Light Rain,MEDIUM
+13.65,22,Afternoon,Light Rain,LOW
+0.15,13,Night,Clear,CRITICAL
+13.9,7,Dusk,Heavy Rain,LOW
+5.22,25,Morning,Clear,MEDIUM
+1.71,5,Afternoon,Clear,HIGH
+11.84,20,Dusk,Light Rain,LOW
+12.18,16,Morning,Heavy Rain,LOW
+8.4,8,Night,Heavy Rain,LOW
+14.63,18,Night,Heavy Rain,LOW
+14.02,6,Afternoon,Light Rain,LOW
+5.65,5,Morning,Heavy Rain,MEDIUM
+3.93,24,Afternoon,Clear,CRITICAL
+7.38,14,Afternoon,Clear,MEDIUM
+14.28,12,Morning,Light Rain,LOW
+5.46,2,Dusk,Heavy Rain,MEDIUM
+14.97,21,Dusk,Heavy Rain,LOW
+1.61,4,Night,Heavy Rain,HIGH
+8.65,22,Afternoon,Heavy Rain,LOW
+5.05,2,Morning,Light Rain,MEDIUM
+10.62,3,Dusk,Light Rain,LOW
+2.6,3,Afternoon,Heavy Rain,HIGH
+4.04,21,Morning,Light Rain,MEDIUM
+4.26,18,Afternoon,Clear,MEDIUM
+3.05,18,Afternoon,Light Rain,CRITICAL
+8.91,19,Afternoon,Clear,LOW
+4.75,13,Afternoon,Heavy Rain,MEDIUM
+6.3,0,Morning,Clear,LOW
+4.39,9,Night,Light Rain,HIGH
+2.11,16,Night,Heavy Rain,CRITICAL
+9.09,1,Morning,Heavy Rain,LOW
+6.41,4,Afternoon,Heavy Rain,MEDIUM
+0.2,15,Night,Heavy Rain,CRITICAL
+12.02,0,Dusk,Clear,LOW
+13.88,14,Afternoon,Clear,LOW
+12.73,8,Morning,Light Rain,LOW
+3.05,11,Night,Clear,CRITICAL
+5.93,25,Dusk,Heavy Rain,MEDIUM
+9.03,1,Dusk,Heavy Rain,LOW
+8.39,11,Morning,Heavy Rain,LOW
+8.67,13,Night,Clear,LOW
+0.14,19,Morning,Heavy Rain,CRITICAL
+2.15,21,Night,Clear,CRITICAL
+0.69,1,Morning,Heavy Rain,MEDIUM
+13.39,20,Dusk,Clear,LOW
+10.12,19,Afternoon,Light Rain,LOW
+12.99,24,Dusk,Light Rain,LOW
+5.31,23,Night,Light Rain,MEDIUM
+1.69,6,Night,Heavy Rain,CRITICAL
+3.53,22,Afternoon,Heavy Rain,CRITICAL
+4.33,24,Afternoon,Clear,MEDIUM
+11.72,13,Dusk,Clear,LOW
+4.7,5,Dusk,Clear,HIGH
+11.38,20,Night,Heavy Rain,LOW
+9.11,1,Night,Clear,LOW
+7.7,23,Night,Clear,MEDIUM
+11.25,12,Night,Clear,LOW
+2.54,4,Morning,Light Rain,HIGH
+12.87,25,Morning,Heavy Rain,LOW
+1.59,19,Morning,Clear,CRITICAL
+9.84,23,Afternoon,Clear,LOW
+12.41,7,Afternoon,Heavy Rain,LOW
+2.01,17,Morning,Clear,CRITICAL
+12.48,8,Dusk,Clear,LOW
+1.2,12,Night,Light Rain,CRITICAL
+4.28,7,Afternoon,Light Rain,MEDIUM
+0.78,13,Afternoon,Clear,CRITICAL
+7.59,0,Morning,Heavy Rain,LOW
+5.01,12,Dusk,Clear,CRITICAL
+8.24,3,Dusk,Clear,LOW
+13.11,1,Dusk,Clear,LOW
+14.8,9,Afternoon,Light Rain,LOW
+12.36,5,Morning,Clear,LOW
+6.93,21,Morning,Light Rain,MEDIUM
+6.04,10,Dusk,Heavy Rain,MEDIUM
+1.6,2,Night,Heavy Rain,HIGH
+4.94,1,Dusk,Heavy Rain,HIGH
+2.05,22,Night,Clear,CRITICAL
+2.87,14,Afternoon,Clear,CRITICAL
+4.23,12,Afternoon,Clear,HIGH
+6.62,10,Dusk,Light Rain,MEDIUM
+4.0,20,Afternoon,Light Rain,MEDIUM
+6.35,24,Morning,Clear,MEDIUM
+5.11,10,Morning,Clear,MEDIUM
+13.42,11,Morning,Heavy Rain,LOW
+12.35,8,Afternoon,Light Rain,LOW
+4.2,16,Dusk,Light Rain,HIGH
+12.29,6,Night,Clear,LOW
+2.41,19,Dusk,Clear,CRITICAL
+3.97,21,Dusk,Light Rain,CRITICAL
+14.46,13,Afternoon,Heavy Rain,LOW
+1.56,0,Night,Heavy Rain,HIGH
+5.69,20,Night,Clear,MEDIUM
+14.59,9,Afternoon,Light Rain,LOW
+1.09,2,Morning,Clear,MEDIUM
+6.81,20,Morning,Light Rain,MEDIUM
+7.79,9,Night,Light Rain,MEDIUM
+11.37,25,Night,Heavy Rain,LOW
+3.08,11,Morning,Heavy Rain,CRITICAL
+0.39,15,Dusk,Heavy Rain,CRITICAL
+0.12,16,Afternoon,Clear,CRITICAL
+5.9,0,Afternoon,Clear,LOW
+12.48,24,Afternoon,Heavy Rain,LOW
+3.8,7,Dusk,Heavy Rain,HIGH
+5.75,6,Night,Heavy Rain,MEDIUM
+6.45,1,Night,Heavy Rain,MEDIUM
+12.72,0,Afternoon,Clear,LOW
+9.17,5,Night,Light Rain,LOW
+8.61,21,Night,Light Rain,LOW
+9.62,21,Morning,Heavy Rain,LOW
+1.54,12,Dusk,Light Rain,MEDIUM
+10.43,7,Morning,Light Rain,LOW
+0.67,7,Night,Heavy Rain,CRITICAL
+9.05,25,Morning,Light Rain,LOW
+11.71,25,Night,Light Rain,LOW
+5.51,1,Night,Clear,MEDIUM
+1.37,9,Morning,Heavy Rain,HIGH
+2.53,20,Dusk,Light Rain,HIGH
+1.6,10,Dusk,Clear,CRITICAL
+14.85,22,Afternoon,Heavy Rain,LOW
+10.87,15,Afternoon,Heavy Rain,LOW
+9.94,18,Night,Clear,LOW
+4.13,2,Morning,Light Rain,MEDIUM
+2.17,14,Night,Light Rain,CRITICAL
+11.17,15,Night,Light Rain,LOW
+9.18,20,Morning,Clear,LOW
+11.84,25,Dusk,Light Rain,LOW
+6.45,14,Night,Heavy Rain,MEDIUM
+5.27,5,Dusk,Light Rain,MEDIUM
+13.15,13,Afternoon,Clear,LOW
+6.13,8,Dusk,Heavy Rain,MEDIUM
+4.55,7,Night,Light Rain,HIGH
+4.75,2,Dusk,Heavy Rain,HIGH
+12.61,14,Night,Heavy Rain,LOW
+14.37,11,Night,Heavy Rain,LOW
+8.24,7,Afternoon,Heavy Rain,LOW
+12.93,21,Afternoon,Clear,CRITICAL
+7.68,16,Dusk,Clear,MEDIUM
+12.22,8,Morning,Clear,LOW
+0.9,9,Dusk,Heavy Rain,CRITICAL
+2.49,3,Dusk,Light Rain,HIGH
+1.52,14,Morning,Light Rain,CRITICAL
+13.44,23,Morning,Light Rain,LOW
+8.2,9,Afternoon,Clear,LOW
+1.19,9,Dusk,Light Rain,CRITICAL
+8.92,23,Afternoon,Light Rain,LOW
+3.57,23,Morning,Light Rain,CRITICAL
+7.99,13,Night,Heavy Rain,LOW
+13.83,2,Morning,Clear,LOW
+1.68,24,Dusk,Heavy Rain,CRITICAL
+0.86,18,Night,Clear,CRITICAL
+1.19,18,Morning,Light Rain,CRITICAL
+2.64,7,Morning,Clear,HIGH
+2.93,17,Dusk,Heavy Rain,CRITICAL
+4.13,12,Night,Clear,HIGH
+11.31,18,Afternoon,Light Rain,LOW
+12.02,14,Night,Light Rain,LOW
+7.01,18,Afternoon,Heavy Rain,MEDIUM
+12.77,13,Dusk,Heavy Rain,LOW
+10.72,15,Afternoon,Clear,LOW
+9.68,6,Dusk,Heavy Rain,LOW
+7.03,8,Morning,Heavy Rain,MEDIUM
+10.26,12,Afternoon,Light Rain,LOW
+11.45,21,Morning,Clear,LOW
+12.77,18,Afternoon,Clear,LOW
+11.31,20,Afternoon,Heavy Rain,LOW
+4.85,14,Afternoon,Clear,MEDIUM
+2.91,1,Dusk,Heavy Rain,HIGH
+14.42,1,Night,Clear,LOW
+9.31,23,Morning,Light Rain,LOW
+12.77,8,Night,Clear,LOW
+0.76,8,Afternoon,Light Rain,HIGH
+11.25,24,Dusk,Clear,LOW
+6.02,23,Morning,Clear,MEDIUM
+1.61,24,Night,Light Rain,CRITICAL
+1.53,11,Morning,Clear,CRITICAL
+14.83,25,Dusk,Clear,LOW
+2.03,5,Night,Light Rain,HIGH
+0.52,16,Night,Clear,CRITICAL
+7.75,21,Morning,Clear,MEDIUM
+5.82,15,Afternoon,Light Rain,CRITICAL
+1.88,3,Morning,Heavy Rain,HIGH
+4.15,13,Night,Light Rain,HIGH
+12.62,10,Night,Clear,LOW
+5.32,2,Morning,Light Rain,MEDIUM
+7.79,0,Morning,Clear,LOW
+5.94,22,Night,Clear,HIGH
+1.34,16,Night,Heavy Rain,CRITICAL
+5.02,23,Night,Clear,MEDIUM
+2.5,3,Dusk,Heavy Rain,HIGH
+7.34,10,Dusk,Light Rain,MEDIUM
+5.64,14,Night,Heavy Rain,MEDIUM
+14.84,8,Night,Clear,LOW
+3.48,23,Afternoon,Clear,CRITICAL
+7.24,19,Dusk,Light Rain,MEDIUM
+11.17,4,Afternoon,Clear,LOW
+8.02,19,Night,Heavy Rain,LOW
+9.6,21,Night,Light Rain,LOW
+9.13,4,Dusk,Clear,LOW
+5.24,11,Night,Heavy Rain,MEDIUM
+3.79,1,Night,Heavy Rain,HIGH
+14.54,2,Night,Clear,LOW
+6.53,10,Dusk,Heavy Rain,MEDIUM
+14.56,16,Dusk,Clear,LOW
+0.75,0,Afternoon,Light Rain,LOW
+3.25,19,Morning,Clear,CRITICAL
+11.36,0,Afternoon,Light Rain,LOW
+0.41,6,Night,Light Rain,HIGH
+14.19,0,Dusk,Light Rain,LOW
+2.11,5,Dusk,Light Rain,HIGH
+1.94,25,Dusk,Clear,CRITICAL
+7.94,1,Dusk,Heavy Rain,MEDIUM
+0.32,5,Afternoon,Light Rain,HIGH
+10.72,1,Afternoon,Heavy Rain,LOW
+1.33,24,Dusk,Clear,CRITICAL
+7.71,11,Dusk,Light Rain,MEDIUM
+10.61,9,Dusk,Light Rain,LOW
+5.39,3,Dusk,Light Rain,MEDIUM
+10.21,7,Afternoon,Clear,LOW
+3.61,20,Afternoon,Clear,CRITICAL
+4.88,15,Night,Heavy Rain,HIGH
+7.02,12,Afternoon,Heavy Rain,HIGH
+9.37,25,Morning,Heavy Rain,MEDIUM
+0.48,22,Dusk,Clear,CRITICAL
+8.35,22,Night,Clear,LOW
+3.37,15,Morning,Light Rain,CRITICAL
+2.14,9,Morning,Heavy Rain,HIGH
+6.29,4,Night,Heavy Rain,MEDIUM
+3.29,14,Dusk,Heavy Rain,CRITICAL
+3.46,1,Dusk,Heavy Rain,HIGH
+2.25,7,Dusk,Clear,HIGH
+7.15,17,Night,Heavy Rain,MEDIUM
+3.26,11,Afternoon,Light Rain,CRITICAL
+6.75,9,Dusk,Heavy Rain,MEDIUM
+9.67,21,Morning,Heavy Rain,LOW
+4.34,21,Morning,Light Rain,MEDIUM
+1.43,19,Dusk,Light Rain,CRITICAL
+5.95,12,Afternoon,Heavy Rain,MEDIUM
+7.4,21,Afternoon,Light Rain,MEDIUM
+7.17,4,Dusk,Light Rain,MEDIUM
+12.8,17,Afternoon,Light Rain,LOW
+2.38,4,Dusk,Light Rain,HIGH
+8.5,12,Dusk,Clear,LOW
+8.25,20,Morning,Clear,LOW
+0.23,24,Night,Heavy Rain,CRITICAL
+2.02,24,Afternoon,Light Rain,CRITICAL
+13.64,13,Dusk,Heavy Rain,LOW
+3.85,17,Night,Clear,CRITICAL
+4.86,19,Dusk,Heavy Rain,HIGH
+2.86,11,Morning,Heavy Rain,CRITICAL
+6.96,7,Dusk,Light Rain,MEDIUM
+11.32,9,Dusk,Light Rain,LOW
+5.55,4,Night,Light Rain,MEDIUM
+4.92,6,Afternoon,Light Rain,MEDIUM
+8.16,1,Afternoon,Clear,LOW
+5.09,16,Night,Light Rain,MEDIUM
+12.37,5,Dusk,Clear,LOW
+5.38,17,Morning,Clear,MEDIUM
+12.06,18,Afternoon,Light Rain,LOW
+2.39,16,Night,Clear,CRITICAL
+9.96,12,Afternoon,Clear,LOW
+2.98,8,Night,Light Rain,HIGH
+13.55,2,Dusk,Clear,LOW
+7.97,11,Night,Light Rain,MEDIUM
+2.87,4,Dusk,Heavy Rain,HIGH
+13.64,12,Dusk,Light Rain,LOW
+5.49,11,Morning,Clear,MEDIUM
+3.58,23,Morning,Clear,CRITICAL
+4.74,19,Dusk,Heavy Rain,HIGH
+6.66,18,Morning,Light Rain,MEDIUM
+14.86,17,Dusk,Heavy Rain,LOW
+14.46,20,Morning,Heavy Rain,LOW
+4.88,16,Night,Heavy Rain,HIGH
+6.09,1,Morning,Clear,MEDIUM
+13.26,3,Dusk,Clear,LOW
+10.07,0,Morning,Clear,LOW
+9.48,15,Afternoon,Heavy Rain,LOW
+4.52,18,Night,Clear,MEDIUM
+13.38,16,Night,Light Rain,LOW
+13.96,19,Night,Heavy Rain,LOW
+6.51,0,Dusk,Clear,LOW
+9.86,16,Dusk,Heavy Rain,LOW
+2.01,3,Afternoon,Clear,HIGH
+12.97,13,Afternoon,Heavy Rain,LOW
+3.96,15,Night,Heavy Rain,CRITICAL
+6.54,4,Night,Clear,MEDIUM
+0.89,1,Night,Light Rain,HIGH
+10.39,14,Afternoon,Light Rain,LOW
+6.88,1,Afternoon,Heavy Rain,MEDIUM
+0.69,1,Afternoon,Heavy Rain,MEDIUM
+2.8,19,Morning,Light Rain,CRITICAL
+0.26,13,Dusk,Light Rain,CRITICAL
+3.9,5,Afternoon,Heavy Rain,MEDIUM
+1.39,24,Dusk,Clear,CRITICAL
+12.85,6,Dusk,Heavy Rain,LOW
+4.68,12,Morning,Clear,MEDIUM
+14.32,20,Morning,Clear,LOW
+14.23,18,Morning,Clear,LOW
+9.7,8,Dusk,Heavy Rain,LOW
+13.37,9,Dusk,Heavy Rain,LOW
+10.31,4,Afternoon,Clear,LOW
+5.38,12,Afternoon,Heavy Rain,MEDIUM
+7.49,16,Morning,Clear,MEDIUM
+8.46,1,Afternoon,Clear,LOW
+0.13,0,Morning,Clear,LOW
+2.55,6,Night,Heavy Rain,HIGH
+8.62,6,Night,Clear,LOW
+10.09,1,Morning,Clear,LOW
+6.1,14,Dusk,Light Rain,MEDIUM
+9.63,7,Morning,Light Rain,LOW
+9.57,25,Night,Light Rain,LOW
+2.38,10,Morning,Light Rain,HIGH
+4.11,9,Morning,Clear,MEDIUM
+6.18,20,Morning,Heavy Rain,MEDIUM
+5.51,1,Afternoon,Clear,MEDIUM
+6.43,20,Morning,Heavy Rain,MEDIUM
+3.62,12,Morning,Clear,CRITICAL
+7.78,18,Morning,Heavy Rain,HIGH
+12.71,1,Night,Light Rain,LOW
+12.32,9,Afternoon,Clear,LOW
+9.04,23,Afternoon,Light Rain,LOW
+5.65,25,Afternoon,Light Rain,MEDIUM
+0.77,8,Morning,Heavy Rain,HIGH
+11.42,8,Morning,Light Rain,LOW
+14.59,9,Dusk,Heavy Rain,LOW
+14.91,18,Morning,Light Rain,LOW
+4.99,9,Night,Light Rain,HIGH
+1.89,21,Morning,Clear,CRITICAL
+11.95,20,Night,Light Rain,LOW
+1.73,20,Night,Light Rain,CRITICAL
+6.15,3,Night,Heavy Rain,MEDIUM
+1.0,9,Morning,Clear,HIGH
+1.84,22,Night,Heavy Rain,CRITICAL
+9.49,12,Dusk,Clear,LOW
+13.5,24,Morning,Heavy Rain,LOW
+11.25,13,Dusk,Heavy Rain,LOW
+1.56,25,Night,Light Rain,CRITICAL
+5.66,4,Afternoon,Heavy Rain,MEDIUM
+4.21,25,Dusk,Light Rain,HIGH
+5.41,0,Night,Clear,LOW
+10.0,2,Afternoon,Heavy Rain,LOW
+11.66,18,Morning,Clear,LOW
+14.37,2,Morning,Heavy Rain,LOW
+12.16,21,Night,Clear,LOW
+7.88,3,Night,Heavy Rain,MEDIUM
+12.37,3,Morning,Clear,LOW
+8.92,8,Dusk,Clear,LOW
+8.2,4,Night,Clear,LOW
+10.11,14,Morning,Clear,MEDIUM
+11.49,6,Night,Heavy Rain,LOW
+2.93,3,Afternoon,Clear,HIGH
+4.29,14,Afternoon,Light Rain,MEDIUM
+10.93,21,Dusk,Light Rain,LOW
+10.14,6,Morning,Heavy Rain,LOW
+12.63,4,Afternoon,Clear,LOW
+6.86,24,Morning,Clear,MEDIUM
+5.65,1,Dusk,Clear,MEDIUM
+4.0,2,Afternoon,Clear,MEDIUM
+7.68,24,Morning,Light Rain,MEDIUM
+10.99,7,Night,Light Rain,LOW
+13.75,17,Night,Heavy Rain,LOW
+0.98,3,Morning,Heavy Rain,HIGH
+14.28,15,Dusk,Light Rain,LOW
+12.42,1,Night,Clear,LOW
+12.15,10,Morning,Heavy Rain,LOW
+3.08,8,Morning,Heavy Rain,MEDIUM
+2.41,23,Afternoon,Light Rain,CRITICAL
+6.74,15,Dusk,Clear,MEDIUM
+14.75,3,Night,Light Rain,HIGH
+7.38,0,Night,Heavy Rain,LOW
+11.14,9,Night,Heavy Rain,LOW
+13.3,5,Dusk,Light Rain,LOW
+1.84,21,Dusk,Light Rain,CRITICAL
+11.19,21,Morning,Clear,LOW
+1.05,2,Night,Clear,HIGH
+2.99,9,Night,Clear,HIGH
+7.86,23,Dusk,Heavy Rain,MEDIUM
+6.7,18,Afternoon,Heavy Rain,MEDIUM
+14.42,19,Dusk,Heavy Rain,LOW
+7.91,13,Dusk,Clear,MEDIUM
+4.38,23,Afternoon,Heavy Rain,MEDIUM
+12.21,8,Morning,Light Rain,LOW
+14.03,18,Night,Clear,LOW
+6.6,14,Afternoon,Clear,MEDIUM
+1.34,23,Night,Light Rain,CRITICAL
+6.91,5,Night,Clear,MEDIUM
+4.3,23,Night,Clear,HIGH
+4.73,9,Afternoon,Heavy Rain,MEDIUM
+3.75,5,Afternoon,Light Rain,MEDIUM
+8.32,18,Dusk,Light Rain,LOW
+7.22,8,Night,Clear,MEDIUM
+11.43,22,Afternoon,Clear,LOW
+3.22,9,Dusk,Heavy Rain,HIGH
+10.08,23,Dusk,Heavy Rain,LOW
+6.06,1,Dusk,Light Rain,MEDIUM
+9.58,8,Afternoon,Light Rain,LOW
+7.0,24,Afternoon,Light Rain,MEDIUM
+12.0,19,Night,Clear,LOW
+11.72,17,Afternoon,Light Rain,LOW
+1.17,0,Night,Light Rain,HIGH
+9.95,0,Night,Light Rain,CRITICAL
+0.66,15,Morning,Heavy Rain,CRITICAL
+0.1,25,Morning,Light Rain,CRITICAL
+5.87,18,Afternoon,Heavy Rain,MEDIUM
+14.5,15,Dusk,Light Rain,LOW
+9.43,4,Morning,Light Rain,LOW
+4.09,12,Night,Heavy Rain,HIGH
+7.37,1,Dusk,Light Rain,MEDIUM
+2.67,12,Afternoon,Clear,CRITICAL
+4.13,11,Dusk,Clear,HIGH
+9.87,22,Night,Light Rain,LOW
+8.93,13,Morning,Light Rain,LOW
+10.73,3,Morning,Heavy Rain,LOW
+10.74,2,Afternoon,Heavy Rain,LOW
+5.16,23,Afternoon,Clear,MEDIUM
+2.97,20,Night,Clear,CRITICAL
+4.6,4,Dusk,Light Rain,HIGH
+8.41,13,Morning,Clear,LOW
+3.2,23,Morning,Light Rain,CRITICAL
+8.29,5,Afternoon,Light Rain,LOW
+4.16,4,Night,Heavy Rain,HIGH
+3.24,19,Dusk,Clear,CRITICAL
+4.07,24,Night,Light Rain,HIGH
+5.68,13,Morning,Clear,MEDIUM
+4.98,2,Morning,Clear,MEDIUM
+3.75,16,Morning,Clear,CRITICAL
+8.18,5,Morning,Heavy Rain,LOW
+13.82,21,Morning,Light Rain,LOW
+4.85,15,Night,Clear,HIGH
+1.56,15,Night,Heavy Rain,CRITICAL
+12.5,3,Dusk,Heavy Rain,LOW
+3.04,6,Night,Clear,HIGH
+13.86,22,Morning,Heavy Rain,LOW
+0.7,7,Dusk,Heavy Rain,CRITICAL
+2.62,18,Night,Light Rain,CRITICAL
+12.67,14,Night,Light Rain,LOW
+7.03,8,Morning,Clear,MEDIUM
+11.51,4,Dusk,Clear,LOW
+3.07,8,Dusk,Clear,MEDIUM
+9.37,0,Night,Light Rain,LOW
+11.44,3,Afternoon,Clear,MEDIUM
+7.69,1,Dusk,Heavy Rain,MEDIUM
+11.7,16,Morning,Light Rain,LOW
+14.31,7,Dusk,Light Rain,LOW
+8.82,1,Afternoon,Light Rain,LOW
+13.06,19,Afternoon,Clear,LOW
+13.78,1,Night,Light Rain,LOW
+10.17,23,Afternoon,Light Rain,LOW
+7.65,7,Afternoon,Heavy Rain,MEDIUM
+14.13,18,Night,Light Rain,LOW
+8.55,20,Morning,Clear,LOW
+8.86,10,Night,Clear,LOW
+2.32,1,Afternoon,Heavy Rain,MEDIUM
+11.33,4,Morning,Clear,LOW
+1.67,13,Afternoon,Light Rain,CRITICAL
+11.89,21,Morning,Clear,LOW
+2.48,14,Night,Light Rain,CRITICAL
+2.75,22,Morning,Clear,CRITICAL
+11.27,10,Afternoon,Heavy Rain,LOW
+8.46,21,Night,Heavy Rain,LOW
+6.55,13,Dusk,Clear,MEDIUM
+10.73,20,Night,Clear,LOW
+13.93,20,Morning,Clear,LOW
+3.4,19,Morning,Heavy Rain,CRITICAL
+1.19,24,Dusk,Heavy Rain,CRITICAL
+10.84,8,Night,Heavy Rain,LOW
+0.44,21,Night,Light Rain,CRITICAL
+8.23,2,Night,Heavy Rain,LOW
+9.41,20,Dusk,Clear,LOW
+3.61,9,Dusk,Heavy Rain,HIGH
+12.3,3,Dusk,Clear,MEDIUM
+5.75,8,Night,Clear,MEDIUM
+14.67,22,Morning,Heavy Rain,LOW
+5.43,17,Morning,Light Rain,MEDIUM
+5.53,2,Afternoon,Clear,MEDIUM
+11.1,19,Night,Clear,LOW
+10.9,12,Dusk,Clear,LOW
+5.14,3,Night,Light Rain,MEDIUM
+13.6,8,Morning,Clear,LOW
+7.56,22,Morning,Clear,MEDIUM
+11.35,12,Night,Clear,LOW
+11.53,17,Morning,Clear,LOW
+12.7,23,Dusk,Light Rain,LOW
+8.66,0,Night,Heavy Rain,LOW
+14.62,14,Afternoon,Light Rain,LOW
+9.62,6,Afternoon,Light Rain,LOW
+0.64,20,Morning,Light Rain,CRITICAL
+5.07,20,Night,Light Rain,MEDIUM
+12.49,12,Morning,Clear,LOW
+2.78,22,Morning,Clear,CRITICAL
+5.78,8,Afternoon,Heavy Rain,MEDIUM
+1.41,17,Dusk,Heavy Rain,CRITICAL
+13.16,5,Night,Light Rain,LOW
+6.13,0,Afternoon,Clear,LOW
+4.41,24,Afternoon,Light Rain,MEDIUM
+1.03,12,Dusk,Light Rain,CRITICAL
+7.74,0,Night,Light Rain,LOW
+7.5,14,Dusk,Light Rain,MEDIUM
+13.57,2,Night,Light Rain,LOW
+9.69,5,Morning,Clear,LOW
+7.34,21,Dusk,Light Rain,MEDIUM
+7.49,25,Afternoon,Light Rain,MEDIUM
+9.39,11,Morning,Heavy Rain,LOW
+6.88,4,Afternoon,Light Rain,MEDIUM
+0.57,16,Afternoon,Heavy Rain,CRITICAL
+11.91,17,Night,Light Rain,LOW
+13.13,18,Dusk,Heavy Rain,LOW
+14.66,9,Morning,Clear,LOW
+1.92,20,Night,Heavy Rain,CRITICAL
+0.49,7,Dusk,Light Rain,CRITICAL
+5.96,13,Dusk,Light Rain,MEDIUM
+7.11,2,Dusk,Light Rain,MEDIUM
+14.65,24,Dusk,Clear,LOW
+4.27,17,Night,Clear,HIGH
+2.5,9,Morning,Light Rain,HIGH
+10.73,22,Morning,Clear,LOW
+5.15,9,Night,Clear,MEDIUM
+4.77,19,Dusk,Clear,HIGH
+14.75,20,Afternoon,Heavy Rain,LOW
+7.89,24,Night,Heavy Rain,MEDIUM
+3.68,20,Night,Heavy Rain,CRITICAL
+11.87,10,Dusk,Light Rain,LOW
+10.66,15,Morning,Light Rain,LOW
+8.98,20,Afternoon,Light Rain,LOW
+2.51,4,Night,Light Rain,LOW
+9.68,9,Afternoon,Clear,LOW
+2.19,13,Night,Light Rain,CRITICAL
+0.21,14,Morning,Light Rain,CRITICAL
+11.3,18,Morning,Light Rain,LOW
+5.14,1,Afternoon,Clear,MEDIUM
+6.21,6,Morning,Clear,HIGH
+13.05,14,Afternoon,Clear,LOW
+3.68,9,Afternoon,Light Rain,MEDIUM
+12.21,16,Dusk,Light Rain,LOW
+9.82,13,Morning,Heavy Rain,LOW
+11.39,11,Morning,Heavy Rain,LOW
+14.84,24,Night,Heavy Rain,MEDIUM
+3.91,3,Afternoon,Clear,MEDIUM
+4.64,11,Afternoon,Clear,MEDIUM
+10.47,13,Dusk,Heavy Rain,LOW
+7.98,0,Afternoon,Heavy Rain,CRITICAL
+13.39,12,Dusk,Heavy Rain,LOW
+2.43,12,Dusk,Clear,CRITICAL
+0.33,5,Afternoon,Light Rain,HIGH
+12.84,11,Afternoon,Light Rain,LOW
+2.33,21,Dusk,Clear,CRITICAL
+6.96,14,Morning,Heavy Rain,MEDIUM
+4.32,24,Night,Light Rain,HIGH
+0.78,13,Morning,Clear,CRITICAL
+8.1,0,Dusk,Clear,LOW
+6.85,3,Afternoon,Clear,MEDIUM
+14.88,24,Dusk,Light Rain,LOW
+9.97,20,Night,Light Rain,LOW
+3.72,19,Night,Heavy Rain,CRITICAL
+8.72,18,Dusk,Clear,HIGH
+5.31,11,Dusk,Heavy Rain,MEDIUM
+2.56,1,Night,Clear,HIGH
+12.11,13,Dusk,Clear,LOW
+1.01,16,Night,Light Rain,CRITICAL
+0.6,0,Morning,Light Rain,LOW
+14.7,6,Dusk,Clear,LOW
+9.44,18,Night,Heavy Rain,LOW
+10.16,13,Afternoon,Heavy Rain,LOW
+14.24,2,Night,Light Rain,LOW
+8.23,7,Morning,Light Rain,LOW
+11.44,0,Morning,Heavy Rain,LOW
+11.86,12,Night,Light Rain,LOW
+5.99,11,Afternoon,Heavy Rain,MEDIUM
+12.94,4,Afternoon,Light Rain,LOW
+4.98,24,Night,Heavy Rain,HIGH
+0.79,9,Morning,Heavy Rain,HIGH
+14.56,21,Dusk,Clear,LOW
+6.47,1,Afternoon,Clear,MEDIUM
+12.82,17,Afternoon,Heavy Rain,LOW
+6.92,15,Dusk,Heavy Rain,MEDIUM
+10.03,20,Afternoon,Heavy Rain,LOW
+5.93,17,Morning,Heavy Rain,MEDIUM
+0.11,6,Night,Heavy Rain,CRITICAL
+14.85,20,Night,Heavy Rain,LOW
+14.14,3,Dusk,Clear,LOW
+8.82,17,Morning,Light Rain,LOW
+5.05,16,Afternoon,Clear,MEDIUM
+9.74,2,Morning,Clear,LOW
+6.14,25,Night,Clear,MEDIUM
+8.97,14,Night,Clear,LOW
+12.4,11,Morning,Light Rain,LOW
+9.8,5,Morning,Heavy Rain,LOW
+5.25,8,Morning,Clear,MEDIUM
+4.7,12,Dusk,Clear,HIGH
+1.24,11,Afternoon,Clear,CRITICAL
+7.69,4,Night,Heavy Rain,MEDIUM
+1.57,3,Dusk,Heavy Rain,HIGH
+9.75,7,Morning,Heavy Rain,LOW
+2.02,22,Afternoon,Light Rain,CRITICAL
+9.22,5,Dusk,Heavy Rain,LOW
+2.66,14,Dusk,Heavy Rain,CRITICAL
+9.77,5,Afternoon,Clear,LOW
+1.07,12,Afternoon,Heavy Rain,CRITICAL
+8.79,20,Night,Heavy Rain,LOW
+0.61,10,Afternoon,Clear,HIGH
+4.34,24,Afternoon,Light Rain,MEDIUM
+8.88,21,Morning,Heavy Rain,LOW
+5.11,5,Dusk,Clear,MEDIUM
+2.51,25,Afternoon,Light Rain,CRITICAL
+6.95,11,Morning,Clear,MEDIUM
+14.34,24,Morning,Light Rain,LOW
+1.62,5,Afternoon,Heavy Rain,HIGH
+4.53,9,Dusk,Light Rain,HIGH
+10.83,19,Morning,Heavy Rain,LOW
+12.18,22,Night,Heavy Rain,LOW
+4.32,9,Morning,Light Rain,MEDIUM
+3.99,5,Dusk,Clear,HIGH
+7.82,22,Morning,Clear,MEDIUM
+11.45,0,Morning,Heavy Rain,LOW
+9.51,7,Night,Heavy Rain,LOW
+7.06,17,Morning,Heavy Rain,MEDIUM
+6.31,11,Morning,Clear,MEDIUM
+11.29,0,Dusk,Light Rain,LOW
+7.88,1,Night,Light Rain,MEDIUM
+10.69,17,Night,Clear,MEDIUM
+14.65,20,Dusk,Clear,LOW
+14.55,10,Dusk,Light Rain,LOW
+0.41,10,Dusk,Light Rain,CRITICAL
+14.72,11,Dusk,Light Rain,LOW
+5.68,8,Morning,Heavy Rain,MEDIUM
+1.15,13,Morning,Clear,CRITICAL
+5.76,22,Night,Clear,MEDIUM
+5.38,21,Morning,Heavy Rain,MEDIUM
+5.09,9,Afternoon,Clear,MEDIUM
+12.12,20,Night,Light Rain,LOW
+7.13,21,Morning,Clear,MEDIUM
+12.24,11,Morning,Clear,LOW
+7.87,12,Morning,Clear,MEDIUM
+5.69,5,Dusk,Light Rain,MEDIUM
+1.05,21,Night,Clear,MEDIUM
+11.97,2,Night,Heavy Rain,LOW
+14.37,25,Dusk,Light Rain,LOW
+6.69,14,Dusk,Heavy Rain,MEDIUM
+10.94,12,Night,Light Rain,LOW
+14.19,18,Dusk,Heavy Rain,LOW
+0.41,9,Afternoon,Clear,HIGH
+14.26,20,Night,Heavy Rain,LOW
+14.86,4,Dusk,Light Rain,LOW
+7.85,17,Night,Clear,MEDIUM
+5.36,17,Night,Heavy Rain,MEDIUM
+8.5,8,Morning,Light Rain,LOW
+9.47,17,Morning,Light Rain,LOW
+6.01,0,Night,Heavy Rain,MEDIUM
+3.55,14,Afternoon,Light Rain,CRITICAL
+14.47,10,Morning,Heavy Rain,LOW
+3.89,9,Afternoon,Clear,MEDIUM
+9.3,22,Dusk,Light Rain,LOW
+7.84,3,Night,Clear,MEDIUM
+5.12,14,Afternoon,Light Rain,CRITICAL
+8.81,22,Afternoon,Light Rain,LOW
+6.14,21,Dusk,Light Rain,MEDIUM
+2.89,11,Night,Heavy Rain,CRITICAL
+6.96,23,Morning,Clear,MEDIUM
+8.67,24,Night,Heavy Rain,LOW
+12.69,2,Night,Light Rain,LOW
+12.55,17,Morning,Light Rain,LOW
+14.85,19,Afternoon,Light Rain,LOW
+13.13,6,Morning,Clear,LOW
+13.07,7,Morning,Heavy Rain,LOW
+6.5,23,Night,Clear,MEDIUM
+11.31,3,Afternoon,Heavy Rain,LOW
+1.46,8,Night,Light Rain,CRITICAL
+11.84,23,Afternoon,Clear,LOW
+14.34,3,Morning,Heavy Rain,LOW
+8.63,9,Dusk,Heavy Rain,MEDIUM
+11.66,3,Morning,Heavy Rain,LOW
+2.92,10,Night,Heavy Rain,HIGH
+13.15,13,Morning,Light Rain,CRITICAL
+9.3,21,Morning,Heavy Rain,LOW
+6.93,25,Dusk,Heavy Rain,MEDIUM
+3.0,1,Night,Clear,HIGH
+4.17,2,Dusk,Light Rain,HIGH
+12.64,0,Morning,Heavy Rain,LOW
+14.19,19,Afternoon,Light Rain,LOW
+13.48,18,Dusk,Light Rain,LOW
+1.23,13,Morning,Light Rain,CRITICAL
+9.63,25,Afternoon,Heavy Rain,LOW
+13.83,13,Morning,Heavy Rain,CRITICAL
+13.33,1,Night,Light Rain,LOW
+4.1,2,Afternoon,Clear,MEDIUM
+8.26,21,Morning,Light Rain,CRITICAL
+10.02,5,Dusk,Light Rain,LOW
+14.86,23,Afternoon,Clear,LOW
+8.84,22,Dusk,Light Rain,LOW
+5.2,21,Night,Clear,MEDIUM
+6.1,20,Morning,Heavy Rain,MEDIUM
+14.15,2,Dusk,Clear,HIGH
+11.16,21,Night,Heavy Rain,LOW
+10.2,1,Morning,Clear,LOW
+3.87,24,Dusk,Clear,CRITICAL
+13.41,6,Morning,Light Rain,LOW
+3.86,22,Afternoon,Heavy Rain,CRITICAL
+2.79,13,Morning,Clear,CRITICAL
+12.02,16,Dusk,Heavy Rain,LOW
+3.51,15,Night,Heavy Rain,CRITICAL
+7.52,1,Dusk,Heavy Rain,MEDIUM
+6.16,12,Morning,Heavy Rain,MEDIUM
+0.6,1,Morning,Light Rain,MEDIUM
+7.74,21,Afternoon,Heavy Rain,MEDIUM
+7.77,22,Night,Heavy Rain,MEDIUM
+13.74,3,Morning,Heavy Rain,LOW
+11.99,6,Afternoon,Clear,LOW
+10.21,0,Morning,Light Rain,LOW
+12.04,21,Morning,Heavy Rain,LOW
+5.7,21,Afternoon,Clear,MEDIUM
+7.43,11,Afternoon,Light Rain,MEDIUM
+10.04,18,Morning,Heavy Rain,LOW
+5.0,6,Dusk,Heavy Rain,MEDIUM
+7.32,11,Afternoon,Heavy Rain,MEDIUM
+13.86,16,Night,Light Rain,LOW
+14.58,17,Night,Light Rain,LOW
+3.27,16,Afternoon,Clear,CRITICAL
+2.04,2,Afternoon,Clear,MEDIUM
+8.93,9,Afternoon,Light Rain,LOW
+7.5,13,Dusk,Light Rain,MEDIUM
+13.21,13,Afternoon,Heavy Rain,LOW
+8.7,23,Night,Heavy Rain,LOW
+11.03,8,Afternoon,Clear,LOW
+13.48,6,Morning,Light Rain,LOW
+5.74,24,Dusk,Heavy Rain,MEDIUM
+8.88,17,Afternoon,Clear,LOW
+0.77,9,Dusk,Light Rain,CRITICAL
+7.17,24,Afternoon,Light Rain,MEDIUM
+7.22,4,Morning,Heavy Rain,MEDIUM
+5.32,4,Morning,Light Rain,MEDIUM
+3.01,1,Night,Clear,HIGH
+2.19,17,Morning,Light Rain,CRITICAL
+1.48,3,Afternoon,Clear,HIGH
+2.02,2,Afternoon,Heavy Rain,MEDIUM
+5.09,17,Afternoon,Heavy Rain,MEDIUM
+0.4,25,Night,Light Rain,CRITICAL
+12.3,20,Dusk,Clear,LOW
+4.28,17,Morning,Light Rain,MEDIUM
+14.47,20,Afternoon,Heavy Rain,LOW
+1.88,24,Afternoon,Clear,CRITICAL
+13.48,10,Dusk,Light Rain,LOW
+1.44,7,Dusk,Heavy Rain,CRITICAL
+0.85,23,Dusk,Light Rain,CRITICAL
+9.69,23,Dusk,Light Rain,LOW
+11.66,18,Morning,Heavy Rain,LOW
+0.63,18,Morning,Light Rain,CRITICAL
+5.2,13,Night,Heavy Rain,MEDIUM
+11.36,12,Afternoon,Heavy Rain,LOW
+1.99,15,Dusk,Light Rain,CRITICAL
+3.49,11,Morning,Heavy Rain,CRITICAL
+11.41,24,Dusk,Clear,LOW
+2.17,3,Morning,Heavy Rain,HIGH
+5.38,8,Dusk,Heavy Rain,MEDIUM
+11.73,4,Night,Heavy Rain,LOW
+7.63,13,Morning,Clear,MEDIUM
+2.79,8,Dusk,Light Rain,HIGH
+6.06,8,Morning,Heavy Rain,MEDIUM
+14.67,15,Dusk,Clear,LOW
+6.0,9,Morning,Heavy Rain,MEDIUM
+1.61,14,Afternoon,Clear,CRITICAL
+13.55,11,Morning,Light Rain,LOW
+8.53,25,Dusk,Clear,LOW
+5.53,24,Dusk,Light Rain,MEDIUM
+6.3,11,Night,Clear,MEDIUM
+1.24,18,Morning,Light Rain,CRITICAL
+7.47,16,Night,Heavy Rain,MEDIUM
+14.74,0,Night,Clear,LOW
+11.27,7,Night,Heavy Rain,LOW
+1.18,3,Afternoon,Clear,HIGH
+13.07,7,Morning,Clear,LOW
+9.58,19,Dusk,Heavy Rain,LOW
+3.04,20,Afternoon,Clear,CRITICAL
+0.75,3,Dusk,Clear,HIGH
+14.51,18,Afternoon,Clear,LOW
+14.46,1,Night,Light Rain,LOW
+1.82,1,Morning,Heavy Rain,MEDIUM
+12.43,22,Morning,Clear,LOW
+10.48,5,Morning,Light Rain,LOW
+8.32,7,Afternoon,Clear,LOW
+8.17,6,Afternoon,Light Rain,LOW
+0.37,21,Night,Light Rain,CRITICAL
+12.05,9,Afternoon,Clear,LOW
+1.39,21,Afternoon,Light Rain,CRITICAL
+5.65,13,Morning,Light Rain,MEDIUM
+13.77,16,Morning,Heavy Rain,LOW
+3.38,25,Night,Heavy Rain,CRITICAL
+9.9,0,Dusk,Heavy Rain,LOW
+3.66,25,Night,Clear,CRITICAL
+6.14,1,Dusk,Clear,MEDIUM
+6.56,6,Dusk,Clear,MEDIUM
+13.71,16,Morning,Heavy Rain,LOW
+2.87,15,Night,Clear,CRITICAL
+10.19,6,Dusk,Clear,LOW
+1.65,22,Afternoon,Heavy Rain,CRITICAL
+3.92,25,Dusk,Clear,CRITICAL
+6.16,12,Afternoon,Light Rain,MEDIUM
+3.32,3,Night,Light Rain,HIGH
+4.78,22,Morning,Light Rain,MEDIUM
+8.3,18,Morning,Heavy Rain,LOW
+12.07,14,Morning,Clear,LOW
+5.72,23,Night,Light Rain,MEDIUM
+2.12,18,Dusk,Clear,CRITICAL
+8.69,9,Morning,Heavy Rain,LOW
+5.5,20,Afternoon,Heavy Rain,MEDIUM
+3.53,0,Night,Heavy Rain,HIGH
+0.93,20,Morning,Heavy Rain,CRITICAL
+10.48,24,Afternoon,Clear,LOW
+10.11,19,Dusk,Clear,LOW
+0.74,7,Night,Clear,CRITICAL
+1.07,17,Night,Clear,CRITICAL
+6.08,6,Afternoon,Light Rain,MEDIUM
+9.29,23,Afternoon,Heavy Rain,LOW
+11.47,17,Afternoon,Clear,LOW
+5.86,0,Dusk,Heavy Rain,LOW
+4.67,8,Morning,Clear,MEDIUM
+1.27,12,Dusk,Light Rain,CRITICAL
+11.99,9,Dusk,Clear,LOW
+0.12,4,Dusk,Heavy Rain,HIGH
+4.88,19,Night,Heavy Rain,HIGH
+5.68,21,Night,Heavy Rain,MEDIUM
+6.17,24,Afternoon,Light Rain,MEDIUM
+9.15,13,Morning,Light Rain,LOW
+11.62,17,Night,Heavy Rain,LOW
+5.42,13,Night,Light Rain,MEDIUM
+7.04,12,Morning,Heavy Rain,MEDIUM
+7.21,4,Night,Clear,MEDIUM
+5.82,23,Dusk,Heavy Rain,MEDIUM
+6.72,2,Dusk,Clear,HIGH
+5.06,23,Dusk,Heavy Rain,MEDIUM
+10.25,12,Afternoon,Clear,LOW
+11.96,17,Night,Clear,LOW
+1.05,18,Morning,Clear,CRITICAL
+7.24,3,Morning,Light Rain,MEDIUM
+10.86,24,Morning,Clear,LOW
+6.35,15,Dusk,Clear,MEDIUM
+6.79,20,Night,Clear,MEDIUM
+4.46,18,Night,Light Rain,HIGH
+2.9,17,Night,Clear,CRITICAL
+6.62,11,Afternoon,Light Rain,MEDIUM
+6.66,17,Morning,Light Rain,MEDIUM
+10.75,13,Afternoon,Heavy Rain,LOW
+3.8,21,Morning,Light Rain,CRITICAL
+12.56,6,Dusk,Light Rain,LOW
+7.45,12,Dusk,Heavy Rain,MEDIUM
+14.17,16,Afternoon,Light Rain,LOW
+2.59,3,Dusk,Heavy Rain,HIGH
+12.24,11,Night,Heavy Rain,LOW
+8.46,18,Dusk,Light Rain,LOW
+11.2,10,Night,Light Rain,LOW
+12.18,2,Dusk,Heavy Rain,LOW
+5.07,1,Morning,Light Rain,MEDIUM
+14.63,23,Dusk,Clear,MEDIUM
+11.01,23,Afternoon,Heavy Rain,LOW
+13.44,0,Afternoon,Heavy Rain,LOW
+6.16,6,Dusk,Heavy Rain,MEDIUM
+4.15,12,Morning,Heavy Rain,MEDIUM
+13.27,20,Afternoon,Light Rain,LOW
+12.54,14,Afternoon,Heavy Rain,LOW
+1.99,2,Morning,Clear,MEDIUM
+14.57,18,Afternoon,Clear,CRITICAL
+8.74,2,Afternoon,Heavy Rain,LOW
+12.44,8,Afternoon,Clear,LOW
+14.72,1,Morning,Clear,LOW
+3.73,9,Dusk,Clear,HIGH
+9.88,12,Dusk,Clear,LOW
+0.64,14,Night,Light Rain,CRITICAL
+11.32,11,Morning,Light Rain,HIGH
+1.09,12,Dusk,Light Rain,CRITICAL
+5.34,5,Dusk,Clear,MEDIUM
+1.67,18,Dusk,Light Rain,CRITICAL
+13.44,5,Night,Light Rain,LOW
+0.83,17,Night,Clear,CRITICAL
+14.5,13,Morning,Heavy Rain,LOW
+10.99,0,Dusk,Light Rain,LOW
+11.82,9,Night,Heavy Rain,LOW
+13.78,19,Night,Clear,LOW
+10.16,16,Dusk,Clear,LOW
+5.35,3,Night,Heavy Rain,MEDIUM
+2.7,6,Morning,Light Rain,HIGH
+6.04,21,Dusk,Light Rain,MEDIUM
+5.34,20,Night,Light Rain,MEDIUM
+3.97,23,Morning,Light Rain,CRITICAL
+8.69,14,Afternoon,Heavy Rain,LOW
+11.64,24,Night,Clear,LOW
+14.67,11,Night,Light Rain,LOW
+4.79,12,Morning,Light Rain,MEDIUM
+13.66,16,Morning,Light Rain,LOW
+1.49,25,Afternoon,Light Rain,CRITICAL
+14.79,12,Dusk,Clear,LOW
+14.27,1,Morning,Clear,LOW
+8.42,21,Afternoon,Heavy Rain,LOW
+2.39,12,Afternoon,Clear,CRITICAL
+11.41,23,Dusk,Light Rain,LOW
+2.14,19,Afternoon,Heavy Rain,CRITICAL
+9.7,24,Morning,Clear,LOW
+4.63,24,Afternoon,Heavy Rain,MEDIUM
+13.94,16,Dusk,Clear,LOW
+6.18,9,Dusk,Light Rain,MEDIUM
+3.93,22,Morning,Clear,CRITICAL
+14.44,0,Morning,Light Rain,LOW
+0.72,18,Dusk,Clear,CRITICAL
+4.16,13,Night,Clear,HIGH
+8.56,11,Morning,Heavy Rain,LOW
+10.23,11,Night,Heavy Rain,LOW
+1.14,12,Dusk,Light Rain,CRITICAL
+1.62,21,Morning,Light Rain,CRITICAL
+7.8,9,Afternoon,Clear,MEDIUM
+11.21,20,Morning,Clear,LOW
+5.63,14,Afternoon,Clear,MEDIUM
+8.39,11,Dusk,Heavy Rain,LOW
+7.82,5,Afternoon,Heavy Rain,MEDIUM
+10.13,4,Afternoon,Heavy Rain,LOW
+13.82,14,Dusk,Clear,LOW
+10.35,23,Night,Heavy Rain,LOW
+2.67,6,Dusk,Clear,HIGH
+7.05,15,Morning,Light Rain,MEDIUM
+8.51,12,Afternoon,Light Rain,LOW
+14.7,5,Night,Heavy Rain,LOW
+5.63,6,Morning,Light Rain,MEDIUM
+11.21,22,Night,Light Rain,LOW
+1.03,0,Dusk,Clear,HIGH
+4.83,22,Night,Heavy Rain,HIGH
+7.99,4,Afternoon,Heavy Rain,MEDIUM
+0.64,5,Morning,Clear,HIGH
+4.41,7,Dusk,Light Rain,HIGH
+13.78,9,Morning,Clear,LOW
+8.41,5,Afternoon,Light Rain,LOW
+5.91,4,Afternoon,Heavy Rain,MEDIUM
+6.82,22,Night,Light Rain,MEDIUM
+8.47,24,Dusk,Clear,LOW
+13.22,14,Dusk,Light Rain,LOW
+7.28,15,Afternoon,Clear,MEDIUM
+6.94,11,Afternoon,Clear,MEDIUM
+3.38,4,Afternoon,Light Rain,MEDIUM
+14.49,7,Morning,Light Rain,LOW
+12.18,20,Afternoon,Clear,LOW
+9.46,17,Morning,Light Rain,LOW
+2.88,25,Morning,Light Rain,CRITICAL
+6.05,22,Dusk,Light Rain,MEDIUM
+11.46,3,Dusk,Light Rain,LOW
+0.43,22,Dusk,Light Rain,CRITICAL
+13.52,21,Night,Light Rain,MEDIUM
+8.19,21,Night,Light Rain,LOW
+7.44,23,Afternoon,Heavy Rain,MEDIUM
+7.59,6,Morning,Clear,MEDIUM
+6.67,14,Afternoon,Clear,MEDIUM
+6.92,19,Afternoon,Heavy Rain,MEDIUM
+12.78,24,Night,Clear,LOW
+2.97,0,Morning,Clear,LOW
+9.68,21,Afternoon,Clear,LOW
+11.4,1,Morning,Clear,LOW
+5.23,22,Dusk,Clear,MEDIUM
+12.73,8,Night,Heavy Rain,LOW
+10.41,8,Night,Light Rain,LOW
+14.59,13,Night,Clear,LOW
+0.81,13,Afternoon,Light Rain,CRITICAL
+3.18,1,Night,Clear,HIGH
+6.49,17,Morning,Light Rain,MEDIUM
+13.01,8,Afternoon,Clear,LOW
+4.7,22,Night,Heavy Rain,HIGH
+14.5,1,Dusk,Clear,LOW
+5.93,1,Dusk,Clear,MEDIUM
+12.5,11,Night,Heavy Rain,LOW
+6.75,16,Night,Light Rain,MEDIUM
+9.04,13,Morning,Heavy Rain,LOW
+12.72,17,Morning,Clear,LOW
+5.41,9,Dusk,Clear,MEDIUM
+1.03,11,Night,Light Rain,CRITICAL
+9.69,6,Dusk,Light Rain,LOW
+7.15,11,Dusk,Clear,MEDIUM
+1.88,21,Night,Light Rain,CRITICAL
+3.1,13,Morning,Heavy Rain,CRITICAL
+5.12,4,Dusk,Heavy Rain,MEDIUM
+7.9,4,Afternoon,Clear,MEDIUM
+7.67,13,Afternoon,Clear,MEDIUM
+10.02,19,Afternoon,Heavy Rain,LOW
+0.33,0,Morning,Clear,LOW
+9.72,19,Afternoon,Heavy Rain,LOW
+6.26,6,Night,Heavy Rain,LOW
+1.71,12,Dusk,Clear,CRITICAL
+2.18,1,Dusk,Light Rain,HIGH
+10.25,21,Morning,Heavy Rain,LOW
+0.28,17,Morning,Clear,CRITICAL
+9.17,2,Afternoon,Light Rain,LOW
+2.73,0,Morning,Light Rain,LOW
+10.3,14,Afternoon,Light Rain,LOW
+13.26,2,Afternoon,Clear,LOW
+1.18,12,Morning,Clear,CRITICAL
+8.09,4,Morning,Heavy Rain,LOW
+6.58,18,Dusk,Heavy Rain,MEDIUM
+13.86,13,Morning,Light Rain,LOW
+8.23,25,Afternoon,Light Rain,LOW
+8.05,8,Afternoon,Light Rain,LOW
+9.46,0,Dusk,Clear,LOW
+2.35,9,Night,Clear,CRITICAL
+0.39,1,Afternoon,Clear,MEDIUM
+11.96,19,Night,Heavy Rain,LOW
+14.1,21,Dusk,Light Rain,LOW
+0.99,4,Afternoon,Light Rain,HIGH
+4.0,1,Morning,Light Rain,MEDIUM
+3.48,14,Afternoon,Light Rain,CRITICAL
+7.9,13,Afternoon,Light Rain,MEDIUM
+8.04,9,Dusk,Heavy Rain,LOW
+12.44,21,Morning,Clear,LOW
+10.44,15,Morning,Light Rain,LOW
+6.43,24,Afternoon,Heavy Rain,MEDIUM
+13.95,22,Morning,Clear,LOW
+9.32,2,Dusk,Clear,LOW
+11.09,21,Afternoon,Light Rain,LOW
+10.41,7,Night,Light Rain,LOW
+1.29,8,Night,Light Rain,CRITICAL
+6.12,1,Night,Heavy Rain,MEDIUM
+14.18,24,Afternoon,Light Rain,LOW
+11.04,6,Night,Heavy Rain,CRITICAL
+7.8,5,Dusk,Light Rain,MEDIUM
+1.03,15,Morning,Light Rain,CRITICAL
+13.23,25,Dusk,Heavy Rain,LOW
+13.1,15,Night,Light Rain,LOW
+0.83,13,Afternoon,Light Rain,CRITICAL
+12.95,13,Night,Clear,LOW
+8.66,6,Night,Clear,LOW
+8.54,16,Night,Clear,LOW
+2.3,4,Night,Light Rain,HIGH
+8.34,24,Night,Heavy Rain,LOW
+3.96,15,Dusk,Clear,CRITICAL
+10.06,9,Dusk,Heavy Rain,LOW
+11.93,6,Dusk,Heavy Rain,LOW
+12.9,1,Afternoon,Light Rain,LOW
+0.51,6,Morning,Clear,HIGH
+13.65,22,Morning,Heavy Rain,LOW
+12.43,8,Morning,Heavy Rain,LOW
+11.58,3,Dusk,Light Rain,HIGH
+6.8,19,Afternoon,Clear,MEDIUM
+2.45,13,Morning,Heavy Rain,CRITICAL
+9.51,23,Morning,Heavy Rain,LOW
+10.82,4,Morning,Light Rain,MEDIUM
+0.11,5,Night,Clear,HIGH
+7.68,12,Dusk,Clear,MEDIUM
+1.6,8,Morning,Clear,HIGH
+7.82,22,Afternoon,Heavy Rain,MEDIUM
+10.3,3,Morning,Clear,LOW
+5.49,4,Morning,Clear,MEDIUM
+3.92,1,Morning,Clear,MEDIUM
+0.87,25,Afternoon,Clear,CRITICAL
+14.27,25,Dusk,Clear,LOW
+14.57,15,Night,Heavy Rain,LOW
+5.9,18,Night,Light Rain,MEDIUM
+9.14,24,Dusk,Clear,LOW
+8.37,3,Morning,Light Rain,LOW
+4.84,1,Morning,Clear,MEDIUM
+9.03,12,Morning,Clear,LOW
+11.39,6,Night,Heavy Rain,CRITICAL
+11.06,12,Dusk,Light Rain,LOW
+11.72,13,Night,Light Rain,LOW
+10.18,17,Morning,Heavy Rain,LOW
+11.66,5,Afternoon,Light Rain,LOW
+6.64,20,Dusk,Clear,MEDIUM
+3.61,1,Night,Light Rain,HIGH
+9.39,14,Afternoon,Heavy Rain,LOW
+5.58,4,Night,Light Rain,MEDIUM
+14.23,5,Afternoon,Light Rain,LOW
+8.68,1,Morning,Light Rain,LOW
+9.54,9,Afternoon,Heavy Rain,LOW
+1.81,7,Morning,Heavy Rain,HIGH
+4.36,22,Night,Clear,HIGH
+1.5,24,Dusk,Clear,CRITICAL
+1.73,7,Night,Light Rain,CRITICAL
+2.84,22,Dusk,Heavy Rain,CRITICAL
+5.08,11,Afternoon,Clear,MEDIUM
+6.85,7,Night,Heavy Rain,MEDIUM
+14.12,24,Morning,Light Rain,LOW
+14.71,17,Night,Heavy Rain,LOW
+12.33,19,Afternoon,Heavy Rain,LOW
+11.21,0,Afternoon,Clear,LOW
+9.71,19,Night,Light Rain,LOW
+11.26,12,Dusk,Heavy Rain,LOW
+14.78,21,Morning,Heavy Rain,LOW
+7.73,7,Morning,Clear,MEDIUM
+0.14,22,Morning,Heavy Rain,CRITICAL
+8.99,8,Morning,Heavy Rain,LOW
+1.33,15,Morning,Light Rain,CRITICAL
+14.87,3,Dusk,Light Rain,LOW
+6.37,17,Morning,Light Rain,MEDIUM
+13.14,9,Morning,Light Rain,LOW
+3.16,15,Dusk,Light Rain,HIGH
+4.97,11,Morning,Clear,MEDIUM
+4.39,24,Night,Light Rain,HIGH
+13.97,3,Night,Heavy Rain,LOW
+7.81,4,Afternoon,Heavy Rain,MEDIUM
+3.68,16,Dusk,Light Rain,LOW
+13.27,20,Dusk,Heavy Rain,LOW
+7.22,3,Afternoon,Heavy Rain,MEDIUM
+2.75,1,Dusk,Heavy Rain,HIGH
+10.66,25,Afternoon,Clear,LOW
+3.76,24,Night,Heavy Rain,CRITICAL
+2.65,2,Dusk,Light Rain,HIGH
+11.89,6,Dusk,Light Rain,LOW
+8.66,12,Night,Light Rain,LOW
+12.08,7,Dusk,Light Rain,LOW
+6.89,11,Night,Light Rain,MEDIUM
+4.57,1,Morning,Light Rain,MEDIUM
+12.21,10,Afternoon,Clear,LOW
+14.87,23,Night,Heavy Rain,LOW
+2.02,18,Night,Clear,CRITICAL
+9.47,20,Night,Heavy Rain,LOW
+4.01,11,Afternoon,Clear,MEDIUM
+3.45,24,Afternoon,Light Rain,CRITICAL
+12.41,9,Morning,Light Rain,LOW
+4.49,0,Dusk,Heavy Rain,HIGH
+13.98,24,Morning,Heavy Rain,LOW
+10.57,9,Dusk,Heavy Rain,LOW
+11.71,6,Dusk,Clear,LOW
+3.16,1,Morning,Heavy Rain,MEDIUM
+11.99,13,Morning,Clear,LOW
+5.78,10,Dusk,Heavy Rain,MEDIUM
+11.06,16,Dusk,Clear,LOW
+11.31,12,Night,Light Rain,LOW
+8.27,2,Dusk,Clear,LOW
+1.74,17,Morning,Clear,CRITICAL
+0.28,10,Morning,Light Rain,HIGH
+1.14,6,Afternoon,Clear,HIGH
+14.21,5,Morning,Clear,LOW
+6.48,15,Afternoon,Clear,MEDIUM
+8.16,24,Morning,Light Rain,LOW
+1.12,1,Morning,Light Rain,MEDIUM
+7.77,14,Afternoon,Light Rain,MEDIUM
+2.64,20,Night,Heavy Rain,CRITICAL
+9.99,24,Afternoon,Clear,LOW
+3.59,5,Morning,Heavy Rain,MEDIUM
+4.9,0,Morning,Heavy Rain,LOW
+11.11,14,Morning,Light Rain,LOW
+6.42,2,Morning,Heavy Rain,MEDIUM
+5.26,9,Dusk,Heavy Rain,MEDIUM
+14.9,19,Afternoon,Heavy Rain,LOW
+3.68,21,Dusk,Heavy Rain,CRITICAL
+7.02,24,Morning,Heavy Rain,MEDIUM
+14.9,12,Night,Heavy Rain,LOW
+10.83,25,Dusk,Heavy Rain,HIGH
+1.02,1,Dusk,Heavy Rain,HIGH
+2.58,2,Morning,Light Rain,MEDIUM
+8.11,25,Dusk,Light Rain,LOW
+11.99,1,Morning,Heavy Rain,HIGH
+0.37,19,Night,Light Rain,CRITICAL
+6.51,21,Dusk,Light Rain,MEDIUM
+5.09,8,Dusk,Clear,MEDIUM
+8.76,1,Afternoon,Light Rain,LOW
+10.11,9,Dusk,Clear,LOW
+1.49,13,Night,Clear,CRITICAL
+13.01,12,Morning,Light Rain,CRITICAL
+11.55,19,Afternoon,Clear,LOW
+8.41,23,Night,Heavy Rain,LOW
+5.08,18,Dusk,Light Rain,MEDIUM
+14.54,15,Afternoon,Light Rain,LOW
+11.93,1,Afternoon,Light Rain,LOW
+6.75,4,Afternoon,Clear,MEDIUM
+1.28,23,Night,Heavy Rain,CRITICAL
+7.33,20,Morning,Heavy Rain,MEDIUM
+14.23,23,Dusk,Light Rain,LOW
+5.24,7,Dusk,Light Rain,MEDIUM
+3.58,22,Night,Clear,CRITICAL
+4.83,14,Afternoon,Heavy Rain,MEDIUM
+11.43,18,Dusk,Clear,LOW
+3.86,21,Dusk,Heavy Rain,CRITICAL
+7.89,22,Afternoon,Heavy Rain,MEDIUM
+3.28,12,Dusk,Clear,CRITICAL
+9.43,25,Afternoon,Clear,LOW
+12.24,11,Dusk,Light Rain,LOW
+10.5,20,Dusk,Light Rain,LOW
+12.54,3,Night,Heavy Rain,LOW
+8.02,2,Night,Clear,LOW
+3.29,22,Morning,Light Rain,CRITICAL
+11.96,13,Dusk,Light Rain,LOW
+0.28,24,Afternoon,Heavy Rain,LOW
+8.07,11,Dusk,Clear,LOW
+10.29,22,Dusk,Clear,LOW
+9.56,15,Night,Heavy Rain,LOW
+6.08,13,Afternoon,Clear,MEDIUM
+6.47,4,Afternoon,Heavy Rain,MEDIUM
+6.28,11,Afternoon,Light Rain,MEDIUM
+4.12,22,Morning,Light Rain,MEDIUM
+4.0,2,Morning,Light Rain,MEDIUM
+3.8,7,Afternoon,Clear,MEDIUM
+10.11,10,Dusk,Heavy Rain,LOW
+6.8,25,Morning,Light Rain,MEDIUM
+10.48,3,Dusk,Light Rain,LOW
+12.4,6,Dusk,Light Rain,LOW
+9.08,10,Dusk,Heavy Rain,LOW
+11.43,23,Afternoon,Light Rain,LOW
+3.82,3,Afternoon,Light Rain,MEDIUM
+0.29,14,Afternoon,Clear,CRITICAL
+9.02,17,Afternoon,Heavy Rain,LOW
+1.73,20,Afternoon,Clear,CRITICAL
+9.13,15,Dusk,Heavy Rain,LOW
+1.76,14,Afternoon,Clear,CRITICAL
+0.47,1,Afternoon,Heavy Rain,MEDIUM
+2.8,22,Morning,Clear,CRITICAL
+11.54,13,Morning,Heavy Rain,LOW
+6.69,6,Morning,Light Rain,MEDIUM
+11.08,10,Night,Clear,LOW
+12.64,20,Night,Light Rain,LOW
+8.29,8,Dusk,Heavy Rain,LOW
+5.07,0,Dusk,Clear,LOW
+8.72,25,Morning,Clear,LOW
+10.4,4,Dusk,Clear,LOW
+13.08,15,Afternoon,Light Rain,LOW
+3.2,4,Dusk,Heavy Rain,HIGH
+6.78,13,Morning,Clear,MEDIUM
+6.26,24,Dusk,Clear,MEDIUM
+6.11,9,Dusk,Light Rain,MEDIUM
+3.72,21,Night,Clear,CRITICAL
+0.52,2,Morning,Clear,MEDIUM
+7.24,3,Dusk,Clear,MEDIUM
+11.23,6,Night,Light Rain,LOW
+2.7,19,Afternoon,Light Rain,CRITICAL
+11.82,11,Afternoon,Light Rain,LOW
+1.16,0,Dusk,Light Rain,HIGH
+7.55,25,Dusk,Clear,MEDIUM
+2.9,20,Night,Light Rain,CRITICAL
+7.42,18,Night,Heavy Rain,MEDIUM
+7.74,22,Night,Light Rain,MEDIUM
+9.18,3,Dusk,Light Rain,LOW
+10.56,10,Night,Clear,LOW
+1.95,5,Night,Light Rain,HIGH
+8.24,3,Morning,Light Rain,LOW
+7.86,14,Dusk,Clear,MEDIUM
+14.97,4,Dusk,Heavy Rain,LOW
+12.87,23,Dusk,Heavy Rain,LOW
+10.46,22,Afternoon,Light Rain,LOW
+13.27,16,Afternoon,Light Rain,LOW
+9.35,4,Morning,Heavy Rain,LOW
+6.52,14,Night,Clear,MEDIUM
+3.99,6,Morning,Clear,MEDIUM
+4.88,5,Night,Heavy Rain,HIGH
+9.33,24,Night,Heavy Rain,LOW
+1.71,16,Morning,Heavy Rain,CRITICAL
+13.41,12,Night,Clear,MEDIUM
+0.24,16,Dusk,Heavy Rain,CRITICAL
+12.74,25,Dusk,Heavy Rain,LOW
+10.57,13,Dusk,Light Rain,LOW
+0.43,0,Dusk,Heavy Rain,HIGH
+10.67,6,Night,Heavy Rain,LOW
+5.7,2,Morning,Light Rain,HIGH
+13.97,15,Afternoon,Heavy Rain,LOW
+5.23,0,Night,Light Rain,LOW
+4.37,5,Night,Light Rain,HIGH
+3.45,17,Dusk,Light Rain,CRITICAL
+9.08,25,Afternoon,Clear,LOW
+6.92,8,Morning,Clear,MEDIUM
+11.56,23,Afternoon,Heavy Rain,LOW
+9.85,8,Morning,Light Rain,LOW
+4.77,22,Morning,Heavy Rain,MEDIUM
+0.8,16,Afternoon,Heavy Rain,CRITICAL
+12.98,24,Dusk,Clear,LOW
+12.11,22,Night,Light Rain,LOW
+9.1,10,Dusk,Light Rain,LOW
+2.64,14,Morning,Light Rain,CRITICAL
+3.02,13,Night,Heavy Rain,CRITICAL
+10.91,10,Morning,Clear,LOW
+14.06,18,Night,Heavy Rain,LOW
+10.37,4,Afternoon,Clear,CRITICAL
+7.97,25,Afternoon,Clear,MEDIUM
+14.29,20,Morning,Light Rain,LOW
+10.24,14,Morning,Clear,LOW
+7.12,12,Night,Light Rain,MEDIUM
+6.19,13,Afternoon,Light Rain,MEDIUM
+5.0,13,Morning,Clear,MEDIUM
+2.69,12,Afternoon,Heavy Rain,CRITICAL
+11.48,17,Morning,Heavy Rain,LOW
+12.65,21,Afternoon,Heavy Rain,LOW
+3.68,11,Dusk,Heavy Rain,CRITICAL
+7.08,9,Dusk,Light Rain,MEDIUM
+8.88,25,Afternoon,Light Rain,LOW
+2.08,22,Dusk,Clear,CRITICAL
+14.92,4,Morning,Clear,LOW
+11.14,25,Night,Clear,LOW
+10.25,24,Dusk,Light Rain,LOW
+1.77,0,Dusk,Heavy Rain,HIGH
+7.25,21,Morning,Light Rain,MEDIUM
+14.65,18,Night,Clear,LOW
+7.78,11,Dusk,Clear,MEDIUM
+10.69,7,Morning,Clear,LOW
+4.37,22,Afternoon,Clear,MEDIUM
+6.84,19,Morning,Light Rain,MEDIUM
+3.09,14,Afternoon,Light Rain,CRITICAL
+10.05,22,Dusk,Clear,LOW
+1.79,1,Night,Heavy Rain,HIGH
+14.83,18,Morning,Clear,LOW
+9.5,14,Afternoon,Heavy Rain,LOW
+7.56,22,Night,Clear,MEDIUM
+8.01,13,Night,Light Rain,LOW
+13.26,24,Dusk,Light Rain,LOW
+8.04,23,Night,Light Rain,LOW
+7.91,18,Night,Clear,MEDIUM
+9.21,1,Afternoon,Clear,LOW
+5.03,10,Morning,Clear,MEDIUM
+12.37,0,Morning,Heavy Rain,LOW
+6.68,23,Afternoon,Heavy Rain,MEDIUM
+9.5,9,Dusk,Light Rain,LOW
+2.74,15,Night,Clear,CRITICAL
+1.75,12,Afternoon,Clear,CRITICAL
+0.24,24,Afternoon,Clear,CRITICAL
+4.59,3,Afternoon,Clear,MEDIUM
+13.21,6,Afternoon,Clear,LOW
+2.88,0,Dusk,Clear,HIGH
+9.87,17,Morning,Clear,LOW
+1.73,18,Dusk,Clear,CRITICAL
+5.05,12,Morning,Heavy Rain,MEDIUM
+10.98,20,Morning,Light Rain,LOW
+3.2,2,Dusk,Heavy Rain,HIGH
+9.58,3,Afternoon,Heavy Rain,LOW
+7.75,9,Night,Light Rain,MEDIUM
+6.37,3,Dusk,Light Rain,MEDIUM
+11.83,9,Dusk,Heavy Rain,LOW
+2.92,15,Night,Light Rain,CRITICAL
+2.2,5,Dusk,Clear,HIGH
+14.68,11,Night,Heavy Rain,LOW
+13.85,14,Dusk,Light Rain,LOW
+3.89,11,Dusk,Clear,MEDIUM
+5.74,24,Morning,Clear,MEDIUM
+3.49,15,Afternoon,Heavy Rain,CRITICAL
+11.4,5,Afternoon,Light Rain,LOW
+9.23,5,Night,Clear,LOW
+13.04,7,Afternoon,Light Rain,LOW
+10.44,16,Night,Light Rain,LOW
+8.21,5,Morning,Clear,LOW
+4.58,0,Dusk,Light Rain,HIGH
+8.59,1,Night,Heavy Rain,LOW
+2.26,18,Afternoon,Heavy Rain,CRITICAL
+9.37,19,Afternoon,Heavy Rain,LOW
+4.9,15,Afternoon,Light Rain,MEDIUM
+0.72,14,Dusk,Light Rain,CRITICAL
+7.25,1,Dusk,Heavy Rain,MEDIUM
+14.49,22,Night,Light Rain,LOW
+7.3,24,Dusk,Clear,MEDIUM
+10.33,11,Morning,Heavy Rain,LOW
+9.26,1,Morning,Clear,LOW
+13.88,0,Dusk,Heavy Rain,LOW
+0.38,17,Dusk,Heavy Rain,CRITICAL
+10.03,20,Night,Clear,LOW
+3.76,21,Night,Light Rain,CRITICAL
+8.24,9,Morning,Clear,LOW
+8.46,13,Afternoon,Light Rain,LOW
+11.24,24,Night,Heavy Rain,LOW
+12.49,12,Dusk,Heavy Rain,LOW
+7.73,20,Night,Heavy Rain,MEDIUM
+6.56,23,Dusk,Clear,MEDIUM
+9.64,7,Night,Heavy Rain,LOW
+4.53,5,Night,Light Rain,HIGH
+14.11,15,Morning,Light Rain,LOW
+0.28,21,Dusk,Clear,CRITICAL
+13.1,2,Morning,Light Rain,LOW
+10.15,1,Dusk,Heavy Rain,LOW
+10.62,10,Dusk,Heavy Rain,LOW
+3.89,11,Afternoon,Clear,CRITICAL
+14.14,8,Afternoon,Light Rain,LOW
+5.82,9,Night,Light Rain,MEDIUM
+12.63,8,Afternoon,Light Rain,LOW
+8.14,18,Night,Clear,LOW
+13.61,7,Morning,Light Rain,LOW
+13.0,14,Night,Clear,LOW
+8.23,13,Afternoon,Light Rain,LOW
+6.13,16,Morning,Heavy Rain,MEDIUM
+13.33,2,Night,Light Rain,LOW
+8.25,9,Night,Light Rain,LOW
+3.75,19,Morning,Light Rain,CRITICAL
+2.75,15,Morning,Light Rain,CRITICAL
+2.37,18,Dusk,Clear,CRITICAL
+5.76,8,Night,Heavy Rain,MEDIUM
+2.76,21,Night,Light Rain,CRITICAL
+8.18,17,Afternoon,Light Rain,LOW
+14.86,1,Morning,Light Rain,LOW
+0.86,6,Dusk,Clear,CRITICAL
+3.12,24,Morning,Light Rain,CRITICAL
+5.8,19,Afternoon,Clear,MEDIUM
+7.6,4,Morning,Clear,MEDIUM
+9.4,22,Afternoon,Light Rain,LOW
+0.73,15,Afternoon,Heavy Rain,CRITICAL
+8.0,4,Morning,Heavy Rain,LOW
+2.43,13,Dusk,Heavy Rain,CRITICAL
+2.76,6,Dusk,Heavy Rain,HIGH
+1.26,9,Night,Light Rain,CRITICAL
+6.11,15,Afternoon,Heavy Rain,MEDIUM
+1.51,7,Morning,Clear,HIGH
+4.35,12,Afternoon,Clear,MEDIUM
+6.1,22,Afternoon,Clear,MEDIUM
+3.71,24,Night,Heavy Rain,CRITICAL
+0.34,2,Dusk,Clear,HIGH
+2.26,8,Dusk,Heavy Rain,HIGH
+6.26,21,Night,Heavy Rain,MEDIUM
+4.23,3,Dusk,Clear,HIGH
+12.27,3,Night,Light Rain,LOW
+14.29,23,Dusk,Heavy Rain,LOW
+4.26,8,Dusk,Clear,HIGH
+14.68,6,Afternoon,Heavy Rain,LOW
+2.92,15,Morning,Light Rain,CRITICAL
+7.0,4,Morning,Clear,MEDIUM
+7.64,13,Morning,Light Rain,MEDIUM
+6.55,22,Morning,Clear,MEDIUM
+5.04,14,Night,Heavy Rain,MEDIUM
+2.44,0,Afternoon,Clear,LOW
+9.08,4,Night,Heavy Rain,LOW
+8.42,15,Morning,Clear,LOW
+10.95,12,Afternoon,Light Rain,LOW
+1.94,10,Dusk,Heavy Rain,CRITICAL
+14.36,19,Dusk,Heavy Rain,LOW
+4.0,20,Dusk,Heavy Rain,HIGH
+3.82,10,Morning,Heavy Rain,HIGH
+2.74,19,Afternoon,Light Rain,CRITICAL
+13.82,19,Night,Clear,LOW
+9.71,20,Morning,Clear,LOW
+4.03,3,Afternoon,Light Rain,MEDIUM
+13.39,4,Afternoon,Heavy Rain,LOW
+2.01,22,Afternoon,Clear,CRITICAL
+14.97,19,Morning,Clear,LOW
+12.03,20,Morning,Light Rain,LOW
+4.26,11,Night,Light Rain,HIGH
+2.12,0,Morning,Light Rain,LOW
+12.81,14,Morning,Heavy Rain,LOW
+1.68,7,Dusk,Clear,CRITICAL
+0.71,5,Morning,Light Rain,HIGH
+7.82,20,Dusk,Clear,MEDIUM
+2.35,7,Night,Light Rain,HIGH
+13.48,6,Night,Light Rain,LOW
+12.58,3,Dusk,Clear,LOW
+11.99,3,Afternoon,Heavy Rain,LOW
+2.46,10,Afternoon,Heavy Rain,HIGH
+2.12,19,Afternoon,Light Rain,CRITICAL
+0.38,6,Dusk,Light Rain,CRITICAL
+10.88,4,Morning,Heavy Rain,LOW
+4.75,18,Night,Heavy Rain,HIGH
+6.31,3,Afternoon,Clear,MEDIUM
+9.43,24,Night,Light Rain,LOW
+8.66,13,Dusk,Heavy Rain,LOW
+8.66,0,Night,Light Rain,LOW
+0.87,6,Night,Heavy Rain,CRITICAL
+8.45,21,Afternoon,Heavy Rain,LOW
+12.73,11,Night,Light Rain,LOW
+9.47,11,Night,Light Rain,LOW
+13.43,14,Dusk,Light Rain,LOW
+1.61,7,Dusk,Heavy Rain,CRITICAL
+1.89,23,Night,Clear,CRITICAL
+7.62,7,Dusk,Heavy Rain,MEDIUM
+14.18,16,Night,Clear,LOW
+3.63,24,Night,Heavy Rain,CRITICAL
+10.6,24,Dusk,Clear,LOW
+14.49,1,Night,Heavy Rain,LOW
+5.01,6,Morning,Heavy Rain,MEDIUM
+9.42,9,Night,Clear,LOW
+14.32,14,Afternoon,Heavy Rain,LOW
+11.28,20,Morning,Light Rain,LOW
+9.23,25,Morning,Clear,LOW
+9.97,0,Afternoon,Clear,LOW
+6.74,10,Afternoon,Heavy Rain,HIGH
+5.47,2,Morning,Light Rain,MEDIUM
+5.46,23,Afternoon,Clear,MEDIUM
+3.62,2,Afternoon,Light Rain,MEDIUM
+11.46,23,Morning,Light Rain,LOW
+7.13,2,Dusk,Heavy Rain,MEDIUM
+6.97,21,Afternoon,Clear,MEDIUM
+12.29,5,Dusk,Heavy Rain,LOW
+2.73,9,Dusk,Light Rain,HIGH
+7.75,10,Dusk,Light Rain,MEDIUM
+11.79,0,Morning,Clear,LOW
+9.89,8,Dusk,Light Rain,LOW
+4.61,9,Night,Clear,HIGH
+3.92,9,Dusk,Clear,HIGH
+0.49,24,Morning,Light Rain,CRITICAL
+12.48,23,Night,Heavy Rain,LOW
+4.34,23,Afternoon,Clear,MEDIUM
+3.86,7,Night,Light Rain,HIGH
+2.49,24,Dusk,Light Rain,CRITICAL
+1.41,19,Dusk,Light Rain,CRITICAL
+9.48,20,Dusk,Clear,LOW
+4.98,25,Dusk,Heavy Rain,CRITICAL
+7.86,14,Night,Clear,MEDIUM
+2.08,7,Morning,Clear,HIGH
+5.46,13,Night,Light Rain,MEDIUM
+5.73,15,Night,Heavy Rain,MEDIUM
+12.97,3,Morning,Heavy Rain,LOW
+10.54,22,Afternoon,Clear,LOW
+8.09,7,Morning,Light Rain,LOW
+14.17,4,Dusk,Heavy Rain,LOW
+6.75,23,Afternoon,Clear,MEDIUM
+11.43,18,Dusk,Light Rain,LOW
+3.56,15,Afternoon,Clear,CRITICAL
+2.67,21,Afternoon,Clear,CRITICAL
+5.21,24,Dusk,Heavy Rain,MEDIUM
+6.92,14,Night,Clear,HIGH
+9.94,8,Night,Light Rain,LOW
+0.42,19,Morning,Light Rain,CRITICAL
+9.21,19,Morning,Heavy Rain,LOW
+8.87,23,Afternoon,Clear,LOW
+11.76,11,Dusk,Light Rain,LOW
+5.13,18,Night,Clear,MEDIUM
+8.59,22,Dusk,Light Rain,LOW
+8.36,17,Dusk,Heavy Rain,LOW
+15.0,10,Morning,Clear,LOW
+9.67,10,Night,Heavy Rain,LOW
+6.44,13,Dusk,Heavy Rain,MEDIUM
+4.93,3,Night,Clear,HIGH
+12.36,18,Dusk,Light Rain,LOW
+13.04,21,Afternoon,Light Rain,LOW
+3.74,11,Morning,Heavy Rain,CRITICAL
+11.03,13,Dusk,Light Rain,LOW
+2.11,17,Dusk,Clear,CRITICAL
+4.68,17,Dusk,Heavy Rain,HIGH
+13.77,13,Morning,Clear,LOW
+5.29,17,Night,Heavy Rain,MEDIUM
+6.29,17,Afternoon,Light Rain,MEDIUM
+10.18,9,Night,Light Rain,LOW
+4.73,24,Night,Clear,HIGH
+14.29,1,Morning,Light Rain,LOW
+3.51,13,Dusk,Heavy Rain,CRITICAL
+0.61,11,Afternoon,Light Rain,CRITICAL
+2.19,23,Night,Heavy Rain,CRITICAL
+7.88,4,Dusk,Heavy Rain,MEDIUM
+7.37,3,Morning,Heavy Rain,MEDIUM
+2.59,11,Dusk,Heavy Rain,CRITICAL
+14.06,10,Dusk,Clear,LOW
+9.02,10,Afternoon,Heavy Rain,LOW
+5.7,8,Dusk,Clear,MEDIUM
+1.12,25,Afternoon,Heavy Rain,CRITICAL
+0.48,20,Morning,Heavy Rain,CRITICAL
+11.7,18,Dusk,Heavy Rain,LOW
+3.97,2,Morning,Light Rain,MEDIUM
+12.78,9,Morning,Clear,LOW
+4.13,12,Morning,Light Rain,MEDIUM
+1.37,8,Morning,Clear,HIGH
+14.05,9,Afternoon,Clear,LOW
+7.61,20,Afternoon,Light Rain,MEDIUM
+2.65,7,Afternoon,Light Rain,HIGH
+3.65,15,Afternoon,Light Rain,CRITICAL
+8.94,18,Afternoon,Clear,LOW
+3.91,5,Afternoon,Heavy Rain,MEDIUM
+9.24,2,Dusk,Clear,CRITICAL
+4.32,13,Morning,Light Rain,MEDIUM
+0.18,5,Night,Heavy Rain,HIGH
+11.33,6,Morning,Heavy Rain,LOW
+2.51,23,Night,Heavy Rain,CRITICAL
+8.32,2,Dusk,Light Rain,LOW
+5.52,6,Morning,Light Rain,MEDIUM
+2.65,6,Night,Light Rain,HIGH
+9.57,8,Morning,Clear,LOW
+7.77,21,Afternoon,Heavy Rain,MEDIUM
+1.52,12,Morning,Clear,CRITICAL
+3.55,9,Morning,Light Rain,MEDIUM
+10.3,16,Night,Heavy Rain,LOW
+0.55,20,Afternoon,Heavy Rain,CRITICAL
+14.87,15,Night,Heavy Rain,LOW
+4.33,4,Dusk,Clear,HIGH
+9.5,7,Dusk,Light Rain,LOW
+14.49,10,Dusk,Clear,LOW
+4.66,0,Dusk,Heavy Rain,HIGH
+9.14,9,Morning,Light Rain,LOW
+6.43,20,Afternoon,Heavy Rain,MEDIUM
+5.68,3,Afternoon,Clear,MEDIUM
+12.74,20,Dusk,Light Rain,LOW
+0.39,25,Dusk,Heavy Rain,CRITICAL
+9.37,21,Dusk,Light Rain,LOW
+0.75,22,Night,Light Rain,CRITICAL
+13.47,21,Night,Light Rain,LOW
+8.54,2,Night,Heavy Rain,LOW
+12.89,13,Dusk,Heavy Rain,LOW
+7.27,1,Morning,Light Rain,MEDIUM
+1.42,18,Morning,Light Rain,CRITICAL
+9.72,12,Dusk,Light Rain,LOW
+6.23,11,Afternoon,Heavy Rain,MEDIUM
+14.77,16,Morning,Heavy Rain,LOW
+13.35,9,Afternoon,Light Rain,LOW
+0.55,21,Morning,Light Rain,CRITICAL
+2.91,20,Morning,Clear,LOW
+11.39,9,Morning,Light Rain,LOW
+11.96,24,Dusk,Light Rain,LOW
+9.14,19,Night,Clear,LOW
+4.82,17,Morning,Heavy Rain,MEDIUM
+11.38,3,Dusk,Light Rain,LOW
+4.37,12,Morning,Clear,MEDIUM
+11.73,6,Dusk,Clear,LOW
+12.37,5,Afternoon,Light Rain,LOW
+14.64,15,Dusk,Clear,LOW
+9.09,22,Morning,Clear,LOW
+0.96,11,Afternoon,Clear,CRITICAL
+13.06,13,Afternoon,Heavy Rain,LOW
+13.25,17,Afternoon,Clear,LOW
+10.58,13,Morning,Clear,LOW
+6.21,16,Dusk,Clear,MEDIUM
+0.25,24,Night,Clear,CRITICAL
+10.59,7,Morning,Light Rain,LOW
+11.67,6,Morning,Light Rain,LOW
+8.86,5,Afternoon,Clear,LOW
+8.65,12,Morning,Heavy Rain,LOW
+3.94,2,Afternoon,Light Rain,MEDIUM
+7.39,19,Dusk,Clear,MEDIUM
+0.35,10,Morning,Clear,HIGH
+6.51,18,Afternoon,Light Rain,MEDIUM
+5.99,10,Morning,Clear,MEDIUM
+6.55,2,Afternoon,Heavy Rain,MEDIUM
+6.97,22,Dusk,Light Rain,MEDIUM
+8.76,10,Afternoon,Light Rain,LOW
+6.06,19,Dusk,Heavy Rain,MEDIUM
+5.09,3,Morning,Heavy Rain,MEDIUM
+7.35,11,Dusk,Heavy Rain,MEDIUM
+10.86,10,Night,Clear,LOW
+6.37,12,Dusk,Heavy Rain,MEDIUM
+10.25,16,Morning,Clear,LOW
+2.75,6,Dusk,Heavy Rain,HIGH
+12.17,22,Afternoon,Clear,LOW
+1.58,3,Afternoon,Heavy Rain,HIGH
+8.78,11,Afternoon,Clear,LOW
+9.38,1,Afternoon,Heavy Rain,LOW
+9.44,12,Night,Heavy Rain,LOW
+14.9,17,Afternoon,Heavy Rain,LOW
+13.48,17,Afternoon,Light Rain,LOW
+12.24,17,Morning,Light Rain,LOW
+13.42,9,Dusk,Heavy Rain,LOW
+8.34,12,Morning,Light Rain,LOW
+9.02,15,Afternoon,Light Rain,LOW
+6.21,16,Dusk,Heavy Rain,MEDIUM
+11.28,14,Dusk,Clear,LOW
+10.21,15,Night,Clear,LOW
+7.92,14,Dusk,Heavy Rain,MEDIUM
+2.46,6,Afternoon,Clear,HIGH
+14.21,7,Morning,Light Rain,LOW
+10.22,2,Dusk,Light Rain,MEDIUM
+7.19,9,Morning,Clear,MEDIUM
+9.65,0,Night,Clear,LOW
+9.25,17,Night,Clear,LOW
+8.26,16,Afternoon,Heavy Rain,LOW
+4.97,0,Afternoon,Clear,LOW
+12.49,1,Night,Heavy Rain,LOW
+13.0,22,Dusk,Light Rain,LOW
+2.88,19,Dusk,Light Rain,CRITICAL
+3.93,21,Dusk,Heavy Rain,CRITICAL
+7.51,22,Afternoon,Clear,MEDIUM
+3.8,8,Morning,Clear,MEDIUM
+9.37,23,Morning,Heavy Rain,LOW
+3.85,15,Morning,Heavy Rain,CRITICAL
+7.37,25,Afternoon,Light Rain,HIGH
+13.96,14,Night,Light Rain,LOW
+9.13,1,Morning,Clear,LOW
+11.65,2,Afternoon,Light Rain,LOW
+4.73,9,Dusk,Heavy Rain,HIGH
+13.4,0,Morning,Light Rain,LOW
+3.37,7,Morning,Clear,MEDIUM
+5.73,0,Afternoon,Light Rain,LOW
+10.03,22,Night,Light Rain,LOW
+11.68,17,Night,Light Rain,LOW
+2.81,2,Dusk,Light Rain,HIGH
+5.22,3,Dusk,Clear,MEDIUM
+9.67,5,Night,Heavy Rain,LOW
+0.15,23,Afternoon,Light Rain,CRITICAL
+3.61,13,Dusk,Clear,CRITICAL
+6.1,14,Morning,Heavy Rain,MEDIUM
+6.93,11,Morning,Heavy Rain,MEDIUM
+14.12,13,Night,Clear,HIGH
+6.47,3,Night,Heavy Rain,MEDIUM
+11.7,1,Afternoon,Light Rain,LOW
+10.13,11,Dusk,Clear,LOW
+9.9,12,Night,Heavy Rain,LOW
+7.93,11,Night,Clear,MEDIUM
+9.47,0,Morning,Heavy Rain,LOW
+1.38,7,Morning,Heavy Rain,HIGH
+5.68,4,Dusk,Heavy Rain,MEDIUM
+9.26,18,Morning,Clear,LOW
+5.97,10,Night,Heavy Rain,MEDIUM
+5.74,3,Night,Heavy Rain,MEDIUM
+4.75,21,Afternoon,Clear,MEDIUM
+5.43,9,Night,Heavy Rain,MEDIUM
+7.34,0,Dusk,Light Rain,LOW
+8.85,8,Night,Light Rain,LOW
+4.76,22,Afternoon,Heavy Rain,MEDIUM
+4.38,4,Morning,Light Rain,MEDIUM
+13.04,8,Morning,Light Rain,LOW
+12.65,20,Dusk,Heavy Rain,LOW
+5.53,15,Afternoon,Heavy Rain,MEDIUM
+3.22,0,Night,Light Rain,HIGH
+3.46,17,Afternoon,Heavy Rain,CRITICAL
+12.97,2,Afternoon,Light Rain,LOW
+6.27,3,Dusk,Clear,MEDIUM
+8.39,4,Morning,Clear,LOW
+13.22,15,Morning,Light Rain,LOW
+13.39,20,Afternoon,Clear,LOW
+6.26,19,Dusk,Light Rain,MEDIUM
+5.29,16,Morning,Heavy Rain,MEDIUM
+12.66,3,Dusk,Heavy Rain,LOW
+12.63,6,Morning,Light Rain,LOW
+9.45,11,Morning,Heavy Rain,LOW
+2.41,11,Afternoon,Clear,CRITICAL
+14.59,25,Night,Clear,LOW
+6.86,13,Afternoon,Light Rain,MEDIUM
+10.5,9,Morning,Heavy Rain,LOW
+9.42,8,Morning,Heavy Rain,LOW
+2.34,12,Night,Clear,CRITICAL
+9.69,13,Afternoon,Heavy Rain,LOW
+4.3,1,Afternoon,Heavy Rain,MEDIUM
+11.15,13,Dusk,Heavy Rain,LOW
+6.0,20,Night,Heavy Rain,MEDIUM
+10.74,23,Afternoon,Heavy Rain,LOW
+0.34,3,Morning,Heavy Rain,HIGH
+9.23,7,Morning,Clear,LOW
+13.18,11,Afternoon,Clear,LOW
+10.08,11,Dusk,Heavy Rain,LOW
+1.35,11,Morning,Heavy Rain,CRITICAL
+0.46,5,Morning,Heavy Rain,HIGH
+14.21,2,Night,Heavy Rain,LOW
+12.44,10,Night,Heavy Rain,LOW
+0.58,16,Dusk,Clear,CRITICAL
+11.55,25,Night,Light Rain,LOW
+6.02,3,Dusk,Clear,MEDIUM
+9.49,19,Night,Heavy Rain,LOW
+5.56,1,Morning,Light Rain,MEDIUM
+12.71,25,Night,Clear,LOW
+6.03,12,Afternoon,Light Rain,MEDIUM
+4.04,12,Dusk,Heavy Rain,HIGH
+11.59,10,Dusk,Light Rain,LOW
+6.92,11,Afternoon,Clear,MEDIUM
+8.49,15,Night,Clear,LOW
+4.78,1,Night,Light Rain,HIGH
+6.24,16,Morning,Clear,MEDIUM
+12.13,14,Dusk,Light Rain,LOW
+9.63,24,Morning,Light Rain,LOW
+10.22,14,Dusk,Light Rain,LOW
+2.57,11,Dusk,Heavy Rain,MEDIUM
+9.59,3,Afternoon,Heavy Rain,LOW
+1.51,13,Morning,Clear,CRITICAL
+0.85,15,Afternoon,Heavy Rain,CRITICAL
+6.17,12,Afternoon,Light Rain,MEDIUM
+12.56,0,Night,Light Rain,LOW
+2.19,10,Dusk,Heavy Rain,MEDIUM
+7.49,12,Afternoon,Heavy Rain,MEDIUM
+7.82,19,Afternoon,Heavy Rain,MEDIUM
+4.3,23,Night,Heavy Rain,HIGH
+13.08,24,Night,Light Rain,LOW
+10.64,5,Afternoon,Clear,LOW
+6.07,9,Dusk,Clear,MEDIUM
+10.87,19,Dusk,Clear,LOW
+5.2,4,Dusk,Clear,MEDIUM
+14.87,2,Night,Light Rain,LOW
+6.52,23,Night,Light Rain,MEDIUM
+13.96,4,Night,Clear,LOW
+13.03,23,Afternoon,Light Rain,LOW
+7.04,14,Night,Light Rain,MEDIUM
+3.99,5,Dusk,Clear,HIGH
+12.65,8,Morning,Heavy Rain,LOW
+0.53,2,Morning,Clear,MEDIUM
+10.2,17,Night,Light Rain,LOW
+1.2,17,Night,Light Rain,CRITICAL
+6.15,11,Night,Heavy Rain,MEDIUM
+8.05,2,Dusk,Light Rain,LOW
+3.11,21,Morning,Light Rain,CRITICAL
+8.0,21,Dusk,Light Rain,LOW
+11.73,15,Night,Light Rain,LOW
+14.14,16,Night,Clear,LOW
+2.69,22,Dusk,Light Rain,CRITICAL
+2.65,16,Dusk,Heavy Rain,CRITICAL
+9.92,11,Afternoon,Light Rain,LOW
+8.47,8,Night,Light Rain,LOW
+10.49,13,Afternoon,Light Rain,LOW
+11.18,5,Dusk,Heavy Rain,LOW
+11.09,8,Morning,Heavy Rain,LOW
+7.59,19,Dusk,Heavy Rain,MEDIUM
+7.98,0,Morning,Light Rain,LOW
+6.53,7,Dusk,Clear,MEDIUM
+4.53,0,Night,Heavy Rain,HIGH
+7.8,8,Morning,Clear,MEDIUM
+12.44,4,Dusk,Light Rain,LOW
+11.89,25,Night,Light Rain,LOW
+1.96,18,Morning,Heavy Rain,CRITICAL
+9.89,3,Night,Heavy Rain,LOW
+10.92,1,Afternoon,Heavy Rain,LOW
+2.13,5,Night,Heavy Rain,HIGH
+2.59,23,Night,Heavy Rain,CRITICAL
+7.88,6,Morning,Light Rain,MEDIUM
+1.83,18,Dusk,Clear,CRITICAL
+13.7,7,Dusk,Light Rain,LOW
+9.91,9,Afternoon,Heavy Rain,LOW
+1.72,8,Morning,Clear,HIGH
+9.75,12,Afternoon,Clear,LOW
+1.72,23,Afternoon,Clear,CRITICAL
+0.56,20,Morning,Heavy Rain,CRITICAL
+13.84,18,Afternoon,Light Rain,LOW
+1.15,2,Afternoon,Light Rain,MEDIUM
+2.99,12,Night,Clear,CRITICAL
+12.16,17,Night,Clear,LOW
+8.19,8,Night,Light Rain,LOW
+13.1,13,Afternoon,Clear,LOW
+10.1,3,Morning,Clear,LOW
+6.45,5,Dusk,Light Rain,MEDIUM
+12.26,5,Dusk,Heavy Rain,LOW
+4.02,3,Night,Light Rain,HIGH
+1.97,20,Dusk,Heavy Rain,CRITICAL
+10.65,6,Afternoon,Clear,LOW
+13.34,22,Afternoon,Light Rain,LOW
+5.55,12,Morning,Clear,LOW
+8.84,6,Morning,Clear,LOW
+12.14,15,Morning,Clear,LOW
+1.56,12,Morning,Light Rain,CRITICAL
+3.85,22,Dusk,Heavy Rain,CRITICAL
+8.88,14,Morning,Heavy Rain,LOW
+11.65,7,Night,Heavy Rain,LOW
+9.67,14,Dusk,Clear,LOW
+3.01,12,Morning,Light Rain,CRITICAL
+11.44,3,Morning,Clear,LOW
+13.62,15,Dusk,Light Rain,LOW
+10.36,11,Dusk,Heavy Rain,LOW
+10.51,1,Afternoon,Heavy Rain,LOW
+11.62,5,Morning,Heavy Rain,LOW
+2.99,10,Afternoon,Light Rain,LOW
+3.37,0,Night,Heavy Rain,HIGH
+6.85,17,Morning,Light Rain,MEDIUM
+3.67,24,Dusk,Clear,CRITICAL
+14.77,19,Afternoon,Heavy Rain,LOW
+5.79,22,Afternoon,Heavy Rain,MEDIUM
+1.5,22,Morning,Light Rain,CRITICAL
+9.93,9,Morning,Clear,LOW
+1.67,20,Morning,Heavy Rain,CRITICAL
+9.26,11,Morning,Clear,LOW
+2.11,8,Morning,Clear,HIGH
+2.11,0,Afternoon,Heavy Rain,LOW
+1.94,11,Dusk,Heavy Rain,CRITICAL
+9.9,20,Dusk,Light Rain,LOW
+11.05,8,Afternoon,Light Rain,LOW
+5.29,5,Afternoon,Light Rain,MEDIUM
+1.39,19,Morning,Heavy Rain,CRITICAL
+10.39,2,Dusk,Heavy Rain,LOW
+6.49,25,Night,Clear,MEDIUM
+5.52,0,Morning,Light Rain,LOW
+2.07,21,Dusk,Heavy Rain,CRITICAL
+8.34,1,Morning,Light Rain,LOW
+8.78,19,Afternoon,Clear,LOW
+0.84,15,Afternoon,Heavy Rain,CRITICAL
+6.9,0,Dusk,Clear,LOW
+1.61,23,Dusk,Heavy Rain,CRITICAL
+5.34,6,Dusk,Heavy Rain,MEDIUM
+7.59,0,Morning,Light Rain,LOW
+3.33,18,Morning,Clear,CRITICAL
+2.17,3,Afternoon,Heavy Rain,HIGH
+11.06,1,Afternoon,Heavy Rain,LOW
+2.18,20,Morning,Light Rain,CRITICAL
+7.37,3,Morning,Clear,MEDIUM
+0.23,8,Dusk,Clear,CRITICAL
+3.18,22,Dusk,Light Rain,CRITICAL
+4.32,14,Dusk,Heavy Rain,HIGH
+11.43,5,Dusk,Light Rain,LOW
+6.95,17,Afternoon,Light Rain,MEDIUM
+0.85,3,Dusk,Heavy Rain,HIGH
+10.24,20,Night,Heavy Rain,LOW
+2.7,24,Night,Light Rain,CRITICAL
+0.2,19,Dusk,Light Rain,CRITICAL
+12.83,24,Dusk,Heavy Rain,LOW
+13.36,21,Morning,Heavy Rain,LOW
+1.79,6,Dusk,Clear,CRITICAL
+14.1,24,Morning,Heavy Rain,LOW
+6.03,8,Night,Clear,MEDIUM
+1.52,10,Afternoon,Clear,MEDIUM
+0.55,12,Night,Heavy Rain,CRITICAL
+14.72,5,Night,Heavy Rain,LOW
+11.31,19,Morning,Light Rain,LOW
+7.91,14,Afternoon,Light Rain,MEDIUM
+4.35,25,Dusk,Clear,HIGH
+10.16,24,Dusk,Heavy Rain,LOW
+10.18,20,Dusk,Light Rain,LOW
+0.46,1,Morning,Clear,MEDIUM
+12.85,13,Dusk,Clear,LOW
+7.16,23,Night,Heavy Rain,MEDIUM
+8.16,15,Morning,Heavy Rain,LOW
+10.42,0,Dusk,Clear,LOW
+7.54,16,Dusk,Clear,MEDIUM
+13.82,20,Afternoon,Clear,LOW
+14.72,20,Morning,Light Rain,LOW
+8.33,6,Night,Heavy Rain,LOW
+11.02,19,Dusk,Clear,LOW
+1.65,15,Afternoon,Heavy Rain,CRITICAL
+2.02,15,Dusk,Clear,CRITICAL
+4.11,18,Dusk,Clear,HIGH
+0.52,14,Morning,Light Rain,LOW
+12.72,15,Night,Light Rain,LOW
+1.42,8,Afternoon,Light Rain,HIGH
+3.11,25,Morning,Light Rain,CRITICAL
+4.73,23,Morning,Heavy Rain,HIGH
+0.88,6,Afternoon,Heavy Rain,HIGH
+5.96,5,Morning,Light Rain,MEDIUM
+1.83,13,Night,Light Rain,CRITICAL
+0.89,23,Dusk,Light Rain,MEDIUM
+5.16,18,Morning,Light Rain,MEDIUM
+12.92,11,Dusk,Heavy Rain,LOW
+8.11,25,Dusk,Heavy Rain,LOW
+14.89,19,Afternoon,Heavy Rain,LOW
+0.34,7,Night,Heavy Rain,CRITICAL
+4.8,17,Dusk,Clear,HIGH
+1.95,20,Night,Light Rain,CRITICAL
+3.64,4,Afternoon,Clear,MEDIUM
+2.49,6,Dusk,Light Rain,HIGH
+0.14,23,Afternoon,Clear,CRITICAL
+3.91,4,Afternoon,Light Rain,MEDIUM
+1.47,12,Morning,Light Rain,CRITICAL
+11.14,23,Morning,Heavy Rain,LOW
+6.92,8,Morning,Heavy Rain,MEDIUM
+8.59,5,Night,Clear,LOW
+3.37,11,Night,Light Rain,LOW
+9.73,4,Morning,Light Rain,LOW
+2.28,20,Morning,Light Rain,CRITICAL
+3.19,16,Afternoon,Heavy Rain,CRITICAL
+7.71,2,Afternoon,Light Rain,MEDIUM
+6.18,11,Morning,Light Rain,MEDIUM
+10.06,21,Dusk,Heavy Rain,LOW
+5.75,12,Dusk,Heavy Rain,MEDIUM
+13.0,11,Morning,Light Rain,LOW
+2.57,16,Dusk,Clear,CRITICAL
+11.43,17,Night,Heavy Rain,LOW
+13.65,18,Night,Light Rain,LOW
+7.55,5,Afternoon,Heavy Rain,MEDIUM
+2.85,14,Dusk,Heavy Rain,CRITICAL
+7.59,25,Morning,Clear,MEDIUM
+1.25,8,Night,Heavy Rain,CRITICAL
+12.94,24,Afternoon,Clear,LOW
+14.71,15,Night,Clear,HIGH
+2.14,11,Morning,Light Rain,CRITICAL
+10.42,10,Dusk,Clear,LOW
+13.18,6,Afternoon,Light Rain,LOW
+11.59,14,Dusk,Light Rain,LOW
+1.91,8,Afternoon,Clear,HIGH
+13.58,11,Night,Light Rain,LOW
+10.07,8,Morning,Clear,LOW
+8.29,25,Afternoon,Light Rain,LOW
+0.73,24,Morning,Heavy Rain,CRITICAL
+13.33,5,Afternoon,Clear,LOW
+5.14,20,Afternoon,Light Rain,MEDIUM
+12.09,16,Afternoon,Light Rain,LOW
+3.31,9,Dusk,Light Rain,HIGH
+2.12,22,Afternoon,Light Rain,CRITICAL
+5.09,19,Night,Heavy Rain,MEDIUM
+12.06,0,Night,Heavy Rain,LOW
+8.49,13,Night,Heavy Rain,LOW
+7.56,12,Dusk,Clear,MEDIUM
+12.58,11,Dusk,Clear,LOW
+8.74,17,Afternoon,Heavy Rain,LOW
+12.95,19,Dusk,Heavy Rain,LOW
+10.69,4,Afternoon,Light Rain,LOW
+5.28,24,Afternoon,Clear,MEDIUM
+4.8,6,Morning,Light Rain,MEDIUM
+6.67,1,Dusk,Heavy Rain,MEDIUM
+14.71,21,Morning,Heavy Rain,LOW
+5.6,22,Night,Heavy Rain,CRITICAL
+13.1,21,Afternoon,Light Rain,LOW
+0.98,22,Morning,Clear,CRITICAL
+13.16,3,Morning,Light Rain,LOW
+2.58,2,Afternoon,Clear,MEDIUM
+1.47,24,Afternoon,Light Rain,CRITICAL
+1.09,19,Afternoon,Clear,CRITICAL
+7.27,12,Dusk,Light Rain,MEDIUM
+3.95,20,Dusk,Clear,CRITICAL
+6.74,6,Dusk,Light Rain,MEDIUM
+3.44,13,Night,Light Rain,CRITICAL
+14.18,13,Morning,Heavy Rain,LOW
+8.67,5,Afternoon,Heavy Rain,LOW
+14.88,14,Morning,Clear,LOW
+7.47,5,Afternoon,Clear,MEDIUM
+14.39,16,Afternoon,Heavy Rain,LOW
+7.09,0,Night,Clear,LOW
+10.69,22,Afternoon,Heavy Rain,LOW
+3.84,25,Morning,Light Rain,CRITICAL
+4.12,18,Night,Heavy Rain,HIGH
+1.61,6,Afternoon,Heavy Rain,HIGH
+13.41,0,Dusk,Clear,LOW
+6.83,13,Morning,Heavy Rain,MEDIUM
+1.19,25,Afternoon,Heavy Rain,CRITICAL
+2.01,23,Dusk,Light Rain,CRITICAL
+1.24,15,Afternoon,Heavy Rain,CRITICAL
+12.8,20,Night,Light Rain,LOW
+11.29,19,Dusk,Light Rain,LOW
+14.42,17,Night,Clear,LOW
+6.41,15,Afternoon,Clear,MEDIUM
+2.85,20,Morning,Heavy Rain,CRITICAL
+10.61,0,Afternoon,Clear,LOW
+2.62,0,Morning,Heavy Rain,LOW
+1.94,20,Afternoon,Light Rain,CRITICAL
+14.32,14,Night,Clear,LOW
+14.33,16,Night,Clear,LOW
+13.42,11,Night,Light Rain,LOW
+7.88,2,Morning,Heavy Rain,MEDIUM
+1.84,1,Night,Clear,HIGH
+4.45,7,Morning,Heavy Rain,MEDIUM
+11.42,10,Dusk,Heavy Rain,LOW
+7.83,21,Night,Heavy Rain,MEDIUM
+13.35,4,Morning,Light Rain,LOW
+0.78,18,Morning,Clear,CRITICAL
+9.65,22,Night,Heavy Rain,LOW
+14.16,22,Night,Heavy Rain,LOW
+10.01,0,Dusk,Light Rain,LOW
+6.44,20,Dusk,Light Rain,MEDIUM
+3.42,3,Afternoon,Light Rain,MEDIUM
+9.48,19,Morning,Clear,LOW
+11.45,1,Afternoon,Heavy Rain,LOW
+8.76,20,Dusk,Heavy Rain,LOW
+3.05,6,Afternoon,Light Rain,MEDIUM
+4.69,2,Morning,Light Rain,MEDIUM
+4.29,1,Dusk,Light Rain,HIGH
+3.39,24,Morning,Light Rain,CRITICAL
+2.96,17,Dusk,Light Rain,CRITICAL
+0.21,12,Morning,Heavy Rain,CRITICAL
+12.18,21,Afternoon,Clear,LOW
+7.12,25,Dusk,Heavy Rain,MEDIUM
+12.72,4,Night,Light Rain,LOW
+7.47,2,Morning,Heavy Rain,MEDIUM
+13.72,14,Night,Clear,LOW
+12.08,1,Afternoon,Clear,HIGH
+10.78,10,Morning,Heavy Rain,LOW
+5.94,15,Morning,Clear,MEDIUM
+1.26,20,Dusk,Clear,CRITICAL
+0.38,12,Dusk,Clear,CRITICAL
+14.33,1,Night,Clear,LOW
+1.26,3,Morning,Light Rain,HIGH
+8.92,2,Morning,Clear,LOW
+5.57,13,Dusk,Light Rain,MEDIUM
+9.49,17,Afternoon,Clear,LOW
+3.48,10,Morning,Heavy Rain,MEDIUM
+14.74,6,Dusk,Clear,LOW
+7.33,22,Night,Light Rain,MEDIUM
+11.75,25,Night,Clear,LOW
+2.06,6,Dusk,Light Rain,HIGH
+0.54,3,Dusk,Clear,HIGH
+4.16,14,Night,Heavy Rain,HIGH
+13.45,6,Night,Light Rain,LOW
+7.17,8,Morning,Heavy Rain,CRITICAL
+4.11,14,Afternoon,Light Rain,MEDIUM
+3.3,9,Night,Heavy Rain,HIGH
+8.07,24,Night,Clear,LOW
+9.9,7,Night,Heavy Rain,LOW
+2.94,8,Night,Heavy Rain,HIGH
+3.61,6,Afternoon,Light Rain,MEDIUM
+12.66,12,Afternoon,Heavy Rain,LOW
+11.36,8,Morning,Light Rain,LOW
+2.68,0,Afternoon,Clear,LOW
+8.25,25,Morning,Light Rain,LOW
+2.76,22,Night,Light Rain,CRITICAL
+7.49,23,Morning,Light Rain,MEDIUM
+9.91,20,Afternoon,Light Rain,LOW
+13.68,21,Dusk,Light Rain,LOW
+0.59,0,Afternoon,Clear,LOW
+7.27,6,Afternoon,Clear,MEDIUM
+5.09,3,Morning,Heavy Rain,MEDIUM
+10.15,10,Afternoon,Clear,LOW
+14.74,9,Afternoon,Heavy Rain,LOW
+5.88,25,Morning,Heavy Rain,MEDIUM
+7.28,1,Dusk,Heavy Rain,MEDIUM
+8.33,13,Morning,Heavy Rain,LOW
+13.98,3,Night,Light Rain,LOW
+13.07,10,Night,Light Rain,LOW
+7.2,20,Dusk,Heavy Rain,MEDIUM
+8.93,4,Morning,Clear,LOW
+7.47,9,Dusk,Heavy Rain,MEDIUM
+3.3,24,Dusk,Clear,CRITICAL
+1.81,15,Dusk,Clear,CRITICAL
+8.78,7,Morning,Clear,LOW
+6.85,17,Afternoon,Heavy Rain,MEDIUM
+14.95,6,Afternoon,Light Rain,LOW
+12.79,9,Afternoon,Heavy Rain,LOW
+9.87,6,Night,Clear,MEDIUM
+11.64,21,Afternoon,Heavy Rain,MEDIUM
+8.54,14,Morning,Heavy Rain,LOW
+6.17,5,Dusk,Heavy Rain,MEDIUM
+10.36,7,Night,Clear,LOW
+4.43,16,Dusk,Heavy Rain,HIGH
+14.04,8,Afternoon,Light Rain,LOW
+11.92,8,Morning,Heavy Rain,LOW
+0.34,1,Afternoon,Clear,MEDIUM
+7.11,23,Dusk,Clear,MEDIUM
+6.84,17,Afternoon,Heavy Rain,MEDIUM
+0.93,12,Afternoon,Heavy Rain,CRITICAL
+0.89,18,Morning,Heavy Rain,CRITICAL
+0.99,1,Morning,Heavy Rain,MEDIUM
+2.13,8,Night,Light Rain,HIGH
+7.02,24,Night,Clear,MEDIUM
+2.16,11,Afternoon,Light Rain,CRITICAL
+7.79,4,Afternoon,Clear,MEDIUM
+14.79,12,Night,Light Rain,LOW
+7.74,1,Morning,Heavy Rain,MEDIUM
+4.52,24,Morning,Clear,MEDIUM
+1.86,11,Dusk,Heavy Rain,CRITICAL
+10.88,19,Night,Clear,LOW
+9.9,6,Dusk,Clear,LOW
+5.84,21,Dusk,Light Rain,MEDIUM
+10.49,1,Morning,Clear,LOW
+13.12,3,Afternoon,Clear,LOW
+1.6,5,Dusk,Light Rain,HIGH
+12.28,4,Morning,Light Rain,LOW
+2.73,2,Night,Clear,HIGH
+5.25,18,Night,Heavy Rain,MEDIUM
+12.42,2,Night,Light Rain,LOW
+12.17,9,Dusk,Heavy Rain,LOW
+7.84,2,Morning,Clear,MEDIUM
+6.84,25,Night,Heavy Rain,MEDIUM
+2.8,24,Dusk,Clear,CRITICAL
+14.05,0,Afternoon,Light Rain,CRITICAL
+3.14,20,Morning,Clear,CRITICAL
+4.92,12,Afternoon,Heavy Rain,MEDIUM
+14.18,20,Dusk,Heavy Rain,LOW
+4.29,8,Dusk,Heavy Rain,HIGH
+1.56,18,Morning,Clear,CRITICAL
+1.49,17,Morning,Clear,CRITICAL
+8.87,23,Afternoon,Heavy Rain,LOW
+0.63,2,Afternoon,Light Rain,MEDIUM
+8.78,5,Night,Heavy Rain,MEDIUM
+11.33,13,Afternoon,Clear,LOW
+2.86,9,Afternoon,Light Rain,HIGH
+2.92,25,Morning,Light Rain,CRITICAL
+0.96,10,Morning,Heavy Rain,HIGH
+13.07,20,Dusk,Heavy Rain,LOW
+6.39,21,Morning,Clear,MEDIUM
+0.25,9,Night,Light Rain,CRITICAL
+14.7,23,Morning,Light Rain,LOW
+9.7,18,Night,Clear,LOW
+11.73,16,Dusk,Clear,LOW
+12.15,10,Afternoon,Light Rain,LOW
+11.49,15,Morning,Heavy Rain,LOW
+1.22,13,Night,Clear,CRITICAL
+4.03,20,Night,Light Rain,HIGH
+10.9,15,Afternoon,Heavy Rain,LOW
+13.04,16,Dusk,Heavy Rain,LOW
+9.74,21,Night,Clear,LOW
+5.69,21,Morning,Light Rain,MEDIUM
+4.94,18,Morning,Heavy Rain,MEDIUM
+3.42,11,Dusk,Heavy Rain,CRITICAL
+7.33,22,Morning,Light Rain,MEDIUM
+8.66,2,Night,Light Rain,LOW
+9.15,18,Dusk,Clear,LOW
+10.63,20,Morning,Heavy Rain,LOW
+1.14,9,Night,Clear,CRITICAL
+9.15,17,Afternoon,Light Rain,LOW
+3.95,3,Dusk,Heavy Rain,HIGH
+4.22,2,Afternoon,Light Rain,MEDIUM
+10.98,4,Dusk,Heavy Rain,LOW
+12.83,23,Dusk,Clear,LOW
+5.84,20,Night,Light Rain,MEDIUM
+3.82,15,Afternoon,Clear,CRITICAL
+7.92,15,Dusk,Light Rain,MEDIUM
+14.38,15,Night,Light Rain,LOW
+11.24,6,Afternoon,Heavy Rain,LOW
+0.28,6,Afternoon,Clear,HIGH
+7.82,25,Night,Light Rain,MEDIUM
+7.7,21,Dusk,Light Rain,MEDIUM
+5.11,1,Morning,Heavy Rain,MEDIUM
+8.45,10,Morning,Light Rain,LOW
+12.28,24,Afternoon,Heavy Rain,LOW
+5.53,17,Dusk,Clear,CRITICAL
+2.1,11,Night,Clear,CRITICAL
+2.85,12,Dusk,Light Rain,CRITICAL
+8.81,12,Dusk,Heavy Rain,CRITICAL
+6.69,1,Morning,Clear,MEDIUM
+11.76,10,Night,Heavy Rain,LOW
+9.12,6,Night,Clear,LOW
+13.56,8,Dusk,Light Rain,LOW
+10.35,23,Night,Light Rain,LOW
+1.88,14,Afternoon,Clear,CRITICAL
+9.06,1,Morning,Light Rain,LOW
+5.82,15,Morning,Light Rain,MEDIUM
+7.05,23,Morning,Clear,MEDIUM
+12.38,3,Morning,Light Rain,LOW
+12.64,17,Afternoon,Clear,CRITICAL
+1.9,4,Dusk,Heavy Rain,HIGH
+14.59,5,Afternoon,Clear,LOW
+9.54,13,Morning,Light Rain,LOW
+3.76,6,Morning,Light Rain,MEDIUM
+4.02,16,Morning,Light Rain,MEDIUM
+13.42,9,Night,Clear,LOW
+3.79,10,Night,Light Rain,HIGH
+12.79,20,Morning,Heavy Rain,LOW
+4.83,8,Dusk,Heavy Rain,HIGH
+6.21,25,Night,Light Rain,MEDIUM
+14.82,6,Dusk,Heavy Rain,LOW
+9.96,14,Dusk,Heavy Rain,LOW
+8.73,11,Night,Clear,LOW
+1.88,4,Dusk,Clear,HIGH
+13.16,2,Morning,Heavy Rain,LOW
+8.87,15,Dusk,Clear,LOW
+5.51,12,Night,Clear,MEDIUM
+5.93,20,Afternoon,Clear,MEDIUM
+4.64,22,Night,Heavy Rain,HIGH
+8.24,14,Afternoon,Heavy Rain,LOW
+6.34,5,Afternoon,Clear,MEDIUM
+3.95,7,Afternoon,Clear,MEDIUM
+6.08,22,Morning,Light Rain,MEDIUM
+6.63,15,Night,Clear,LOW
+4.56,0,Afternoon,Light Rain,LOW
+14.13,15,Afternoon,Heavy Rain,LOW
+4.68,7,Night,Heavy Rain,HIGH
+2.63,15,Night,Light Rain,CRITICAL
+14.28,0,Afternoon,Clear,LOW
+4.84,13,Dusk,Heavy Rain,HIGH
+4.49,21,Night,Heavy Rain,HIGH
+4.86,25,Afternoon,Heavy Rain,MEDIUM
+14.51,19,Dusk,Heavy Rain,LOW
+3.62,10,Night,Light Rain,HIGH
+14.66,2,Night,Light Rain,LOW
+10.37,24,Afternoon,Light Rain,LOW
+4.39,1,Dusk,Light Rain,HIGH
+13.18,6,Afternoon,Heavy Rain,LOW
+12.22,0,Morning,Heavy Rain,LOW
+13.03,8,Night,Clear,LOW
+3.27,6,Afternoon,Heavy Rain,MEDIUM
+0.19,17,Night,Light Rain,CRITICAL
+10.14,10,Night,Light Rain,LOW
+8.06,19,Dusk,Clear,LOW
+2.11,16,Afternoon,Heavy Rain,CRITICAL
+7.51,23,Night,Light Rain,MEDIUM
+6.19,0,Dusk,Heavy Rain,LOW
+3.33,20,Afternoon,Clear,CRITICAL
+3.18,20,Morning,Heavy Rain,CRITICAL
+7.09,17,Afternoon,Heavy Rain,MEDIUM
+14.31,23,Night,Clear,LOW
+11.01,24,Dusk,Heavy Rain,LOW
+12.16,18,Night,Light Rain,LOW
+6.94,18,Night,Heavy Rain,MEDIUM
+1.82,5,Dusk,Light Rain,HIGH
+9.94,12,Morning,Heavy Rain,LOW
+4.05,23,Dusk,Light Rain,HIGH
+1.32,11,Morning,Light Rain,CRITICAL
+3.89,17,Night,Heavy Rain,MEDIUM
+12.27,20,Morning,Light Rain,LOW
+6.68,3,Dusk,Clear,MEDIUM
+9.64,3,Morning,Clear,LOW
+6.62,23,Afternoon,Heavy Rain,MEDIUM
+7.74,16,Afternoon,Clear,MEDIUM
+8.38,6,Dusk,Light Rain,LOW
+1.02,12,Morning,Light Rain,CRITICAL
+12.91,14,Dusk,Heavy Rain,LOW
+3.66,5,Night,Heavy Rain,HIGH
+10.62,0,Night,Heavy Rain,LOW
+13.51,10,Afternoon,Light Rain,LOW
+11.96,11,Dusk,Heavy Rain,CRITICAL
+6.03,22,Night,Clear,MEDIUM
+12.14,15,Dusk,Clear,LOW
+2.85,25,Morning,Heavy Rain,CRITICAL
+14.63,16,Afternoon,Light Rain,LOW
+9.6,23,Afternoon,Clear,LOW
+0.75,14,Afternoon,Heavy Rain,CRITICAL
+3.59,14,Afternoon,Light Rain,CRITICAL
+3.02,9,Afternoon,Light Rain,MEDIUM
+11.85,10,Night,Heavy Rain,LOW
+11.65,20,Dusk,Clear,LOW
+12.71,10,Dusk,Heavy Rain,LOW
+5.46,20,Dusk,Clear,MEDIUM
+14.62,3,Night,Clear,LOW
+13.62,11,Morning,Heavy Rain,LOW
+14.13,15,Night,Clear,LOW
+0.32,13,Afternoon,Heavy Rain,CRITICAL
+11.66,14,Dusk,Clear,LOW
+5.01,10,Afternoon,Heavy Rain,CRITICAL
+9.37,4,Afternoon,Light Rain,LOW
+13.15,5,Dusk,Clear,LOW
+8.35,9,Dusk,Light Rain,LOW
+4.43,12,Morning,Clear,MEDIUM
+13.18,1,Morning,Heavy Rain,LOW
+10.88,11,Afternoon,Light Rain,LOW
+2.14,10,Morning,Heavy Rain,HIGH
+5.6,12,Morning,Heavy Rain,MEDIUM
+8.39,10,Afternoon,Light Rain,LOW
+0.56,16,Afternoon,Clear,CRITICAL
+9.99,12,Morning,Heavy Rain,LOW
+6.2,15,Night,Clear,MEDIUM
+8.81,0,Afternoon,Clear,LOW
+11.85,19,Dusk,Heavy Rain,LOW
+5.88,20,Dusk,Light Rain,MEDIUM
+1.35,12,Afternoon,Heavy Rain,CRITICAL
+0.59,1,Morning,Light Rain,MEDIUM
+10.0,12,Afternoon,Light Rain,LOW
+6.71,16,Afternoon,Clear,MEDIUM
+6.94,17,Dusk,Heavy Rain,HIGH
+4.42,2,Morning,Clear,MEDIUM
+8.85,11,Dusk,Clear,LOW
+12.28,19,Dusk,Light Rain,LOW
+0.26,11,Morning,Light Rain,CRITICAL
+10.34,5,Afternoon,Light Rain,LOW
+10.35,9,Morning,Heavy Rain,LOW
+1.76,8,Dusk,Light Rain,CRITICAL
+12.62,3,Dusk,Light Rain,LOW
+2.03,25,Dusk,Clear,CRITICAL
+3.87,11,Dusk,Heavy Rain,CRITICAL
+6.0,22,Morning,Heavy Rain,MEDIUM
+5.79,7,Morning,Clear,MEDIUM
+7.3,17,Dusk,Clear,MEDIUM
+9.98,23,Night,Light Rain,LOW
+11.18,9,Night,Light Rain,LOW
+4.68,13,Morning,Clear,MEDIUM
+2.16,16,Afternoon,Heavy Rain,CRITICAL
+2.61,16,Morning,Light Rain,CRITICAL
+1.6,24,Morning,Heavy Rain,CRITICAL
+6.49,25,Dusk,Heavy Rain,MEDIUM
+8.2,13,Night,Light Rain,LOW
+10.13,4,Afternoon,Clear,LOW
+5.44,18,Afternoon,Heavy Rain,MEDIUM
+2.04,14,Night,Clear,CRITICAL
+5.0,14,Afternoon,Light Rain,MEDIUM
+9.59,18,Morning,Heavy Rain,LOW
+14.24,3,Afternoon,Heavy Rain,LOW
+6.07,3,Night,Clear,MEDIUM
+4.72,14,Afternoon,Clear,MEDIUM
+9.92,3,Afternoon,Clear,LOW
+1.07,23,Afternoon,Heavy Rain,CRITICAL
+0.15,2,Afternoon,Light Rain,MEDIUM
+7.63,9,Dusk,Heavy Rain,MEDIUM
+4.88,25,Night,Heavy Rain,HIGH
+11.55,6,Afternoon,Clear,LOW
+13.03,19,Afternoon,Clear,LOW
+14.16,0,Night,Light Rain,LOW
+9.88,2,Afternoon,Light Rain,LOW
+4.22,5,Night,Light Rain,HIGH
+13.96,6,Afternoon,Heavy Rain,LOW
+10.08,2,Morning,Heavy Rain,LOW
+1.79,13,Dusk,Light Rain,CRITICAL
+4.84,16,Night,Light Rain,HIGH
+2.27,12,Afternoon,Heavy Rain,CRITICAL
+14.13,3,Afternoon,Light Rain,LOW
+6.26,14,Afternoon,Clear,MEDIUM
+13.84,13,Morning,Heavy Rain,LOW
+0.89,21,Afternoon,Heavy Rain,CRITICAL
+4.78,25,Night,Clear,HIGH
+5.5,0,Afternoon,Clear,LOW
+3.34,8,Dusk,Heavy Rain,HIGH
+8.54,2,Morning,Clear,LOW
+6.38,20,Dusk,Heavy Rain,MEDIUM
+9.82,24,Afternoon,Clear,LOW
+0.32,17,Dusk,Heavy Rain,CRITICAL
+10.78,14,Night,Heavy Rain,LOW
+1.02,18,Dusk,Clear,CRITICAL
+0.5,22,Night,Light Rain,CRITICAL
+5.83,6,Morning,Heavy Rain,MEDIUM
+3.18,19,Morning,Heavy Rain,CRITICAL
+9.86,0,Morning,Clear,LOW
+10.27,7,Night,Heavy Rain,LOW
+6.2,3,Night,Heavy Rain,MEDIUM
+5.82,6,Morning,Light Rain,MEDIUM
+14.15,14,Night,Heavy Rain,LOW
+4.07,13,Morning,Heavy Rain,MEDIUM
+5.26,17,Dusk,Light Rain,MEDIUM
+2.34,10,Morning,Light Rain,HIGH
+10.73,4,Afternoon,Heavy Rain,LOW
+3.33,0,Afternoon,Light Rain,LOW
+13.29,11,Night,Heavy Rain,LOW
+9.3,23,Dusk,Light Rain,LOW
+0.29,14,Afternoon,Heavy Rain,CRITICAL
+4.1,13,Afternoon,Heavy Rain,MEDIUM
+0.2,4,Night,Heavy Rain,HIGH
+13.28,6,Night,Clear,LOW
+4.1,12,Night,Heavy Rain,HIGH
+9.91,12,Night,Light Rain,LOW
+3.42,18,Dusk,Heavy Rain,CRITICAL
+3.93,2,Morning,Light Rain,MEDIUM
+2.88,19,Morning,Clear,CRITICAL
+11.05,1,Morning,Light Rain,HIGH
+5.45,22,Afternoon,Clear,MEDIUM
+11.39,24,Night,Heavy Rain,LOW
+3.42,1,Morning,Light Rain,MEDIUM
+14.96,9,Dusk,Heavy Rain,LOW
+11.86,7,Night,Light Rain,LOW
+8.1,13,Morning,Heavy Rain,LOW
+1.89,14,Dusk,Light Rain,CRITICAL
+2.92,10,Dusk,Heavy Rain,HIGH
+9.34,20,Night,Heavy Rain,LOW
+11.35,16,Afternoon,Light Rain,LOW
+0.76,5,Dusk,Heavy Rain,HIGH
+0.56,12,Morning,Heavy Rain,CRITICAL
+7.16,9,Dusk,Clear,HIGH
+4.05,25,Night,Light Rain,HIGH
+12.83,19,Morning,Light Rain,LOW
+3.55,17,Afternoon,Heavy Rain,CRITICAL
+6.82,24,Morning,Clear,MEDIUM
+7.99,20,Night,Light Rain,MEDIUM
+12.74,21,Dusk,Heavy Rain,LOW
+0.45,9,Morning,Heavy Rain,HIGH
+13.73,16,Afternoon,Light Rain,LOW
+8.49,17,Dusk,Light Rain,LOW
+8.45,23,Afternoon,Heavy Rain,LOW
+11.45,16,Dusk,Clear,LOW
+3.95,3,Night,Heavy Rain,HIGH
+8.98,7,Night,Heavy Rain,LOW
+1.0,1,Dusk,Heavy Rain,HIGH
+12.07,7,Afternoon,Light Rain,LOW
+13.58,8,Dusk,Heavy Rain,LOW
+6.57,5,Night,Heavy Rain,MEDIUM
+12.3,7,Night,Clear,LOW
+3.82,9,Night,Heavy Rain,HIGH
+2.04,1,Dusk,Heavy Rain,HIGH
+3.47,1,Morning,Heavy Rain,MEDIUM
+3.47,14,Afternoon,Heavy Rain,CRITICAL
+8.2,19,Afternoon,Light Rain,LOW
+8.14,0,Afternoon,Clear,LOW
+11.67,8,Afternoon,Clear,LOW
+3.2,8,Afternoon,Heavy Rain,MEDIUM
+9.84,15,Afternoon,Clear,LOW
+5.08,14,Afternoon,Light Rain,MEDIUM
+12.86,21,Night,Clear,LOW
+7.19,25,Afternoon,Heavy Rain,MEDIUM
+10.29,15,Night,Heavy Rain,LOW
+2.56,20,Morning,Clear,CRITICAL
+1.67,7,Afternoon,Heavy Rain,HIGH
+10.53,24,Dusk,Heavy Rain,LOW
+6.43,3,Night,Clear,HIGH
+2.85,10,Morning,Light Rain,HIGH
+3.75,16,Night,Light Rain,CRITICAL
+9.45,6,Morning,Clear,LOW
+6.39,22,Night,Heavy Rain,MEDIUM
+11.44,4,Afternoon,Clear,LOW
+12.17,19,Dusk,Clear,LOW
+13.31,6,Morning,Clear,LOW
+6.4,17,Afternoon,Clear,MEDIUM
+11.22,8,Night,Light Rain,LOW
+13.83,6,Night,Heavy Rain,LOW
+6.58,8,Night,Light Rain,MEDIUM
+5.62,23,Dusk,Heavy Rain,MEDIUM
+8.82,14,Night,Clear,LOW
+8.31,9,Afternoon,Heavy Rain,LOW
+7.25,0,Afternoon,Heavy Rain,LOW
+4.45,23,Afternoon,Clear,MEDIUM
+5.84,9,Dusk,Heavy Rain,MEDIUM
+2.69,18,Night,Clear,CRITICAL
+8.5,7,Night,Light Rain,LOW
+12.99,13,Afternoon,Heavy Rain,LOW
+14.92,23,Dusk,Light Rain,LOW
+8.19,0,Dusk,Heavy Rain,HIGH
+14.11,0,Dusk,Heavy Rain,CRITICAL
+8.94,0,Night,Clear,LOW
+6.73,17,Morning,Clear,MEDIUM
+7.94,24,Morning,Clear,MEDIUM
+7.15,10,Morning,Heavy Rain,MEDIUM
+10.96,19,Night,Heavy Rain,LOW
+8.2,6,Dusk,Clear,LOW
+10.07,1,Night,Clear,LOW
+14.68,13,Afternoon,Heavy Rain,LOW
+4.37,22,Afternoon,Clear,MEDIUM
+0.45,6,Afternoon,Clear,HIGH
+11.34,9,Night,Light Rain,LOW
+0.25,23,Morning,Heavy Rain,CRITICAL
+2.17,19,Dusk,Clear,CRITICAL
+12.06,23,Dusk,Light Rain,LOW
+13.3,10,Night,Heavy Rain,LOW
+5.49,5,Night,Clear,MEDIUM
+8.46,13,Dusk,Light Rain,LOW
+8.2,6,Dusk,Light Rain,LOW
+4.35,15,Dusk,Light Rain,HIGH
+4.45,1,Night,Clear,CRITICAL
+9.41,7,Night,Clear,LOW
+11.79,22,Morning,Light Rain,LOW
+14.88,6,Morning,Heavy Rain,LOW
+0.68,20,Afternoon,Heavy Rain,CRITICAL
+8.09,10,Night,Light Rain,LOW
+11.04,3,Afternoon,Light Rain,LOW
+9.73,23,Morning,Heavy Rain,LOW
+1.92,3,Night,Heavy Rain,HIGH
+6.19,2,Dusk,Clear,MEDIUM
+1.22,6,Morning,Clear,HIGH
+12.37,22,Dusk,Clear,LOW
+13.7,19,Afternoon,Clear,LOW
+0.38,13,Dusk,Light Rain,CRITICAL
+8.42,2,Night,Light Rain,LOW
+8.46,18,Morning,Heavy Rain,LOW
+12.79,20,Afternoon,Light Rain,LOW
+9.58,23,Dusk,Light Rain,LOW
+12.41,5,Morning,Clear,LOW
+13.44,5,Night,Heavy Rain,LOW
+13.67,2,Morning,Heavy Rain,CRITICAL
+4.81,19,Afternoon,Heavy Rain,MEDIUM
+11.41,23,Morning,Light Rain,LOW
+4.86,20,Afternoon,Clear,MEDIUM
+14.61,14,Afternoon,Clear,LOW
+11.36,4,Night,Light Rain,LOW
+2.09,22,Morning,Clear,CRITICAL
+14.51,20,Dusk,Clear,LOW
+3.83,7,Afternoon,Clear,MEDIUM
+6.91,4,Night,Clear,MEDIUM
+11.01,15,Afternoon,Clear,LOW
+11.64,23,Afternoon,Clear,LOW
+6.63,21,Morning,Light Rain,MEDIUM
+12.01,16,Morning,Clear,LOW
+13.53,12,Morning,Light Rain,LOW
+13.5,11,Dusk,Light Rain,LOW
+5.21,18,Dusk,Clear,MEDIUM
+0.74,12,Night,Heavy Rain,CRITICAL
+2.14,12,Dusk,Light Rain,CRITICAL
+11.85,5,Morning,Clear,LOW
+10.93,16,Dusk,Heavy Rain,LOW
+8.58,24,Morning,Clear,LOW
+1.4,5,Dusk,Heavy Rain,HIGH
+14.74,13,Afternoon,Clear,LOW
+1.93,14,Morning,Light Rain,CRITICAL
+0.75,7,Afternoon,Light Rain,MEDIUM
+7.25,1,Morning,Heavy Rain,MEDIUM
+5.67,18,Dusk,Light Rain,MEDIUM
+2.44,18,Dusk,Clear,CRITICAL
+12.16,18,Dusk,Light Rain,LOW
+11.58,5,Night,Heavy Rain,LOW
+10.8,8,Dusk,Light Rain,LOW
+13.99,14,Dusk,Heavy Rain,LOW
+9.6,6,Morning,Heavy Rain,LOW
+7.88,24,Dusk,Light Rain,MEDIUM
+6.39,12,Dusk,Heavy Rain,MEDIUM
+0.79,9,Night,Heavy Rain,CRITICAL
+12.46,0,Afternoon,Light Rain,LOW
+5.09,11,Dusk,Clear,MEDIUM
+1.53,18,Afternoon,Heavy Rain,CRITICAL
+9.82,17,Night,Light Rain,LOW
+11.23,11,Morning,Clear,LOW
+8.57,8,Night,Light Rain,LOW
+13.01,15,Dusk,Clear,LOW
+9.52,12,Afternoon,Heavy Rain,LOW
+3.88,8,Night,Heavy Rain,HIGH
+0.11,5,Night,Heavy Rain,HIGH
+8.21,16,Dusk,Light Rain,LOW
+10.27,23,Dusk,Clear,LOW
+4.37,20,Dusk,Clear,HIGH
+7.72,19,Morning,Clear,MEDIUM
+13.41,3,Afternoon,Heavy Rain,LOW
+1.53,22,Afternoon,Clear,CRITICAL
+7.97,21,Morning,Light Rain,MEDIUM
+9.47,23,Afternoon,Clear,LOW
+9.25,4,Night,Clear,LOW
+8.43,3,Night,Heavy Rain,LOW
+8.76,1,Night,Light Rain,LOW
+0.22,21,Dusk,Light Rain,CRITICAL
+11.99,3,Afternoon,Clear,LOW
+12.84,23,Afternoon,Clear,LOW
+3.02,18,Afternoon,Heavy Rain,CRITICAL
+5.47,24,Morning,Clear,MEDIUM
+5.33,18,Dusk,Heavy Rain,MEDIUM
+4.53,12,Night,Light Rain,HIGH
+9.96,24,Afternoon,Heavy Rain,LOW
+12.87,6,Night,Heavy Rain,LOW
+10.99,10,Afternoon,Heavy Rain,LOW
+2.31,8,Morning,Light Rain,HIGH
+4.14,7,Afternoon,Clear,MEDIUM
+5.64,21,Dusk,Clear,MEDIUM
+12.97,13,Morning,Clear,LOW
+8.13,16,Night,Light Rain,LOW
+10.43,13,Morning,Clear,LOW
+3.71,18,Dusk,Clear,CRITICAL
+1.98,5,Night,Clear,HIGH
+8.51,1,Afternoon,Clear,LOW
+10.12,17,Afternoon,Light Rain,LOW
+4.14,23,Morning,Heavy Rain,MEDIUM
+11.55,2,Afternoon,Heavy Rain,LOW
+14.9,18,Dusk,Clear,LOW
+1.6,20,Afternoon,Heavy Rain,CRITICAL
+7.6,1,Morning,Light Rain,MEDIUM
+12.79,10,Dusk,Light Rain,LOW
+14.96,25,Night,Clear,LOW
+11.91,14,Afternoon,Heavy Rain,LOW
+8.92,8,Dusk,Heavy Rain,LOW
+12.45,2,Afternoon,Heavy Rain,LOW
+2.35,14,Night,Heavy Rain,CRITICAL
+12.31,7,Night,Clear,LOW
+8.97,22,Morning,Heavy Rain,LOW
+7.82,10,Dusk,Heavy Rain,MEDIUM
+4.05,18,Dusk,Light Rain,HIGH
+8.44,18,Afternoon,Light Rain,LOW
+6.54,23,Afternoon,Heavy Rain,MEDIUM
+2.24,14,Dusk,Heavy Rain,CRITICAL
+4.1,1,Dusk,Clear,HIGH
+7.12,17,Dusk,Light Rain,MEDIUM
+13.19,9,Dusk,Light Rain,LOW
+8.31,14,Afternoon,Light Rain,LOW
+9.37,5,Night,Light Rain,LOW
+10.75,22,Dusk,Heavy Rain,LOW
+13.56,4,Dusk,Light Rain,LOW
+13.16,4,Night,Heavy Rain,LOW
+13.32,24,Night,Clear,LOW
+8.01,6,Afternoon,Heavy Rain,LOW
+12.58,9,Dusk,Clear,LOW
+13.36,10,Afternoon,Clear,LOW
+4.47,24,Afternoon,Heavy Rain,MEDIUM
+5.39,15,Night,Heavy Rain,MEDIUM
+9.7,23,Afternoon,Heavy Rain,LOW
+5.59,10,Morning,Clear,MEDIUM
+10.53,10,Night,Clear,LOW
+10.3,22,Afternoon,Light Rain,LOW
+10.64,24,Afternoon,Light Rain,LOW
+4.21,11,Afternoon,Heavy Rain,MEDIUM
+2.52,25,Afternoon,Heavy Rain,CRITICAL
+0.77,24,Dusk,Clear,CRITICAL
+13.75,4,Dusk,Clear,LOW
+12.63,17,Dusk,Heavy Rain,CRITICAL
+0.6,4,Afternoon,Heavy Rain,HIGH
+5.21,22,Morning,Light Rain,MEDIUM
+14.36,17,Night,Heavy Rain,LOW
+11.31,7,Morning,Light Rain,LOW
+2.68,24,Night,Clear,CRITICAL
+5.75,9,Dusk,Heavy Rain,MEDIUM
+5.88,8,Dusk,Clear,MEDIUM
+1.55,25,Night,Heavy Rain,CRITICAL
+2.07,16,Dusk,Clear,CRITICAL
+1.69,3,Night,Light Rain,HIGH
+0.45,10,Morning,Heavy Rain,HIGH
+4.84,0,Dusk,Light Rain,HIGH
+8.35,9,Morning,Light Rain,LOW
+9.9,2,Dusk,Clear,LOW
+9.16,6,Night,Light Rain,LOW
+8.99,13,Dusk,Clear,LOW
+10.17,3,Morning,Light Rain,LOW
+2.05,3,Morning,Heavy Rain,HIGH
+11.18,16,Dusk,Heavy Rain,LOW
+4.49,19,Morning,Heavy Rain,MEDIUM
+13.78,18,Night,Heavy Rain,LOW
+10.87,8,Morning,Clear,LOW
+10.62,24,Afternoon,Light Rain,LOW
+3.16,19,Morning,Clear,CRITICAL
+10.88,19,Afternoon,Light Rain,LOW
+3.54,12,Night,Heavy Rain,CRITICAL
+14.75,22,Afternoon,Heavy Rain,LOW
+1.07,24,Dusk,Heavy Rain,CRITICAL
+5.79,16,Morning,Light Rain,MEDIUM
+3.16,22,Night,Clear,CRITICAL
+9.36,11,Morning,Heavy Rain,LOW
+13.49,10,Morning,Clear,LOW
+13.62,21,Dusk,Light Rain,LOW
+0.27,25,Morning,Light Rain,CRITICAL
+3.72,0,Morning,Clear,LOW
+14.68,1,Dusk,Clear,LOW
+3.39,3,Morning,Heavy Rain,MEDIUM
+12.81,16,Morning,Clear,LOW
+3.37,22,Dusk,Clear,CRITICAL
+1.02,24,Morning,Heavy Rain,CRITICAL
+9.72,15,Afternoon,Heavy Rain,LOW
+2.18,4,Afternoon,Light Rain,HIGH
+14.23,18,Dusk,Light Rain,LOW
+5.13,0,Morning,Heavy Rain,LOW
+11.47,22,Afternoon,Clear,LOW
+13.7,22,Afternoon,Heavy Rain,LOW
+14.32,23,Night,Heavy Rain,LOW
+11.87,6,Night,Heavy Rain,LOW
+4.65,25,Dusk,Light Rain,HIGH
+5.3,12,Afternoon,Clear,MEDIUM
+5.74,10,Morning,Heavy Rain,MEDIUM
+13.83,3,Night,Heavy Rain,LOW
+11.9,5,Afternoon,Clear,CRITICAL
+10.68,16,Night,Clear,LOW
+0.49,17,Afternoon,Heavy Rain,CRITICAL
+9.03,0,Night,Light Rain,LOW
+0.65,1,Afternoon,Clear,MEDIUM
+2.85,24,Morning,Clear,CRITICAL
+8.87,23,Night,Light Rain,HIGH
+7.63,1,Afternoon,Clear,MEDIUM
+2.87,11,Morning,Heavy Rain,CRITICAL
+3.84,8,Afternoon,Light Rain,MEDIUM
+7.7,16,Morning,Light Rain,MEDIUM
+12.9,2,Afternoon,Light Rain,LOW
+9.72,18,Afternoon,Heavy Rain,LOW
+13.86,20,Dusk,Light Rain,LOW
+8.04,7,Dusk,Heavy Rain,LOW
+0.91,15,Morning,Light Rain,CRITICAL
+3.17,16,Morning,Heavy Rain,CRITICAL
+6.78,12,Night,Heavy Rain,MEDIUM
+10.57,22,Afternoon,Clear,LOW
+14.85,4,Night,Light Rain,LOW
+9.32,6,Dusk,Clear,LOW
+1.45,6,Dusk,Heavy Rain,CRITICAL
+0.36,21,Night,Heavy Rain,CRITICAL
+13.96,1,Morning,Light Rain,LOW
+9.33,25,Night,Heavy Rain,LOW
+5.36,10,Dusk,Clear,MEDIUM
+12.95,9,Night,Light Rain,LOW
+4.03,9,Dusk,Light Rain,HIGH
+4.12,7,Afternoon,Light Rain,MEDIUM
+0.95,9,Afternoon,Clear,HIGH
+9.37,11,Dusk,Light Rain,LOW
+14.78,1,Afternoon,Light Rain,LOW
+7.37,0,Morning,Clear,LOW
+14.03,9,Dusk,Clear,LOW
+7.76,19,Night,Clear,MEDIUM
+0.6,19,Afternoon,Heavy Rain,CRITICAL
+0.85,23,Dusk,Clear,CRITICAL
+8.05,5,Dusk,Heavy Rain,LOW
+3.51,13,Night,Heavy Rain,CRITICAL
+2.2,19,Afternoon,Heavy Rain,CRITICAL
+0.29,3,Dusk,Light Rain,HIGH
+2.71,4,Afternoon,Heavy Rain,HIGH
+1.35,9,Morning,Light Rain,HIGH
+4.77,0,Morning,Light Rain,LOW
+14.92,16,Dusk,Heavy Rain,LOW
+7.34,9,Night,Heavy Rain,MEDIUM
+11.68,1,Morning,Light Rain,LOW
+13.81,5,Dusk,Clear,LOW
+12.79,8,Morning,Light Rain,LOW
+6.31,13,Dusk,Heavy Rain,MEDIUM
+12.55,25,Night,Heavy Rain,LOW
+0.56,2,Afternoon,Clear,HIGH
+8.98,7,Night,Clear,LOW
+2.36,16,Night,Heavy Rain,CRITICAL
+12.94,11,Morning,Light Rain,LOW
+7.21,2,Afternoon,Clear,MEDIUM
+10.35,20,Afternoon,Clear,LOW
+1.01,13,Night,Light Rain,CRITICAL
+0.19,2,Night,Clear,LOW
+14.2,2,Dusk,Clear,LOW
+1.86,4,Afternoon,Light Rain,HIGH
+5.32,25,Dusk,Light Rain,MEDIUM
+12.59,21,Afternoon,Heavy Rain,LOW
+3.8,8,Afternoon,Clear,MEDIUM
+3.05,10,Dusk,Light Rain,HIGH
+13.3,19,Dusk,Clear,LOW
+8.74,5,Morning,Light Rain,LOW
+4.96,14,Morning,Heavy Rain,MEDIUM
+2.11,19,Night,Clear,CRITICAL
+13.62,11,Morning,Heavy Rain,LOW
+12.7,9,Afternoon,Clear,LOW
+11.94,24,Night,Heavy Rain,LOW
+13.98,1,Morning,Heavy Rain,LOW
+14.11,21,Morning,Clear,LOW
+2.44,13,Night,Clear,CRITICAL
+9.42,3,Morning,Clear,LOW
+0.4,24,Afternoon,Heavy Rain,CRITICAL
+11.58,13,Morning,Light Rain,LOW
+6.48,1,Dusk,Heavy Rain,MEDIUM
+13.02,13,Morning,Clear,LOW
+11.33,17,Night,Clear,LOW
+0.78,19,Morning,Heavy Rain,CRITICAL
+14.67,8,Morning,Clear,LOW
+8.62,16,Night,Clear,LOW
+8.61,6,Dusk,Light Rain,LOW
+0.42,20,Dusk,Clear,CRITICAL
+0.59,1,Morning,Heavy Rain,MEDIUM
+14.31,8,Dusk,Heavy Rain,LOW
+1.28,20,Night,Light Rain,CRITICAL
+5.28,24,Afternoon,Light Rain,MEDIUM
+12.05,1,Morning,Light Rain,LOW
+10.72,21,Dusk,Clear,LOW
+2.27,14,Night,Light Rain,CRITICAL
+12.76,5,Afternoon,Light Rain,LOW
+14.07,22,Afternoon,Clear,LOW
+1.37,12,Night,Clear,CRITICAL
+4.15,1,Night,Clear,HIGH
+6.21,20,Night,Clear,MEDIUM
+14.15,18,Night,Heavy Rain,LOW
+10.2,8,Morning,Heavy Rain,LOW
+10.16,8,Night,Heavy Rain,LOW
+10.76,7,Dusk,Light Rain,LOW
+1.28,3,Dusk,Light Rain,HIGH
+5.16,18,Afternoon,Light Rain,MEDIUM
+12.77,15,Dusk,Clear,LOW
+1.2,25,Afternoon,Clear,CRITICAL
+8.31,17,Afternoon,Light Rain,LOW
+4.89,0,Night,Heavy Rain,HIGH
+11.91,5,Night,Light Rain,LOW
+1.56,24,Afternoon,Clear,CRITICAL
+9.89,9,Night,Light Rain,LOW
+8.44,9,Morning,Heavy Rain,LOW
+11.11,11,Morning,Light Rain,MEDIUM
+2.92,21,Morning,Light Rain,CRITICAL
+8.84,25,Dusk,Light Rain,CRITICAL
+1.33,8,Night,Light Rain,CRITICAL
+10.87,14,Morning,Light Rain,LOW
+2.53,15,Afternoon,Clear,CRITICAL
+5.7,16,Morning,Clear,MEDIUM
+9.8,0,Dusk,Clear,LOW
+0.54,21,Dusk,Light Rain,CRITICAL
+12.7,21,Afternoon,Light Rain,LOW
+9.88,20,Night,Light Rain,LOW
+7.42,17,Dusk,Heavy Rain,MEDIUM
+1.69,24,Night,Clear,CRITICAL
+13.11,24,Dusk,Heavy Rain,LOW
+11.68,8,Morning,Heavy Rain,LOW
+2.74,12,Dusk,Light Rain,CRITICAL
+2.58,12,Dusk,Heavy Rain,CRITICAL
+1.37,18,Afternoon,Light Rain,CRITICAL
+9.9,10,Night,Clear,LOW
+12.54,0,Afternoon,Heavy Rain,LOW
+5.6,22,Dusk,Clear,MEDIUM
+2.15,10,Dusk,Clear,HIGH
+4.42,2,Morning,Light Rain,CRITICAL
+13.92,19,Night,Heavy Rain,LOW
+10.66,14,Afternoon,Heavy Rain,LOW
+12.92,21,Dusk,Clear,LOW
+13.18,7,Afternoon,Clear,LOW
+9.26,13,Night,Heavy Rain,LOW
+7.79,11,Morning,Heavy Rain,MEDIUM
+4.9,7,Afternoon,Clear,MEDIUM
+9.47,20,Night,Light Rain,LOW
+0.52,14,Dusk,Heavy Rain,CRITICAL
+14.24,22,Morning,Clear,LOW
+7.63,18,Night,Heavy Rain,MEDIUM
+14.27,9,Night,Heavy Rain,LOW
+5.76,13,Dusk,Clear,MEDIUM
+2.04,16,Morning,Light Rain,CRITICAL
+12.47,4,Morning,Clear,LOW
+12.64,15,Night,Clear,LOW
+10.27,23,Afternoon,Clear,LOW
+9.17,9,Night,Light Rain,LOW
+8.08,16,Afternoon,Heavy Rain,LOW
+0.84,17,Morning,Light Rain,CRITICAL
+9.4,11,Night,Clear,LOW
+6.97,1,Morning,Clear,MEDIUM
+11.36,3,Night,Clear,LOW
+2.37,25,Afternoon,Heavy Rain,CRITICAL
+1.51,4,Afternoon,Clear,HIGH
+11.33,14,Dusk,Heavy Rain,LOW
+9.86,18,Morning,Clear,LOW
+10.93,25,Night,Clear,LOW
+6.85,8,Night,Heavy Rain,MEDIUM
+5.99,1,Dusk,Light Rain,MEDIUM
+1.92,13,Afternoon,Clear,CRITICAL
+8.34,3,Morning,Heavy Rain,LOW
+9.41,25,Night,Light Rain,LOW
+6.49,5,Morning,Clear,MEDIUM
+11.82,0,Afternoon,Light Rain,LOW
+6.58,11,Morning,Light Rain,HIGH
+0.67,25,Morning,Heavy Rain,CRITICAL
+8.07,24,Morning,Heavy Rain,LOW
+9.32,22,Afternoon,Light Rain,LOW
+8.45,6,Night,Light Rain,LOW
+13.19,15,Dusk,Heavy Rain,LOW
+1.42,3,Dusk,Light Rain,HIGH
+7.57,5,Dusk,Light Rain,MEDIUM
+10.83,10,Morning,Light Rain,LOW
+12.14,4,Afternoon,Clear,LOW
+3.18,6,Morning,Light Rain,MEDIUM
+3.06,8,Afternoon,Light Rain,MEDIUM
+1.86,17,Dusk,Light Rain,CRITICAL
+11.71,1,Afternoon,Clear,LOW
+13.48,4,Morning,Clear,LOW
+13.05,16,Afternoon,Heavy Rain,LOW
+1.57,3,Afternoon,Heavy Rain,HIGH
+13.25,22,Morning,Light Rain,LOW
+6.75,20,Night,Light Rain,MEDIUM
+1.66,6,Afternoon,Clear,HIGH
+13.22,13,Night,Light Rain,LOW
+3.34,1,Dusk,Heavy Rain,HIGH
+4.26,23,Morning,Light Rain,MEDIUM
+8.86,8,Night,Light Rain,LOW
+9.43,0,Morning,Heavy Rain,LOW
+13.5,1,Dusk,Heavy Rain,LOW
+14.5,10,Afternoon,Heavy Rain,LOW
+1.85,23,Night,Light Rain,CRITICAL
+10.45,16,Afternoon,Heavy Rain,HIGH
+1.03,22,Afternoon,Heavy Rain,CRITICAL
+14.11,9,Morning,Light Rain,LOW
+4.3,22,Morning,Heavy Rain,MEDIUM
+8.91,12,Afternoon,Clear,HIGH
+4.62,7,Morning,Light Rain,MEDIUM
+9.38,14,Night,Light Rain,LOW
+3.02,25,Dusk,Clear,CRITICAL
+8.73,5,Afternoon,Light Rain,LOW
+2.37,17,Night,Clear,CRITICAL
+10.27,3,Dusk,Clear,LOW
+12.14,5,Dusk,Light Rain,LOW
+11.26,0,Dusk,Clear,LOW
+13.37,9,Dusk,Light Rain,CRITICAL
+5.72,3,Afternoon,Light Rain,MEDIUM
+5.24,24,Dusk,Clear,MEDIUM
+4.31,2,Night,Clear,HIGH
+13.36,20,Afternoon,Light Rain,LOW
+14.9,25,Dusk,Clear,LOW
+3.57,23,Afternoon,Clear,CRITICAL
+12.03,2,Dusk,Heavy Rain,LOW
+12.85,9,Morning,Heavy Rain,MEDIUM
+1.88,0,Afternoon,Clear,LOW
+12.06,20,Dusk,Light Rain,LOW
+13.59,18,Night,Heavy Rain,LOW
+4.81,22,Afternoon,Light Rain,MEDIUM
+1.13,25,Morning,Heavy Rain,CRITICAL
+5.16,14,Morning,Clear,MEDIUM
+12.91,20,Morning,Clear,LOW
+5.29,20,Dusk,Clear,MEDIUM
+13.94,7,Night,Light Rain,LOW
+9.25,11,Dusk,Clear,LOW
+9.55,6,Morning,Light Rain,LOW
+8.43,7,Dusk,Clear,LOW
+5.79,21,Night,Clear,MEDIUM
+5.11,16,Dusk,Clear,MEDIUM
+13.6,25,Dusk,Heavy Rain,LOW
+12.87,19,Night,Heavy Rain,LOW
+11.83,21,Night,Heavy Rain,LOW
+3.64,16,Night,Clear,CRITICAL
+7.3,0,Dusk,Clear,LOW
+5.31,25,Afternoon,Clear,MEDIUM
+14.44,14,Dusk,Light Rain,LOW
+9.86,9,Night,Heavy Rain,LOW
+8.51,1,Afternoon,Clear,LOW
+13.19,19,Dusk,Clear,LOW
+1.2,4,Night,Heavy Rain,HIGH
+11.72,13,Morning,Heavy Rain,LOW
+9.48,2,Afternoon,Heavy Rain,LOW
+10.4,5,Night,Light Rain,LOW
+2.16,25,Afternoon,Clear,CRITICAL
+5.6,7,Night,Light Rain,MEDIUM
+5.07,17,Morning,Clear,MEDIUM
+3.38,24,Night,Clear,CRITICAL
+1.44,0,Dusk,Heavy Rain,HIGH
+14.13,9,Night,Clear,LOW
+1.91,6,Afternoon,Light Rain,HIGH
+0.45,1,Night,Light Rain,HIGH
+13.6,13,Morning,Heavy Rain,LOW
+10.64,18,Morning,Clear,LOW
+14.49,18,Afternoon,Clear,LOW
+8.14,5,Dusk,Clear,LOW
+3.34,5,Afternoon,Light Rain,MEDIUM
+14.13,23,Afternoon,Light Rain,LOW
+9.06,12,Night,Light Rain,LOW
+13.75,16,Afternoon,Clear,LOW
+1.38,23,Morning,Clear,CRITICAL
+12.54,5,Morning,Heavy Rain,LOW
+6.67,11,Night,Clear,MEDIUM
+1.27,23,Afternoon,Heavy Rain,CRITICAL
+10.65,10,Dusk,Clear,LOW
+8.29,17,Dusk,Clear,LOW
+5.63,19,Afternoon,Clear,MEDIUM
+8.07,19,Night,Light Rain,LOW
+5.13,21,Afternoon,Heavy Rain,MEDIUM
+0.44,16,Morning,Heavy Rain,CRITICAL
+4.79,2,Dusk,Light Rain,HIGH
+14.93,13,Morning,Heavy Rain,LOW
+10.71,0,Morning,Clear,LOW
+8.28,0,Morning,Light Rain,LOW
+2.16,10,Dusk,Heavy Rain,HIGH
+1.91,20,Night,Heavy Rain,CRITICAL
+12.33,16,Dusk,Light Rain,LOW
+10.27,23,Dusk,Clear,LOW
+10.75,16,Night,Clear,LOW
+10.74,0,Night,Light Rain,MEDIUM
+2.86,4,Night,Clear,HIGH
+1.56,8,Night,Clear,CRITICAL
+6.36,7,Dusk,Clear,MEDIUM
+11.34,4,Afternoon,Light Rain,LOW
+4.27,25,Night,Heavy Rain,HIGH
+10.17,22,Afternoon,Light Rain,LOW
+8.94,21,Dusk,Heavy Rain,LOW
+13.65,3,Morning,Heavy Rain,MEDIUM
+5.72,13,Morning,Clear,MEDIUM
+10.0,19,Morning,Heavy Rain,LOW
+14.57,15,Afternoon,Clear,LOW
+3.62,25,Afternoon,Heavy Rain,CRITICAL
+1.41,25,Night,Light Rain,CRITICAL
+7.73,16,Dusk,Light Rain,MEDIUM
+0.79,7,Dusk,Heavy Rain,CRITICAL
+1.84,15,Morning,Light Rain,CRITICAL
+13.38,0,Dusk,Light Rain,LOW
+11.56,12,Morning,Clear,LOW
+8.7,24,Night,Heavy Rain,LOW
+7.33,24,Night,Clear,MEDIUM
+5.69,25,Afternoon,Light Rain,MEDIUM
+12.0,13,Afternoon,Heavy Rain,LOW
+7.57,6,Dusk,Heavy Rain,MEDIUM
+14.89,11,Dusk,Light Rain,LOW
+1.19,13,Night,Light Rain,CRITICAL
+11.33,9,Morning,Clear,LOW
+10.83,13,Afternoon,Clear,LOW
+2.37,19,Dusk,Light Rain,CRITICAL
+3.03,9,Dusk,Light Rain,HIGH
+3.64,16,Morning,Light Rain,CRITICAL
+3.93,11,Morning,Heavy Rain,CRITICAL
+11.4,12,Dusk,Light Rain,LOW
+4.9,12,Dusk,Clear,HIGH
+4.1,21,Dusk,Heavy Rain,HIGH
+6.4,19,Night,Heavy Rain,MEDIUM
+1.24,25,Afternoon,Light Rain,CRITICAL
+5.09,9,Dusk,Heavy Rain,MEDIUM
+5.88,3,Afternoon,Clear,MEDIUM
+11.38,17,Night,Light Rain,MEDIUM
+8.84,7,Afternoon,Light Rain,LOW
+12.86,15,Night,Light Rain,LOW
+11.82,1,Dusk,Light Rain,LOW
+4.93,22,Dusk,Heavy Rain,HIGH
+12.27,4,Afternoon,Light Rain,LOW
+4.7,15,Morning,Heavy Rain,MEDIUM
+8.14,14,Night,Clear,LOW
+7.05,11,Morning,Heavy Rain,MEDIUM
+3.61,10,Morning,Heavy Rain,MEDIUM
+6.01,17,Dusk,Light Rain,MEDIUM
+9.98,7,Morning,Clear,LOW
+7.85,7,Night,Heavy Rain,MEDIUM
+0.52,22,Morning,Heavy Rain,CRITICAL
+2.76,9,Afternoon,Clear,HIGH
+7.14,24,Night,Clear,MEDIUM
+14.93,22,Morning,Heavy Rain,LOW
+8.93,1,Afternoon,Clear,LOW
+1.73,9,Morning,Light Rain,HIGH
+7.98,16,Night,Light Rain,MEDIUM
+7.2,23,Morning,Heavy Rain,MEDIUM
+11.02,4,Afternoon,Heavy Rain,LOW
+9.11,6,Morning,Heavy Rain,LOW
+4.93,5,Dusk,Clear,HIGH
+10.25,9,Morning,Light Rain,LOW
+11.4,21,Night,Heavy Rain,LOW
+10.78,17,Afternoon,Clear,LOW
+5.19,5,Dusk,Clear,MEDIUM
+13.6,22,Afternoon,Clear,LOW
+10.85,15,Night,Clear,LOW
+5.8,18,Morning,Heavy Rain,MEDIUM
+4.04,17,Morning,Heavy Rain,MEDIUM
+4.0,15,Night,Heavy Rain,HIGH
+3.07,21,Dusk,Clear,CRITICAL
+8.25,23,Dusk,Clear,LOW
+6.39,0,Morning,Heavy Rain,LOW
+12.87,1,Morning,Clear,LOW
+11.59,19,Dusk,Clear,LOW
+1.54,6,Morning,Light Rain,HIGH
+3.33,10,Morning,Heavy Rain,MEDIUM
+8.8,15,Dusk,Light Rain,LOW
+8.28,20,Dusk,Light Rain,LOW
+13.14,22,Dusk,Light Rain,LOW
+9.4,4,Afternoon,Clear,LOW
+3.75,24,Night,Heavy Rain,CRITICAL
+5.52,6,Dusk,Light Rain,MEDIUM
+4.0,14,Afternoon,Clear,MEDIUM
+6.59,14,Morning,Heavy Rain,MEDIUM
+9.73,18,Night,Light Rain,LOW
+1.73,2,Afternoon,Heavy Rain,MEDIUM
+10.24,10,Night,Heavy Rain,LOW
+3.12,14,Night,Clear,CRITICAL
+8.62,24,Dusk,Clear,LOW
+9.36,5,Dusk,Light Rain,LOW
+9.13,5,Night,Light Rain,LOW
+10.21,10,Morning,Light Rain,LOW
+2.93,9,Afternoon,Clear,HIGH
+10.78,16,Dusk,Clear,LOW
+7.55,18,Night,Clear,MEDIUM
+8.19,6,Night,Light Rain,LOW
+0.35,11,Dusk,Heavy Rain,CRITICAL
+9.22,23,Morning,Light Rain,LOW
+6.04,15,Night,Heavy Rain,MEDIUM
+8.31,25,Dusk,Clear,LOW
+1.58,4,Dusk,Heavy Rain,HIGH
+1.37,19,Morning,Light Rain,CRITICAL
+6.05,24,Afternoon,Light Rain,MEDIUM
+9.74,7,Dusk,Light Rain,LOW
+3.69,9,Morning,Clear,MEDIUM
+12.31,8,Night,Light Rain,LOW
+9.15,6,Dusk,Clear,LOW
+4.74,23,Night,Light Rain,HIGH
+7.94,9,Afternoon,Light Rain,MEDIUM
+12.1,11,Afternoon,Light Rain,LOW
+5.42,16,Dusk,Heavy Rain,LOW
+9.08,5,Night,Clear,LOW
+6.82,9,Night,Heavy Rain,MEDIUM
+14.77,0,Night,Clear,LOW
+7.41,0,Afternoon,Light Rain,LOW
+6.05,16,Dusk,Heavy Rain,MEDIUM
+1.01,22,Morning,Light Rain,CRITICAL
+5.12,10,Night,Light Rain,MEDIUM
+13.36,18,Morning,Light Rain,LOW
+3.18,7,Night,Clear,HIGH
+4.51,4,Afternoon,Clear,MEDIUM
+10.96,24,Night,Clear,LOW
+5.95,7,Dusk,Light Rain,MEDIUM
+11.2,16,Dusk,Heavy Rain,LOW
+5.67,1,Afternoon,Light Rain,MEDIUM
+5.62,15,Afternoon,Heavy Rain,MEDIUM
+7.5,9,Morning,Light Rain,MEDIUM
+8.65,24,Morning,Clear,LOW
+10.99,18,Afternoon,Light Rain,LOW
+1.51,8,Night,Clear,CRITICAL
+2.57,24,Morning,Clear,CRITICAL
+13.37,3,Dusk,Light Rain,CRITICAL
+14.08,18,Night,Clear,LOW
+14.73,9,Dusk,Clear,LOW
+8.87,7,Afternoon,Clear,LOW
+12.12,11,Morning,Clear,LOW
+3.65,23,Night,Clear,CRITICAL
+11.8,24,Afternoon,Heavy Rain,LOW
+7.3,18,Afternoon,Clear,MEDIUM
+2.75,13,Morning,Heavy Rain,CRITICAL
+4.82,14,Night,Clear,HIGH
+0.86,7,Dusk,Heavy Rain,CRITICAL
+13.98,14,Afternoon,Clear,LOW
+9.03,8,Morning,Clear,LOW
+8.64,19,Morning,Clear,LOW
+1.2,5,Night,Light Rain,HIGH
+3.23,0,Afternoon,Clear,LOW
+6.01,13,Night,Heavy Rain,MEDIUM
+9.24,5,Night,Heavy Rain,LOW
+11.17,7,Night,Heavy Rain,LOW
+12.68,0,Dusk,Light Rain,LOW
+3.66,3,Night,Light Rain,HIGH
+14.28,2,Morning,Light Rain,LOW
+10.22,0,Dusk,Light Rain,LOW
+3.41,24,Morning,Light Rain,CRITICAL
+8.79,16,Afternoon,Heavy Rain,LOW
+1.42,3,Night,Clear,HIGH
+9.16,7,Dusk,Heavy Rain,LOW
+5.54,9,Night,Light Rain,MEDIUM
+13.34,17,Afternoon,Clear,LOW

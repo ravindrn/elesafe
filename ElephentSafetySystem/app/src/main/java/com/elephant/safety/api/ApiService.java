@@ -7,7 +7,8 @@ import com.elephant.safety.models.EmergencyContact;
 import com.elephant.safety.models.VerifiedReport;
 import com.elephant.safety.models.NewsItem;
 import com.elephant.safety.models.DashboardStats;
-
+import com.elephant.safety.models.RiskPredictionRequest;
+import com.elephant.safety.models.RiskPredictionResponse;
 
 import java.util.List;
 import java.util.Map;
@@ -18,6 +19,9 @@ import retrofit2.http.*;
 public interface ApiService {
 
     // ========== AUTH ENDPOINTS ==========
+
+    @POST("/api/ml/check-risk")
+    Call<RiskPredictionResponse> checkCurrentRisk(@Body RiskPredictionRequest request);
 
     @POST("api/auth/login")
     Call<LoginResponse> login(@Body LoginRequest request);

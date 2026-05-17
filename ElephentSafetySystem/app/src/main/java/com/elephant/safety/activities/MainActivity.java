@@ -19,7 +19,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -40,6 +39,8 @@ import com.elephant.safety.R;
 import com.elephant.safety.api.ApiClient;
 import com.elephant.safety.api.ApiService;
 import com.elephant.safety.models.DangerZone;
+import com.elephant.safety.models.RiskPredictionRequest;
+import com.elephant.safety.models.RiskPredictionResponse;
 import com.elephant.safety.services.LocationForegroundService;
 import com.elephant.safety.utils.CustomToast;
 import com.elephant.safety.utils.HaversineFormula;
@@ -156,6 +157,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
+    // 1. The Updated Safety Status method
     private void updateSafetyStatus() {
         if (dangerZones == null || dangerZones.isEmpty()) {
             setSafeStatus("Loading zones...", "Fetching danger zone data", "🟡");
@@ -184,57 +186,77 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             return;
         }
 
-        double distanceKm = minDistance / 1000;
-        String riskLevel = nearestZone.getRiskLevel();
+        // --- TRIGGER THE AI ---
+        double distanceKm = minDistance / 1000.0;
+        fetchAiPrediction(distanceKm, nearestZone);
+    }
 
-        if (minDistance < 100) {
-            tvProximityLabel.setText("⚠️ ENTERING DANGER ZONE!");
-        } else if (minDistance < 1000) {
-            tvProximityLabel.setText(String.format("Nearest Danger Zone: %.0f meters - %s Risk", minDistance, riskLevel));
-        } else {
-            tvProximityLabel.setText(String.format("Nearest Danger Zone: %.1f km away - %s Risk", distanceKm, riskLevel));
-        }
+    // 2. The AI Network Call (LIVE GPS ENABLED)
+    private void fetchAiPrediction(double distanceKm, DangerZone nearestZone) {
+        String timeOfDay = getCurrentTimeOfDay();
 
-        int progress;
-        if (minDistance < 0) {
-            progress = 100;
-        } else if (minDistance > 5000) {
-            progress = 0;
-        } else {
-            progress = (int)((1 - (minDistance / 5000)) * 100);
-        }
-        progressDanger.setProgress(progress);
+        // We are still simulating weather for now, but GPS is REAL!
+        String simulatedWeather = "Clear";
 
-        if (minDistance < 0) {
-            if (riskLevel.equals("CRITICAL")) {
-                setDangerStatus("⚠️ CRITICAL DANGER!", "You are in a CRITICAL elephant zone! Immediate action required!", "🔴", COLOR_CRITICAL);
-                tvWarningHint.setVisibility(android.view.View.VISIBLE);
-                tvWarningHint.setText("🚨 EMERGENCY: You are inside a CRITICAL danger zone! Reduce speed NOW!");
-                tvWarningHint.setTextColor(Color.parseColor("#FF0000"));
-            } else if (riskLevel.equals("HIGH")) {
-                setDangerStatus("⚠️ HIGH RISK!", "You are in a HIGH RISK elephant zone! Stay alert!", "🟠", COLOR_DANGER);
-                tvWarningHint.setVisibility(android.view.View.VISIBLE);
-                tvWarningHint.setText("⚠️ WARNING: You are in a HIGH RISK elephant danger zone!");
-            } else {
-                setWarningStatus("⚠️ DANGER ZONE!", "You are in an elephant danger zone. Stay alert!", "🟡", COLOR_WARNING);
-                tvWarningHint.setVisibility(android.view.View.VISIBLE);
-                tvWarningHint.setText("⚠️ You are in an elephant danger zone - Stay alert!");
+        // IMPORTANT: We are now passing currentLatitude and currentLongitude
+        // directly from your phone's live GPS sensor!
+        RiskPredictionRequest request = new RiskPredictionRequest(
+                distanceKm,
+                currentLatitude,
+                currentLongitude,
+                timeOfDay,
+                simulatedWeather
+        );
+
+        apiService.checkCurrentRisk(request).enqueue(new Callback<RiskPredictionResponse>() {
+            @Override
+            public void onResponse(Call<RiskPredictionResponse> call, Response<RiskPredictionResponse> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    String aiRiskLevel = response.body().predictedRisk;
+
+                    runOnUiThread(() -> {
+                        tvProximityLabel.setText(String.format("Nearest Zone: %.1f km away", distanceKm));
+
+                        if ("CRITICAL".equals(aiRiskLevel)) {
+                            setDangerStatus("⚠️ CRITICAL DANGER!", "AI detected severe risk! Reduce speed NOW!", "🔴", COLOR_CRITICAL);
+                            tvWarningHint.setVisibility(android.view.View.VISIBLE);
+                            tvWarningHint.setText("🚨 EMERGENCY: AI has flagged this area as highly active.");
+                            tvWarningHint.setTextColor(Color.parseColor("#FFFFFF"));
+
+                        } else if ("HIGH".equals(aiRiskLevel)) {
+                            setDangerStatus("⚠️ HIGH RISK!", "AI predicts high elephant activity!", "🟠", COLOR_DANGER);
+                            tvWarningHint.setVisibility(android.view.View.VISIBLE);
+                            tvWarningHint.setText("⚠️ WARNING: High probability of elephant encounter.");
+
+                        } else if ("MEDIUM".equals(aiRiskLevel)) {
+                            setWarningStatus("⚠️ BE AWARE", "AI indicates moderate risk. Stay alert.", "🟡", COLOR_WARNING);
+                            tvWarningHint.setVisibility(android.view.View.VISIBLE);
+                            tvWarningHint.setText("⚠️ Elephant presence is possible.");
+
+                        } else {
+                            setSafeStatus("YOU ARE SAFE", "AI indicates low risk.", "🟢");
+                            tvWarningHint.setVisibility(android.view.View.GONE);
+                        }
+                    });
+                }
             }
-        } else if (minDistance < 500) {
-            setDangerStatus("⚠️ APPROACHING DANGER!", String.format("%.0f meters to danger zone. Be prepared!", minDistance), "🔴", COLOR_DANGER);
-            tvWarningHint.setVisibility(android.view.View.VISIBLE);
-            tvWarningHint.setText(String.format("⚠️ Approaching %s risk zone - %.0f meters ahead!", riskLevel, minDistance));
-        } else if (minDistance < 1000) {
-            setWarningStatus("⚠️ CAUTION!", String.format("Danger zone %.0f meters ahead. Stay vigilant!", minDistance), "🟡", COLOR_WARNING);
-            tvWarningHint.setVisibility(android.view.View.VISIBLE);
-            tvWarningHint.setText(String.format("⚠️ %s risk zone ahead - %.0f meters", riskLevel, minDistance));
-        } else if (minDistance < 2000) {
-            setInfoStatus("⚠️ BE AWARE", String.format("Danger zone %.1f km ahead. Stay alert!", distanceKm), "🟠", COLOR_WARNING);
-            tvWarningHint.setVisibility(android.view.View.GONE);
-        } else {
-            setSafeStatus("YOU ARE SAFE", String.format("Nearest danger zone is %.1f km away", distanceKm), "🟢");
-            tvWarningHint.setVisibility(android.view.View.GONE);
-        }
+
+            @Override
+            public void onFailure(Call<RiskPredictionResponse> call, Throwable t) {
+                Log.e("ML_ERROR", "Failed to connect to AI server: " + t.getMessage());
+                setSafeStatus("CONNECTING...", "AI Server unreachable", "⚪");
+            }
+        });
+    }
+
+
+    // 3. The Time Helper
+    private String getCurrentTimeOfDay() {
+        int hour = java.util.Calendar.getInstance().get(java.util.Calendar.HOUR_OF_DAY);
+        if (hour >= 6 && hour < 12) return "Morning";
+        if (hour >= 12 && hour < 17) return "Afternoon";
+        if (hour >= 17 && hour < 19) return "Dusk";
+        return "Night";
     }
 
     private void setSafeStatus(String status, String message, String icon) {
