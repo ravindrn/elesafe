@@ -43,6 +43,7 @@
         th { background: #1a472a; color: white; }
         .status-PENDING { color: #ff9800; font-weight: bold; background: #fff3e0; padding: 4px 8px; border-radius: 20px; display: inline-block; }
         .status-APPROVED { color: #4caf50; font-weight: bold; background: #e8f5e9; padding: 4px 8px; border-radius: 20px; display: inline-block; }
+        .status-REJECTED { color: #f44336; font-weight: bold; background: #fee; padding: 4px 8px; border-radius: 20px; display: inline-block; }
         .status-RESOLVED { color: #4caf50; font-weight: bold; background: #e8f5e9; padding: 4px 8px; border-radius: 20px; display: inline-block; }
         button { padding: 5px 12px; border: none; border-radius: 5px; cursor: pointer; margin: 2px; }
         .view-btn { background: #2196f3; color: white; }
@@ -81,8 +82,12 @@
             <div class="number" id="pendingCount">0</div>
         </div>
         <div class="stat-card resolved">
-            <h4>✅ RESOLVED</h4>
+            <h4>✅ APPROVED/RESOLVED</h4>
             <div class="number" id="resolvedCount">0</div>
+        </div>
+        <div class="stat-card">
+            <h4>❌ REJECTED</h4>
+            <div class="number" id="rejectedCount">0</div>
         </div>
         <div class="stat-card">
             <h4>📋 TOTAL</h4>
@@ -95,7 +100,8 @@
         <select class="filter-select" id="statusFilter">
             <option value="ALL">All Status</option>
             <option value="PENDING">Pending</option>
-            <option value="APPROVED">Approved/Resolved</option>
+            <option value="APPROVED">Approved</option>
+            <option value="REJECTED">Rejected</option>
         </select>
         <button class="refresh-btn" onclick="loadReports()">🔄 Refresh</button>
     </div>
@@ -133,10 +139,14 @@
 
     function updateStats() {
         const pending = allReports.filter(r => r.status === 'PENDING').length;
-        const resolved = allReports.filter(r => r.status !== 'PENDING').length;
+        const approved = allReports.filter(r => r.status === 'APPROVED').length;
+        const rejected = allReports.filter(r => r.status === 'REJECTED').length;
+        const total = allReports.length;
+
         document.getElementById('pendingCount').innerText = pending;
-        document.getElementById('resolvedCount').innerText = resolved;
-        document.getElementById('totalCount').innerText = allReports.length;
+        document.getElementById('resolvedCount').innerText = approved;
+        document.getElementById('rejectedCount').innerText = rejected;
+        document.getElementById('totalCount').innerText = total;
     }
 
     function renderTable() {
@@ -146,9 +156,7 @@
         let filtered = allReports.filter(report => {
             const matchSearch = (report.userName && report.userName.toLowerCase().includes(searchTerm)) ||
                 (report.latitude && report.latitude.toString().includes(searchTerm));
-            const matchStatus = statusFilter === 'ALL' ||
-                (statusFilter === 'PENDING' && report.status === 'PENDING') ||
-                (statusFilter === 'APPROVED' && report.status !== 'PENDING');
+            const matchStatus = statusFilter === 'ALL' || report.status === statusFilter;
             return matchSearch && matchStatus;
         });
 
@@ -159,13 +167,20 @@
 
         let html = `<table>
             <thead>
-                <tr><th>ID</th><th>Coordinates</th><th>Elephants</th><th>User</th><th>Date</th><th>Status</th><th>Actions</th></tr>
+                <tr>
+                    <th>ID</th>
+                    <th>Coordinates</th>
+                    <th>Elephants</th>
+                    <th>User</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
             </thead>
             <tbody>`;
 
         filtered.forEach(report => {
             const date = new Date(report.createdAt).toLocaleString();
-            const isPending = report.status === 'PENDING';
             html += `
                 <tr>
                     <td>${report.id}</td>
@@ -177,8 +192,8 @@
                     <td>
                         <div class="action-buttons">
                             <button class="view-btn" onclick="viewReport(${report.id})">View</button>
-                            ${isPending ? `<button class="approve-btn" onclick="approveReport(${report.id})">Approve</button>` : ''}
-                            ${isPending ? `<button class="reject-btn" onclick="rejectReport(${report.id})">Reject</button>` : ''}
+                            <button class="approve-btn" onclick="approveReport(${report.id})">Approve</button>
+                            <button class="reject-btn" onclick="rejectReport(${report.id})">Reject</button>
                         </div>
                     </td>
                 </tr>`;
@@ -209,7 +224,7 @@
     }
 
     async function approveReport(id) {
-        if (confirm('Approve this report? It will be marked as RESOLVED.')) {
+        if (confirm('Approve this report?')) {
             try {
                 const response = await fetch('/api/admin/reports/' + id + '/status', {
                     method: 'PUT',
@@ -217,7 +232,7 @@
                     body: JSON.stringify({ status: 'APPROVED' })
                 });
                 if (response.ok) {
-                    alert('Report approved and resolved!');
+                    alert('Report approved!');
                     loadReports();
                 } else {
                     alert('Failed to approve');
