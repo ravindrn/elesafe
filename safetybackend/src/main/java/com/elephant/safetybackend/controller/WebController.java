@@ -127,16 +127,147 @@ public class WebController {
         long pendingReports = reportRepository.findAll().stream()
                 .filter(r -> r.getStatus().toString().equals("PENDING"))
                 .count();
+        
+        // Calculate users in danger zones instead of danger zone count
+        long usersInDangerZones = calculateUsersInDangerZones();
 
         Map<String, Object> stats = new HashMap<>();
         stats.put("totalUsers", totalUsers);
         stats.put("activeUsers", activeUsers);
-        stats.put("totalDangerZones", dangerZoneRepository.count());
+        stats.put("totalDangerZones", usersInDangerZones);  // Now shows users in danger
         stats.put("pendingReports", pendingReports);
         stats.put("adminName", session.getAttribute("userName") != null ?
                 session.getAttribute("userName").toString() : "Admin");
 
         return ResponseEntity.ok(stats);
+    }
+
+    // ========== HELPER METHODS FOR USERS IN DANGER ZONES ==========
+    
+    private long calculateUsersInDangerZones() {
+        List<User> users = userRepository.findAll();
+        List<DangerZone> dangerZones = dangerZoneRepository.findAll();
+        
+        if (dangerZones.isEmpty()) {
+            return 0;
+        }
+        
+        long count = 0;
+        for (User user : users) {
+            // Check if user is active and has location data
+            if (user.getIsActive() != null && user.getIsActive() &&
+                user.getLatitude() != null && user.getLongitude() != null) {
+                
+                if (isUserInAnyDangerZone(user, dangerZones)) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
+    private boolean isUserInAnyDangerZone(User user, List<DangerZone> dangerZones) {
+        for (DangerZone zone : dangerZones) {
+            if (zone.getLatitude() != null && zone.getLongitude() != null) {
+                double distance = calculateDistance(
+                    user.getLatitude(), user.getLongitude(),
+                    zone.getLatitude(), zone.getLongitude()
+                );
+                // Convert radius from meters to km and compare
+                double zoneRadiusKm = zone.getRadius() != null ? zone.getRadius() / 1000.0 : 1.0;
+                if (distance <= zoneRadiusKm) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
+        final int R = 6371; // Earth's radius in km
+        double latDistance = Math.toRadians(lat2 - lat1);
+        double lonDistance = Math.toRadians(lon2 - lon1);
+        double a = Math.sin(latDistance / 2) * Math.sin(latDistance / 2)
+                + Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2))
+                * Math.sin(lonDistance / 2) * Math.sin(lonDistance / 2);
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        return R * c;
+    }
+
+    // ========== TEST ENDPOINT: Set User Location (For Testing) ==========
+    @PostMapping("/api/admin/set-location/{userId}")
+    @ResponseBody
+    public ResponseEntity<?> setUserLocation(@PathVariable Long userId,
+                                             @RequestParam double lat,
+                                             @RequestParam double lng,
+                                             HttpSession session) {
+        if (session.getAttribute("userId") == null) {
+            return ResponseEntity.status(403).body(Map.of("error", "Unauthorized"));
+        }
+        
+        User user = userRepository.findById(userId).orElse(null);
+        if (user == null) {
+            return ResponseEntity.badRequest().body(Map.of("error", "User not found"));
+        }
+        
+        user.setLatitude(lat);
+        user.setLongitude(lng);
+        user.setLastLocationUpdate(LocalDateTime.now());
+        userRepository.save(user);
+        
+        // Check if in danger zone
+        List<DangerZone> dangerZones = dangerZoneRepository.findAll();
+        boolean inDanger = false;
+        String dangerZoneName = null;
+        
+        for (DangerZone zone : dangerZones) {
+            if (zone.getLatitude() != null && zone.getLongitude() != null) {
+                double distance = calculateDistance(lat, lng, zone.getLatitude(), zone.getLongitude());
+                double zoneRadiusKm = zone.getRadius() != null ? zone.getRadius() / 1000.0 : 1.0;
+                if (distance <= zoneRadiusKm) {
+                    inDanger = true;
+                    dangerZoneName = zone.getZoneName();
+                    break;
+                }
+            }
+        }
+        
+        Map<String, Object> response = new HashMap<>();
+        response.put("success", true);
+        response.put("userId", userId);
+        response.put("userName", user.getName());
+        response.put("latitude", lat);
+        response.put("longitude", lng);
+        response.put("inDangerZone", inDanger);
+        response.put("dangerZoneName", dangerZoneName);
+        
+        return ResponseEntity.ok(response);
+    }
+
+    // ========== API: GET ALL USERS WITH LOCATIONS (For Admin Monitoring) ==========
+    @GetMapping("/api/admin/user-locations")
+    @ResponseBody
+    public ResponseEntity<?> getUserLocations(HttpSession session) {
+        if (session.getAttribute("userId") == null) {
+            return ResponseEntity.status(403).body(Map.of("error", "Unauthorized"));
+        }
+        
+        List<User> users = userRepository.findAll();
+        List<Map<String, Object>> locationData = new ArrayList<>();
+        
+        for (User user : users) {
+            Map<String, Object> userLoc = new HashMap<>();
+            userLoc.put("id", user.getId());
+            userLoc.put("name", user.getName());
+            userLoc.put("email", user.getEmail());
+            userLoc.put("latitude", user.getLatitude());
+            userLoc.put("longitude", user.getLongitude());
+            userLoc.put("lastLocationUpdate", user.getLastLocationUpdate());
+            userLoc.put("isActive", user.getIsActive());
+            locationData.add(userLoc);
+        }
+        
+        return ResponseEntity.ok(locationData);
     }
 
     // ========== API: GET ALL DANGER ZONES ==========
