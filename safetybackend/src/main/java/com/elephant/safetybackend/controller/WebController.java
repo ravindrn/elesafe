@@ -117,15 +117,13 @@ public class WebController {
     @ResponseBody
     public ResponseEntity<?> getDashboardStats(HttpSession session) {
         if (session.getAttribute("userId") == null) {
-            return ResponseEntity.status(403).body("Unauthorized");
+            return ResponseEntity.status(403).body(Map.of("error", "Unauthorized"));
         }
 
         long totalUsers = userRepository.count();
-
         long activeUsers = userRepository.findAll().stream()
                 .filter(u -> u.getIsActive() != null && u.getIsActive())
                 .count();
-
         long pendingReports = reportRepository.findAll().stream()
                 .filter(r -> r.getStatus().toString().equals("PENDING"))
                 .count();
@@ -144,43 +142,141 @@ public class WebController {
     // ========== API: GET ALL DANGER ZONES ==========
     @GetMapping("/api/admin/danger-zones")
     @ResponseBody
-    public ResponseEntity<?> getAllDangerZones(HttpSession session) {
+    public ResponseEntity<List<Map<String, Object>>> getAllDangerZones(HttpSession session) {
         if (session.getAttribute("userId") == null) {
-            return ResponseEntity.status(403).body("Unauthorized");
+            return ResponseEntity.status(403).build();
         }
+
         List<DangerZone> zones = dangerZoneRepository.findAll();
-        return ResponseEntity.ok(zones);
+        List<Map<String, Object>> responseList = new ArrayList<>();
+
+        for (DangerZone zone : zones) {
+            Map<String, Object> zoneMap = new HashMap<>();
+            zoneMap.put("id", zone.getId());
+            zoneMap.put("zoneName", zone.getZoneName());
+            zoneMap.put("latitude", zone.getLatitude());
+            zoneMap.put("longitude", zone.getLongitude());
+            zoneMap.put("radius", zone.getRadius());
+            zoneMap.put("district", zone.getDistrict());
+            zoneMap.put("roadName", zone.getRoadName());
+            zoneMap.put("riskLevel", zone.getRiskLevel().toString());
+            zoneMap.put("status", zone.getStatus().toString());
+            zoneMap.put("createdAt", zone.getCreatedAt());
+            responseList.add(zoneMap);
+        }
+
+        return ResponseEntity.ok(responseList);
     }
 
     // ========== API: ADD DANGER ZONE ==========
     @PostMapping("/api/admin/danger-zones")
     @ResponseBody
-    public ResponseEntity<?> addDangerZone(@RequestBody DangerZone zone, HttpSession session) {
+    public ResponseEntity<?> addDangerZone(@RequestBody Map<String, Object> zoneData, HttpSession session) {
         if (session.getAttribute("userId") == null) {
-            return ResponseEntity.status(403).body("Unauthorized");
+            return ResponseEntity.status(403).body(Map.of("error", "Unauthorized"));
         }
-        zone.setCreatedAt(LocalDateTime.now());
-        DangerZone saved = dangerZoneRepository.save(zone);
-        return ResponseEntity.ok(saved);
+
+        try {
+            DangerZone zone = new DangerZone();
+
+            // Set basic fields
+            zone.setZoneName((String) zoneData.get("zoneName"));
+            if (zone.getZoneName() == null) {
+                zone.setZoneName((String) zoneData.get("locationName")); // Fallback for frontend
+            }
+
+            zone.setLatitude(Double.parseDouble(zoneData.get("latitude").toString()));
+            zone.setLongitude(Double.parseDouble(zoneData.get("longitude").toString()));
+
+            // Set radius
+            if (zoneData.get("radius") != null) {
+                zone.setRadius(Integer.parseInt(zoneData.get("radius").toString()));
+            } else {
+                zone.setRadius(500);
+            }
+
+            // Set optional fields
+            if (zoneData.get("district") != null) {
+                zone.setDistrict((String) zoneData.get("district"));
+            }
+            if (zoneData.get("roadName") != null) {
+                zone.setRoadName((String) zoneData.get("roadName"));
+            }
+
+            // Set RiskLevel Enum
+            String riskLevelStr = (String) zoneData.get("riskLevel");
+            if (riskLevelStr != null) {
+                switch (riskLevelStr.toUpperCase()) {
+                    case "CRITICAL":
+                        zone.setRiskLevel(DangerZone.RiskLevel.CRITICAL);
+                        break;
+                    case "HIGH":
+                        zone.setRiskLevel(DangerZone.RiskLevel.HIGH);
+                        break;
+                    case "MEDIUM":
+                        zone.setRiskLevel(DangerZone.RiskLevel.MEDIUM);
+                        break;
+                    case "LOW":
+                        zone.setRiskLevel(DangerZone.RiskLevel.LOW);
+                        break;
+                    default:
+                        zone.setRiskLevel(DangerZone.RiskLevel.MEDIUM);
+                }
+            } else {
+                zone.setRiskLevel(DangerZone.RiskLevel.MEDIUM);
+            }
+
+            // Set Status Enum
+            String statusStr = (String) zoneData.get("status");
+            if ("ACTIVE".equalsIgnoreCase(statusStr)) {
+                zone.setStatus(DangerZone.Status.ACTIVE);
+            } else {
+                zone.setStatus(DangerZone.Status.INACTIVE);
+            }
+
+            zone.setCreatedAt(LocalDateTime.now());
+
+            DangerZone saved = dangerZoneRepository.save(zone);
+
+            // Return response
+            Map<String, Object> response = new HashMap<>();
+            response.put("id", saved.getId());
+            response.put("zoneName", saved.getZoneName());
+            response.put("latitude", saved.getLatitude());
+            response.put("longitude", saved.getLongitude());
+            response.put("riskLevel", saved.getRiskLevel().toString());
+            response.put("status", saved.getStatus().toString());
+            response.put("radius", saved.getRadius());
+
+            return ResponseEntity.ok(response);
+
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(Map.of("error", "Failed to add zone: " + e.getMessage()));
+        }
     }
 
     // ========== API: DELETE DANGER ZONE ==========
     @DeleteMapping("/api/admin/danger-zones/{id}")
     @ResponseBody
-    public ResponseEntity<?> deleteDangerZone(@PathVariable Long id, HttpSession session) {
+    public ResponseEntity<Map<String, String>> deleteDangerZone(@PathVariable Long id, HttpSession session) {
         if (session.getAttribute("userId") == null) {
-            return ResponseEntity.status(403).body("Unauthorized");
+            return ResponseEntity.status(403).body(Map.of("error", "Unauthorized"));
         }
+
+        if (!dangerZoneRepository.existsById(id)) {
+            return ResponseEntity.notFound().build();
+        }
+
         dangerZoneRepository.deleteById(id);
-        return ResponseEntity.ok("Deleted");
+        return ResponseEntity.ok(Map.of("message", "Deleted successfully"));
     }
 
     // ========== API: GET ALL REPORTS ==========
     @GetMapping("/api/admin/reports")
     @ResponseBody
-    public ResponseEntity<?> getAllReports(HttpSession session) {
+    public ResponseEntity<Map<String, Object>> getAllReports(HttpSession session) {
         if (session.getAttribute("userId") == null) {
-            return ResponseEntity.status(403).body("Unauthorized");
+            return ResponseEntity.status(403).body(Map.of("error", "Unauthorized"));
         }
 
         List<ElephantReport> reports = reportRepository.findAll();
@@ -225,9 +321,9 @@ public class WebController {
     // ========== API: GET SINGLE REPORT ==========
     @GetMapping("/api/admin/reports/{id}")
     @ResponseBody
-    public ResponseEntity<?> getReportById(@PathVariable Long id, HttpSession session) {
+    public ResponseEntity<Map<String, Object>> getReportById(@PathVariable Long id, HttpSession session) {
         if (session.getAttribute("userId") == null) {
-            return ResponseEntity.status(403).body("Unauthorized");
+            return ResponseEntity.status(403).body(Map.of("error", "Unauthorized"));
         }
 
         ElephantReport report = reportRepository.findById(id).orElse(null);
@@ -255,9 +351,9 @@ public class WebController {
     // ========== API: UPDATE REPORT STATUS (Approve/Reject) ==========
     @PutMapping("/api/admin/reports/{id}/status")
     @ResponseBody
-    public ResponseEntity<?> updateReportStatus(@PathVariable Long id, @RequestBody Map<String, String> payload, HttpSession session) {
+    public ResponseEntity<Map<String, String>> updateReportStatus(@PathVariable Long id, @RequestBody Map<String, String> payload, HttpSession session) {
         if (session.getAttribute("userId") == null) {
-            return ResponseEntity.status(403).body("Unauthorized");
+            return ResponseEntity.status(403).body(Map.of("error", "Unauthorized"));
         }
 
         ElephantReport report = reportRepository.findById(id).orElse(null);
