@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,8 +19,11 @@ import com.google.android.gms.location.LocationServices;
 import com.elephant.safety.R;
 import com.elephant.safety.api.ApiClient;
 import com.elephant.safety.api.ApiService;
-import com.elephant.safety.models.ElephantReport;
+import com.elephant.safety.utils.CustomAlertDialog;
+import com.elephant.safety.utils.CustomToast;
 import com.elephant.safety.utils.SharedPrefManager;
+
+import java.io.IOException;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -30,7 +32,7 @@ import retrofit2.Response;
 public class ReportSightingActivity extends AppCompatActivity {
 
     private EditText etNote;
-    private TextView tvElephantCount, tvLocationStatus, tvPhotoStatus;
+    private TextView tvElephantCount, tvLocationStatus;
     private Button btnSubmitReport, btnGetLocation, btnDecrement, btnIncrement, btnUploadPhoto;
     private FusedLocationProviderClient fusedLocationClient;
     private ApiService apiService;
@@ -39,7 +41,6 @@ public class ReportSightingActivity extends AppCompatActivity {
     private double currentLatitude = 0;
     private double currentLongitude = 0;
     private boolean hasLocation = false;
-    private boolean hasPhoto = false;
 
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1002;
 
@@ -48,31 +49,27 @@ public class ReportSightingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report_sighting);
 
-        // Setup toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle("Report Elephant Sighting");
         }
 
         apiService = ApiClient.getClient(this).create(ApiService.class);
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
-        // Initialize views
         etNote = findViewById(R.id.etNote);
         tvElephantCount = findViewById(R.id.tvElephantCount);
         tvLocationStatus = findViewById(R.id.tvLocationStatus);
-        tvPhotoStatus = findViewById(R.id.tvPhotoStatus);
         btnSubmitReport = findViewById(R.id.btnSubmitReport);
         btnGetLocation = findViewById(R.id.btnGetLocation);
         btnDecrement = findViewById(R.id.btnDecrement);
         btnIncrement = findViewById(R.id.btnIncrement);
         btnUploadPhoto = findViewById(R.id.btnUploadPhoto);
 
-        // Set initial values
         tvElephantCount.setText(String.valueOf(elephantCount));
 
-        // Setup click listeners
         btnDecrement.setOnClickListener(v -> {
             if (elephantCount > 1) {
                 elephantCount--;
@@ -86,17 +83,11 @@ public class ReportSightingActivity extends AppCompatActivity {
         });
 
         btnGetLocation.setOnClickListener(v -> getCurrentLocation());
-
-        btnUploadPhoto.setOnClickListener(v -> {
-            // For now, just simulate photo selection
-            hasPhoto = true;
-            tvPhotoStatus.setText("📷 Photo selected");
-            tvPhotoStatus.setTextColor(getColor(R.color.primary));
-        });
-
         btnSubmitReport.setOnClickListener(v -> submitReport());
+        btnUploadPhoto.setOnClickListener(v ->
+                CustomToast.showInfo(this, "Camera feature coming soon!"));
 
-        // Auto get location on start
+        // Auto-get location on start
         getCurrentLocation();
     }
 
@@ -110,7 +101,6 @@ public class ReportSightingActivity extends AppCompatActivity {
         }
 
         tvLocationStatus.setText("📍 Getting location...");
-        tvLocationStatus.setTextColor(getColor(R.color.warning));
 
         fusedLocationClient.getLastLocation().addOnSuccessListener(this, location -> {
             if (location != null) {
@@ -119,60 +109,91 @@ public class ReportSightingActivity extends AppCompatActivity {
                 hasLocation = true;
                 tvLocationStatus.setText(String.format("📍 Location: %.4f, %.4f",
                         currentLatitude, currentLongitude));
-                tvLocationStatus.setTextColor(getColor(R.color.safe));
                 btnSubmitReport.setEnabled(true);
+                CustomToast.showSuccess(this, "Location detected successfully");
             } else {
                 tvLocationStatus.setText("⚠️ Could not get location. Please try again.");
-                tvLocationStatus.setTextColor(getColor(R.color.danger));
                 btnSubmitReport.setEnabled(false);
+                CustomToast.showWarning(this, "Unable to detect location. Please try again.");
             }
+        }).addOnFailureListener(e -> {
+            tvLocationStatus.setText("⚠️ Location error: " + e.getMessage());
+            btnSubmitReport.setEnabled(false);
+            CustomToast.showError(this, "Failed to get location: " + e.getMessage());
         });
     }
 
     private void submitReport() {
         if (!hasLocation) {
-            Toast.makeText(this, "Please get location first", Toast.LENGTH_SHORT).show();
+            CustomToast.showWarning(this, "Please get location first");
             return;
         }
 
         String note = etNote.getText().toString().trim();
-        long userId = SharedPrefManager.getInstance(this).getUserId();
+        if (note.isEmpty()) {
+            note = "Elephant sighting reported";
+        }
 
-        if (userId == -1) {
-            Toast.makeText(this, "Please login again", Toast.LENGTH_SHORT).show();
+        // Check if user is logged in
+        if (!SharedPrefManager.getInstance(this).isLoggedIn()) {
+            CustomToast.showError(this, "Please login to submit a report");
             return;
         }
 
-        ElephantReport report = new ElephantReport(userId, currentLatitude, currentLongitude, note, elephantCount);
+        // IMPORTANT: Use ReportRequest, NOT ElephantReport
+        // Do NOT include userId, createdAt, id, status - backend gets these from token and generates them
+        ApiService.ReportRequest request = new ApiService.ReportRequest(
+                currentLatitude,
+                currentLongitude,
+                note,
+                elephantCount
+        );
 
         btnSubmitReport.setText("Submitting...");
         btnSubmitReport.setEnabled(false);
 
-        apiService.submitReport(report).enqueue(new Callback<ElephantReport>() {
+        // Debug: Log what we're sending
+        android.util.Log.d("ReportSighting", "Submitting report: lat=" + currentLatitude + ", lng=" + currentLongitude + ", note=" + note + ", count=" + elephantCount);
+
+        apiService.submitReport(request).enqueue(new Callback<ApiService.ReportResponse>() {
             @Override
-            public void onResponse(Call<ElephantReport> call, Response<ElephantReport> response) {
+            public void onResponse(Call<ApiService.ReportResponse> call, Response<ApiService.ReportResponse> response) {
                 btnSubmitReport.setText("Submit Report");
                 btnSubmitReport.setEnabled(true);
 
-                if (response.isSuccessful()) {
-                    Toast.makeText(ReportSightingActivity.this,
-                            "✅ Report submitted successfully!\nThank you for keeping roads safe.",
-                            Toast.LENGTH_LONG).show();
-                    finish();
+                if (response.isSuccessful() && response.body() != null) {
+                    ApiService.ReportResponse reportResponse = response.body();
+                    CustomToast.showSuccess(ReportSightingActivity.this,
+                            "Report submitted! Status: " + reportResponse.getStatus());
+                    CustomAlertDialog.showReportSubmitted(ReportSightingActivity.this);
+                    new android.os.Handler().postDelayed(() -> finish(), 2000);
                 } else {
-                    Toast.makeText(ReportSightingActivity.this,
-                            "❌ Failed to submit report. Please try again.",
-                            Toast.LENGTH_SHORT).show();
+                    // Handle different error codes
+                    try {
+                        String errorBody = response.errorBody() != null ? response.errorBody().string() : "Unknown error";
+                        android.util.Log.e("ReportSighting", "Error response: " + response.code() + " - " + errorBody);
+
+                        if (response.code() == 401) {
+                            CustomToast.showError(ReportSightingActivity.this, "Session expired. Please login again.");
+                            SharedPrefManager.getInstance(ReportSightingActivity.this).logout();
+                            finish();
+                        } else if (response.code() == 500) {
+                            CustomToast.showError(ReportSightingActivity.this, "Server error. Please try again later.");
+                        } else {
+                            CustomToast.showError(ReportSightingActivity.this, "Failed to submit report: " + response.code());
+                        }
+                    } catch (IOException e) {
+                        CustomToast.showError(ReportSightingActivity.this, "Failed to submit report");
+                    }
                 }
             }
 
             @Override
-            public void onFailure(Call<ElephantReport> call, Throwable t) {
+            public void onFailure(Call<ApiService.ReportResponse> call, Throwable t) {
                 btnSubmitReport.setText("Submit Report");
                 btnSubmitReport.setEnabled(true);
-                Toast.makeText(ReportSightingActivity.this,
-                        "Network error: " + t.getMessage(),
-                        Toast.LENGTH_LONG).show();
+                CustomToast.showError(ReportSightingActivity.this, "Network error: " + t.getMessage());
+                android.util.Log.e("ReportSighting", "Network error", t);
             }
         });
     }
@@ -191,8 +212,8 @@ public class ReportSightingActivity extends AppCompatActivity {
                 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             getCurrentLocation();
         } else {
-            tvLocationStatus.setText("⚠️ Location permission required to report sightings");
-            tvLocationStatus.setTextColor(getColor(R.color.danger));
+            tvLocationStatus.setText("⚠️ Location permission required");
+            CustomToast.showError(this, "Location permission is required to report sightings");
         }
     }
 }

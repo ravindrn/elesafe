@@ -14,6 +14,7 @@ import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.Priority;
 import com.elephant.safety.models.DangerZone;
 import com.elephant.safety.utils.HaversineFormula;
 import com.elephant.safety.utils.SharedPrefManager;
@@ -27,6 +28,10 @@ public class LocationTrackingService extends Service {
     private List<DangerZone> dangerZones;
     private List<Long> recentlyAlertedZones;
     private static final long ALERT_COOLDOWN_MS = 300000; // 5 minutes
+
+    // Store current location
+    private double currentLatitude = 0;
+    private double currentLongitude = 0;
 
     @Override
     public void onCreate() {
@@ -45,12 +50,19 @@ public class LocationTrackingService extends Service {
                 if (locationResult == null) return;
 
                 for (Location location : locationResult.getLocations()) {
-                    checkDangerZones(location.getLatitude(), location.getLongitude());
+                    // Update current location
+                    currentLatitude = location.getLatitude();
+                    currentLongitude = location.getLongitude();
+
+                    // Log the location for debugging
+                    android.util.Log.d("LocationTracking", "Lat: " + currentLatitude + ", Lon: " + currentLongitude);
+
+                    checkDangerZones(currentLatitude, currentLongitude);
 
                     // Broadcast location update
                     Intent intent = new Intent("LOCATION_UPDATE");
-                    intent.putExtra("latitude", location.getLatitude());
-                    intent.putExtra("longitude", location.getLongitude());
+                    intent.putExtra("latitude", currentLatitude);
+                    intent.putExtra("longitude", currentLongitude);
                     LocalBroadcastManager.getInstance(LocationTrackingService.this).sendBroadcast(intent);
                 }
             }
@@ -58,6 +70,8 @@ public class LocationTrackingService extends Service {
     }
 
     private void checkDangerZones(double userLat, double userLon) {
+        if (dangerZones == null) return;
+
         for (DangerZone zone : dangerZones) {
             boolean insideZone = HaversineFormula.isInsideZone(
                     userLat, userLon, zone.getLatitude(), zone.getLongitude(), zone.getRadius()
@@ -71,28 +85,35 @@ public class LocationTrackingService extends Service {
     }
 
     private boolean isRecentlyAlerted(long zoneId) {
-        // Check if zone was alerted within cooldown period
         return recentlyAlertedZones.contains(zoneId);
     }
 
     private void addToRecentlyAlerted(long zoneId) {
         recentlyAlertedZones.add(zoneId);
-        // Remove after cooldown
         new android.os.Handler().postDelayed(() ->
                 recentlyAlertedZones.remove(zoneId), ALERT_COOLDOWN_MS);
     }
 
     private void triggerZoneAlert(DangerZone zone) {
+        // Calculate distance to zone center
+        double distanceToZone = HaversineFormula.calculateDistance(
+                currentLatitude, currentLongitude,
+                zone.getLatitude(), zone.getLongitude()
+        );
+
         EmergencyAlertService alertService = new EmergencyAlertService(this);
-        alertService.triggerFullAlert(
-                String.format("Warning! Entering %s zone. Risk level: %s",
-                        zone.getZoneName(), zone.getRiskLevel())
+        alertService.showDetailedAlert(
+                zone.getZoneName(),
+                zone.getRiskLevel(),
+                distanceToZone / 1000 // Convert to km
         );
     }
 
     private void loadDangerZones() {
-        // Load danger zones from API
         dangerZones = SharedPrefManager.getInstance(this).getDangerZones();
+        if (dangerZones == null) {
+            dangerZones = new ArrayList<>();
+        }
     }
 
     @Override
@@ -102,15 +123,18 @@ public class LocationTrackingService extends Service {
     }
 
     private void startLocationUpdates() {
-        LocationRequest locationRequest = LocationRequest.create()
-                .setInterval(5000) // 5 seconds
-                .setFastestInterval(2000) // 2 seconds
-                .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        // Create location request with PRIORITY_HIGH_ACCURACY
+        LocationRequest locationRequest = new LocationRequest.Builder(
+                Priority.PRIORITY_HIGH_ACCURACY, 5000)
+                .setMinUpdateIntervalMillis(2000)
+                .build();
 
         if (checkSelfPermission(android.Manifest.permission.ACCESS_FINE_LOCATION)
                 == android.content.pm.PackageManager.PERMISSION_GRANTED) {
             fusedLocationClient.requestLocationUpdates(locationRequest,
                     locationCallback, Looper.getMainLooper());
+        } else {
+            android.util.Log.e("LocationTracking", "Location permission not granted");
         }
     }
 

@@ -6,25 +6,151 @@
     android:orientation="vertical"
     android:background="@color/bg_screen">
 
-    <!-- Top Bar -->
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        app:titleTextColor="@color/white"
+        app:title="ElephAlert" />
+
+    <!-- Safety Status Bar -->
     <LinearLayout
+        android:id="@+id/safetyStatusBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/primary_dark"
-        android:padding="16dp"
-        android:paddingTop="24dp">
+        android:padding="12dp"
+        android:background="@color/safe">
 
-        <TextView
-            android:id="@+id/tvWelcome"
-            android:layout_width="wrap_content"
+        <!-- Top Row: Status Icon and Text -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome, Driver!"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
+            <TextView
+                android:id="@+id/tvSafetyIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="🟢"
+                android:textSize="24sp"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/tvSafetyStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="YOU ARE SAFE"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvSafetyMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No danger zones nearby"
+                    android:textSize="12sp"
+                    android:textColor="#CCFFFFFF" />
+            </LinearLayout>
+
+            <!-- Speed Indicator -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="#33FFFFFF"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:layout_marginStart="8dp"
+                app:cornerRadius="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🚗"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="km/h"
+                    android:textSize="11sp"
+                    android:textColor="#CCFFFFFF"
+                    android:layout_marginStart="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Progress Bar for Danger Proximity -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/tvProximityLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nearest Danger Zone: Scanning..."
+                android:textSize="11sp"
+                android:textColor="#CCFFFFFF"
+                android:layout_marginBottom="4dp" />
+
+            <ProgressBar
+                android:id="@+id/progressDanger"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:progress="0"
+                android:max="100"
+                android:progressTint="@color/warning"
+                android:progressBackgroundTint="#33FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvWarningHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚠️ Danger zone within 2km - Stay alert!"
+                android:textSize="10sp"
+                android:textColor="#CCFFFFFF"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
     </LinearLayout>
+
+    <!-- Welcome Text (ADD THIS) -->
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome, Driver!"
+        android:textColor="@color/primary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:paddingBottom="0dp" />
 
     <!-- Buttons Row -->
     <LinearLayout

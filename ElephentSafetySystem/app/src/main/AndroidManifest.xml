@@ -9,6 +9,11 @@
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
 
     <application
         android:name=".MyApplication"
@@ -24,9 +29,34 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyB5pO_amMv74OfQ3FG8UdFxjQifOyR3dFU" />
 
+        <!-- Foreground Service for location tracking -->
+        <service
+            android:name=".services.LocationForegroundService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+
+        <!-- Boot Receiver - Auto start service after phone reboot -->
+        <receiver
+            android:name=".services.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Notification Channel Receiver -->
+        <receiver
+            android:name=".services.NotificationReceiver"
+            android:exported="false" />
+
+        <!-- Activities -->
         <activity
             android:name=".activities.SplashActivity"
-            android:exported="true">
+            android:exported="true"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -40,8 +70,14 @@
         <activity android:name=".activities.SafetyInfoActivity" />
         <activity android:name=".activities.AlertsActivity" />
         <activity android:name=".activities.ProfileActivity" />
+        <activity android:name=".activities.InsightsActivity" />
 
-        <!-- Location Service -->
+        <activity android:name=".activities.DangerAlertActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true" />
+
+        <!-- Location Service (Regular) -->
         <service android:name=".services.LocationTrackingService"
             android:exported="false" />
 
