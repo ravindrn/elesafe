@@ -4,8 +4,8 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "reports")
-public class ElephantReport {
+@Table(name = "verified_reports")
+public class VerifiedReport {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,22 +27,19 @@ public class ElephantReport {
     @Column(name = "elephant_count")
     private Integer elephantCount = 1;
 
-    @Enumerated(EnumType.STRING)
-    private ReportStatus status = ReportStatus.PENDING;
+    @Column(name = "verified_at")
+    private LocalDateTime verifiedAt;
+
+    @Column(name = "verified_by")
+    private Long verifiedBy;
 
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
-    @Column(name = "resolved_at")
-    private LocalDateTime resolvedAt;
-
-    public enum ReportStatus {
-        PENDING, APPROVED, REJECTED, RESOLVED
-    }
-
     @PrePersist
     protected void onCreate() {
         createdAt = LocalDateTime.now();
+        verifiedAt = LocalDateTime.now();
     }
 
     // Getters and Setters
@@ -64,12 +61,12 @@ public class ElephantReport {
     public Integer getElephantCount() { return elephantCount; }
     public void setElephantCount(Integer elephantCount) { this.elephantCount = elephantCount; }
 
-    public ReportStatus getStatus() { return status; }
-    public void setStatus(ReportStatus status) { this.status = status; }
+    public LocalDateTime getVerifiedAt() { return verifiedAt; }
+    public void setVerifiedAt(LocalDateTime verifiedAt) { this.verifiedAt = verifiedAt; }
+
+    public Long getVerifiedBy() { return verifiedBy; }
+    public void setVerifiedBy(Long verifiedBy) { this.verifiedBy = verifiedBy; }
 
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
-
-    public LocalDateTime getResolvedAt() { return resolvedAt; }
-    public void setResolvedAt(LocalDateTime resolvedAt) { this.resolvedAt = resolvedAt; }
 }

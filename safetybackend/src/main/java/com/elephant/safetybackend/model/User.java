@@ -26,11 +26,6 @@ public class User {
     private String phone;
     private Boolean isActive = true;
     private LocalDateTime createdAt = LocalDateTime.now();
-    
-    // Location tracking fields (matching your app's needs)
-    private Double latitude;      // Will store user's current latitude
-    private Double longitude;     // Will store user's current longitude
-    private LocalDateTime lastLocationUpdate;
 
     public enum Role { USER, ADMIN }
 
@@ -46,9 +41,6 @@ public class User {
     public String getPhone() { return phone; }
     public Boolean getIsActive() { return isActive; }
     public LocalDateTime getCreatedAt() { return createdAt; }
-    public Double getLatitude() { return latitude; }
-    public Double getLongitude() { return longitude; }
-    public LocalDateTime getLastLocationUpdate() { return lastLocationUpdate; }
 
     // Setters
     public void setId(Long id) { this.id = id; }
@@ -59,7 +51,4 @@ public class User {
     public void setPhone(String phone) { this.phone = phone; }
     public void setIsActive(Boolean isActive) { this.isActive = isActive; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
-    public void setLatitude(Double latitude) { this.latitude = latitude; }
-    public void setLongitude(Double longitude) { this.longitude = longitude; }
-    public void setLastLocationUpdate(LocalDateTime lastLocationUpdate) { this.lastLocationUpdate = lastLocationUpdate; }
 }

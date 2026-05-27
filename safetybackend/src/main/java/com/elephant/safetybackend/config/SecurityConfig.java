@@ -1,13 +1,11 @@
 package com.elephant.safetybackend.config;
 
 import com.elephant.safetybackend.filter.JwtRequestFilter;
-import com.elephant.safetybackend.repository.UserRepository;
 import com.elephant.safetybackend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
-import org.springframework.core.annotation.Order;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -30,9 +28,6 @@ public class SecurityConfig {
 
     @Autowired
     private JwtRequestFilter jwtRequestFilter;
-    
-    @Autowired
-    private UserRepository userRepository;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -52,64 +47,21 @@ public class SecurityConfig {
         return config.getAuthenticationManager();
     }
 
-    // ============ ADMIN WEB PANEL CONFIGURATION ==========
     @Bean
-    @Order(1)
-    public SecurityFilterChain adminFilterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            .csrf(csrf -> csrf.disable())
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/login", "/css/**", "/js/**").permitAll()
-                .anyRequest().authenticated()
-            )
-            .formLogin(form -> form
-                .loginPage("/login")
-                .loginProcessingUrl("/login")
-                .successHandler((request, response, authentication) -> {
-                    // Set session attributes after successful login
-                    String email = authentication.getName();
-                    com.elephant.safetybackend.model.User user = userRepository.findByEmail(email).orElse(null);
-                    if (user != null) {
-                        request.getSession().setAttribute("userId", user.getId());
-                        request.getSession().setAttribute("userName", user.getName());
-                        request.getSession().setAttribute("userEmail", user.getEmail());
-                        request.getSession().setAttribute("userRole", user.getRole().toString());
-                        System.out.println("✅ Login successful! User: " + user.getName());
-                        System.out.println("   Session userId: " + user.getId());
-                        System.out.println("   Session userRole: " + user.getRole());
-                    }
-                    response.sendRedirect("/admin/dashboard");
-                })
-                .failureUrl("/login?error=true")
-                .permitAll()
-            )
-            .logout(logout -> logout
-                .logoutUrl("/logout")
-                .logoutSuccessUrl("/login?logout=true")
-                .invalidateHttpSession(true)
-                .deleteCookies("JSESSIONID")
-                .permitAll()
-            );
-        
-        return http.build();
-    }
+                .csrf(csrf -> csrf.disable())
+                .authorizeHttpRequests(auth -> auth
+                        // TEMPORARY - Allow public access to all endpoints for testing
+                        .anyRequest().permitAll()
+                )
+                .sessionManagement(session -> session
+                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                );
 
-    // ============ MOBILE APP API CONFIGURATION ==========
-    @Bean
-    @Order(2)
-    public SecurityFilterChain apiFilterChain(HttpSecurity http) throws Exception {
-        http
-            .securityMatcher("/api/**")
-            .csrf(csrf -> csrf.disable())
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/auth/**", "/api/public/**").permitAll()
-                .anyRequest().authenticated()
-            )
-            .sessionManagement(session -> session
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-            )
-            .authenticationProvider(authenticationProvider())
-            .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
+        // Comment out authentication for now
+        // .authenticationProvider(authenticationProvider())
+        // .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
