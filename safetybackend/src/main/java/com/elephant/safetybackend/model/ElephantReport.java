@@ -45,31 +45,25 @@ public class ElephantReport {
         createdAt = LocalDateTime.now();
     }
 
-    // Getters and Setters
+    // Getters
     public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-
     public User getUser() { return user; }
-    public void setUser(User user) { this.user = user; }
-
     public Double getLatitude() { return latitude; }
-    public void setLatitude(Double latitude) { this.latitude = latitude; }
-
     public Double getLongitude() { return longitude; }
-    public void setLongitude(Double longitude) { this.longitude = longitude; }
-
     public String getNote() { return note; }
-    public void setNote(String note) { this.note = note; }
-
     public Integer getElephantCount() { return elephantCount; }
-    public void setElephantCount(Integer elephantCount) { this.elephantCount = elephantCount; }
-
     public ReportStatus getStatus() { return status; }
-    public void setStatus(ReportStatus status) { this.status = status; }
-
     public LocalDateTime getCreatedAt() { return createdAt; }
-    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
-
     public LocalDateTime getResolvedAt() { return resolvedAt; }
+
+    // Setters
+    public void setId(Long id) { this.id = id; }
+    public void setUser(User user) { this.user = user; }
+    public void setLatitude(Double latitude) { this.latitude = latitude; }
+    public void setLongitude(Double longitude) { this.longitude = longitude; }
+    public void setNote(String note) { this.note = note; }
+    public void setElephantCount(Integer elephantCount) { this.elephantCount = elephantCount; }
+    public void setStatus(ReportStatus status) { this.status = status; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
     public void setResolvedAt(LocalDateTime resolvedAt) { this.resolvedAt = resolvedAt; }
 }

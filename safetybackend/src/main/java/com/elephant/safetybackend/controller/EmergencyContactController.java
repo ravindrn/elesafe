@@ -1,66 +1,82 @@
 package com.elephant.safetybackend.controller;
 
-import com.elephant.safetybackend.dto.EmergencyContactDTO;
-import com.elephant.safetybackend.service.EmergencyContactService;
+import com.elephant.safetybackend.model.EmergencyContact;
+import com.elephant.safetybackend.repository.EmergencyContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import jakarta.servlet.http.HttpSession;
+import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-@RestController
-@RequestMapping("/api/emergency-contacts")
-@CrossOrigin(origins = "*")
+@Controller
+@RequestMapping("/admin/emergency-contacts")
 public class EmergencyContactController {
 
     @Autowired
-    private EmergencyContactService emergencyContactService;
+    private EmergencyContactRepository emergencyContactRepository;
 
-    // Get all active emergency contacts (Public)
-    @GetMapping("/active")
-    public ResponseEntity<List<EmergencyContactDTO>> getAllActiveContacts() {
-        return ResponseEntity.ok(emergencyContactService.getAllActiveContacts());
+    @GetMapping
+    public String emergencyContactsPage(HttpSession session, Model model) {
+        if (session.getAttribute("userId") == null) {
+            return "redirect:/login";
+        }
+        model.addAttribute("adminName", session.getAttribute("userName"));
+        return "admin/emergency-contacts";
     }
 
-    // Get categorized emergency contacts (Public)
-    @GetMapping("/categorized")
-    public ResponseEntity<EmergencyContactService.CategorizedContactsDTO> getCategorizedContacts() {
-        return ResponseEntity.ok(emergencyContactService.getCategorizedContacts());
+    @GetMapping("/api/list")
+    @ResponseBody
+    public ResponseEntity<List<EmergencyContact>> getAllEmergencyContacts(HttpSession session) {
+        if (session.getAttribute("userId") == null) {
+            return ResponseEntity.status(403).build();
+        }
+        return ResponseEntity.ok(emergencyContactRepository.findAll());
     }
 
-    // Get contacts by category (Public)
-    @GetMapping("/category/{category}")
-    public ResponseEntity<List<EmergencyContactDTO>> getContactsByCategory(@PathVariable String category) {
-        return ResponseEntity.ok(emergencyContactService.getContactsByCategory(category));
+    @PostMapping("/api/add")
+    @ResponseBody
+    public ResponseEntity<?> addEmergencyContact(@RequestBody EmergencyContact contact, HttpSession session) {
+        if (session.getAttribute("userId") == null) {
+            return ResponseEntity.status(403).body(Map.of("error", "Unauthorized"));
+        }
+        try {
+            contact.setCreatedAt(LocalDateTime.now());
+            contact.setUpdatedAt(LocalDateTime.now());
+            EmergencyContact saved = emergencyContactRepository.save(contact);
+            return ResponseEntity.ok(Map.of("success", true, "id", saved.getId()));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
+        }
     }
 
-    // Create new emergency contact (Admin only)
-    @PostMapping
-    @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<EmergencyContactDTO> createContact(@RequestBody EmergencyContactDTO dto) {
-        return new ResponseEntity<>(emergencyContactService.createContact(dto), HttpStatus.CREATED);
+    @PutMapping("/api/update/{id}")
+    @ResponseBody
+    public ResponseEntity<?> updateEmergencyContact(@PathVariable Long id, @RequestBody EmergencyContact contact, HttpSession session) {
+        if (session.getAttribute("userId") == null) {
+            return ResponseEntity.status(403).body(Map.of("error", "Unauthorized"));
+        }
+        try {
+            contact.setId(id);
+            contact.setUpdatedAt(LocalDateTime.now());
+            emergencyContactRepository.save(contact);
+            return ResponseEntity.ok(Map.of("success", true));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
+        }
     }
 
-    // Update emergency contact (Admin only)
-    @PutMapping("/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<EmergencyContactDTO> updateContact(@PathVariable Long id, @RequestBody EmergencyContactDTO dto) {
-        return ResponseEntity.ok(emergencyContactService.updateContact(id, dto));
-    }
-
-    // Delete emergency contact (Admin only)
-    @DeleteMapping("/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<Void> deleteContact(@PathVariable Long id) {
-        emergencyContactService.deleteContact(id);
-        return ResponseEntity.noContent().build();
-    }
-
-    // Toggle contact status (Admin only)
-    @PatchMapping("/{id}/toggle")
-    @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<EmergencyContactDTO> toggleContactStatus(@PathVariable Long id) {
-        return ResponseEntity.ok(emergencyContactService.toggleContactStatus(id));
+    @DeleteMapping("/api/delete/{id}")
+    @ResponseBody
+    public ResponseEntity<?> deleteEmergencyContact(@PathVariable Long id, HttpSession session) {
+        if (session.getAttribute("userId") == null) {
+            return ResponseEntity.status(403).body(Map.of("error", "Unauthorized"));
+        }
+        emergencyContactRepository.deleteById(id);
+        return ResponseEntity.ok(Map.of("success", true));
     }
 }

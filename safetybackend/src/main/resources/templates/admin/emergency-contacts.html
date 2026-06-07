@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contacts - Elephant Safety Sri Lanka</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; }
+        .navbar {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a27 100%);
+            color: white;
+            padding: 0 30px;
+            height: 65px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .logo { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: bold; }
+        .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+        .nav-links a { color: white; text-decoration: none; padding: 8px 18px; border-radius: 8px; font-size: 14px; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.2); }
+        .user-info { display: flex; align-items: center; gap: 20px; }
+        .logout-btn { background: rgba(255,255,255,0.15); padding: 6px 14px; border-radius: 6px; text-decoration: none; color: white; }
+        .container { margin-top: 85px; padding: 25px 35px; }
+        .page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+        .page-header h2 { color: #333; }
+        .btn-primary { background: #2e7d32; color: white; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; }
+        .btn-sm { padding: 5px 10px; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; margin: 0 2px; }
+        .btn-edit { background: #ffc107; color: #333; }
+        .btn-delete { background: #dc3545; color: white; }
+        .table-container { background: white; border-radius: 20px; padding: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        th { text-align: left; padding: 12px; background: #f8f9fa; font-weight: 600; border-bottom: 2px solid #e0e0e0; }
+        td { padding: 12px; border-bottom: 1px solid #e0e0e0; }
+        .badge { padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+        .badge-police { background: #cce5ff; color: #004085; }
+        .badge-ambulance { background: #f8d7da; color: #721c24; }
+        .badge-wildlife { background: #d4edda; color: #155724; }
+        .badge-hospital { background: #d1ecf1; color: #0c5460; }
+        .badge-forest { background: #e2e3e5; color: #383d41; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; z-index: 2000; }
+        .modal-content { background: white; border-radius: 20px; width: 90%; max-width: 500px; max-height: 90vh; overflow-y: auto; }
+        .modal-header { padding: 20px; background: #1a472a; color: white; border-radius: 20px 20px 0 0; display: flex; justify-content: space-between; }
+        .close { background: none; border: none; color: white; font-size: 28px; cursor: pointer; }
+        .modal-body { padding: 20px; }
+        .modal-footer { padding: 20px; border-top: 1px solid #e0e0e0; display: flex; gap: 10px; justify-content: flex-end; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; }
+        @media (max-width: 768px) { .nav-links { display: none; } .container { padding: 15px; } }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">🐘 Elephant Safety Sri Lanka</div>
+    <div class="nav-links">
+        <a href="/admin/dashboard">📊 Dashboard</a>
+        <a href="/admin/users">👥 Users</a>
+        <a href="/admin/danger-zones">⚠️ Danger Zones</a>
+        <a href="/admin/reports">📋 Reports</a>
+        <a href="/admin/emergency-contacts" class="active">📞 Emergency</a>
+        <a href="/admin/news">📰 News</a>
+        <a href="/admin/safety-tips">💡 Safety Tips</a>
+
+    </div>
+    <div class="user-info">
+        <span>👋 <strong th:text="${adminName}">Admin</strong></span>
+        <a href="/logout" class="logout-btn">🚪 Logout</a>
+    </div>
+</nav>
+<div class="container">
+    <div class="page-header">
+        <h2>📞 Emergency Contacts</h2>
+        <button class="btn-primary" onclick="openAddModal()">➕ Add Contact</button>
+    </div>
+    <div class="table-container">
+        <table id="contactsTable">
+            <thead><tr><th>ID</th><th>Name</th><th>Phone</th><th>Category</th><th>Priority</th><th>Status</th><th>Actions</th></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header"><h3 id="modalTitle">Add Emergency Contact</h3><button class="close" onclick="closeModal()">&times;</button></div>
+        <div class="modal-body">
+            <input type="hidden" id="contactId">
+            <div class="form-group"><label>Name *</label><input type="text" id="contactName" required></div>
+            <div class="form-group"><label>Phone Number *</label><input type="text" id="contactPhone" required></div>
+            <div class="form-group"><label>Description</label><textarea id="contactDesc" rows="2"></textarea></div>
+            <div class="form-group"><label>Category</label>
+                <select id="contactCategory">
+                    <option value="POLICE">🚓 POLICE</option><option value="AMBULANCE">🚑 AMBULANCE</option>
+                    <option value="WILDLIFE">🐘 WILDLIFE</option><option value="HOSPITAL">🏥 HOSPITAL</option>
+                    <option value="FOREST">🌳 FOREST</option>
+                </select>
+            </div>
+            <div class="form-group"><label>Priority (1-10)</label><input type="number" id="contactPriority" value="1"></div>
+            <div class="form-group"><label>Active</label>
+                <select id="contactActive"><option value="true">Active</option><option value="false">Inactive</option></select>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button onclick="closeModal()" style="padding:10px 20px; background:#6c757d; color:white; border:none; border-radius:8px;">Cancel</button>
+            <button onclick="saveContact()" style="padding:10px 20px; background:#2e7d32; color:white; border:none; border-radius:8px;">Save</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function loadContacts() {
+        $.get('/admin/emergency-contacts/api/list', function(data) {
+            let html = '';
+            data.forEach(c => {
+                let categoryClass = c.category === 'POLICE' ? 'badge-police' : (c.category === 'AMBULANCE' ? 'badge-ambulance' : (c.category === 'WILDLIFE' ? 'badge-wildlife' : (c.category === 'HOSPITAL' ? 'badge-hospital' : 'badge-forest')));
+                let statusBadge = c.isActive ? '<span class="badge badge-wildlife">Active</span>' : '<span class="badge badge-forest">Inactive</span>';
+                html += `<tr><td>${c.id}</td><td>${c.name}</td><td>${c.phoneNumber}</td><td><span class="badge ${categoryClass}">${c.category}</span></td><td>${c.priority || 0}</td><td>${statusBadge}</td><td><button class="btn-sm btn-edit" onclick="editContact(${c.id})">Edit</button><button class="btn-sm btn-delete" onclick="deleteContact(${c.id})">Delete</button></td></tr>`;
+            });
+            $('#contactsTable tbody').html(html);
+        });
+    }
+    function openAddModal() { $('#modalTitle').text('Add Emergency Contact'); $('#contactId').val(''); $('#contactName').val(''); $('#contactPhone').val(''); $('#contactDesc').val(''); $('#contactCategory').val('POLICE'); $('#contactPriority').val('1'); $('#contactActive').val('true'); $('#contactModal').css('display','flex'); }
+    function editContact(id) { $.get('/admin/emergency-contacts/api/list', function(data) { let c = data.find(x=>x.id==id); if(c) { $('#modalTitle').text('Edit Emergency Contact'); $('#contactId').val(c.id); $('#contactName').val(c.name); $('#contactPhone').val(c.phoneNumber); $('#contactDesc').val(c.description); $('#contactCategory').val(c.category); $('#contactPriority').val(c.priority || 1); $('#contactActive').val(c.isActive ? 'true' : 'false'); $('#contactModal').css('display','flex'); } }); }
+    function closeModal() { $('#contactModal').css('display','none'); }
+    function saveContact() { let data = { id: $('#contactId').val() || null, name: $('#contactName').val(), phoneNumber: $('#contactPhone').val(), description: $('#contactDesc').val(), category: $('#contactCategory').val(), priority: parseInt($('#contactPriority').val()), isActive: $('#contactActive').val() === 'true' }; if(!data.name || !data.phoneNumber) { alert('Please fill Name and Phone'); return; } let url = data.id ? `/admin/emergency-contacts/api/update/${data.id}` : '/admin/emergency-contacts/api/add'; let method = data.id ? 'PUT' : 'POST'; $.ajax({ url: url, type: method, contentType: 'application/json', data: JSON.stringify(data), success: function() { closeModal(); loadContacts(); alert('Contact saved!'); }, error: function(xhr) { alert('Error: ' + (xhr.responseJSON?.error || 'Failed to save')); } }); }
+    function deleteContact(id) { if(confirm('Delete this contact?')) $.ajax({ url: `/admin/emergency-contacts/api/delete/${id}`, type: 'DELETE', success: function() { loadContacts(); } }); }
+    $(document).ready(loadContacts);
+</script>
+</body>
+</html>

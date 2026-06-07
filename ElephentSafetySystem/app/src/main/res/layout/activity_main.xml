@@ -140,7 +140,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Welcome Text (ADD THIS) -->
+    <!-- Welcome Text -->
     <TextView
         android:id="@+id/tvWelcome"
         android:layout_width="wrap_content"
@@ -197,6 +197,43 @@
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+
+        <!-- Zoom Controls - Correctly placed here -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnZoomIn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_zoom_in"
+                android:backgroundTint="@color/white"
+                app:fabSize="mini"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnZoomOut"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_zoom_out"
+                android:backgroundTint="@color/white"
+                app:fabSize="mini"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabMyLocation"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_my_location"
+                android:backgroundTint="@color/primary"
+                app:tint="@color/white"
+                app:fabSize="mini" />
+
+        </LinearLayout>
 
         <!-- Nearest Alert Card -->
         <com.google.android.material.card.MaterialCardView

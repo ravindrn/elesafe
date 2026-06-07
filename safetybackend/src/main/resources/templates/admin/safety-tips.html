@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Tips - Elephant Safety Sri Lanka</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; }
+        .navbar {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a27 100%);
+            color: white;
+            padding: 0 30px;
+            height: 65px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .logo { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: bold; }
+        .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+        .nav-links a { color: white; text-decoration: none; padding: 8px 18px; border-radius: 8px; font-size: 14px; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.2); }
+        .user-info { display: flex; align-items: center; gap: 20px; }
+        .logout-btn { background: rgba(255,255,255,0.15); padding: 6px 14px; border-radius: 6px; text-decoration: none; color: white; }
+        .container { margin-top: 85px; padding: 25px 35px; }
+        .page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+        .page-header h2 { color: #333; }
+        .btn-primary { background: #2e7d32; color: white; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; }
+        .btn-sm { padding: 5px 10px; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; margin: 0 2px; }
+        .btn-edit { background: #ffc107; color: #333; }
+        .btn-delete { background: #dc3545; color: white; }
+        .table-container { background: white; border-radius: 20px; padding: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        th { text-align: left; padding: 12px; background: #f8f9fa; font-weight: 600; border-bottom: 2px solid #e0e0e0; }
+        td { padding: 12px; border-bottom: 1px solid #e0e0e0; }
+        .badge { padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+        .badge-driving { background: #cce5ff; color: #004085; }
+        .badge-encounter { background: #fff3cd; color: #856404; }
+        .badge-emergency { background: #f8d7da; color: #721c24; }
+        .badge-general { background: #d4edda; color: #155724; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; z-index: 2000; }
+        .modal-content { background: white; border-radius: 20px; width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto; }
+        .modal-header { padding: 20px; background: #1a472a; color: white; border-radius: 20px 20px 0 0; display: flex; justify-content: space-between; }
+        .close { background: none; border: none; color: white; font-size: 28px; cursor: pointer; }
+        .modal-body { padding: 20px; }
+        .modal-footer { padding: 20px; border-top: 1px solid #e0e0e0; display: flex; gap: 10px; justify-content: flex-end; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; }
+        @media (max-width: 768px) { .nav-links { display: none; } .container { padding: 15px; } }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">🐘 Elephant Safety Sri Lanka</div>
+    <div class="nav-links">
+        <a href="/admin/dashboard">📊 Dashboard</a>
+        <a href="/admin/users">👥 Users</a>
+        <a href="/admin/danger-zones">⚠️ Danger Zones</a>
+        <a href="/admin/reports">📋 Reports</a>
+        <a href="/admin/emergency-contacts">📞 Emergency</a>
+        <a href="/admin/news">📰 News</a>
+        <a href="/admin/safety-tips" class="active">💡 Safety Tips</a>
+
+    </div>
+    <div class="user-info">
+        <span>👋 <strong th:text="${adminName}">Admin</strong></span>
+        <a href="/logout" class="logout-btn">🚪 Logout</a>
+    </div>
+</nav>
+<div class="container">
+    <div class="page-header">
+        <h2>💡 Safety Tips Management</h2>
+        <button class="btn-primary" onclick="openAddModal()">➕ Add Safety Tip</button>
+    </div>
+    <div class="table-container">
+        <table id="tipsTable">
+            <thead><tr><th>ID</th><th>Title</th><th>Category</th><th>Priority</th><th>Status</th><th>Actions</th></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+<div id="tipModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header"><h3 id="modalTitle">Add Safety Tip</h3><button class="close" onclick="closeModal()">&times;</button></div>
+        <div class="modal-body">
+            <input type="hidden" id="tipId">
+            <div class="form-group"><label>Title *</label><input type="text" id="tipTitle" required></div>
+            <div class="form-group"><label>Description *</label><textarea id="tipDescription" rows="4" required></textarea></div>
+            <div class="form-group"><label>Category</label>
+                <select id="tipCategory">
+                    <option value="DRIVING">🚗 Driving Tips</option>
+                    <option value="ENCOUNTER">🐘 Elephant Encounter</option>
+                    <option value="EMERGENCY">🚨 Emergency</option>
+                    <option value="GENERAL">📋 General</option>
+                </select>
+            </div>
+            <div class="form-group"><label>Icon</label><input type="text" id="tipIcon" placeholder="e.g., ic_speed, ic_warning"></div>
+            <div class="form-group"><label>Priority (1-10, higher first)</label><input type="number" id="tipPriority" value="1"></div>
+            <div class="form-group"><label>Status</label>
+                <select id="tipActive"><option value="true">Active</option><option value="false">Inactive</option></select>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button onclick="closeModal()" style="padding:10px 20px; background:#6c757d; color:white; border:none; border-radius:8px;">Cancel</button>
+            <button onclick="saveTip()" style="padding:10px 20px; background:#2e7d32; color:white; border:none; border-radius:8px;">Save</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function loadTips() {
+        $.get('/admin/safety-tips/api/list', function(data) {
+            let html = '';
+            data.forEach(t => {
+                let categoryClass = t.category === 'DRIVING' ? 'badge-driving' : (t.category === 'ENCOUNTER' ? 'badge-encounter' : (t.category === 'EMERGENCY' ? 'badge-emergency' : 'badge-general'));
+                let categoryIcon = t.category === 'DRIVING' ? '🚗' : (t.category === 'ENCOUNTER' ? '🐘' : (t.category === 'EMERGENCY' ? '🚨' : '📋'));
+                let statusBadge = t.isActive ? '<span class="badge badge-general">Active</span>' : '<span class="badge badge-emergency">Inactive</span>';
+                html += `<tr>
+                    <td>${t.id}</td>
+                    <td><strong>${t.title}</strong><br><small style="color:#666">${t.description ? t.description.substring(0,60) + (t.description.length > 60 ? '...' : '') : ''}</small></td>
+                    <td><span class="badge ${categoryClass}">${categoryIcon} ${t.category}</span></td>
+                    <td>${t.priority || 0}</td>
+                    <td>${statusBadge}</td>
+                    <td>
+                        <button class="btn-sm btn-edit" onclick="editTip(${t.id})">Edit</button>
+                        <button class="btn-sm btn-delete" onclick="deleteTip(${t.id})">Delete</button>
+                    </td>
+                </tr>`;
+            });
+            $('#tipsTable tbody').html(html);
+        });
+    }
+    function openAddModal() { $('#modalTitle').text('Add Safety Tip'); $('#tipId').val(''); $('#tipTitle').val(''); $('#tipDescription').val(''); $('#tipCategory').val('DRIVING'); $('#tipIcon').val(''); $('#tipPriority').val('1'); $('#tipActive').val('true'); $('#tipModal').css('display','flex'); }
+    function editTip(id) { $.get('/admin/safety-tips/api/list', function(data) { let t = data.find(x=>x.id==id); if(t) { $('#modalTitle').text('Edit Safety Tip'); $('#tipId').val(t.id); $('#tipTitle').val(t.title); $('#tipDescription').val(t.description); $('#tipCategory').val(t.category); $('#tipIcon').val(t.icon || ''); $('#tipPriority').val(t.priority || 1); $('#tipActive').val(t.isActive ? 'true' : 'false'); $('#tipModal').css('display','flex'); } }); }
+    function closeModal() { $('#tipModal').css('display','none'); }
+    function saveTip() { let data = { id: $('#tipId').val() || null, title: $('#tipTitle').val(), description: $('#tipDescription').val(), category: $('#tipCategory').val(), icon: $('#tipIcon').val(), priority: parseInt($('#tipPriority').val()), isActive: $('#tipActive').val() === 'true' }; if(!data.title || !data.description) { alert('Please fill Title and Description'); return; } let url = data.id ? `/admin/safety-tips/api/update/${data.id}` : '/admin/safety-tips/api/add'; let method = data.id ? 'PUT' : 'POST'; $.ajax({ url: url, type: method, contentType: 'application/json', data: JSON.stringify(data), success: function() { closeModal(); loadTips(); alert('Safety tip saved!'); }, error: function(xhr) { alert('Error: ' + (xhr.responseJSON?.error || 'Failed to save')); } }); }
+    function deleteTip(id) { if(confirm('Delete this safety tip?')) $.ajax({ url: `/admin/safety-tips/api/delete/${id}`, type: 'DELETE', success: function() { loadTips(); } }); }
+    $(document).ready(loadTips);
+</script>
+</body>
+</html>

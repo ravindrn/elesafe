@@ -1,7 +1,7 @@
 package com.elephant.safetybackend.controller;
 
-import com.elephant.safetybackend.model.SafetyTip;
-import com.elephant.safetybackend.repository.SafetyTipRepository;
+import com.elephant.safetybackend.model.NewsItem;
+import com.elephant.safetybackend.repository.NewsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -14,70 +14,84 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-@RequestMapping("/admin/safety-tips")
-public class SafetyTipController {
+@RequestMapping("/admin/news")
+public class NewsController {
 
     @Autowired
-    private SafetyTipRepository safetyTipRepository;
+    private NewsRepository newsRepository;
 
     @GetMapping
-    public String safetyTipsPage(HttpSession session, Model model) {
+    public String newsPage(HttpSession session, Model model) {
         if (session.getAttribute("userId") == null) {
             return "redirect:/login";
         }
         model.addAttribute("adminName", session.getAttribute("userName"));
-        return "admin/safety-tips";
+        return "admin/news";
     }
 
     @GetMapping("/api/list")
     @ResponseBody
-    public ResponseEntity<List<SafetyTip>> getAllSafetyTips(HttpSession session) {
+    public ResponseEntity<List<NewsItem>> getAllNews(HttpSession session) {
         if (session.getAttribute("userId") == null) {
             return ResponseEntity.status(403).build();
         }
-        return ResponseEntity.ok(safetyTipRepository.findAll());
+        return ResponseEntity.ok(newsRepository.findAll());
     }
 
     @PostMapping("/api/add")
     @ResponseBody
-    public ResponseEntity<?> addSafetyTip(@RequestBody SafetyTip tip, HttpSession session) {
+    public ResponseEntity<?> addNews(@RequestBody NewsItem news, HttpSession session) {
         if (session.getAttribute("userId") == null) {
             return ResponseEntity.status(403).body(Map.of("error", "Unauthorized"));
         }
         try {
-            tip.setCreatedAt(LocalDateTime.now());
-            tip.setUpdatedAt(LocalDateTime.now());
-            tip.setIsActive(true);
-            SafetyTip saved = safetyTipRepository.save(tip);
+            news.setId(null); // Ensure new record
+            news.setCreatedAt(LocalDateTime.now());
+            news.setPublishedDate(LocalDateTime.now());
+            news.setIsActive(true);
+            NewsItem saved = newsRepository.save(news);
             return ResponseEntity.ok(Map.of("success", true, "id", saved.getId()));
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
         }
     }
 
     @PutMapping("/api/update/{id}")
     @ResponseBody
-    public ResponseEntity<?> updateSafetyTip(@PathVariable Long id, @RequestBody SafetyTip tip, HttpSession session) {
+    public ResponseEntity<?> updateNews(@PathVariable Long id, @RequestBody NewsItem news, HttpSession session) {
         if (session.getAttribute("userId") == null) {
             return ResponseEntity.status(403).body(Map.of("error", "Unauthorized"));
         }
         try {
-            tip.setId(id);
-            tip.setUpdatedAt(LocalDateTime.now());
-            safetyTipRepository.save(tip);
+            NewsItem existing = newsRepository.findById(id).orElse(null);
+            if (existing == null) {
+                return ResponseEntity.notFound().build();
+            }
+
+            existing.setTitle(news.getTitle());
+            existing.setContent(news.getContent());
+            existing.setSource(news.getSource());
+            existing.setImageUrl(news.getImageUrl());
+            existing.setType(news.getType());
+            existing.setIsActive(news.getIsActive());
+            existing.setUpdatedAt(LocalDateTime.now());
+
+            newsRepository.save(existing);
             return ResponseEntity.ok(Map.of("success", true));
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
         }
     }
 
     @DeleteMapping("/api/delete/{id}")
     @ResponseBody
-    public ResponseEntity<?> deleteSafetyTip(@PathVariable Long id, HttpSession session) {
+    public ResponseEntity<?> deleteNews(@PathVariable Long id, HttpSession session) {
         if (session.getAttribute("userId") == null) {
             return ResponseEntity.status(403).body(Map.of("error", "Unauthorized"));
         }
-        safetyTipRepository.deleteById(id);
+        newsRepository.deleteById(id);
         return ResponseEntity.ok(Map.of("success", true));
     }
 }

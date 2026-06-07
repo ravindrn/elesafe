@@ -10,7 +10,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -36,6 +38,7 @@ import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.elephant.safety.R;
 import com.elephant.safety.api.ApiClient;
 import com.elephant.safety.api.ApiService;
@@ -59,6 +62,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private ProgressBar progressDanger;
     private LinearLayout safetyStatusBar;
     private Button btnReportSighting, btnSafetyInfo;
+    private ImageButton btnZoomIn, btnZoomOut;
+    private FloatingActionButton fabMyLocation;
     private ApiService apiService;
     private List<DangerZone> dangerZones;
     private FusedLocationProviderClient fusedLocationClient;
@@ -72,6 +77,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private static final int COLOR_WARNING = 0xFFFF9800;
     private static final int COLOR_DANGER = 0xFFF44336;
     private static final int COLOR_CRITICAL = 0xFFD32F2F;
+
+    // Current camera zoom level
+    private float currentZoomLevel = 7.0f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +103,11 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         btnSafetyInfo = findViewById(R.id.btnSafetyInfo);
         bottomNav = findViewById(R.id.bottomNav);
 
+        // Zoom controls
+        btnZoomIn = findViewById(R.id.btnZoomIn);
+        btnZoomOut = findViewById(R.id.btnZoomOut);
+        fabMyLocation = findViewById(R.id.fabMyLocation);
+
         String userName = SharedPrefManager.getInstance(this).getUserName();
         tvWelcome.setText("Welcome, " + userName + "! 🐘");
 
@@ -110,6 +123,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         btnSafetyInfo.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, SafetyInfoActivity.class)));
 
+        // Setup zoom controls
+        setupZoomControls();
+
         setupBottomNavigation();
         checkLocationPermission();
         loadDangerZonesFromServer();
@@ -117,6 +133,35 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         // Start background location service
         startBackgroundLocationService();
+    }
+
+    private void setupZoomControls() {
+        // Zoom In button
+        btnZoomIn.setOnClickListener(v -> {
+            if (googleMap != null) {
+                currentZoomLevel = googleMap.getCameraPosition().zoom;
+                googleMap.animateCamera(CameraUpdateFactory.zoomTo(currentZoomLevel + 1));
+            }
+        });
+
+        // Zoom Out button
+        btnZoomOut.setOnClickListener(v -> {
+            if (googleMap != null) {
+                currentZoomLevel = googleMap.getCameraPosition().zoom;
+                googleMap.animateCamera(CameraUpdateFactory.zoomTo(currentZoomLevel - 1));
+            }
+        });
+
+        // My Location button
+        fabMyLocation.setOnClickListener(v -> {
+            if (googleMap != null && currentLatitude != 0 && currentLongitude != 0) {
+                LatLng currentLocation = new LatLng(currentLatitude, currentLongitude);
+                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, 15));
+                CustomToast.showInfo(this, "📍 Centered on your location");
+            } else {
+                CustomToast.showWarning(this, "Waiting for location...");
+            }
+        });
     }
 
     private void startBackgroundLocationService() {

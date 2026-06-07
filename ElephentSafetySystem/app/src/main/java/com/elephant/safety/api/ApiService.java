@@ -8,10 +8,10 @@ import com.elephant.safety.models.VerifiedReport;
 import com.elephant.safety.models.NewsItem;
 import com.elephant.safety.models.DashboardStats;
 
-
 import java.util.List;
 import java.util.Map;
 
+import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.http.*;
 
@@ -95,6 +95,23 @@ public interface ApiService {
 
     @GET("api/insights/recent-accidents")
     Call<List<NewsItem>> getRecentAccidents();
+
+    // ========== PROFILE ENDPOINTS ==========
+
+    @GET("api/users/stats")
+    Call<UserStats> getUserStats();
+
+    @PUT("api/users/profile")
+    Call<UpdateProfileResponse> updateProfile(@Body UpdateProfileRequest request);
+
+    @PUT("api/users/password")
+    Call<ChangePasswordResponse> changePassword(@Body ChangePasswordRequest request);
+
+    @POST("api/users/profile-image")
+    Call<ImageUploadResponse> uploadProfileImage(@Part MultipartBody.Part image);
+
+    @DELETE("api/users/profile-image")
+    Call<Void> removeProfileImage();
 
     // ========== INNER CLASSES WITH PUBLIC FIELDS ==========
 
@@ -289,5 +306,155 @@ public interface ApiService {
         public void setHospital(List<EmergencyContact> hospital) { this.hospital = hospital; }
         public List<EmergencyContact> getForest() { return forest; }
         public void setForest(List<EmergencyContact> forest) { this.forest = forest; }
+    }
+
+    // ========== PROFILE INNER CLASSES ==========
+
+    /**
+     * User Statistics Class
+     */
+    public static class UserStats {
+        private int totalReports;
+        private int approvedReports;
+        private int dangerZonesVisited;
+        private int totalAlerts;
+        private int savedReports;
+
+        public UserStats() {}
+
+        public int getTotalReports() { return totalReports; }
+        public void setTotalReports(int totalReports) { this.totalReports = totalReports; }
+
+        public int getApprovedReports() { return approvedReports; }
+        public void setApprovedReports(int approvedReports) { this.approvedReports = approvedReports; }
+
+        public int getDangerZonesVisited() { return dangerZonesVisited; }
+        public void setDangerZonesVisited(int dangerZonesVisited) { this.dangerZonesVisited = dangerZonesVisited; }
+
+        public int getTotalAlerts() { return totalAlerts; }
+        public void setTotalAlerts(int totalAlerts) { this.totalAlerts = totalAlerts; }
+
+        public int getSavedReports() { return savedReports; }
+        public void setSavedReports(int savedReports) { this.savedReports = savedReports; }
+    }
+
+    /**
+     * Update Profile Request Class
+     */
+    public static class UpdateProfileRequest {
+        private String name;
+        private String email;
+        private String phone;
+
+        public UpdateProfileRequest() {}
+
+        public UpdateProfileRequest(String name, String email, String phone) {
+            this.name = name;
+            this.email = email;
+            this.phone = phone;
+        }
+
+        public String getName() { return name; }
+        public void setName(String name) { this.name = name; }
+
+        public String getEmail() { return email; }
+        public void setEmail(String email) { this.email = email; }
+
+        public String getPhone() { return phone; }
+        public void setPhone(String phone) { this.phone = phone; }
+    }
+
+    /**
+     * Update Profile Response Class
+     */
+    public static class UpdateProfileResponse {
+        private String message;
+        private UserDTO user;
+
+        public UpdateProfileResponse() {}
+
+        public String getMessage() { return message; }
+        public void setMessage(String message) { this.message = message; }
+
+        public UserDTO getUser() { return user; }
+        public void setUser(UserDTO user) { this.user = user; }
+
+        public static class UserDTO {
+            private Long id;
+            private String name;
+            private String email;
+            private String phone;
+            private String role;
+
+            public UserDTO() {}
+
+            public Long getId() { return id; }
+            public void setId(Long id) { this.id = id; }
+
+            public String getName() { return name; }
+            public void setName(String name) { this.name = name; }
+
+            public String getEmail() { return email; }
+            public void setEmail(String email) { this.email = email; }
+
+            public String getPhone() { return phone; }
+            public void setPhone(String phone) { this.phone = phone; }
+
+            public String getRole() { return role; }
+            public void setRole(String role) { this.role = role; }
+        }
+    }
+
+    /**
+     * Change Password Request Class
+     */
+    public static class ChangePasswordRequest {
+        private String currentPassword;
+        private String newPassword;
+
+        public ChangePasswordRequest() {}
+
+        public ChangePasswordRequest(String currentPassword, String newPassword) {
+            this.currentPassword = currentPassword;
+            this.newPassword = newPassword;
+        }
+
+        public String getCurrentPassword() { return currentPassword; }
+        public void setCurrentPassword(String currentPassword) { this.currentPassword = currentPassword; }
+
+        public String getNewPassword() { return newPassword; }
+        public void setNewPassword(String newPassword) { this.newPassword = newPassword; }
+    }
+
+    /**
+     * Change Password Response Class
+     */
+    public static class ChangePasswordResponse {
+        private String message;
+        private boolean success;
+
+        public ChangePasswordResponse() {}
+
+        public String getMessage() { return message; }
+        public void setMessage(String message) { this.message = message; }
+
+        public boolean isSuccess() { return success; }
+        public void setSuccess(boolean success) { this.success = success; }
+    }
+
+    /**
+     * Image Upload Response Class
+     */
+    public static class ImageUploadResponse {
+        private String imageUrl;
+        private String message;
+
+        public ImageUploadResponse() {}
+
+        public String getImageUrl() { return imageUrl; }
+        public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
+
+        public String getMessage() { return message; }
+        public void setMessage(String message) { this.message = message; }
     }
 }
