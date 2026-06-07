@@ -4,10 +4,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
+
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.elephant.safety.R;
@@ -17,10 +18,10 @@ import com.elephant.safety.api.ApiService;
 import com.elephant.safety.models.DashboardStats;
 import com.elephant.safety.models.NewsItem;
 import com.elephant.safety.models.VerifiedReport;
-import com.elephant.safety.utils.CustomToast;
-import com.elephant.safety.utils.SharedPrefManager;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -28,28 +29,42 @@ import retrofit2.Response;
 public class InsightsActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
-    private androidx.viewpager2.widget.ViewPager2 viewPager;
+    private ViewPager2 viewPager;
     private ProgressBar progressBar;
     private ApiService apiService;
+
+    // Stats TextViews
+    private TextView tvTotalReports, tvApprovedReports, tvTotalUsers, tvDangerZones, tvReportsThisWeek, tvTopDistrict;
 
     private List<VerifiedReport> verifiedReports = new ArrayList<>();
     private List<NewsItem> newsList = new ArrayList<>();
     private List<NewsItem> accidentsList = new ArrayList<>();
     private DashboardStats stats;
 
-    private final String[] tabTitles = {"📊 STATS", "✅ VERIFIED", "📰 NEWS", "⚠️ ACCIDENTS"};
+    private boolean dataLoaded = false;
+
+    private final String[] tabTitles = {"✅ VERIFIED REPORTS", "📰 NEWS", "⚠️ ACCIDENTS"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_insights);
 
+        // Initialize Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setTitle("Insights");
+            getSupportActionBar().setTitle("Insights Dashboard");
         }
+
+        // Initialize Stats Views
+        tvTotalReports = findViewById(R.id.tvTotalReports);
+        tvApprovedReports = findViewById(R.id.tvApprovedReports);
+        tvTotalUsers = findViewById(R.id.tvTotalUsers);
+        tvDangerZones = findViewById(R.id.tvDangerZones);
+        tvReportsThisWeek = findViewById(R.id.tvReportsThisWeek);
+        tvTopDistrict = findViewById(R.id.tvTopDistrict);
 
         tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewPager);
@@ -57,18 +72,9 @@ public class InsightsActivity extends AppCompatActivity {
 
         apiService = ApiClient.getClient(this).create(ApiService.class);
 
-        fetchAllData();
-    }
-
-    private void fetchAllData() {
-        if (!SharedPrefManager.getInstance(this).isLoggedIn()) {
-            CustomToast.showWarning(this, "Please login to view insights");
-            return;
-        }
-
         progressBar.setVisibility(View.VISIBLE);
 
-        // Fetch all data in parallel
+        // Fetch all data
         fetchVerifiedReports();
         fetchNews();
         fetchAccidents();
@@ -130,23 +136,39 @@ public class InsightsActivity extends AppCompatActivity {
         apiService.getDashboardStats().enqueue(new Callback<DashboardStats>() {
             @Override
             public void onResponse(Call<DashboardStats> call, Response<DashboardStats> response) {
+                progressBar.setVisibility(View.GONE);
                 if (response.isSuccessful() && response.body() != null) {
                     stats = response.body();
+                    updateStatsUI();
                 }
+                dataLoaded = true;
                 checkAndSetupViewPager();
             }
 
             @Override
             public void onFailure(Call<DashboardStats> call, Throwable t) {
+                progressBar.setVisibility(View.GONE);
+                dataLoaded = true;
                 checkAndSetupViewPager();
             }
         });
     }
 
+    private void updateStatsUI() {
+        if (stats != null) {
+            tvTotalReports.setText(String.valueOf(stats.getTotalReports()));
+            tvApprovedReports.setText(String.valueOf(stats.getApprovedReports()));
+            tvTotalUsers.setText(String.valueOf(stats.getTotalUsers()));
+            tvDangerZones.setText(String.valueOf(stats.getDangerZones()));
+            tvReportsThisWeek.setText(String.valueOf(stats.getReportsThisWeek()));
+            tvTopDistrict.setText(stats.getTopDistrict() != null ? stats.getTopDistrict() : "N/A");
+        }
+    }
+
     private void checkAndSetupViewPager() {
-        // Hide progress bar after all data is loaded
-        progressBar.setVisibility(View.GONE);
-        setupViewPager();
+        if (dataLoaded) {
+            setupViewPager();
+        }
     }
 
     private void setupViewPager() {

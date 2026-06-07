@@ -9,21 +9,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.elephant.safety.R;
 import com.elephant.safety.models.VerifiedReport;
 import com.google.android.material.card.MaterialCardView;
 
-<<<<<<< Updated upstream
-=======
 import java.io.IOException;
->>>>>>> Stashed changes
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -144,14 +139,6 @@ public class VerifiedReportsFragment extends Fragment {
                 tvNote.setText(report.getNote());
                 tvElephantCount.setText("🐘 " + report.getElephantCount() + " elephant(s)");
                 tvDate.setText("📅 " + formatDate(report.getCreatedAt()));
-
-                // Highlight based on elephant count
-                if (report.getElephantCount() >= 5) {
-                    if (cardView != null) {
-                        cardView.setStrokeColor(getResources().getColor(R.color.danger));
-                        cardView.setStrokeWidth(2);
-                    }
-                }
             }
 
             private void fetchLocationName(double latitude, double longitude, TextView textView) {
@@ -324,7 +311,7 @@ public class VerifiedReportsFragment extends Fragment {
                     Date date = inputFormat.parse(dateStr);
                     return outputFormat.format(date);
                 } catch (Exception e) {
-                    return dateStr;
+                    return dateStr != null ? dateStr : "Unknown date";
                 }
             }
         }

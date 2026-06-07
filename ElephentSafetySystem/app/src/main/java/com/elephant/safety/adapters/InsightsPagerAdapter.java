@@ -7,12 +7,12 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.elephant.safety.fragments.AccidentsFragment;
 import com.elephant.safety.fragments.NewsFragment;
-import com.elephant.safety.fragments.StatsFragment;
 import com.elephant.safety.fragments.VerifiedReportsFragment;
 import com.elephant.safety.models.DashboardStats;
 import com.elephant.safety.models.NewsItem;
 import com.elephant.safety.models.VerifiedReport;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class InsightsPagerAdapter extends FragmentStateAdapter {
@@ -29,9 +29,9 @@ public class InsightsPagerAdapter extends FragmentStateAdapter {
                                 List<NewsItem> accidentsList) {
         super(fragmentActivity);
         this.stats = stats;
-        this.verifiedReports = verifiedReports;
-        this.newsList = newsList;
-        this.accidentsList = accidentsList;
+        this.verifiedReports = verifiedReports != null ? verifiedReports : new ArrayList<>();
+        this.newsList = newsList != null ? newsList : new ArrayList<>();
+        this.accidentsList = accidentsList != null ? accidentsList : new ArrayList<>();
     }
 
     @NonNull
@@ -39,20 +39,18 @@ public class InsightsPagerAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position) {
             case 0:
-                return StatsFragment.newInstance(stats);
-            case 1:
                 return VerifiedReportsFragment.newInstance(verifiedReports);
-            case 2:
+            case 1:
                 return NewsFragment.newInstance(newsList);
-            case 3:
+            case 2:
                 return AccidentsFragment.newInstance(accidentsList);
             default:
-                return StatsFragment.newInstance(stats);
+                return VerifiedReportsFragment.newInstance(verifiedReports);
         }
     }
 
     @Override
     public int getItemCount() {
-        return 4;
+        return 3; // 3 fragments: Verified Reports, News, Accidents
     }
 }
