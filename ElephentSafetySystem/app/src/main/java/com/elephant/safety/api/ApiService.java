@@ -7,15 +7,22 @@ import com.elephant.safety.models.EmergencyContact;
 import com.elephant.safety.models.VerifiedReport;
 import com.elephant.safety.models.NewsItem;
 import com.elephant.safety.models.DashboardStats;
+import com.elephant.safety.models.RiskPredictionRequest; // [YOUR CODE]
+import com.elephant.safety.models.RiskPredictionResponse; // [YOUR CODE]
 
 import java.util.List;
 import java.util.Map;
 
-import okhttp3.MultipartBody;
+import okhttp3.MultipartBody; // [FRIEND'S CODE] Needed for Profile Image uploads
 import retrofit2.Call;
 import retrofit2.http.*;
 
 public interface ApiService {
+
+    // ========== 🧠 MACHINE LEARNING ENDPOINT [YOUR CODE] ==========
+
+    @POST("api/ml/check-risk")
+    Call<RiskPredictionResponse> checkCurrentRisk(@Body RiskPredictionRequest request);
 
     // ========== AUTH ENDPOINTS ==========
 
@@ -96,7 +103,7 @@ public interface ApiService {
     @GET("api/insights/recent-accidents")
     Call<List<NewsItem>> getRecentAccidents();
 
-    // ========== PROFILE ENDPOINTS ==========
+    // ========== PROFILE ENDPOINTS [FRIEND'S CODE] ==========
 
     @GET("api/users/stats")
     Call<UserStats> getUserStats();
@@ -308,7 +315,7 @@ public interface ApiService {
         public void setForest(List<EmergencyContact> forest) { this.forest = forest; }
     }
 
-    // ========== PROFILE INNER CLASSES ==========
+    // ========== PROFILE INNER CLASSES [FRIEND'S CODE] ==========
 
     /**
      * User Statistics Class

@@ -236,7 +236,7 @@ public class WebController {
         StringBuilder sb = new StringBuilder();
         sb.append("<h3>All Users in Database</h3>");
         sb.append("<table border='1' cellpadding='5'>");
-        sb.append("<tr><th>ID</th><th>Name</th><th>Email</th><th>Role</th><th>Active</th><th>Hash Length</th></tr>");
+        sb.append("</table><th>ID</th><th>Name</th><th>Email</th><th>Role</th><th>Active</th><th>Hash Length</th></tr>");
 
         for (User user : users) {
             sb.append("<tr>");
@@ -309,6 +309,69 @@ public class WebController {
                 session.getAttribute("userName").toString() : "Admin");
 
         return ResponseEntity.ok(stats);
+    }
+
+    // ========== USERS PAGE ==========
+    @GetMapping("/admin/users")
+    public String usersPage(HttpSession session, Model model) {
+        System.out.println("=== ACCESSING /admin/users ===");
+        System.out.println("Session userId: " + session.getAttribute("userId"));
+        System.out.println("Session userName: " + session.getAttribute("userName"));
+
+        if (session.getAttribute("userId") == null) {
+            System.out.println("No session, redirecting to login");
+            return "redirect:/login";
+        }
+        model.addAttribute("adminName", session.getAttribute("userName"));
+        return "admin/users";
+    }
+
+    // ========== API: GET ALL USERS (for frontend) ==========
+    @GetMapping("/api/admin/users-list")
+    @ResponseBody
+    public ResponseEntity<List<Map<String, Object>>> getAllUsersList(HttpSession session) {
+        if (session.getAttribute("userId") == null) {
+            return ResponseEntity.status(403).build();
+        }
+
+        List<User> users = userRepository.findAll();
+        List<Map<String, Object>> userList = new ArrayList<>();
+
+        for (User user : users) {
+            Map<String, Object> userMap = new HashMap<>();
+            userMap.put("id", user.getId());
+            userMap.put("name", user.getName());
+            userMap.put("email", user.getEmail());
+            userMap.put("phone", user.getPhone());
+            userMap.put("role", user.getRole().toString());
+            userMap.put("isActive", user.getIsActive());
+            userMap.put("createdAt", user.getCreatedAt() != null ? user.getCreatedAt().toString() : null);
+            userList.add(userMap);
+        }
+
+        return ResponseEntity.ok(userList);
+    }
+
+    // ========== API: UPDATE USER STATUS ==========
+    @PutMapping("/api/admin/users/{id}/status")
+    @ResponseBody
+    public ResponseEntity<Map<String, String>> updateUserStatus(@PathVariable Long id, @RequestBody Map<String, Boolean> payload, HttpSession session) {
+        if (session.getAttribute("userId") == null) {
+            return ResponseEntity.status(403).body(Map.of("error", "Unauthorized"));
+        }
+
+        User user = userRepository.findById(id).orElse(null);
+        if (user == null) {
+            return ResponseEntity.notFound().build();
+        }
+
+        Boolean isActive = payload.get("isActive");
+        if (isActive != null) {
+            user.setIsActive(isActive);
+            userRepository.save(user);
+        }
+
+        return ResponseEntity.ok(Map.of("message", "User status updated successfully"));
     }
 
     // ========== HELPER METHODS FOR USERS IN DANGER ZONES ==========
@@ -651,53 +714,5 @@ public class WebController {
 
         reportRepository.save(report);
         return ResponseEntity.ok(Map.of("message", "Status updated successfully", "status", status));
-    }
-
-    // ========== API: GET ALL USERS ==========
-    @GetMapping("/api/admin/users")
-    @ResponseBody
-    public ResponseEntity<List<Map<String, Object>>> getAllUsers(HttpSession session) {
-        if (session.getAttribute("userId") == null) {
-            return ResponseEntity.status(403).build();
-        }
-
-        List<User> users = userRepository.findAll();
-        List<Map<String, Object>> userList = new ArrayList<>();
-
-        for (User user : users) {
-            Map<String, Object> userMap = new HashMap<>();
-            userMap.put("id", user.getId());
-            userMap.put("name", user.getName());
-            userMap.put("email", user.getEmail());
-            userMap.put("phone", user.getPhone());
-            userMap.put("role", user.getRole().toString());
-            userMap.put("isActive", user.getIsActive());
-            userMap.put("createdAt", user.getCreatedAt() != null ? user.getCreatedAt().toString() : null);
-            userList.add(userMap);
-        }
-
-        return ResponseEntity.ok(userList);
-    }
-
-    // ========== API: UPDATE USER STATUS ==========
-    @PutMapping("/api/admin/users/{id}/status")
-    @ResponseBody
-    public ResponseEntity<Map<String, String>> updateUserStatus(@PathVariable Long id, @RequestBody Map<String, Boolean> payload, HttpSession session) {
-        if (session.getAttribute("userId") == null) {
-            return ResponseEntity.status(403).body(Map.of("error", "Unauthorized"));
-        }
-
-        User user = userRepository.findById(id).orElse(null);
-        if (user == null) {
-            return ResponseEntity.notFound().build();
-        }
-
-        Boolean isActive = payload.get("isActive");
-        if (isActive != null) {
-            user.setIsActive(isActive);
-            userRepository.save(user);
-        }
-
-        return ResponseEntity.ok(Map.of("message", "User status updated successfully"));
     }
 }

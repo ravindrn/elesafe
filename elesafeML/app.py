@@ -11,13 +11,13 @@ MODEL_PATH = "elephant_rf_model.pkl"
 try:
     if os.path.exists(MODEL_PATH):
         model = joblib.load(MODEL_PATH)
-        print("✅ Success: ML Model loaded perfectly!")
+        print(" Success: ML Model loaded perfectly!")
     else:
         model = None
-        print("⚠️ Warning: elephant_rf_model.pkl not found. Running in fallback mode.")
+        print(" Warning: elephant_rf_model.pkl not found. Running in fallback mode.")
 except Exception as e:
     model = None
-    print(f"❌ Error loading model: {e}")
+    print(f" Error loading model: {e}")
 
 # 2. Dictionary to convert text from Java into Numbers for the ML Model
 # (Adjust these numbers if you used different encoding in Google Colab!)
@@ -68,7 +68,7 @@ def predict_risk():
         # The model returns an array like ['CRITICAL'], so we grab the first item
         prediction_result = model.predict(features)
         
-        print(f"🧠 AI Predicts: {prediction_result}")
+        print(f" AI Predicts: {prediction_result}")
 
         # F. Send the answer back to Spring Boot!
         return jsonify({
@@ -77,7 +77,7 @@ def predict_risk():
         })
 
     except Exception as e:
-        print(f"❌ API Error: {e}")
+        print(f" API Error: {e}")
         return jsonify({"status": "error", "message": str(e)}), 500
 
 

@@ -1,14 +1,19 @@
 package com.elephant.safety.activities;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +26,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -43,6 +47,8 @@ import com.elephant.safety.R;
 import com.elephant.safety.api.ApiClient;
 import com.elephant.safety.api.ApiService;
 import com.elephant.safety.models.DangerZone;
+import com.elephant.safety.models.RiskPredictionRequest;
+import com.elephant.safety.models.RiskPredictionResponse;
 import com.elephant.safety.services.LocationForegroundService;
 import com.elephant.safety.utils.CustomToast;
 import com.elephant.safety.utils.HaversineFormula;
@@ -62,8 +68,11 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private ProgressBar progressDanger;
     private LinearLayout safetyStatusBar;
     private Button btnReportSighting, btnSafetyInfo;
+
+    // Friend's Zoom & Location Controls
     private ImageButton btnZoomIn, btnZoomOut;
     private FloatingActionButton fabMyLocation;
+
     private ApiService apiService;
     private List<DangerZone> dangerZones;
     private FusedLocationProviderClient fusedLocationClient;
@@ -103,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         btnSafetyInfo = findViewById(R.id.btnSafetyInfo);
         bottomNav = findViewById(R.id.bottomNav);
 
-        // Zoom controls
+        // Initialize Zoom controls
         btnZoomIn = findViewById(R.id.btnZoomIn);
         btnZoomOut = findViewById(R.id.btnZoomOut);
         fabMyLocation = findViewById(R.id.fabMyLocation);
@@ -123,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         btnSafetyInfo.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, SafetyInfoActivity.class)));
 
-        // Setup zoom controls
+        // Setup friend's zoom controls
         setupZoomControls();
 
         setupBottomNavigation();
@@ -136,7 +145,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     private void setupZoomControls() {
-        // Zoom In button
         btnZoomIn.setOnClickListener(v -> {
             if (googleMap != null) {
                 currentZoomLevel = googleMap.getCameraPosition().zoom;
@@ -144,7 +152,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
-        // Zoom Out button
         btnZoomOut.setOnClickListener(v -> {
             if (googleMap != null) {
                 currentZoomLevel = googleMap.getCameraPosition().zoom;
@@ -152,7 +159,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
-        // My Location button
         fabMyLocation.setOnClickListener(v -> {
             if (googleMap != null && currentLatitude != 0 && currentLongitude != 0) {
                 LatLng currentLocation = new LatLng(currentLatitude, currentLongitude);
@@ -201,6 +207,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
+    // 1. Blended Safety Status: Friend's Progress Bar + Your AI Trigger
     private void updateSafetyStatus() {
         if (dangerZones == null || dangerZones.isEmpty()) {
             setSafeStatus("Loading zones...", "Fetching danger zone data", "🟡");
@@ -229,17 +236,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             return;
         }
 
-        double distanceKm = minDistance / 1000;
-        String riskLevel = nearestZone.getRiskLevel();
-
-        if (minDistance < 100) {
-            tvProximityLabel.setText("⚠️ ENTERING DANGER ZONE!");
-        } else if (minDistance < 1000) {
-            tvProximityLabel.setText(String.format("Nearest Danger Zone: %.0f meters - %s Risk", minDistance, riskLevel));
-        } else {
-            tvProximityLabel.setText(String.format("Nearest Danger Zone: %.1f km away - %s Risk", distanceKm, riskLevel));
-        }
-
+        // Friend's UI logic for the progress bar
         int progress;
         if (minDistance < 0) {
             progress = 100;
@@ -250,36 +247,69 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
         progressDanger.setProgress(progress);
 
-        if (minDistance < 0) {
-            if (riskLevel.equals("CRITICAL")) {
-                setDangerStatus("⚠️ CRITICAL DANGER!", "You are in a CRITICAL elephant zone! Immediate action required!", "🔴", COLOR_CRITICAL);
-                tvWarningHint.setVisibility(android.view.View.VISIBLE);
-                tvWarningHint.setText("🚨 EMERGENCY: You are inside a CRITICAL danger zone! Reduce speed NOW!");
-                tvWarningHint.setTextColor(Color.parseColor("#FF0000"));
-            } else if (riskLevel.equals("HIGH")) {
-                setDangerStatus("⚠️ HIGH RISK!", "You are in a HIGH RISK elephant zone! Stay alert!", "🟠", COLOR_DANGER);
-                tvWarningHint.setVisibility(android.view.View.VISIBLE);
-                tvWarningHint.setText("⚠️ WARNING: You are in a HIGH RISK elephant danger zone!");
-            } else {
-                setWarningStatus("⚠️ DANGER ZONE!", "You are in an elephant danger zone. Stay alert!", "🟡", COLOR_WARNING);
-                tvWarningHint.setVisibility(android.view.View.VISIBLE);
-                tvWarningHint.setText("⚠️ You are in an elephant danger zone - Stay alert!");
+        // TRIGGER THE AI
+        double distanceKm = minDistance / 1000.0;
+        fetchAiPrediction(distanceKm, nearestZone);
+    }
+
+    // 2. Your AI Network Call (With Alarm logic injected)
+    private void fetchAiPrediction(double distanceKm, DangerZone nearestZone) {
+        RiskPredictionRequest request = new RiskPredictionRequest(
+                currentLatitude,
+                currentLongitude,
+                distanceKm
+        );
+
+        apiService.checkCurrentRisk(request).enqueue(new Callback<RiskPredictionResponse>() {
+            @Override
+            public void onResponse(Call<RiskPredictionResponse> call, Response<RiskPredictionResponse> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    String aiRiskLevel = response.body().predictedRisk;
+
+                    runOnUiThread(() -> {
+                        // Friend's proximity label math updated to use distanceKm
+                        if (distanceKm < 0.1) {
+                            tvProximityLabel.setText("⚠️ ENTERING DANGER ZONE!");
+                        } else if (distanceKm < 1.0) {
+                            tvProximityLabel.setText(String.format("Nearest Danger Zone: %.0f meters - %s Risk", distanceKm * 1000, nearestZone.getRiskLevel()));
+                        } else {
+                            tvProximityLabel.setText(String.format("Nearest Danger Zone: %.1f km away - %s Risk", distanceKm, nearestZone.getRiskLevel()));
+                        }
+
+                        // AI Risk Assessment
+                        if ("CRITICAL".equals(aiRiskLevel)) {
+                            setDangerStatus("⚠️ CRITICAL DANGER!", "AI detected severe risk! Reduce speed NOW!", "🔴", COLOR_CRITICAL);
+                            tvWarningHint.setVisibility(View.VISIBLE);
+                            tvWarningHint.setText("🚨 EMERGENCY: AI has flagged this area as highly active.");
+                            tvWarningHint.setTextColor(Color.parseColor("#FFFFFF"));
+
+                            // 🚨 TRIGGER EMERGENCY ALARM HERE 🚨
+                            triggerEmergencyAlarm();
+
+                        } else if ("HIGH".equals(aiRiskLevel)) {
+                            setDangerStatus("⚠️ HIGH RISK!", "AI predicts high elephant activity!", "🟠", COLOR_DANGER);
+                            tvWarningHint.setVisibility(View.VISIBLE);
+                            tvWarningHint.setText("⚠️ WARNING: High probability of elephant encounter.");
+
+                        } else if ("MEDIUM".equals(aiRiskLevel)) {
+                            setWarningStatus("⚠️ BE AWARE", "AI indicates moderate risk. Stay alert.", "🟡", COLOR_WARNING);
+                            tvWarningHint.setVisibility(View.VISIBLE);
+                            tvWarningHint.setText("⚠️ Elephant presence is possible.");
+
+                        } else {
+                            setSafeStatus("YOU ARE SAFE", "AI indicates low risk.", "🟢");
+                            tvWarningHint.setVisibility(View.GONE);
+                        }
+                    });
+                }
             }
-        } else if (minDistance < 500) {
-            setDangerStatus("⚠️ APPROACHING DANGER!", String.format("%.0f meters to danger zone. Be prepared!", minDistance), "🔴", COLOR_DANGER);
-            tvWarningHint.setVisibility(android.view.View.VISIBLE);
-            tvWarningHint.setText(String.format("⚠️ Approaching %s risk zone - %.0f meters ahead!", riskLevel, minDistance));
-        } else if (minDistance < 1000) {
-            setWarningStatus("⚠️ CAUTION!", String.format("Danger zone %.0f meters ahead. Stay vigilant!", minDistance), "🟡", COLOR_WARNING);
-            tvWarningHint.setVisibility(android.view.View.VISIBLE);
-            tvWarningHint.setText(String.format("⚠️ %s risk zone ahead - %.0f meters", riskLevel, minDistance));
-        } else if (minDistance < 2000) {
-            setInfoStatus("⚠️ BE AWARE", String.format("Danger zone %.1f km ahead. Stay alert!", distanceKm), "🟠", COLOR_WARNING);
-            tvWarningHint.setVisibility(android.view.View.GONE);
-        } else {
-            setSafeStatus("YOU ARE SAFE", String.format("Nearest danger zone is %.1f km away", distanceKm), "🟢");
-            tvWarningHint.setVisibility(android.view.View.GONE);
-        }
+
+            @Override
+            public void onFailure(Call<RiskPredictionResponse> call, Throwable t) {
+                Log.e("ML_ERROR", "Failed to connect to AI server: " + t.getMessage());
+                setSafeStatus("CONNECTING...", "AI Server unreachable", "⚪");
+            }
+        });
     }
 
     private void setSafeStatus(String status, String message, String icon) {
@@ -428,6 +458,30 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onDestroy();
         if (fusedLocationClient != null && locationCallback != null) {
             fusedLocationClient.removeLocationUpdates(locationCallback);
+        }
+    }
+
+    // 🚨 The Missing Alarm & Vibrate Method 🚨
+    private void triggerEmergencyAlarm() {
+        try {
+            // Vibrate the phone intensely
+            Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+            if (vibrator != null && vibrator.hasVibrator()) {
+                vibrator.vibrate(1500); // Vibrate for 1.5 seconds
+            }
+
+            // Play the default emergency alarm or notification sound
+            Uri alarmUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+            if (alarmUri == null) {
+                alarmUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+            }
+            Ringtone ringtone = RingtoneManager.getRingtone(getApplicationContext(), alarmUri);
+
+            if (ringtone != null && !ringtone.isPlaying()) {
+                ringtone.play();
+            }
+        } catch (Exception e) {
+            Log.e("ALARM_ERROR", "Could not play alarm: " + e.getMessage());
         }
     }
 }
